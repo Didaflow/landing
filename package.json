@@ -1,0 +1,9 @@
+{
+  "name": "landing",
+  "private": true,
+  "description": "Didaflow marketing landing — vanilla HTML/CSS/JS, no build step.",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run scripts/dev.ts"
+  }
+}

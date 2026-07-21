@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- didaflowers mark, static daisy: 7 petals, no detaching petal, no animation.
+     3 colours: white #ffffff, coral #d96d60, yellow #f0c24a. Use as logo. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="15 23 52 52" role="img"
+     aria-label="didaflowers — marchio fiore" class="df-flower-svg">
+  <g class="df-mark">
+    <ellipse fill="#ffffff" stroke="#d96d60" stroke-width="1" stroke-linejoin="round" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(0 41 49)"/>
+    <ellipse fill="#ffffff" stroke="#d96d60" stroke-width="1" stroke-linejoin="round" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(90 41 49)"/>
+    <ellipse fill="#ffffff" stroke="#d96d60" stroke-width="1" stroke-linejoin="round" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(135 41 49)"/>
+    <ellipse fill="#ffffff" stroke="#d96d60" stroke-width="1" stroke-linejoin="round" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(180 41 49)"/>
+    <ellipse fill="#ffffff" stroke="#d96d60" stroke-width="1" stroke-linejoin="round" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(225 41 49)"/>
+    <ellipse fill="#ffffff" stroke="#d96d60" stroke-width="1" stroke-linejoin="round" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(270 41 49)"/>
+    <ellipse fill="#ffffff" stroke="#d96d60" stroke-width="1" stroke-linejoin="round" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(315 41 49)"/>
+    <circle fill="#d96d60" cx="41" cy="49" r="7"/>
+    <circle fill="#f0c24a" cx="41" cy="49" r="4.8"/>
+  </g>
+</svg>

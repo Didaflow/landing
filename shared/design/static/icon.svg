@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- didaflowers icon — static daisy on a coral field. Full-bleed square = maskable-safe.
+     Source of truth for favicon.svg and the raster favicon/PWA icons. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="didaflowers">
+  <rect width="512" height="512" fill="#d96d60"/>
+  <g transform="translate(256 256) scale(6.9) translate(-41 -49)">
+    <ellipse fill="#ffffff" stroke="#d96d60" stroke-width="1" stroke-linejoin="round" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(0 41 49)"/>
+    <ellipse fill="#ffffff" stroke="#d96d60" stroke-width="1" stroke-linejoin="round" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(90 41 49)"/>
+    <ellipse fill="#ffffff" stroke="#d96d60" stroke-width="1" stroke-linejoin="round" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(135 41 49)"/>
+    <ellipse fill="#ffffff" stroke="#d96d60" stroke-width="1" stroke-linejoin="round" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(180 41 49)"/>
+    <ellipse fill="#ffffff" stroke="#d96d60" stroke-width="1" stroke-linejoin="round" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(225 41 49)"/>
+    <ellipse fill="#ffffff" stroke="#d96d60" stroke-width="1" stroke-linejoin="round" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(270 41 49)"/>
+    <ellipse fill="#ffffff" stroke="#d96d60" stroke-width="1" stroke-linejoin="round" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(315 41 49)"/>
+    <circle fill="#d96d60" cx="41" cy="49" r="7"/>
+    <circle fill="#f0c24a" cx="41" cy="49" r="4.8"/>
+  </g>
+</svg>

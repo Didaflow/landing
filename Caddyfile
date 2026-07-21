@@ -1,0 +1,38 @@
+# didaflow.ai — production config for the landing site.
+#
+# Static files only. `handle_path /_assets/*` mounts the design system so the
+# CSS tokens and brand assets have one source, shared with anything else that
+# links them.
+#
+# The apex serves this and nothing else. Validate before reloading:
+#   caddy validate --config Caddyfile
+
+(security) {
+	header {
+		X-Frame-Options "DENY"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		-Server
+	}
+}
+
+didaflow.ai, www.didaflow.ai {
+	import security
+	encode gzip zstd
+
+	handle_path /_assets/* {
+		root * {$LANDING_ROOT}/shared/design
+		header Cache-Control "public, max-age=300"
+		file_server
+	}
+
+	rewrite /favicon.ico /_assets/static/favicon.ico
+	rewrite /apple-touch-icon.png /_assets/static/apple-touch-icon.png
+
+	handle {
+		root * {$LANDING_ROOT}/landing
+		try_files {path} {path}/index.html
+		file_server
+	}
+}

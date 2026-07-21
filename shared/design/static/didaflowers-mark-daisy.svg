@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- didaflowers mark, daisy variant: white petals, coral corona, yellow eye.
+     Two-circle centre. Self-contained; works as img, css background, or inline.
+     Geometry matches didaflowers-mark.svg. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 10 70 70" role="img"
+     aria-label="didaflowers — marchio fiore (daisy)" class="df-flower-svg">
+  <style>
+    /* 3 colours only: white #ffffff, coral #d96d60, yellow #f0c24a.
+       Borders reuse coral — no extra tints. */
+    .df-petal,
+    .df-petal-detach { fill: #ffffff; stroke: #d96d60; stroke-width: 1; stroke-linejoin: round; }
+    .df-corona { fill: #d96d60; }
+    .df-eye    { fill: #f0c24a; }
+    .df-petal-detach {
+      transform-box: fill-box; transform-origin: center;
+      transform: translate(18.4px, -18.4px) rotate(63deg) scale(0.82);
+      opacity: 0.42;
+      animation: df-detach 2200ms cubic-bezier(0.25, 1, 0.5, 1) 450ms 1 both;
+    }
+    @keyframes df-detach {
+      0%   { transform: translate(0, 0) rotate(45deg) scale(1); opacity: 1; }
+      100% { transform: translate(18.4px, -18.4px) rotate(63deg) scale(0.82); opacity: 0.42; }
+    }
+    @media (prefers-reduced-motion: reduce) { .df-petal-detach { animation: none; } }
+  </style>
+  <g class="df-mark">
+    <ellipse class="df-petal" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(0 41 49)"/>
+    <ellipse class="df-petal" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(90 41 49)"/>
+    <ellipse class="df-petal" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(135 41 49)"/>
+    <ellipse class="df-petal" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(180 41 49)"/>
+    <ellipse class="df-petal" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(225 41 49)"/>
+    <ellipse class="df-petal" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(270 41 49)"/>
+    <ellipse class="df-petal" cx="41" cy="37" rx="5.8" ry="11" transform="rotate(315 41 49)"/>
+    <ellipse class="df-petal-detach" cx="48.49" cy="40.52" rx="5.8" ry="11"/>
+    <circle class="df-corona" cx="41" cy="49" r="7"/>
+    <circle class="df-eye" cx="41" cy="49" r="4.8"/>
+  </g>
+</svg>
