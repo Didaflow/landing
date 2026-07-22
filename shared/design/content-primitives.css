@@ -14,12 +14,6 @@
   max-width: 920px;
 }
 
-/* White paper is a marketing page, not a legal doc: match the site's
-   standard container width instead of the narrower reading column. */
-.df-doc--paper > .container {
-  max-width: var(--container-max);
-}
-
 .df-doc h1 {
   max-width: 12ch;
   margin: 0 0 var(--space-3);
