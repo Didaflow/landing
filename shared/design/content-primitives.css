@@ -107,10 +107,6 @@
   line-height: 1.35;
 }
 
-.df-doc--paper .df-doc-download {
-  margin: 0 0 var(--space-12);
-}
-
 .df-doc--paper section > p {
   max-width: 70ch;
   margin: 0 0 var(--space-5);
