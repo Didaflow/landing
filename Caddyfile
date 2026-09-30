@@ -17,7 +17,12 @@
 	}
 }
 
-didaflow.ai, www.didaflow.ai {
+www.didaflow.ai {
+	import security
+	redir https://didaflow.ai{uri} permanent
+}
+
+didaflow.ai {
 	import security
 	encode gzip zstd
 
