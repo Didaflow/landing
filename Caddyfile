@@ -38,6 +38,14 @@ didaflow.ai {
 	handle {
 		root * {$LANDING_ROOT}/landing
 		try_files {path} {path}/index.html
+
+		# Revalidate on every request (ETag from file_server); pages stay fresh after deploys.
+		@html path / /*/ *.html
+		header @html Cache-Control "no-cache"
+		# Static leaf files: short cache, like /_assets.
+		@static path *.js *.png *.pdf *.xml *.txt
+		header @static Cache-Control "public, max-age=300"
+
 		file_server
 	}
 }
