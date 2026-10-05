@@ -6,7 +6,8 @@ JavaScript — no framework, no build step, no dependencies.
 ```
 landing/          the pages: home, changelog, and the four legal pages
 landing/scripts/  main.js
-shared/design/    design tokens, content primitives, brand assets → served at /_assets/
+shared/design/    copy of Didaflow/didaflow-design at DESIGN_VERSION (scripts/design.sh) → served at /_assets/
+landing/assets/   site styles (css/site.css) and site-chrome.js
 scripts/dev.ts    static dev server (Bun), mirrors the production route map
 DESIGN.md         the design system
 ```

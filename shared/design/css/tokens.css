@@ -1,0 +1,368 @@
+/*
+ * Didaflow Design Tokens — solo variabili.
+ * Fonte unica per landing, labs (Studio) e servizi per i clienti (es. unibo).
+ * Nessun selettore di pagina qui: le primitive stanno in primitives.css, gli
+ * stili di ogni sito nel suo repository. I temi per cliente in tenants/.
+ *
+ * Origine: landing/shared/design/design-tokens.css (righe 39-279), estratto il
+ * 2026-10-05. Valori validati per contrasto WCAG 2.1 AA (tests/test_contrasto.py).
+ */
+
+:root {
+  /* ─── BRAND — CORAL (warm voice: action) ────────────────────── */
+  --brand-primary: 217 109 96;          /* rgb triplet */
+  --brand-primary-hex: #d96d60;         /* coral — the signature warmth */
+  --brand-strong: #b5504a;              /* hover / pressed */
+  --brand-tint: 246 230 227;            /* #f6e6e3 — coral wash */
+  --brand-tint-hex: #f6e6e3;
+
+  /* ─── BRAND — INK (cool voice: data + institution) ────────────────── */
+  --ink: #1f3a5f;                       /* inchiostro — institutional blue */
+  --ink-rgb: 31 58 95;
+  --ink-strong: #142844;                /* deeper, for hover/headings */
+  --ink-deep: #142844;
+  --ink-tint: #e6ecf3;                  /* soft blue wash */
+  --ink-tint-rgb: 230 236 243;
+  --ink-soft: rgba(31, 58, 95, 0.10);   /* translucent for chip backgrounds */
+  --institution: var(--ink);            /* semantic alias */
+  --data: var(--ink);                   /* semantic alias */
+
+  /* ─── SURFACE & FOREGROUND ────────────────────────────────── */
+  --bg: 252 250 247;                    /* #fcfaf7 — warm off-white */
+  --bg-secondary: 246 230 227;          /* coral wash */
+  --fg: 26 20 18;                       /* #1a1412 — warm near-black */
+  --fg-muted: 89 85 82;                 /* #595552 — warm grey */
+
+  --background: #fcfaf7;
+  --foreground: #1a1412;
+  --heading:    #1a1412;
+  --muted:      #595552;
+  --fg-subtle:  #77716d;
+  --surface:    #f4f1ed;
+  --border:     #e3e0dc;
+
+  /* ─── CARDS / CHROME ────────────────────────────────────── */
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.06);
+  --card-border-hover: rgba(0, 0, 0, 0.12);
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --hairline: rgba(26, 20, 18, 0.06);
+
+  /* ─── ACCENT ALIASES — coral remains the primary action color ───────── */
+  --accent: #d96d60;
+  --accent-hex: #d96d60;
+  --accent-strong: #b5504a;
+  --accent-hover: #b5504a;
+  --accent-light: #f6e6e3;
+  --accent-tint: rgba(217, 109, 96, 0.10);
+  --accent-rgb: 217 109 96;
+
+  /* ─── SEMAPHORE / SEMANTIC ────────────────────────────────── */
+  --semaphore-good:    #2d9a54;   /* warm-shifted green */
+  --semaphore-caution: #c07005;   /* amber */
+  --semaphore-alert:   #c93b3b;   /* warm red */
+  --semaphore-neutral: #94a3b8;   /* slate — unknown / idle */
+  --success: #2d9a54;
+  --warning: #c07005;
+  --danger:  #c93b3b;
+  --danger-strong:  #9e2e2e;      /* deeper for hover / pressed / badge text */
+  --warning-strong: #9a5a04;      /* dark amber — badge text on warning tint */
+  --success-strong: #1f7a40;      /* dark green — badge text on success tint */
+  --danger-tint:   rgba(201, 59, 59, 0.12);
+  --warning-tint:  rgba(192, 112, 5, 0.12);
+  --success-tint:  rgba(45, 154, 84, 0.12);
+
+  /* hero / decorative semaphore (slightly brighter, for charts) */
+  --chart-good:    #22c55e;
+  --chart-caution: #f59e0b;
+  --chart-alert:   #ef4444;
+  --chart-neutral: #94a3b8;
+
+  /* ─── ON-COLOR (text/icon over filled surfaces) ─────────────────── */
+  --on-accent: #ffffff;             /* on coral CTA */
+  --on-ink:    #ffffff;             /* on ink filled CTA */
+  --on-danger: #ffffff;             /* on danger CTA */
+
+  /* ─── STUDIO CANVAS (dashboard dotted surface) ──────────────────── */
+  --canvas:     #faf9f7;            /* slightly warmer than --background, for dotted canvas */
+  --canvas-dot: #ddd8d3;            /* dot pattern on canvas */
+
+  /* ─── DATA VIZ — single primary series (ink) + coral highlight ──────── */
+  --viz-primary:   var(--ink);          /* main line / bar series */
+  --viz-highlight: var(--accent);       /* annotation, current value, callout */
+  --viz-baseline:  rgba(31, 58, 95, 0.32);   /* secondary / historical */
+  --viz-grid:      rgba(26, 20, 18, 0.06);   /* hairline grid */
+
+  /* ─── TYPE FAMILIES ─────────────────────────────────────── */
+  --font-sans: Satoshi, ui-sans-serif, system-ui, -apple-system,
+               BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+               Arial, sans-serif;
+  --font-display: Satoshi, ui-sans-serif, system-ui, sans-serif;
+  /* Editorial / body voice. Swap to real Reckless when license arrives:
+     --font-serif: "Reckless Neue", Fraunces, Georgia, serif; */
+  --font-serif: Fraunces, "Reckless", Georgia, "Times New Roman", serif;
+  --font-editorial: var(--font-serif);  /* legacy alias */
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* ─── TYPE SCALE ────────────────────────────────────────── */
+  --display-1: clamp(2rem, 5vw, 3.25rem);   /* h1 default */
+  --display-2: clamp(1.4rem, 3vw, 1.75rem); /* h2 default */
+  --display-3: 1.15rem;                     /* h3 default */
+  --display-hero: clamp(2.5rem, 5.5vw, 4.25rem); /* hero h1 */
+
+  --text-xs:   0.75rem;   /* 12 */
+  --text-sm:   0.8125rem; /* 13 */
+  --text-base: 0.9375rem; /* 15 — chat / body in app */
+  --text-md:   1rem;      /* 16 */
+  --text-lg:   1.125rem;  /* 18 — landing body */
+  --text-xl:   1.5rem;    /* 24 */
+  --text-2xl:  1.875rem;  /* 30 */
+  --text-3xl:  2.25rem;   /* 36 */
+  --text-4xl:  3rem;      /* 48 */
+  --fs-body-sm: var(--text-sm);
+  --fs-h2: var(--display-2);
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --lh-snug: 1.15;
+
+  --tracking-tight: -0.025em;
+  --tracking-tighter: -0.03em;
+  --tracking-base: 0;
+  --tracking-wide: 0.06em;
+
+  /* ─── SPACING ─────────────────────────────────────────── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-7:  28px;
+  --space-8:  32px;
+  --space-9:  36px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* ─── RADII ───────────────────────────────────────────── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  24px;
+  --radius-pill: 9999px;
+
+  /* ─── SHADOWS — coral-tinted, warm ───────────────────────────── */
+  --shadow-sm:   0 1px 2px rgba(26, 20, 18, 0.05);
+  --shadow-md:   0 4px 12px rgba(26, 20, 18, 0.06);
+  --shadow-lg:   0 10px 25px -5px rgba(217, 109, 96, 0.25);
+  --shadow-xl:   0 20px 40px -10px rgba(217, 109, 96, 0.30);
+  --shadow-glow: 0 0 20px rgba(217, 109, 96, 0.20);
+  /* Ink-tinted shadows for institutional cards (charts, reports) */
+  --shadow-ink:  0 10px 25px -5px rgba(31, 58, 95, 0.18);
+
+  /* ─── EASING / TIMING ───────────────────────────────────── */
+  --ease-out:    cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 300ms;
+
+  /* ─── LAYOUT ──────────────────────────────────────────── */
+  --container-max:    1152px;
+  --container-narrow:  960px;
+  --container-wide:   1200px;
+  --header-h:           64px;
+  --header-h-app:       48px;
+
+  /* ─── Z-index scale ─────────────────────────────────────── */
+  --z-base: 1;
+  --z-sticky: 10;
+  --z-overlay: 100;
+  --z-modal: 1000;
+  --z-toast: 10000;
+}
+
+/* ─── BRAND PALETTE PRESET — INK ────────────────────────────────
+   Opt-in via data-palette="ink" on :root. The default (no preset) keeps
+   the coral brand (warm voice: action); the ink preset swaps the brand to
+   the institutional navy (--ink) for an executive, measured register.
+   Minimal change — only --brand-* tokens diverge; surfaces, spacing,
+   typography all stay shared. */
+
+:root[data-palette="ink"] {
+  --brand-primary: 31 58 95;            /* navy — institutional */
+  --brand-primary-hex: #1f3a5f;
+  --brand-strong: #142844;              /* hover / pressed */
+  --brand-tint: 230 236 243;            /* #e6ecf3 — navy wash */
+  --brand-tint-hex: #e6ecf3;
+}
+
+/* ─── PALETTE PRESETS ─────────────────────────────────────── */
+
+:root[data-palette="aurora"] {
+  --accent: #7a5cf0;
+  --accent-hex: #7a5cf0;
+  --accent-strong: #5d3fd0;
+  --accent-hover: #5d3fd0;
+  --accent-light: #e8e2fc;
+  --accent-tint: rgba(122, 92, 240, 0.10);
+  --accent-rgb: 122 92 240;
+  --shadow-lg: 0 10px 25px -5px rgba(122, 92, 240, 0.25);
+  --shadow-xl: 0 20px 40px -10px rgba(122, 92, 240, 0.30);
+  --shadow-glow: 0 0 20px rgba(122, 92, 240, 0.20);
+}
+
+:root[data-palette="forest"] {
+  --accent: #2d9a54;
+  --accent-hex: #2d9a54;
+  --accent-strong: #1f7a40;
+  --accent-hover: #1f7a40;
+  --accent-light: #dcefe2;
+  --accent-tint: rgba(45, 154, 84, 0.10);
+  --accent-rgb: 45 154 84;
+  --shadow-lg: 0 10px 25px -5px rgba(45, 154, 84, 0.25);
+  --shadow-xl: 0 20px 40px -10px rgba(45, 154, 84, 0.30);
+  --shadow-glow: 0 0 20px rgba(45, 154, 84, 0.20);
+}
+
+/* ─── VIBE PRESETS ──────────────────────────────────────────
+   Editorial: serif headlines AS WELL (research-journal feel).
+   Energetic: tighter tracking + faster transitions.
+   ────────────────────────────────────────────────────── */
+
+:root[data-vibe="editorial"] {
+  --font-display: var(--font-serif);
+  --duration-base: 320ms;
+  --duration-slow: 500ms;
+}
+
+:root[data-vibe="energetic"] {
+  --tracking-tight: -0.045em;
+  --tracking-tighter: -0.05em;
+  --duration-fast: 100ms;
+  --duration-base: 150ms;
+  --duration-slow: 220ms;
+}
+
+/* ─── BASE ───────────────────────────────────────────────── */
+
+
+
+/* ─── Tema scuro (opt-in) ───────────────────────────────────────
+   data-theme="dark" lo forza, data-theme="auto" segue il sistema. Senza
+   data-theme resta il tema chiaro: chi aggiorna versione non lo trova
+   attivato a sorpresa. Ink e corallo schiariti per reggere 4,5:1 sul fondo
+   scuro; sopra i bottoni il testo diventa scuro (--on-accent). */
+:root[data-theme="dark"] {
+  --bg: 20 20 22;
+  --bg-secondary: 46 30 28;
+  --fg: 236 236 238;
+  --fg-muted: 163 163 171;
+  --background: #141416;
+  --foreground: #ececee;
+  --heading: #f2f2f4;
+  --muted: #a3a3ab;
+  --fg-subtle: #8f8f97;
+  --surface: #1d1d20;
+  --border: #2f2f34;
+  --card-bg: #1b1b1e;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-border-hover: rgba(255, 255, 255, 0.16);
+  --header-bg: rgba(20, 20, 22, 0.9);
+  --hairline: rgba(255, 255, 255, 0.08);
+  --ink: #8fb3e0;
+  --ink-rgb: 143 179 224;
+  --ink-strong: #b5cdee;
+  --ink-deep: #d6e3f5;
+  --ink-tint: #22324a;
+  --ink-tint-rgb: 34 50 74;
+  --ink-soft: rgba(143, 179, 224, 0.14);
+  --brand-primary: 232 135 123;
+  --brand-primary-hex: #e8877b;
+  --brand-strong: #f0a297;
+  --brand-tint: 58 37 34;
+  --brand-tint-hex: #3a2522;
+  --accent: #e8877b;
+  --accent-hex: #e8877b;
+  --accent-strong: #f0a297;
+  --accent-hover: #f0a297;
+  --accent-light: #3a2522;
+  --accent-tint: rgba(232, 135, 123, 0.14);
+  --accent-rgb: 232 135 123;
+  --semaphore-good: #4cc47a;
+  --semaphore-caution: #e0a040;
+  --semaphore-alert: #ef6b6b;
+  --semaphore-neutral: #8a94a6;
+  --success: #4cc47a;
+  --warning: #e0a040;
+  --danger: #ef6b6b;
+  --success-strong: #7ad79c;
+  --warning-strong: #f0c07a;
+  --danger-strong: #f59a9a;
+  --on-accent: #141416;
+  --on-ink: #141416;
+  --on-danger: #141416;
+  --canvas: #121214;
+  --canvas-dot: #2a2a2e;
+  --viz-baseline: rgba(143, 179, 224, 0.4);
+  --viz-grid: rgba(255, 255, 255, 0.08);
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    --bg: 20 20 22;
+    --bg-secondary: 46 30 28;
+    --fg: 236 236 238;
+    --fg-muted: 163 163 171;
+    --background: #141416;
+    --foreground: #ececee;
+    --heading: #f2f2f4;
+    --muted: #a3a3ab;
+    --fg-subtle: #8f8f97;
+    --surface: #1d1d20;
+    --border: #2f2f34;
+    --card-bg: #1b1b1e;
+    --card-border: rgba(255, 255, 255, 0.08);
+    --card-border-hover: rgba(255, 255, 255, 0.16);
+    --header-bg: rgba(20, 20, 22, 0.9);
+    --hairline: rgba(255, 255, 255, 0.08);
+    --ink: #8fb3e0;
+    --ink-rgb: 143 179 224;
+    --ink-strong: #b5cdee;
+    --ink-deep: #d6e3f5;
+    --ink-tint: #22324a;
+    --ink-tint-rgb: 34 50 74;
+    --ink-soft: rgba(143, 179, 224, 0.14);
+    --brand-primary: 232 135 123;
+    --brand-primary-hex: #e8877b;
+    --brand-strong: #f0a297;
+    --brand-tint: 58 37 34;
+    --brand-tint-hex: #3a2522;
+    --accent: #e8877b;
+    --accent-hex: #e8877b;
+    --accent-strong: #f0a297;
+    --accent-hover: #f0a297;
+    --accent-light: #3a2522;
+    --accent-tint: rgba(232, 135, 123, 0.14);
+    --accent-rgb: 232 135 123;
+    --semaphore-good: #4cc47a;
+    --semaphore-caution: #e0a040;
+    --semaphore-alert: #ef6b6b;
+    --semaphore-neutral: #8a94a6;
+    --success: #4cc47a;
+    --warning: #e0a040;
+    --danger: #ef6b6b;
+    --success-strong: #7ad79c;
+    --warning-strong: #f0c07a;
+    --danger-strong: #f59a9a;
+    --on-accent: #141416;
+    --on-ink: #141416;
+    --on-danger: #141416;
+    --canvas: #121214;
+    --canvas-dot: #2a2a2e;
+    --viz-baseline: rgba(143, 179, 224, 0.4);
+    --viz-grid: rgba(255, 255, 255, 0.08);
+  }
+}
