@@ -39,7 +39,8 @@
     const mobileNav = header.querySelector(".mobile-nav");
     header.setAttribute("data-menu-open", String(open));
     toggle.setAttribute("aria-expanded", String(open));
-    toggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+    const it = document.documentElement.lang === "it";
+    toggle.setAttribute("aria-label", open ? (it ? "Chiudi il menu" : "Close navigation menu") : (it ? "Apri il menu" : "Open navigation menu"));
     document.body.style.overflow = open ? "hidden" : "";
 
     if (mobileNav) {
