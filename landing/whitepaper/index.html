@@ -30,6 +30,8 @@
   <link rel="stylesheet" href="/_assets/css/tokens.css" />
   <link rel="stylesheet" href="/_assets/css/primitives.css" />
   <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/editorial.css" />
+  <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
 
   <script type="application/ld+json">
   {
@@ -47,31 +49,33 @@
 
   <title>Machine in the Loop · didaflow</title>
 </head>
-<body data-surface="paper">
+<body class="page-editorial">
   <a href="#main" class="skip-link">Skip to content</a>
-  <div class="bg-orbs" aria-hidden="true"></div>
-  <div class="mouse-glow" data-mouse-glow aria-hidden="true"></div>
 
   <script src="/assets/js/site-chrome.js"></script>
   <script>document.currentScript.insertAdjacentHTML("beforebegin", DidaflowChrome.header());</script>
 
-  <main id="main" class="df-doc df-doc--paper">
-    <div class="container">
-      <p class="eyebrow df-doc-eyebrow">The Didaflow white paper</p>
-      <h1>Machine in the Loop</h1>
-      <p class="df-doc-strapline">Returning knowledge and decisions to the people who own them</p>
+  <main id="main">
+    <div class="document-header wrap">
+      <p class="ed-eyebrow">The Didaflow white paper</p>
+      <h1>Machine<br><em>in the Loop</em></h1>
+      <p class="lead">Returning knowledge and decisions to the people who own them</p>
+      <p class="reading-tag">Website edition · Institutional references anonymised</p>
+    </div>
 
-      <nav class="df-doc-nav df-doc-nav--cols-4" aria-label="Sections">
-        <a href="#where-this-comes-from">1. Where this comes from</a>
-        <a href="#the-educational-ai-divide">2. The Educational AI Divide</a>
-        <a href="#three-ways-it-fails">3. Three ways it fails</a>
-        <a href="#the-response-machine-in-the-loop">4. The response: Machine in the Loop</a>
-        <a href="#where-it-was-forged">5. Where it was forged</a>
-        <a href="#what-we-believe">6. What we believe</a>
-        <a href="#towards-learning-institutions">7. Towards learning institutions</a>
-        <a href="#work-with-us">8. Work with us</a>
+    <div class="document-body wrap">
+      <nav class="document-nav" aria-label="White paper chapters">
+        <a href="#where-this-comes-from">Where this comes from</a>
+        <a href="#the-educational-ai-divide">The Educational AI Divide</a>
+        <a href="#three-ways-it-fails">Three ways it fails</a>
+        <a href="#the-response-machine-in-the-loop">The response: Machine in the Loop</a>
+        <a href="#where-it-was-forged">Where it was forged</a>
+        <a href="#what-we-believe">What we believe</a>
+        <a href="#towards-learning-institutions">Towards learning institutions</a>
+        <a href="#work-with-us">Work with us</a>
       </nav>
 
+      <div class="document-content">
       <section id="where-this-comes-from">
         <h2>Where this comes from</h2>
         <p><strong>Didaflow builds decision-support systems for education that put human expertise — not algorithms — at the centre of knowledge and decisions.</strong></p>
@@ -92,13 +96,13 @@
         <h2>Three ways it fails</h2>
         <p>The divide produces three uncertainties that feed one another.</p>
 
-        <h3>I. Technological uncertainty — <em>How does it work?</em></h3>
+        <h3>Technological uncertainty — <em>How does it work?</em></h3>
         <p>Modern educational AI is opaque by construction. Predictions arrive without mechanisms; explanations, when offered, are computed after the fact by systems no more inspectable than the ones they explain. An educator cannot contest what they cannot see. <strong>A recommendation you cannot interrogate is not advice — it is an instruction.</strong></p>
 
-        <h3>II. Socio-technical uncertainty — <em>Cui bono?</em></h3>
+        <h3>Socio-technical uncertainty — <em>Cui bono?</em></h3>
         <p>Behind every educational technology stands a network of actors — vendors, platforms, incentive structures — whose interests are built into the tool and travel with it into the classroom, invisibly. Opacity shields those interests; those interests, in turn, select for opaque systems that scale. The loop closes on itself. <strong>Black boxes are not only hard to read. They are convenient not to open.</strong></p>
 
-        <h3>III. Educational uncertainty — <em>At what cost?</em></h3>
+        <h3>Educational uncertainty — <em>At what cost?</em></h3>
         <p>We measure what these systems do for grades and completion rates. We barely ask what they do to learners — to their capacity for judgement, their ownership of their own learning, their autonomy. When an apparently neutral tool quietly takes over the work of evaluating knowledge, the student gains an output and loses a faculty. And because our metrics only see the output, <strong>the benchmark improves while the learner erodes.</strong></p>
 
         <p>These three uncertainties are not separate problems awaiting separate fixes. Opacity hides interests; interests define what counts as success; eroded judgement loses the very capacity to contest either. <strong>The system does not self-correct. It deepens.</strong> That is why educational AI keeps disappointing the institutions that adopt it — and why the answer cannot be a better dashboard.</p>
@@ -109,15 +113,21 @@
         <p>For a decade, the field's answer to these worries has been to keep a <em>human in the loop</em> — a person supervising an automated pipeline, approving what the machine proposes. We think this gets the geometry backwards.</p>
         <p><strong>Machine in the Loop (MITL) puts the machine inside the human loop.</strong> Educators, coordinators, and institutional leaders remain the authors of hypotheses, the owners of goals, the makers of decisions. The machine enters their process to do what machines do well: formalise the hypotheses experts state, simulate their consequences before anyone acts, confront them with evidence, and keep every assumption visible and revisable.</p>
         <p>Three principles govern every system we build:</p>
-        <p><strong>Epistemic precedence.</strong> Hypotheses come from people who understand the domain — teachers, programme coordinators, the research literature — <em>before</em> any data is touched. Data refine expert knowledge; they never replace it. The machine proposes nothing it was not asked; it never invents a number and never decides a causal claim.</p>
-        <p><strong>Causal transparency.</strong> Every assumption is written down. Every effect estimate carries its source — a cited study, an institution's own historical data, a declared expert judgement — and its uncertainty. Anyone affected by a decision can trace the reasoning behind it to its origins. Where our own systems use opaque components, they are caged: constrained by explicit protocols, barred from making judgements, and named as limitations rather than hidden as features.</p>
-        <p><strong>Intervention orientation.</strong> Education does not ask "who will fail?" — it asks "what should we change?" Our systems answer the second question: they estimate what happens <em>if</em> the institution acts — if it introduces tutoring, redesigns a course, reorganises support — so that decisions can be compared, simulated, and evaluated before and after they are made. Prediction ranks people. Intervention changes conditions. We build for the latter.</p>
+        <h3 class="principle-heading">Epistemic precedence</h3>
+        <p>Hypotheses come from people who understand the domain — teachers, programme coordinators, the research literature — <em>before</em> any data is touched. Data refine expert knowledge; they never replace it. The machine proposes nothing it was not asked; it never invents a number and never decides a causal claim.</p>
+        <h3 class="principle-heading">Causal transparency</h3>
+        <p>Every assumption is written down. Every effect estimate carries its source — a cited study, an institution's own historical data, a declared expert judgement — and its uncertainty. Anyone affected by a decision can trace the reasoning behind it to its origins. Where our own systems use opaque components, they are caged: constrained by explicit protocols, barred from making judgements, and named as limitations rather than hidden as features.</p>
+        <h3 class="principle-heading">Intervention orientation</h3>
+        <p>Education does not ask "who will fail?" — it asks "what should we change?" Our systems answer the second question: they estimate what happens <em>if</em> the institution acts — if it introduces tutoring, redesigns a course, reorganises support — so that decisions can be compared, simulated, and evaluated before and after they are made. Prediction ranks people. Intervention changes conditions. We build for the latter.</p>
         <p>Each principle cuts one strand of the loop that holds the divide open: transparency removes the shield, epistemic precedence restores the authority to contest, intervention orientation takes back the definition of what counts as success. <strong>This is why it is one methodology and not three features: the failures are a system, and only a system-level response holds.</strong></p>
+        <details class="technical-detail"><summary data-model-text="summary">Open a technical example of the causal model</summary>
+          <figure><div class="causal-diagram" data-causal-model><svg class="causal-svg causal-desktop" viewBox="0 0 800 420" role="img" data-model-label="diagram" aria-label="Educational causal model: context, guidance intervention, satisfaction, motivation, performance and study progression"><defs><marker id="paper-model-desktop-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f3a5f"/></marker><marker id="paper-model-desktop-context" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#939ba5"/></marker></defs><path class="model-edge model-context-edge" d="M300 45C195 45 115 125 115 224" marker-end="url(#paper-model-desktop-context)"/><path class="model-edge model-context-edge" d="M400 85L400 129" marker-end="url(#paper-model-desktop-context)"/><path class="model-edge model-context-edge" d="M500 45C605 45 685 125 685 224" marker-end="url(#paper-model-desktop-context)"/><path class="model-edge" d="M220 265C265 265 265 170 299 170" marker-end="url(#paper-model-desktop-arrow)"/><path class="model-edge" d="M220 265H299" marker-end="url(#paper-model-desktop-arrow)"/><path class="model-edge" d="M220 265C265 265 265 360 299 360" marker-end="url(#paper-model-desktop-arrow)"/><path class="model-edge" d="M500 170C548 170 546 245 579 245" marker-end="url(#paper-model-desktop-arrow)"/><path class="model-edge" d="M500 265H579" marker-end="url(#paper-model-desktop-arrow)"/><path class="model-edge" d="M500 360C548 360 546 285 579 285" marker-end="url(#paper-model-desktop-arrow)"/><g class="model-context"><rect x="300" y="5" width="200" height="80" rx="5"/><text x="400.0" y="41.0" data-model-text="context">Context C</text><text x="400.0" y="65.0" data-model-text="isee" class="model-subtitle">ISEE</text></g><g class="model-intervention"><rect x="10" y="225" width="210" height="80" rx="5"/><text x="115.0" y="261.0" data-model-text="intervention">Intervention I</text><text x="115.0" y="285.0" data-model-text="guidance" class="model-subtitle">Guidance during studies</text></g><g class="model-mediator"><rect x="300" y="130" width="200" height="80" rx="5"/><text x="400.0" y="176.0" data-model-text="satisfaction">Satisfaction</text></g><g class="model-mediator"><rect x="300" y="225" width="200" height="80" rx="5"/><text x="400.0" y="271.0" data-model-text="motivation">Motivation</text></g><g class="model-mediator"><rect x="300" y="320" width="200" height="80" rx="5"/><text x="400.0" y="366.0" data-model-text="performance">Performance</text></g><g class="model-outcome"><rect x="580" y="225" width="210" height="80" rx="5"/><text x="685.0" y="261.0" data-model-text="outcome">Outcome Y</text><text x="685.0" y="285.0" data-model-text="progression" class="model-subtitle">On-time progression</text></g></svg><svg class="causal-svg causal-mobile" viewBox="0 0 320 620" role="img" data-model-label="diagram" aria-label="Educational causal model: context, guidance intervention, satisfaction, motivation, performance and study progression"><defs><marker id="paper-model-mobile-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f3a5f"/></marker><marker id="paper-model-mobile-context" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#939ba5"/></marker></defs><path class="model-edge model-context-edge" d="M150 82L150 109" marker-end="url(#paper-model-mobile-context)"/><path class="model-edge model-context-edge" d="M70 49H54V250H69" marker-end="url(#paper-model-mobile-context)"/><path class="model-edge model-context-edge" d="M230 49H292V564H231" marker-end="url(#paper-model-mobile-context)"/><path class="model-edge" d="M230 146H250V250H231" marker-end="url(#paper-model-mobile-arrow)"/><path class="model-edge" d="M230 146H265V343H231" marker-end="url(#paper-model-mobile-arrow)"/><path class="model-edge" d="M230 146H280V436H231" marker-end="url(#paper-model-mobile-arrow)"/><path class="model-edge" d="M70 250H38V563H69" marker-end="url(#paper-model-mobile-arrow)"/><path class="model-edge" d="M70 343H24V580H69" marker-end="url(#paper-model-mobile-arrow)"/><path class="model-edge" d="M70 436H10V596H69" marker-end="url(#paper-model-mobile-arrow)"/><g class="model-context"><rect x="70" y="16" width="160" height="66" rx="5"/><text x="150.0" y="45.0" data-model-text="context">Context C</text><text x="150.0" y="69.0" data-model-text="isee" class="model-subtitle">ISEE</text></g><g class="model-intervention"><rect x="70" y="110" width="160" height="72" rx="5"/><text x="150.0" y="142.0" data-model-text="intervention">Intervention I</text><text x="150.0" y="166.0" data-model-text="guidance" class="model-subtitle">Guidance during studies</text></g><g class="model-mediator"><rect x="70" y="217" width="160" height="66" rx="5"/><text x="150.0" y="256.0" data-model-text="satisfaction">Satisfaction</text></g><g class="model-mediator"><rect x="70" y="310" width="160" height="66" rx="5"/><text x="150.0" y="349.0" data-model-text="motivation">Motivation</text></g><g class="model-mediator"><rect x="70" y="403" width="160" height="66" rx="5"/><text x="150.0" y="442.0" data-model-text="performance">Performance</text></g><g class="model-outcome"><rect x="70" y="536" width="160" height="72" rx="5"/><text x="150.0" y="568.0" data-model-text="outcome">Outcome Y</text><text x="150.0" y="592.0" data-model-text="progression" class="model-subtitle">On-time progression</text></g></svg></div><figcaption data-model-text="caption">Technical example supplied by Didaflow. Arrows represent proposed causal relationships, not effect estimates. The model is co-built with domain experts and educational scientists.</figcaption></figure>
+        </details>
       </section>
 
       <section id="where-it-was-forged">
         <h2>Where it was forged</h2>
-        <p>MITL was not designed on a whiteboard. It grew out of doctoral research at the National PhD in Artificial Intelligence and years of work inside the University of Bologna — one of Europe's largest universities, and the oldest in the world.</p>
+        <p>MITL was not designed on a whiteboard. It grew out of doctoral research at the National PhD in Artificial Intelligence and years of work inside a public university.</p>
         <p>The turning point was failure. Our group had spent years building dropout prediction models that worked: accurate, early, state of the art. And they changed almost nothing. Knowing <em>who</em> was likely to leave gave the institution no lever on <em>why</em> — and targeting individuals with risk scores raised harms of its own: labels that stick, prophecies that fulfil themselves, responsibility quietly shifted onto the very students the system was meant to help.</p>
         <p>So we inverted the question. Students do not simply abandon universities; universities, through a thousand structural conditions, abandon students first. The object of analysis moved from the student to the system — from <em>predicting the person</em> to <em>understanding and changing the conditions</em>. That inversion demanded new machinery: explicit causal models authored with the institution's own experts, effect estimates grounded in evidence and local history, simulation before action, evaluation after it — and a discipline in which every step of that reasoning stays open to challenge.</p>
         <p>That machinery is now software. Our platform walks educators and decision-makers through a structured scientific protocol — from a vague question to an explicit hypothesis, from hypothesis to simulated intervention, from simulation to evidence and back. It refuses shortcuts by design: it will not skip the step where a human thinks, it will not produce a number it cannot trace, and when local evidence disagrees with the literature, it does not silently pick a side — it puts the choice in front of the expert, where it belongs. Developed with and tested inside a real university on real institutional questions, it is the working proof that the methodology is not a manifesto. It runs.</p>
@@ -149,6 +159,7 @@
         <p><strong>If you build technology for education</strong>: the divide we described is a choice, and it can be unchosen. We are glad to compare notes with anyone building on the same side of it.</p>
         <p><em>Didaflow — Bologna, Italy.</em></p>
       </section>
+      </div>
     </div>
   </main>
 
