@@ -11,30 +11,52 @@
   var LANG = document.documentElement.lang === "it" ? "it" : "en";
   var HOME = LANG === "it" ? "/it/" : "/";
 
-  // Only the home page is translated; legal pages, changelog and white paper stay in English.
+  // Only the home page is translated; methodology, legal pages, changelog and white paper stay in English.
   var T = {
     en: {
-      about: "About", outcomes: "Outcomes", how: "How it works", whitepaper: "White paper",
-      contact: "Get in touch", menu: "Open menu", home: "didaflow home",
-      tagline: "Academic intelligence powered by AI to support institutional decision making in education.",
-      resources: "Resources", methodology: "Methodology", anvur: "ANVUR mapping", cases: "Case studies",
-      changelog: "Changelog", company: "Company", team: "Research team", careers: "Careers", contactLink: "Contact",
+      platform: "Platform", practice: "In practice", thinking: "Our thinking", people: "People", whitepaper: "White paper",
+      demo: "Book a demo", menu: "Open menu", home: "didaflow home",
+      tagline: "Educational Intelligence. Bologna, Italy.",
+      resources: "Resources", methodology: "Methodology", cases: "Case studies", credits: "Artwork & credits",
+      changelog: "Changelog", company: "Company", team: "Team", careers: "Careers", contactLink: "Contact",
       legal: "Legal", privacy: "Privacy policy", cookies: "Cookie policy", terms: "Terms of service",
-      made: "made with", by: "by"
+      made: "made with", by: "by",
+      dialog: {
+        close: "Close demo request", eyebrow: "Let’s explore your question", title: "Meet <em>Didaflow</em>",
+        intro: "Tell us a little about your institution and the decision on your mind.",
+        institution: "Your institution", institutionHint: "University or business school",
+        role: "Your role", roles: ["Educator", "Programme coordinator", "Institutional leader", "Student support", "Other"],
+        question: "What would you like to explore?", questionHint: "A decision, a challenge, a possibility…",
+        submit: "Continue by email",
+        note: "Opens your email app with a prepared request. Your demo is confirmed when we reply. You can also write to",
+        subject: "Didaflow demo", greeting: "Hello Didaflow,\n\nI would like to explore a demo.",
+        signoff: "Best regards", myQuestion: "My question", institutionField: "Institution", roleField: "Role"
+      }
     },
     it: {
-      about: "Chi siamo", outcomes: "Risultati", how: "Come funziona", whitepaper: "White paper",
-      contact: "Contattaci", menu: "Apri il menu", home: "didaflow, home",
-      tagline: "Intelligenza accademica basata su AI a supporto delle decisioni istituzionali nella formazione.",
-      resources: "Risorse", methodology: "Metodologia", anvur: "Mappatura ANVUR", cases: "Casi studio",
-      changelog: "Changelog", company: "Azienda", team: "Team di ricerca", careers: "Lavora con noi", contactLink: "Contatti",
+      platform: "Piattaforma", practice: "In pratica", thinking: "Il nostro approccio", people: "Persone", whitepaper: "White paper",
+      demo: "Prenota una demo", menu: "Apri il menu", home: "didaflow, home",
+      tagline: "Educational Intelligence. Bologna, Italia.",
+      resources: "Risorse", methodology: "Metodologia", cases: "Casi studio", credits: "Opera e crediti",
+      changelog: "Changelog", company: "Azienda", team: "Team", careers: "Lavora con noi", contactLink: "Contatti",
       legal: "Note legali", privacy: "Privacy policy", cookies: "Cookie policy", terms: "Termini di servizio",
-      made: "fatto con", by: "da"
+      made: "fatto con", by: "da",
+      dialog: {
+        close: "Chiudi la richiesta di demo", eyebrow: "Esploriamo la tua domanda", title: "Scopri <em>Didaflow</em>",
+        intro: "Raccontaci qualcosa della tua istituzione e della decisione che hai in mente.",
+        institution: "La tua istituzione", institutionHint: "Università o business school",
+        role: "Il tuo ruolo", roles: ["Docente", "Coordinatore di corso di studio", "Vertice istituzionale", "Supporto agli studenti", "Altro"],
+        question: "Cosa vorresti esplorare?", questionHint: "Una decisione, una sfida, una possibilità…",
+        submit: "Continua via email",
+        note: "Apre la tua app di posta con una richiesta già compilata. La demo è confermata quando ti rispondiamo. Puoi anche scrivere a",
+        subject: "Demo Didaflow", greeting: "Buongiorno,\n\nvorrei esplorare una demo di Didaflow.",
+        signoff: "Cordiali saluti", myQuestion: "La mia domanda", institutionField: "Istituzione", roleField: "Ruolo"
+      }
     }
   }[LANG];
 
   function href(id) {
-    return (location.pathname === HOME ? "#" : HOME) + id;
+    return (location.pathname === HOME ? "" : HOME) + "#" + id;
   }
 
   // Link to the other language version, taken from the page's own hreflang alternates.
@@ -54,14 +76,14 @@
         <span class="brand__name">dida<em>flow</em></span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="${href("about")}">${T.about}</a>
-        <a href="${href("outcomes")}">${T.outcomes}</a>
-        <a href="${href("how")}">${T.how}</a>
-        <a href="/whitepaper/">${T.whitepaper}</a>
+        <a href="${href("platform")}">${T.platform}</a>
+        <a href="${href("practice")}">${T.practice}</a>
+        <a href="/methodology/">${T.thinking}</a>
+        <a href="${href("team")}">${T.people}</a>
         ${langSwitch()}
       </nav>
       <div class="site-header__cta">
-        <a class="btn btn--primary btn--sm" href="${href("contact")}">${T.contact}</a>
+        <a class="btn btn--primary btn--sm" href="${href("contact")}" data-demo>${T.demo}</a>
       </div>
       <button class="menu-toggle" type="button" data-menu-toggle aria-label="${T.menu}" aria-controls="mobile-nav" aria-expanded="false">
         <svg class="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
@@ -69,12 +91,12 @@
       </button>
     </div>
     <nav class="container mobile-nav" id="mobile-nav" aria-label="Mobile" role="navigation" aria-modal="false">
-      <a href="${href("about")}">${T.about}</a>
-      <a href="${href("outcomes")}">${T.outcomes}</a>
-      <a href="${href("how")}">${T.how}</a>
-      <a href="/whitepaper/">${T.whitepaper}</a>
+      <a href="${href("platform")}">${T.platform}</a>
+      <a href="${href("practice")}">${T.practice}</a>
+      <a href="/methodology/">${T.thinking}</a>
+      <a href="${href("team")}">${T.people}</a>
       ${langSwitch()}
-      <a class="btn btn--primary" href="${href("contact")}">${T.contact}</a>
+      <a class="btn btn--primary" href="${href("contact")}" data-demo>${T.demo}</a>
     </nav>
   </header>`;
   }
@@ -103,17 +125,17 @@
             <div class="site-footer__col-title">${T.resources}</div>
             <ul>
               <li><a href="/whitepaper/">${T.whitepaper}</a></li>
-              <li><a href="${href("how")}">${T.methodology}</a></li>
-              <li><a href="${href("outcomes")}">${T.anvur}</a></li>
-              <li><a href="${href("about")}">${T.cases}</a></li>
+              <li><a href="/methodology/">${T.methodology}</a></li>
+              <li><a href="${href("practice")}">${T.cases}</a></li>
               <li><a href="/changelog/">${T.changelog}</a></li>
+              <li><a href="/credits/">${T.credits}</a></li>
             </ul>
           </div>
           <div>
             <div class="site-footer__col-title">${T.company}</div>
             <ul>
-              <li><a href="${href("about")}">${T.about}</a></li>
-              <li><a href="${href("about")}">${T.team}</a></li>
+              <li><a href="${href("platform")}">${T.platform}</a></li>
+              <li><a href="${href("team")}">${T.team}</a></li>
               <li><a href="mailto:hello@didaflow.ai">${T.careers}</a></li>
               <li><a href="${href("contact")}">${T.contactLink}</a></li>
             </ul>
@@ -146,7 +168,27 @@
         </span>
       </div>
     </div>
-  </footer>`;
+  </footer>
+  ${demoDialog()}`;
+  }
+
+  // Demo request: prepares an email to hello@didaflow.ai (scripts/main.js opens it from any [data-demo]).
+  // Nothing is sent or booked automatically.
+  function demoDialog() {
+    var D = T.dialog;
+    return `<dialog class="demo-dialog" id="demo-dialog" aria-labelledby="demo-title" data-subject="${D.subject}" data-greeting="${D.greeting}" data-signoff="${D.signoff}" data-question-label="${D.myQuestion}" data-institution-label="${D.institutionField}" data-role-label="${D.roleField}">
+    <button class="demo-dialog__close" type="button" aria-label="${D.close}">×</button>
+    <p class="eyebrow">${D.eyebrow}</p>
+    <h2 id="demo-title">${D.title}</h2>
+    <p>${D.intro}</p>
+    <form id="demo-form">
+      <label>${D.institution}<input name="institution" autocomplete="organization" required placeholder="${D.institutionHint}" /></label>
+      <label>${D.role}<select name="role">${D.roles.map((r) => `<option>${r}</option>`).join("")}</select></label>
+      <label>${D.question}<textarea name="question" rows="3" required placeholder="${D.questionHint}"></textarea></label>
+      <button class="btn btn--primary btn--md" type="submit">${D.submit} <span aria-hidden="true">↗</span></button>
+      <p class="demo-dialog__note">${D.note} <a href="mailto:hello@didaflow.ai">hello@didaflow.ai</a>.</p>
+    </form>
+  </dialog>`;
   }
 
   window.DidaflowChrome = { header, footer };

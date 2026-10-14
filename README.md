@@ -4,10 +4,11 @@ The [didaflow.ai](https://didaflow.ai) marketing site. Vanilla HTML, CSS and
 JavaScript — no framework, no build step, no dependencies.
 
 ```
-landing/          the pages: home, changelog, and the four legal pages
+landing/          the pages: home (en, /it/), methodology, white paper, credits, changelog, and the four legal pages
 landing/scripts/  main.js
 shared/design/    copy of Didaflow/didaflow-design at DESIGN_VERSION (scripts/design.sh) → served at /_assets/
-landing/assets/   site styles (css/site.css) and site-chrome.js
+landing/assets/   site styles (css/site.css, css/editorial.css), site-chrome.js, Inter webfont,
+                  Bruegel figures (bruegel/, see its README) and team portraits
 scripts/dev.ts    static dev server (Bun), mirrors the production route map
 DESIGN.md         the design system
 ```

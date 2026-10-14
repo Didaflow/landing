@@ -914,6 +914,56 @@ body[data-surface="grid"]::before {
   color: var(--muted);
 }
 
+/* ─── Demo dialog (site-chrome.js) ─────────────────────────────
+   Prepares an email; nothing is sent or booked automatically. */
+.demo-dialog {
+  width: min(560px, calc(100% - 32px));
+  max-height: calc(100% - 40px);
+  padding: var(--space-10);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--background);
+  color: var(--foreground);
+}
+.demo-dialog::backdrop { background: rgba(20, 40, 68, 0.55); backdrop-filter: blur(4px); }
+.demo-dialog h2 {
+  font-size: clamp(2.5rem, 7vw, 3.25rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin: var(--space-4) 0;
+}
+.demo-dialog h2 em { font-style: normal; color: var(--accent-strong); }
+.demo-dialog > p:not(.eyebrow) { margin: 0; font-size: var(--text-sm); color: var(--muted); }
+.demo-dialog .eyebrow { margin: 0; padding-right: 44px; color: var(--accent-strong); }
+.demo-dialog__close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-4);
+  width: 44px;
+  height: 44px;
+  font-size: 28px;
+  line-height: 1;
+}
+.demo-dialog form { display: grid; gap: var(--space-4); margin-top: var(--space-6); }
+.demo-dialog label { display: grid; gap: 6px; font-size: var(--text-sm); }
+.demo-dialog input,
+.demo-dialog select,
+.demo-dialog textarea {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  font: inherit;
+  font-size: 16px; /* no zoom on iOS focus */
+  resize: vertical;
+}
+.demo-dialog button[type="submit"] { justify-self: start; gap: var(--space-6); }
+.demo-dialog__note { margin: 0; font-size: var(--text-xs); line-height: 1.7; color: var(--muted); }
+.demo-dialog__note a { text-decoration: underline; }
+@media (max-width: 600px) { .demo-dialog { padding: var(--space-8) var(--space-5); } }
+
 /* ─── Pagine documento (privacy, termini, whitepaper): ex content-primitives.css ─── */
 /*
  * Didaflow content primitives.
