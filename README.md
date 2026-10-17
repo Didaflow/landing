@@ -8,7 +8,7 @@ landing/          the pages: home (en, /it/), methodology, white paper, credits,
 landing/scripts/  main.js
 shared/design/    copy of Didaflow/didaflow-design at DESIGN_VERSION (scripts/design.sh) → served at /_assets/
 landing/assets/   site styles (css/site.css, css/editorial.css), site-chrome.js, Inter webfont,
-                  Bruegel figures (bruegel/, see its README) and team portraits
+                  Bruegel figures (bruegel/, see its README)
 scripts/dev.ts    static dev server (Bun), mirrors the production route map
 DESIGN.md         the design system
 ```
