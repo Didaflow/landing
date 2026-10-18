@@ -893,7 +893,13 @@ body[data-surface="grid"]::before {
   gap: 6px;
 }
 .site-footer__lockup-text .made svg { width: 11px; height: 10px; }
-.site-footer__lockup-text .word { margin-top: 3px; font-family: var(--font-sans); font-size: 1.25rem; font-weight: 700; letter-spacing: var(--tracking-tighter); color: var(--foreground); }
+.site-footer__lockup-text .word { font-size: var(--text-md); font-weight: 700; letter-spacing: -0.03em; margin-top: 3px; }
+.site-footer__lockup-text .word .flowers {
+  font-family: var(--font-serif);
+  color: var(--accent);
+  font-style: italic;
+  font-weight: 600;
+}
 
 .site-footer__bottom {
   display: flex;

@@ -150,8 +150,8 @@
       </div>
       <div class="site-footer__bottom">
         <span>Didaflow Srl · VAT 04337201208 · Bologna, Italy · &copy; 2026</span>
-        <span class="site-footer__lockup" aria-label="Made with love by didaflow">
-          <img class="brand__mark" src="/_assets/static/didaflowers-mark-daisy.svg" alt="" width="32" height="32" aria-hidden="true" />
+        <span class="site-footer__lockup" aria-label="Made with love by didaflowers">
+          <img src="/_assets/static/didaflowers-mark-daisy-static.svg" alt="" width="48" height="48" />
           <span class="site-footer__lockup-text">
             <span class="made">
               ${T.made}
@@ -160,7 +160,7 @@
               </svg>
               ${T.by}
             </span>
-            <span class="word brand__name">dida<em>flow</em></span>
+            <span class="word">dida<span class="flowers">flowers</span></span>
           </span>
         </span>
       </div>
