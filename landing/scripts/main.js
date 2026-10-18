@@ -55,7 +55,7 @@
   }
 
   function initActiveNav() {
-    const sectionIds = ["platform", "practice", "team"];
+    const sectionIds = ["platform", "practice"];
     const sections = sectionIds
       .map((id) => document.getElementById(id))
       .filter(Boolean);
