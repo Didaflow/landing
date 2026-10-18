@@ -879,7 +879,7 @@ body[data-surface="grid"]::before {
 .site-footer__nav a { font-family: var(--font-sans); font-size: var(--text-sm); color: var(--muted); }
 .site-footer__nav a:hover { color: var(--foreground); }
 
-.site-footer__lockup { display: flex; align-items: center; gap: var(--space-3); }
+.site-footer__lockup { display: flex; align-items: center; gap: var(--space-2); }
 .site-footer__lockup svg { flex: none; }
 .site-footer__lockup-text { display: flex; flex-direction: column; line-height: 1; font-family: var(--font-sans); }
 .site-footer__lockup-text .made {
@@ -893,13 +893,7 @@ body[data-surface="grid"]::before {
   gap: 6px;
 }
 .site-footer__lockup-text .made svg { width: 11px; height: 10px; }
-.site-footer__lockup-text .word { font-size: var(--text-md); font-weight: 700; letter-spacing: -0.03em; margin-top: 3px; }
-.site-footer__lockup-text .word .flowers {
-  font-family: var(--font-serif);
-  color: var(--accent);
-  font-style: italic;
-  font-weight: 600;
-}
+.site-footer__lockup-text .word { margin-top: 3px; font-family: var(--font-sans); font-size: 1.25rem; font-weight: 700; letter-spacing: var(--tracking-tighter); color: var(--foreground); }
 
 .site-footer__bottom {
   display: flex;

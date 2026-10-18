@@ -14,11 +14,11 @@
   // Only the home page is translated; methodology, legal pages, changelog and white paper stay in English.
   var T = {
     en: {
-      platform: "Platform", practice: "In practice", thinking: "Our thinking", people: "People", whitepaper: "White paper",
+      platform: "Platform", practice: "In practice", thinking: "Our thinking", whitepaper: "White paper",
       demo: "Book a demo", menu: "Open menu", home: "didaflow home",
       tagline: "Educational Intelligence. Bologna, Italy.",
       resources: "Resources", methodology: "Methodology", cases: "Case studies", credits: "Artwork & credits",
-      changelog: "Changelog", company: "Company", team: "Team", careers: "Careers", contactLink: "Contact",
+      changelog: "Changelog", company: "Company", careers: "Careers", contactLink: "Contact",
       legal: "Legal", privacy: "Privacy policy", cookies: "Cookie policy", terms: "Terms of service",
       made: "made with", by: "by",
       dialog: {
@@ -34,11 +34,11 @@
       }
     },
     it: {
-      platform: "Piattaforma", practice: "In pratica", thinking: "Il nostro approccio", people: "Persone", whitepaper: "White paper",
+      platform: "Piattaforma", practice: "In pratica", thinking: "Il nostro approccio", whitepaper: "White paper",
       demo: "Prenota una demo", menu: "Apri il menu", home: "didaflow, home",
       tagline: "Educational Intelligence. Bologna, Italia.",
       resources: "Risorse", methodology: "Metodologia", cases: "Casi studio", credits: "Opera e crediti",
-      changelog: "Changelog", company: "Azienda", team: "Team", careers: "Lavora con noi", contactLink: "Contatti",
+      changelog: "Changelog", company: "Azienda", careers: "Lavora con noi", contactLink: "Contatti",
       legal: "Note legali", privacy: "Privacy policy", cookies: "Cookie policy", terms: "Termini di servizio",
       made: "fatto con", by: "da",
       dialog: {
@@ -79,7 +79,6 @@
         <a href="${href("platform")}">${T.platform}</a>
         <a href="${href("practice")}">${T.practice}</a>
         <a href="/methodology/">${T.thinking}</a>
-        <a href="${href("team")}">${T.people}</a>
         ${langSwitch()}
       </nav>
       <div class="site-header__cta">
@@ -94,7 +93,6 @@
       <a href="${href("platform")}">${T.platform}</a>
       <a href="${href("practice")}">${T.practice}</a>
       <a href="/methodology/">${T.thinking}</a>
-      <a href="${href("team")}">${T.people}</a>
       ${langSwitch()}
       <a class="btn btn--primary" href="${href("contact")}" data-demo>${T.demo}</a>
     </nav>
@@ -135,7 +133,6 @@
             <div class="site-footer__col-title">${T.company}</div>
             <ul>
               <li><a href="${href("platform")}">${T.platform}</a></li>
-              <li><a href="${href("team")}">${T.team}</a></li>
               <li><a href="mailto:hello@didaflow.ai">${T.careers}</a></li>
               <li><a href="${href("contact")}">${T.contactLink}</a></li>
             </ul>
@@ -154,7 +151,7 @@
       <div class="site-footer__bottom">
         <span>Didaflow Srl · VAT 04337201208 · Bologna, Italy · &copy; 2026</span>
         <span class="site-footer__lockup" aria-label="Made with love by didaflowers">
-          <img src="/_assets/static/didaflowers-mark-daisy-static.svg" alt="" width="48" height="48" />
+          <img class="brand__mark" src="/_assets/static/didaflowers-mark-daisy.svg" alt="" width="32" height="32" aria-hidden="true" />
           <span class="site-footer__lockup-text">
             <span class="made">
               ${T.made}
@@ -163,7 +160,7 @@
               </svg>
               ${T.by}
             </span>
-            <span class="word">dida<span class="flowers">flowers</span></span>
+            <span class="word brand__name">dida<em>flowers</em></span>
           </span>
         </span>
       </div>

@@ -315,10 +315,6 @@
 .services .text-link { grid-column: 3; justify-self: start; margin-top: -15px; }
 
 /* ─── Team ────────────────────────────────────────────────── */
-.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
-.team-grid h3 { margin-bottom: 10px; font-size: 25px; line-height: 1.2; letter-spacing: -0.02em; }
-.team-grid p { color: var(--muted); font-size: 12px; line-height: 1.7; }
-.team-grid .team-role { margin-bottom: 8px; color: var(--ed-coral); font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; }
 
 /* ─── Contact ─────────────────────────────────────────────── */
 .contact { padding-block: 70px; border-top: 1px solid var(--ed-line); }
@@ -393,8 +389,6 @@
   .stage-question { font-size: 32px; }
   .role-story h3 { font-size: 34px; }
   .method-grid { gap: 60px; }
-  .team-grid { gap: 20px; }
-  .team-grid h3 { font-size: 22px; }
   .document-body { grid-template-columns: 200px 1fr; gap: 45px; }
 }
 
@@ -412,8 +406,6 @@
   .services h3 { grid-row: 2 / 4; }
   .services > p:not(.ed-eyebrow) { grid-column: 2; }
   .services .text-link { grid-column: 2; margin-top: 0; }
-  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 45px; }
-  .team-grid h3 { font-size: 25px; }
   .document-body { grid-template-columns: 1fr; }
   .document-nav { position: static; flex-direction: row; flex-wrap: wrap; gap: 15px; }
   .document-content { max-width: none; }
@@ -522,10 +514,6 @@
   .services h3 { grid-row: auto; font-size: 32px; }
   .services > p:not(.ed-eyebrow),
   .services .text-link { grid-column: 1; }
-  .team-grid { gap: 32px 20px; }
-  .team-grid h3 { font-size: 21px; }
-  .team-grid p { font-size: 11px; }
-  .team-grid .team-role { font-size: 10px; }
   .contact { padding-block: 55px; }
   .contact h2 { max-width: 100%; font-size: clamp(46px, 12vw, 65px); }
   .contact-bottom { flex-direction: column; align-items: start; gap: 25px; }
