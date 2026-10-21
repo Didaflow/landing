@@ -16,7 +16,7 @@ DESIGN.md         the design system
 ## Develop
 
 ```sh
-bun run dev       # http://localhost:8765
+bun run dev       # http://127.0.0.1:8765 (PORT=… for another port)
 ```
 
 Serves `landing/` at `/` and `shared/design/` at `/_assets/` — the same mapping
