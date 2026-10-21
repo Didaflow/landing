@@ -374,7 +374,6 @@
 @media (max-width: 1150px) {
   .opening { gap: 25px; }
   .opening h1 { font-size: 72px; }
-  .opening__copy .ed-eyebrow { font-size: 9px; }
   .opening__actions { gap: 16px; }
   .scene { height: 560px; }
   .scene__blue { width: 60px; }
@@ -413,7 +412,7 @@
 
 @media (max-width: 900px) and (min-width: 761px) {
   .opening h1 { font-size: 63px; }
-  .opening__copy .ed-eyebrow { font-size: 8px; letter-spacing: 0.04em; }
+  .opening__copy .ed-eyebrow { letter-spacing: 0.04em; }
   .opening__description { font-size: 15px; }
   .opening__actions .text-link { font-size: 11px; }
   .scene { height: 530px; }
@@ -446,7 +445,6 @@
   .scene__circle { top: 60%; width: 150px; }
   .scene__linked { top: 52%; width: 165px; }
   .scene__hoops { top: 71%; width: 135px; }
-  .scene__credit { font-size: 9px; }
   .role-journey { display: block; margin-top: 35px; }
   .journey-stage { display: none; }
   .role-story { min-height: 0; padding: 48px 0; }
@@ -459,7 +457,7 @@
 }
 
 @media (max-width: 600px) {
-  .opening__copy .ed-eyebrow { font-size: 8px; letter-spacing: 0.04em; }
+  .opening__copy .ed-eyebrow { letter-spacing: 0.04em; }
   .opening h1 { margin-block: 23px; font-size: clamp(56px, 15.8vw, 78px); }
   .opening__description { font-size: 16px; }
   .opening__secondary { font-size: 12px; }
@@ -471,7 +469,6 @@
   .scene__circle { top: 59%; width: 100px; }
   .scene__linked { top: 53%; width: 125px; }
   .scene__hoops { top: 71%; right: 32%; width: 92px; }
-  .scene__credit { font-size: 8px; }
   .intro-strip { gap: 20px; }
   .intro-strip .section-label { width: 100%; }
   .intro-strip > p { font-size: 24px; }
@@ -480,7 +477,6 @@
   .section-heading h2 { font-size: 42px; }
   .section-intro { max-width: none; font-size: 13px; }
   .shared-foundation { padding: 22px 16px; }
-  .foundation-label { font-size: 9px; }
   .foundation-stakeholders .foundation-items { grid-template-columns: 1fr 1fr; gap: 16px 12px; }
   .foundation-stakeholders .foundation-items span { font-size: 17px; }
   .foundation-core { padding: 22px 14px; }
