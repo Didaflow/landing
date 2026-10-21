@@ -67,6 +67,22 @@
 
   <script src="/assets/js/site-chrome.js"></script>
   <script>document.currentScript.insertAdjacentHTML("beforebegin", DidaflowChrome.header());</script>
+  <noscript>
+    <!-- Without JavaScript site-chrome.js renders nothing: a static header and footer keep navigation and the legal pages reachable. -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="/it/" class="brand" aria-label="didaflow, home">
+          <img class="brand__mark" src="/_assets/static/didaflowers-mark-daisy.svg" alt="" width="32" height="32" aria-hidden="true" />
+          <span class="brand__name">dida<em>flow</em></span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="/it/#platform">Piattaforma</a>
+          <a href="/it/#practice">In pratica</a>
+          <a href="/methodology/">Il nostro approccio</a>
+        </nav>
+      </div>
+    </header>
+  </noscript>
 
   <main id="main">
 
@@ -285,6 +301,40 @@
   </main>
 
   <script>document.currentScript.insertAdjacentHTML("beforebegin", DidaflowChrome.footer());</script>
+  <noscript>
+    <footer class="site-footer">
+      <div class="container">
+        <nav class="site-footer__nav" aria-label="Footer">
+          <div>
+            <div class="site-footer__col-title">Risorse</div>
+            <ul>
+              <li><a href="/whitepaper/">White paper</a></li>
+              <li><a href="/methodology/">Metodologia</a></li>
+              <li><a href="/changelog/">Changelog</a></li>
+              <li><a href="/credits/">Opera e crediti</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="site-footer__col-title">Azienda</div>
+            <ul>
+              <li><a href="/it/#platform">Piattaforma</a></li>
+              <li><a href="mailto:hello@didaflow.ai">Contatti</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="site-footer__col-title">Note legali</div>
+            <ul>
+              <li><a href="/privacy-policy/">Privacy policy</a></li>
+              <li><a href="/cookie-policy/">Cookie policy</a></li>
+              <li><a href="/terms-of-service/">Termini di servizio</a></li>
+              <li><a href="/dpa/">DPA</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="site-footer__bottom"><span>Didaflow Srl · VAT 04337201208 · Bologna, Italy · &copy; 2026</span></div>
+      </div>
+    </footer>
+  </noscript>
 
   <script src="/scripts/main.js" defer></script>
 </body>
