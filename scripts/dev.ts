@@ -1,6 +1,6 @@
 // Static dev server for the landing site.
 // Serves landing/ at / and shared/design/ at /_assets/ — mirrors the Caddy prod map.
-//   bun run dev   →   http://localhost:8765
+//   bun run dev   →   http://127.0.0.1:8765 (DEV_HOST and PORT override)
 
 import { existsSync, statSync } from "node:fs";
 import { join, normalize, resolve } from "node:path";
@@ -8,6 +8,7 @@ import { join, normalize, resolve } from "node:path";
 const ROOT = resolve(import.meta.dir, "..");
 const LANDING = join(ROOT, "landing");
 const ASSETS = join(ROOT, "shared", "design");
+const HOST = Bun.env.DEV_HOST ?? "127.0.0.1"; // loopback only: the dev server must not be reachable from the network
 const PORT = Number(Bun.env.PORT ?? 8765);
 
 /** Resolve a request path to a file on disk, or null if it escapes the root. */
@@ -22,6 +23,7 @@ function resolveFile(root: string, pathname: string): string | null {
 }
 
 Bun.serve({
+  hostname: HOST,
   port: PORT,
   fetch(req) {
     const pathname = decodeURIComponent(new URL(req.url).pathname);
@@ -37,4 +39,4 @@ Bun.serve({
   },
 });
 
-console.log(`landing → http://localhost:${PORT}`);
+console.log(`landing → http://${HOST}:${PORT}`);
