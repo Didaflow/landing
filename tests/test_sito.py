@@ -15,7 +15,9 @@ ASSETS = ROOT / "shared" / "design"
 
 # Attributes that point to a file. Absolute and mailto/tel/data URLs are not internal.
 URL_ATTRS = {"href", "src", "poster"}
-IN_JS = re.compile(r"""\b(?:href|src)=["'](/[^"'$`{}]*)["']""")
+# Literal absolute paths in href="..." / src="..." inside site-chrome.js templates. Paths built at runtime
+# (template interpolation) are not checked: href() in that file only varies fragments of the same pages.
+IN_JS = re.compile(r"""\b(?:href|src)\s*=\s*["'](/[^"'$`{}]*)["']""")
 
 
 def resolve(url: str, page: Path) -> Path | None:
@@ -32,7 +34,8 @@ def resolve(url: str, page: Path) -> Path | None:
     target = (base / rel.lstrip("/")).resolve()
     if target.is_dir() or rel.endswith("/"):
         target = target / "index.html"
-    return target
+    # Like the web server, never serve outside the root that the route maps to.
+    return target if base.resolve() in target.parents else base / "__fuori_dalla_radice__"
 
 
 class Refs(HTMLParser):
@@ -53,8 +56,7 @@ class RiferimentiInterni(unittest.TestCase):
             target = resolve(url, page)
             if target is None:
                 continue
-            inside = ROOT in target.parents
-            if not inside or not target.is_file():
+            if not target.is_file():
                 missing.append(url)
         self.assertEqual([], missing, f"{page.relative_to(ROOT)}: riferimenti senza file")
 
@@ -66,7 +68,7 @@ class RiferimentiInterni(unittest.TestCase):
             parser.feed(page.read_text(encoding="utf-8"))
             self.check(page, parser.urls)
 
-    def test_html_dentro_noscript_e_script(self):
+    def test_percorsi_letterali_in_site_chrome(self):
         # Header and footer are built by site-chrome.js, so its literal paths count too.
         js = LANDING / "assets" / "js" / "site-chrome.js"
         self.check(js, IN_JS.findall(js.read_text(encoding="utf-8")))
@@ -78,6 +80,7 @@ class RiferimentiInterni(unittest.TestCase):
         self.assertTrue(resolve("/methodology/", page).is_file())
         self.assertFalse(resolve("/non-esiste/", page).is_file())
         self.assertFalse(resolve("/_assets/non-esiste.svg", page).is_file())
+        self.assertFalse(resolve("/../tests/test_sito.py", page).is_file())  # outside the served root
 
 
 if __name__ == "__main__":
