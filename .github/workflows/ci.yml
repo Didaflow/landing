@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  # The job name is a required check in the main ruleset: keep it stable.
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Internal references resolve to files
+        run: python3 -m unittest discover -s tests -v
+      - name: JavaScript parses
+        run: |
+          node --check landing/scripts/main.js
+          node --check landing/assets/js/site-chrome.js
