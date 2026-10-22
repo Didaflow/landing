@@ -17,6 +17,8 @@
       platform: "Platform", practice: "In practice", thinking: "Our thinking", whitepaper: "White paper",
       demo: "Book a demo", menu: "Open menu", home: "didaflow home",
       tagline: "Educational Intelligence. Bologna, Italy.",
+      primary: "Primary", mobile: "Mobile",
+      bottom: "Didaflow Srl · VAT 04337201208 · Bologna, Italy · &copy; 2026",
       resources: "Resources", methodology: "Methodology", cases: "Case studies", credits: "Artwork & credits",
       changelog: "Changelog", company: "Company", careers: "Careers", contactLink: "Contact",
       legal: "Legal", privacy: "Privacy policy", cookies: "Cookie policy", terms: "Terms of service",
@@ -37,6 +39,8 @@
       platform: "Piattaforma", practice: "In pratica", thinking: "Il nostro approccio", whitepaper: "White paper",
       demo: "Prenota una demo", menu: "Apri il menu", home: "didaflow, home",
       tagline: "Educational Intelligence. Bologna, Italia.",
+      primary: "Navigazione principale", mobile: "Navigazione mobile",
+      bottom: "Didaflow Srl · P. IVA 04337201208 · Bologna, Italia · &copy; 2026",
       resources: "Risorse", methodology: "Metodologia", cases: "Casi studio", credits: "Opera e crediti",
       changelog: "Changelog", company: "Azienda", careers: "Lavora con noi", contactLink: "Contatti",
       legal: "Note legali", privacy: "Privacy policy", cookies: "Cookie policy", terms: "Termini di servizio",
@@ -75,7 +79,7 @@
         <img class="brand__mark" src="/_assets/static/didaflowers-mark-daisy.svg" alt="" width="32" height="32" aria-hidden="true" />
         <span class="brand__name">dida<em>flow</em></span>
       </a>
-      <nav class="nav" aria-label="Primary">
+      <nav class="nav" aria-label="${T.primary}">
         <a href="${href("platform")}">${T.platform}</a>
         <a href="${href("practice")}">${T.practice}</a>
         <a href="/methodology/">${T.thinking}</a>
@@ -89,7 +93,7 @@
         <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
       </button>
     </div>
-    <nav class="container mobile-nav" id="mobile-nav" aria-label="Mobile" role="navigation" aria-modal="false">
+    <nav class="container mobile-nav" id="mobile-nav" aria-label="${T.mobile}" role="navigation" aria-modal="false">
       <a href="${href("platform")}">${T.platform}</a>
       <a href="${href("practice")}">${T.practice}</a>
       <a href="/methodology/">${T.thinking}</a>
@@ -149,7 +153,7 @@
         </nav>
       </div>
       <div class="site-footer__bottom">
-        <span>Didaflow Srl · VAT 04337201208 · Bologna, Italy · &copy; 2026</span>
+        <span>${T.bottom}</span>
         <span class="site-footer__lockup" aria-label="Made with love by didaflowers">
           <img class="brand__mark" src="/_assets/static/didaflowers-mark-daisy.svg" alt="" width="32" height="32" aria-hidden="true" />
           <span class="site-footer__lockup-text">
