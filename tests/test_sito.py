@@ -33,7 +33,7 @@ def resolve(url: str, page: Path) -> Path | None:
     base, rel = (ASSETS, path[len("/_assets"):]) if path.startswith("/_assets/") else (LANDING, path)
     target = (base / rel.lstrip("/")).resolve()
     if target.is_dir() or rel.endswith("/"):
-        target = target / "index.html"
+        target = (target / "index.html").resolve()  # resolve again: index.html may be a symlink
     # Like the web server, never serve outside the root that the route maps to.
     return target if base.resolve() in target.parents else base / "__fuori_dalla_radice__"
 
