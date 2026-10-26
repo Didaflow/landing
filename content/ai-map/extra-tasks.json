@@ -1,0 +1,22 @@
+{
+  "$comment": "Tasks added by the editors outside the research files. t-proctoring is in the map for its legal status; its research has not been reviewed yet.",
+  "tasks": [
+    {
+      "id": "t-proctoring", "role": "teacher",
+      "title": { "en": "Monitor online exams with AI (proctoring)", "it": "Sorvegliare gli esami online con l’AI (proctoring)" },
+      "question": { "en": "Can I use AI to supervise an online exam?", "it": "Posso usare l’AI per sorvegliare un esame online?" },
+      "description": { "en": "Software that watches students through camera, microphone or screen during a test and flags possible misconduct.", "it": "Software che osserva gli studenti attraverso webcam, microfono o schermo durante una prova e segnala possibili irregolarità." },
+      "oecd": null,
+      "evidenceLevel": "not-reviewed",
+      "verdict": { "en": "We have not reviewed the research on proctoring yet. The task is in the map because the law already restricts it: inferring emotions is prohibited, and monitoring behaviour during tests is high-risk under the AI Act.", "it": "Non abbiamo ancora esaminato la ricerca sul proctoring. Il compito è nella mappa perché la legge lo limita già: dedurre le emozioni è vietato e monitorare il comportamento durante le prove è ad alto rischio per l’AI Act." },
+      "outcomesMeasured": [],
+      "findings": [], "benefits": [], "risks": [], "conditions": [],
+      "goodPractice": [
+        { "en": "Before choosing a tool, ask your institution’s data protection officer and legal office.", "it": "Prima di scegliere uno strumento, consulta il responsabile della protezione dei dati e l’ufficio legale dell’ateneo." },
+        { "en": "Exclude any feature that reads emotions, attention or engagement from faces or voices: it is prohibited in education.", "it": "Escludi qualsiasi funzione che legga emozioni, attenzione o coinvolgimento da volti o voci: in ambito educativo è vietata." },
+        { "en": "Consider assessment formats that do not need remote surveillance: oral exams, in-person tasks, process-based assignments.", "it": "Valuta formati di verifica che non richiedono sorveglianza a distanza: esami orali, prove in presenza, consegne che documentano il processo." }
+      ],
+      "noAI": [], "toolTypes": [], "gaps": [ { "en": "Research on proctoring has not been reviewed for the map yet.", "it": "La ricerca sul proctoring non è ancora stata esaminata per la mappa." } ]
+    }
+  ]
+}

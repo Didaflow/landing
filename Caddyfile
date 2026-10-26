@@ -35,6 +35,11 @@ didaflow.ai {
 	rewrite /favicon.ico /_assets/static/favicon.ico
 	rewrite /apple-touch-icon.png /_assets/static/apple-touch-icon.png
 
+	# Commons API: AI Map contributions (services/commons-api), a separate Bun process on localhost.
+	handle /api/commons/* {
+		reverse_proxy 127.0.0.1:8787
+	}
+
 	handle {
 		root * {$LANDING_ROOT}/landing
 		try_files {path} {path}/index.html
