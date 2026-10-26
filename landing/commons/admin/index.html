@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Commons · moderazione</title>
+  <link rel="icon" href="/_assets/static/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/_assets/css/tokens.css" />
+  <style>
+    body { margin: 0; background: var(--background); color: var(--foreground); font: 14px/1.55 Inter, ui-sans-serif, system-ui, sans-serif; }
+    main { max-width: 1100px; margin: 0 auto; padding: 40px max(16px, 3vw) 80px; }
+    h1 { margin: 0 0 6px; font-size: 28px; font-weight: 600; letter-spacing: -0.02em; }
+    h2 { margin: 40px 0 12px; padding-top: 14px; border-top: 1px solid var(--foreground); font-size: 17px; }
+    p.note { margin: 0 0 24px; color: var(--muted); }
+    form.login { display: flex; gap: 8px; flex-wrap: wrap; }
+    input, button { font: inherit; }
+    input[type=password] { min-width: 280px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 3px; }
+    button { padding: 6px 12px; border: 1px solid var(--foreground); border-radius: 3px; background: var(--foreground); color: var(--background); cursor: pointer; }
+    button.ghost { background: none; color: var(--foreground); }
+    .counts { display: flex; flex-wrap: wrap; gap: 10px; }
+    .counts div { padding: 12px 16px; border: 1px solid var(--border); border-radius: 4px; background: #fff; }
+    .counts b { display: block; font-size: 22px; font-variant-numeric: tabular-nums; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 8px 10px 8px 0; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; font-size: 11px; letter-spacing: .05em; text-transform: uppercase; }
+    td.num { font-variant-numeric: tabular-nums; }
+    tr.hidden td { color: var(--muted); text-decoration: line-through; }
+    .flagged { color: var(--danger-strong); font-weight: 600; }
+    .exports { display: flex; flex-wrap: wrap; gap: 8px; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Commons · moderazione</h1>
+  <p class="note">Pagina interna. I contributi sono visibili subito; qui si nascondono quelli che violano le regole e si chiudono le segnalazioni. Il token resta solo in questa scheda.</p>
+
+  <form class="login" id="login">
+    <input type="password" id="token" placeholder="Token di amministrazione" autocomplete="off" required />
+    <button type="submit">Entra</button>
+  </form>
+
+  <div id="app" hidden>
+    <div class="counts" id="counts"></div>
+
+    <h2>Dove pratica ed evidenze non concordano</h2>
+    <p class="note">Compiti con almeno 10 risposte, ordinati per quota di «No». Da portare al comitato scientifico.</p>
+    <div class="table-wrap"><table id="disagreement"></table></div>
+
+    <h2>Esperienze</h2>
+    <div class="table-wrap"><table id="posts"></table></div>
+
+    <h2>Risposte</h2>
+    <div class="table-wrap"><table id="replies"></table></div>
+
+    <h2>Segnalazioni di contenuti mancanti</h2>
+    <div class="table-wrap"><table id="reports"></table></div>
+
+    <h2>Uso negli ultimi 30 giorni</h2>
+    <p class="note">Contatori giornalieri anonimi: che cosa è stato aperto, mai da chi.</p>
+    <div class="table-wrap"><table id="usage"></table></div>
+
+    <h2>Export CSV</h2>
+    <div class="exports" id="exports"></div>
+  </div>
+</main>
+<script>
+  (function () {
+    "use strict";
+    var API = "/api/commons/admin";
+    var token = sessionStorage.getItem("commons.admin") || "";
+    function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+    function call(path, opts) {
+      opts = opts || {};
+      opts.headers = Object.assign({ authorization: "Bearer " + token, "content-type": "application/json" }, opts.headers || {});
+      return fetch(API + path, opts).then(function (r) { if (r.status === 401) throw new Error("401"); return r; });
+    }
+    function table(el, cols, rows, extra) {
+      el.innerHTML = "<thead><tr>" + cols.map(function (c) { return "<th>" + c[1] + "</th>"; }).join("") + (extra ? "<th></th>" : "") + "</tr></thead><tbody>" +
+        (rows.length ? rows.map(function (r) {
+          return '<tr class="' + (r.status === "hidden" ? "hidden" : "") + '">' + cols.map(function (c) { return '<td class="' + (c[2] || "") + '">' + (c[0] === "flags" && r.flags ? '<span class="flagged">' + r.flags + "</span>" : esc(r[c[0]])) + "</td>"; }).join("") + (extra ? "<td>" + extra(r) + "</td>" : "") + "</tr>";
+        }).join("") : '<tr><td colspan="' + (cols.length + 1) + '">—</td></tr>') + "</tbody>";
+    }
+    function load() {
+      call("/overview").then(function (r) { return r.json(); }).then(function (d) {
+        document.getElementById("login").hidden = true;
+        document.getElementById("app").hidden = false;
+        var c = d.counts;
+        document.getElementById("counts").innerHTML = [["Risposte «nella tua esperienza»", c.checks], ["«Ti è stata utile?»", c.useful], ["Esperienze", c.posts], ["Risposte", c.replies], ["Segnalazioni aperte", c.reportsOpen]].map(function (x) { return "<div><b>" + x[1] + "</b>" + x[0] + "</div>"; }).join("");
+        table(document.getElementById("disagreement"), [["task", "Compito"], ["n", "Risposte", "num"], ["yes", "Sì", "num"], ["partly", "In parte", "num"], ["no", "No", "num"]], d.disagreement);
+        var toggle = function (kind) { return function (r) { var next = r.status === "hidden" ? "visible" : "hidden"; return '<button class="ghost" data-kind="' + kind + '" data-id="' + r.id + '" data-status="' + next + '">' + (next === "hidden" ? "Nascondi" : "Ripristina") + "</button>"; }; };
+        table(document.getElementById("posts"), [["created", "Data"], ["task", "Compito"], ["tool", "Strumento"], ["role", "Ruolo"], ["stars", "★", "num"], ["text", "Testo"], ["name", "Nome"], ["flags", "Segn."]], d.posts, toggle("posts"));
+        table(document.getElementById("replies"), [["created", "Data"], ["post_id", "Esperienza"], ["text", "Testo"], ["name", "Nome"], ["flags", "Segn."]], d.replies, toggle("replies"));
+        table(document.getElementById("reports"), [["created", "Data"], ["kind", "Tipo"], ["task", "Compito"], ["tool", "Strumento"], ["what", "Che cosa manca"], ["link", "Link"], ["status", "Stato"]], d.reports, function (r) {
+          return '<button class="ghost" data-kind="reports" data-id="' + r.id + '" data-status="' + (r.status === "open" ? "done" : "open") + '">' + (r.status === "open" ? "Chiudi" : "Riapri") + "</button>";
+        });
+        table(document.getElementById("usage"), [["kind", "Evento"], ["role", "Ruolo"], ["task", "Compito"], ["tool", "Strumento"], ["n", "Volte", "num"]], d.usage);
+        document.getElementById("exports").innerHTML = ["checks", "useful", "posts", "updates", "replies", "reports", "events"].map(function (t) { return '<button class="ghost" data-export="' + t + '">' + t + ".csv</button>"; }).join("");
+      }).catch(function () { sessionStorage.removeItem("commons.admin"); token = ""; document.getElementById("login").hidden = false; document.getElementById("app").hidden = true; });
+    }
+    document.getElementById("login").addEventListener("submit", function (e) {
+      e.preventDefault(); token = document.getElementById("token").value; sessionStorage.setItem("commons.admin", token); load();
+    });
+    document.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-kind]");
+      if (b) { call("/" + b.dataset.kind + "/" + b.dataset.id, { method: "POST", body: JSON.stringify({ status: b.dataset.status }) }).then(load); return; }
+      var x = e.target.closest("[data-export]");
+      if (x) {
+        call("/export/" + x.dataset.export + ".csv").then(function (r) { return r.blob(); }).then(function (blob) {
+          var a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "commons-" + x.dataset.export + ".csv"; a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+        });
+      }
+    });
+    if (token) load();
+  })();
+</script>
+</body>
+</html>

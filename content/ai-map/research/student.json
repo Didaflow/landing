@@ -1,0 +1,1120 @@
+{
+ "tasks": [
+  {
+   "id": "s-understand",
+   "role": "student",
+   "title": {"en": "Understand concepts and readings", "it": "Capire concetti e letture"},
+   "question": {"en": "Can AI help me understand a difficult topic or reading?", "it": "L'IA mi può aiutare a capire un argomento o un testo difficile?"},
+   "description": {"en": "Asking an AI assistant or AI tutor to explain concepts, answer questions about course content or walk through a reading.", "it": "Chiedere a un assistente o a un tutor IA di spiegare concetti, rispondere a domande sui contenuti del corso o guidare nella lettura di un testo."},
+   "oecd": "Ch.1 pp.20–23 (performance vs learning; Kestin et al. RCT, Fig. 1.6); Ch.2 pp.41–43 and 50–55; Ch.3 pp.77–79",
+   "evidenceLevel": "mixed",
+   "verdict": {
+    "en": "A carefully designed AI tutor, built by instructors with step-by-step solutions and pedagogical rules, produced larger short-term learning gains than an active-learning class in one university RCT. With a general chatbot used freely, controlled studies find no overall learning gain: asking for explanations tends to help, asking for answers tends to hurt, and students with weaker prior knowledge benefit least. Meta-analyses report positive average effects, but many included studies measure assisted performance or self-reports rather than durable learning.",
+    "it": "In uno studio randomizzato all'università, un tutor IA progettato con cura dai docenti, con soluzioni passo per passo e regole didattiche, ha prodotto apprendimenti a breve termine maggiori di una lezione in aula di tipo attivo. Con un chatbot generico usato liberamente, gli studi controllati non trovano un guadagno complessivo: chiedere spiegazioni tende ad aiutare, chiedere le risposte tende a danneggiare, e chi parte con meno conoscenze ne trae meno vantaggio. Le meta-analisi riportano effetti medi positivi, ma molti studi inclusi misurano la prestazione assistita o le percezioni, non un apprendimento che dura."
+   },
+   "outcomesMeasured": ["learning", "assisted-performance", "time", "satisfaction", "equity"],
+   "findings": [
+    {"source": "kestin-2025", "outcome": "learning",
+     "finding": {"en": "In an introductory physics course (N = 194), students learned more from a custom GPT-4 tutor at home than from an in-class active-learning lesson on the same content (effect size 0.73–1.3 SD on immediate post-tests), with a median of 49 minutes versus 60 minutes in class.", "it": "In un corso introduttivo di fisica (N = 194), gli studenti hanno imparato di più con un tutor GPT-4 personalizzato usato a casa che con una lezione attiva in aula sugli stessi contenuti (effetto 0,73–1,3 deviazioni standard nei test subito dopo), impiegando in mediana 49 minuti contro 60 in aula."},
+     "relevance": {"en": "Direct HE evidence, but for a purpose-built tutor with expert prompts and pre-written solutions, two lessons only, and no delayed test. It does not show that a general chatbot works the same way.", "it": "Evidenza diretta in ambito universitario, ma riguarda un tutor costruito apposta, con prompt di esperti e soluzioni già scritte, solo due lezioni e nessun test a distanza di tempo. Non dimostra che un chatbot generico funzioni allo stesso modo."}},
+    {"source": "lehmann-2025", "outcome": "learning",
+     "finding": {"en": "Two pre-registered lab experiments with university students learning basic Python found no overall effect of ChatGPT access on post-test scores. Exploratory analyses: requesting explanations improved understanding, requesting solutions reduced it; students with below-median prior knowledge understood less than controls, and treated students over-estimated how much they had learned.", "it": "Due esperimenti preregistrati con studenti universitari che imparavano le basi di Python non hanno trovato un effetto complessivo dell'accesso a ChatGPT sul test finale. Dalle analisi esplorative: chiedere spiegazioni migliorava la comprensione, chiedere soluzioni la riduceva; chi partiva sotto la mediana capiva meno del gruppo di controllo, e chi usava l'IA sovrastimava quanto aveva imparato."},
+     "relevance": {"en": "Direct HE evidence on self-directed use of a general chatbot; short lab sessions; preprint.", "it": "Evidenza diretta sull'uso autonomo di un chatbot generico all'università; sessioni brevi in laboratorio; preprint non ancora revisionato."}},
+    {"source": "stadler-2024", "outcome": "learning",
+     "finding": {"en": "91 university students researching a socio-scientific issue with ChatGPT-3.5 reported lower cognitive load than those using Google, but produced lower-quality reasoning and justifications.", "it": "91 studenti universitari che si documentavano su un tema socio-scientifico con ChatGPT-3.5 hanno riportato meno sforzo mentale rispetto a chi usava Google, ma hanno prodotto ragionamenti e giustificazioni di qualità inferiore."},
+     "relevance": {"en": "Shows that feeling that something is easier is not the same as understanding it better.", "it": "Mostra che la sensazione di fatica ridotta non coincide con una comprensione migliore."}},
+    {"source": "deng-2025", "outcome": "assisted-performance",
+     "finding": {"en": "A meta-analysis of experimental studies (2022–2024) reports that ChatGPT interventions improved academic performance, motivation and self-reported higher-order thinking and reduced mental effort, with no effect on self-efficacy.", "it": "Una meta-analisi di studi sperimentali (2022–2024) riporta che gli interventi con ChatGPT migliorano rendimento, motivazione e pensiero di ordine superiore (dichiarato dagli studenti) e riducono lo sforzo mentale, senza effetto sull'autoefficacia."},
+     "relevance": {"en": "Mixes levels and outcome types; a later audit found that few included studies define the treatment, the control and a valid learning measure.", "it": "Mescola livelli scolastici e tipi di risultato; una verifica successiva ha trovato che pochi studi inclusi descrivono bene intervento, gruppo di controllo e misura di apprendimento."}},
+    {"source": "weidlich-2025", "outcome": "learning",
+     "finding": {"en": "An audit of a subset of the primary experiments in Deng et al. found that only a small minority described the treatment, the control activity and a valid learning outcome; observed gains cannot yet be attributed confidently to ChatGPT.", "it": "Un'analisi di una parte degli esperimenti inclusi in Deng et al. ha trovato che solo una piccola minoranza descrive intervento, attività di controllo e una misura valida di apprendimento; i guadagni osservati non si possono ancora attribuire con sicurezza a ChatGPT."},
+     "relevance": {"en": "Reason to read pooled effect sizes on ChatGPT and learning with caution.", "it": "Motivo per leggere con cautela gli effetti medi riportati su ChatGPT e apprendimento."}},
+    {"source": "laun-wolff-2025", "outcome": "learning",
+     "finding": {"en": "Across 62 studies on educational chatbots, the large initial effect on learning performance shrank to small-to-moderate after correcting for publication bias; effects were larger in STEM, with longer interventions and at lower education levels.", "it": "Su 62 studi sui chatbot educativi, l'effetto iniziale ampio sul rendimento si riduce a piccolo-moderato dopo la correzione per il bias di pubblicazione; gli effetti sono maggiori nelle materie STEM, con interventi più lunghi e nei livelli scolastici più bassi."},
+     "relevance": {"en": "Includes pre-generative chatbots and school levels; useful as an upper bound, not as a promise for HE.", "it": "Include chatbot non generativi e livelli scolastici; utile come limite massimo, non come promessa per l'università."}}
+   ],
+   "benefits": [
+    {"kind": "research", "text": {"en": "A structured AI tutor that follows active-learning principles can deliver more learning in less time for a first encounter with new material.", "it": "Un tutor IA strutturato secondo i principi dell'apprendimento attivo può far imparare di più in meno tempo quando si affronta un argomento per la prima volta."}, "sources": ["kestin-2025"]},
+    {"kind": "research", "text": {"en": "Using a chatbot to ask for explanations (rather than answers) is associated with better understanding.", "it": "Usare il chatbot per chiedere spiegazioni (e non risposte) è associato a una comprensione migliore."}, "sources": ["lehmann-2025"]},
+    {"kind": "interpretation", "text": {"en": "Self-paced explanations can help students who find the class pace too fast or too slow.", "it": "Spiegazioni al proprio ritmo possono aiutare chi trova la lezione troppo veloce o troppo lenta."}, "sources": ["kestin-2025"]}
+   ],
+   "risks": [
+    {"kind": "research", "text": {"en": "Less mental effort can come with shallower reasoning, and students may believe they learned more than they did.", "it": "Meno fatica può accompagnarsi a ragionamenti più superficiali, e lo studente può credere di aver imparato più di quanto sia vero."}, "sources": ["stadler-2024", "lehmann-2025"]},
+    {"kind": "research", "text": {"en": "Gaps can widen: students with weaker prior knowledge gained less, or lost ground, when using a general chatbot.", "it": "I divari possono aumentare: chi parte con meno conoscenze guadagna meno, o perde terreno, usando un chatbot generico."}, "sources": ["lehmann-2025"]},
+    {"kind": "research", "text": {"en": "General chatbots can give confident but wrong explanations; the positive tutor study avoided this by giving the model expert-written solutions.", "it": "I chatbot generici possono dare spiegazioni sicure ma sbagliate; lo studio positivo sul tutor ha evitato il problema fornendo al modello soluzioni scritte da esperti."}, "sources": ["kestin-2025", "oecd-2026"]}
+   ],
+   "conditions": [
+    {"en": "Purpose-built tutors (step-by-step scaffolding, verified solutions, no direct answers) versus a general chatbot used freely.", "it": "Tutor costruiti apposta (guida passo per passo, soluzioni verificate, niente risposte dirette) rispetto a un chatbot generico usato liberamente."},
+    {"en": "How the student asks: explanations and checks of own reasoning versus requests for finished answers.", "it": "Come chiede lo studente: spiegazioni e verifiche del proprio ragionamento, oppure risposte già pronte."},
+    {"en": "Prior knowledge: stronger students appear to benefit more from open-ended chatbots.", "it": "Conoscenze di partenza: chi è più preparato sembra trarre più beneficio dai chatbot aperti."}
+   ],
+   "goodPractice": [
+    {"en": "Try to explain the concept in your own words first, then ask the AI to check and correct your explanation.", "it": "Prova prima a spiegare il concetto con parole tue, poi chiedi all'IA di verificare e correggere la tua spiegazione."},
+    {"en": "Ask 'why' and 'how' questions, not for the final answer; ask for an example and a counter-example.", "it": "Fai domande su «perché» e «come», non chiedere la risposta finale; chiedi un esempio e un controesempio."},
+    {"en": "Prefer a course tutor configured by your teacher (with course materials) over a general chatbot when one is available.", "it": "Se esiste, preferisci un tutor del corso configurato dal docente (con i materiali del corso) a un chatbot generico."},
+    {"en": "Check key claims against the course text or slides; AI explanations can be fluent and wrong.", "it": "Controlla le affermazioni importanti sul libro o sulle slide del corso: le spiegazioni dell'IA possono essere scorrevoli e sbagliate."},
+    {"en": "Close the chat and test yourself without it: if you cannot explain it alone, you have not learned it yet.", "it": "Chiudi la chat e mettiti alla prova da solo: se non sai spiegarlo senza aiuto, non l'hai ancora imparato."}
+   ],
+   "noAI": [
+    {"title": {"en": "Active learning in class", "it": "Apprendimento attivo in aula"}, "text": {"en": "Across 225 studies in undergraduate STEM, active learning raised exam scores by about 0.47 SD and cut failure rates compared with lecturing.", "it": "Su 225 studi nelle materie STEM universitarie, l'apprendimento attivo ha alzato i voti d'esame di circa 0,47 deviazioni standard e ridotto le bocciature rispetto alla lezione frontale."}, "sources": ["freeman-2014"]},
+    {"title": {"en": "Self-explanation and elaborative questioning", "it": "Auto-spiegazione e domande di approfondimento"}, "text": {"en": "Explaining material to yourself and asking 'why is this true?' are rated as moderately useful study techniques in a major review.", "it": "Spiegare a sé stessi il materiale e chiedersi «perché è vero?» sono considerate tecniche di studio di utilità moderata in un'ampia rassegna."}, "sources": ["dunlosky-2013"]}
+   ],
+   "toolTypes": ["tutoring-system", "general-assistant", "custom-chatbot"],
+   "gaps": [
+    {"en": "No HE study yet tests delayed retention or transfer after using an AI tutor over a whole course.", "it": "Nessuno studio universitario verifica ancora la memoria a distanza di tempo o il trasferimento dopo l'uso di un tutor IA per un intero corso."},
+    {"en": "Little is known about AI summaries of readings: whether they replace reading and what that does to comprehension.", "it": "Si sa poco sui riassunti di letture fatti dall'IA: se sostituiscono la lettura e che effetto hanno sulla comprensione."},
+    {"en": "A widely cited 2025 meta-analysis on ChatGPT and learning (Wang & Fan, Humanities and Social Sciences Communications) was retracted in 2026 and is not used here.", "it": "Una meta-analisi del 2025 molto citata su ChatGPT e apprendimento (Wang & Fan, Humanities and Social Sciences Communications) è stata ritirata nel 2026 e qui non viene usata."}
+   ]
+  },
+  {
+   "id": "s-practice",
+   "role": "student",
+   "title": {"en": "Practise and self-test for exams", "it": "Esercitarsi e autovalutarsi per gli esami"},
+   "question": {"en": "How can I use AI to prepare for my exam?", "it": "Come posso usare l'IA per prepararmi all'esame?"},
+   "description": {"en": "Using AI to generate practice questions, get hints on exercises or check answers while revising.", "it": "Usare l'IA per creare domande di esercitazione, avere suggerimenti sugli esercizi o controllare le risposte durante il ripasso."},
+   "oecd": "Ch.1 pp.20–21 (Bastani et al., Fig. 1.5); Ch.3 pp.77–79 (guardrails and the 'crutch effect')",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "The clearest experiment is from secondary school: free access to GPT-4 during practice raised practice scores but lowered later exam scores by 17%, while a version that gave hints instead of answers avoided the harm. In HE, students who used a chatbot to get exercise solutions covered more but understood less. Hints generated by ChatGPT produced learning gains similar to human-written hints for adults online. There is no rigorous HE study yet on AI-generated self-tests as a revision method.",
+    "it": "L'esperimento più chiaro viene dalla scuola superiore: l'accesso libero a GPT-4 durante l'esercitazione ha alzato i punteggi negli esercizi ma abbassato del 17% i voti nella verifica successiva, mentre una versione che dava suggerimenti invece delle risposte ha evitato il danno. All'università, chi usava il chatbot per ottenere le soluzioni degli esercizi copriva più argomenti ma li capiva meno. Per adulti online, i suggerimenti scritti da ChatGPT hanno prodotto guadagni simili a quelli scritti da tutor umani. Manca ancora uno studio universitario rigoroso sui quiz generati dall'IA come metodo di ripasso."
+   },
+   "outcomesMeasured": ["assisted-performance", "learning", "time", "equity"],
+   "findings": [
+    {"source": "bastani-2025", "outcome": "learning",
+     "finding": {"en": "In a field experiment with about 1,000 high-school maths students, GPT-4 access during practice raised practice grades (48% with a standard chat interface, 127% with a tutor version), but students who had used the standard version scored 17% lower on the later unassisted exam than students without access. The tutor version, which gave teacher-designed hints and withheld answers, largely removed this harm.", "it": "In un esperimento sul campo con circa 1.000 studenti di matematica delle superiori, l'accesso a GPT-4 durante l'esercitazione ha alzato i voti negli esercizi (+48% con un'interfaccia tipo chat, +127% con una versione tutor), ma chi aveva usato la versione standard ha preso il 17% in meno nella verifica successiva senza IA rispetto a chi non l'aveva usata. La versione tutor, che dava suggerimenti preparati dai docenti e non le risposte, ha in gran parte eliminato il danno."},
+     "relevance": {"en": "School level, so indirect for HE, but the strongest causal evidence on practising with a chatbot.", "it": "È scuola superiore, quindi evidenza indiretta per l'università, ma è la prova causale più solida sull'esercitarsi con un chatbot."}},
+    {"source": "lehmann-2025", "outcome": "learning",
+     "finding": {"en": "In graduate programming courses, code that closely matched ChatGPT output raised the grade on that exercise but cumulative reliance was associated with lower grades on later questions; in the lab, requesting solutions increased the number of exercises completed without improving understanding.", "it": "In corsi di programmazione magistrali, un codice molto simile all'output di ChatGPT alzava il voto su quell'esercizio, ma l'uso ripetuto era associato a voti più bassi nelle domande successive; in laboratorio, chiedere le soluzioni aumentava gli esercizi completati senza migliorare la comprensione."},
+     "relevance": {"en": "Direct HE evidence; field part uses an indirect measure of AI use; preprint.", "it": "Evidenza diretta universitaria; la parte sul campo usa una misura indiretta dell'uso dell'IA; preprint."}},
+    {"source": "pardos-2024", "outcome": "learning",
+     "finding": {"en": "274 adults (crowd-workers) solving algebra and statistics problems learned significantly more than a no-hint control when given ChatGPT-generated hints, with gains not significantly different from human-tutor hints. ChatGPT hints failed quality checks on 32% of problems before an error-reduction technique was applied.", "it": "274 adulti (lavoratori di piattaforme online) che risolvevano problemi di algebra e statistica hanno imparato significativamente di più del gruppo senza suggerimenti quando ricevevano suggerimenti generati da ChatGPT, con guadagni non diversi da quelli dei suggerimenti di tutor umani. Prima di una tecnica di correzione degli errori, i suggerimenti di ChatGPT non superavano i controlli di qualità nel 32% dei problemi."},
+     "relevance": {"en": "Adults but not enrolled students; very short sessions; hints were checked before use.", "it": "Adulti ma non studenti iscritti; sessioni molto brevi; i suggerimenti erano controllati prima dell'uso."}},
+    {"source": "darvishi-2024", "outcome": "learning",
+     "finding": {"en": "In an RCT with 1,625 university students, quality gains in peer-review comments made with AI prompts were not kept when the prompts were removed; self-monitoring checklists partly filled the gap.", "it": "In uno studio randomizzato con 1.625 universitari, i miglioramenti nei commenti di revisione tra pari ottenuti con suggerimenti automatici non si mantenevano quando i suggerimenti venivano tolti; le liste di autocontrollo colmavano in parte il vuoto."},
+     "relevance": {"en": "The assistance was not generative AI; indirect evidence on reliance versus learning from automated support.", "it": "Il supporto non era IA generativa; evidenza indiretta su dipendenza e apprendimento con supporti automatici."}}
+   ],
+   "benefits": [
+    {"kind": "research", "text": {"en": "AI hints on worked problems can produce learning gains similar to human-written hints, when the hints are checked.", "it": "I suggerimenti dell'IA sugli esercizi possono produrre guadagni simili a quelli scritti da persone, se vengono controllati."}, "sources": ["pardos-2024"]},
+    {"kind": "research", "text": {"en": "A tutor that gives hints and withholds answers avoids most of the harm seen with free chatbot use.", "it": "Un tutor che dà suggerimenti e non le risposte evita gran parte del danno osservato con l'uso libero del chatbot."}, "sources": ["bastani-2025"]},
+    {"kind": "interpretation", "text": {"en": "AI can generate many extra practice questions quickly, which supports retrieval practice, a well-established technique.", "it": "L'IA può creare rapidamente molte domande in più, utili per l'esercizio di richiamo, una tecnica di studio ben consolidata."}, "sources": ["adesope-2017"]}
+   ],
+   "risks": [
+    {"kind": "research", "text": {"en": "Higher scores while practising with AI can hide lower scores when the AI is gone (the 'crutch' effect).", "it": "Punteggi più alti mentre ci si esercita con l'IA possono nascondere punteggi più bassi quando l'IA non c'è (l'effetto «stampella»)."}, "sources": ["bastani-2025"]},
+    {"kind": "research", "text": {"en": "AI-generated hints, answers and questions can be wrong; general chatbots often gave incorrect solutions in the school study.", "it": "Suggerimenti, risposte e domande generati dall'IA possono essere sbagliati; nello studio scolastico il chatbot generico dava spesso soluzioni errate."}, "sources": ["bastani-2025", "pardos-2024"]},
+    {"kind": "research", "text": {"en": "Students tend to rely on automated help rather than learn from it.", "it": "Gli studenti tendono ad appoggiarsi all'aiuto automatico invece di imparare da esso."}, "sources": ["darvishi-2024"]}
+   ],
+   "conditions": [
+    {"en": "Whether the tool gives answers or only hints and feedback after the student's own attempt.", "it": "Se lo strumento dà le risposte oppure solo suggerimenti e commenti dopo il tentativo dello studente."},
+    {"en": "Whether practice ends with unassisted testing that mirrors the exam.", "it": "Se l'esercitazione si chiude con una prova senza aiuto simile all'esame."},
+    {"en": "Whether solutions in the tool were checked by the teacher.", "it": "Se le soluzioni usate dallo strumento sono state controllate dal docente."}
+   ],
+   "goodPractice": [
+    {"en": "Attempt every exercise on your own first; ask the AI only for a hint, then for feedback on your attempt.", "it": "Prova ogni esercizio da solo prima; chiedi all'IA solo un suggerimento, poi un commento sul tuo tentativo."},
+    {"en": "Ask the AI to quiz you (one question at a time, answer hidden) on your course notes, rather than to summarise them.", "it": "Chiedi all'IA di interrogarti sui tuoi appunti (una domanda alla volta, risposta nascosta), invece di riassumerli."},
+    {"en": "Check AI questions and answers against the textbook; drop questions you cannot verify.", "it": "Controlla domande e risposte dell'IA sul libro; scarta quelle che non riesci a verificare."},
+    {"en": "Finish each session with a timed, closed-book test, the way the exam will be.", "it": "Chiudi ogni sessione con una prova a tempo e a libro chiuso, come sarà l'esame."},
+    {"en": "Space your practice over several days instead of one long session.", "it": "Distribuisci l'esercizio su più giorni invece di una sola sessione lunga."}
+   ],
+   "noAI": [
+    {"title": {"en": "Practice testing", "it": "Esercitarsi con test"}, "text": {"en": "Taking practice tests improves learning more than restudying and other comparison conditions, across many studies.", "it": "Fare test di prova migliora l'apprendimento più che rileggere o altre condizioni di confronto, in moltissimi studi."}, "sources": ["adesope-2017"]},
+    {"title": {"en": "Spaced and interleaved practice", "it": "Ripasso distribuito e alternato"}, "text": {"en": "Practice testing and distributed practice are the two techniques rated as highly useful in a major review of study techniques.", "it": "L'autotest e il ripasso distribuito nel tempo sono le due tecniche giudicate più utili in un'ampia rassegna sulle tecniche di studio."}, "sources": ["dunlosky-2013"]}
+   ],
+   "toolTypes": ["tutoring-system", "general-assistant", "item-generator"],
+   "gaps": [
+    {"en": "No published RCT in HE yet compares retrieval practice with AI-generated questions to teacher-written questions or to no practice.", "it": "Non esiste ancora uno studio randomizzato pubblicato all'università che confronti l'autotest con domande dell'IA con domande del docente o con l'assenza di esercizio."},
+    {"en": "The quality of AI-generated questions for a given course (accuracy, difficulty, coverage) is rarely checked in student use.", "it": "La qualità delle domande generate dall'IA per un corso specifico (correttezza, difficoltà, copertura) è raramente verificata nell'uso reale degli studenti."},
+    {"en": "Long-term effects over a semester are unknown.", "it": "Gli effetti su un intero semestre non sono noti."}
+   ]
+  },
+  {
+   "id": "s-writing",
+   "role": "student",
+   "title": {"en": "Write and get feedback on writing", "it": "Scrivere e ricevere feedback sulla scrittura"},
+   "question": {"en": "Can AI help me write my essay or improve my draft?", "it": "L'IA mi può aiutare a scrivere la tesina o a migliorare la bozza?"},
+   "description": {"en": "Using AI to draft, revise or get feedback on essays, reports and other written assignments.", "it": "Usare l'IA per scrivere, rivedere o ricevere commenti su saggi, relazioni e altri elaborati scritti."},
+   "oecd": "Ch.1 pp.21–22 (Fan et al.; Chen et al.; Kosmyna et al.) and pp.24–25 (AI feedback); Ch.2 pp.44–46 and 51–52",
+   "evidenceLevel": "mixed",
+   "verdict": {
+    "en": "Two things need to be kept apart. AI feedback on a draft the student wrote leads to learning gains similar to human feedback in a meta-analysis, though students trust it less. Using ChatGPT to revise an essay improved the essay score in a university RCT, but not knowledge or transfer, and students did less self-monitoring. Writing with an LLM from the start was linked to weak recall of one's own text in a small preprint study.",
+    "it": "Bisogna distinguere due cose. I commenti dell'IA su una bozza scritta dallo studente producono, in una meta-analisi, guadagni di apprendimento simili ai commenti di una persona, anche se gli studenti se ne fidano meno. Usare ChatGPT per rivedere un saggio, in uno studio randomizzato all'università, ha migliorato il voto del testo ma non le conoscenze né il trasferimento, e gli studenti si sono controllati di meno. In un piccolo studio non ancora revisionato, scrivere con un modello linguistico fin dall'inizio è stato associato a un ricordo debole del proprio testo."
+   },
+   "outcomesMeasured": ["assisted-performance", "learning", "transfer", "retention", "satisfaction"],
+   "findings": [
+    {"source": "fan-2025", "outcome": "assisted-performance",
+     "finding": {"en": "In a randomised lab study with 117 university students revising an essay, the ChatGPT group improved essay scores the most, but knowledge gain and transfer did not differ from groups supported by a human expert, a checklist tool or no support; the ChatGPT group showed fewer metacognitive processes (the authors call this 'metacognitive laziness').", "it": "In uno studio randomizzato in laboratorio con 117 universitari che rivedevano un saggio, il gruppo con ChatGPT ha migliorato di più il voto del testo, ma conoscenze e trasferimento non differivano dai gruppi aiutati da un esperto, da una checklist o da nessuno; il gruppo con ChatGPT ha mostrato meno processi metacognitivi (gli autori parlano di «pigrizia metacognitiva»)."},
+     "relevance": {"en": "Direct HE evidence that a better text is not proof of more learning; single short lab session.", "it": "Evidenza diretta universitaria che un testo migliore non prova un apprendimento maggiore; una sola sessione breve in laboratorio."}},
+    {"source": "chen-2025-helpseeking", "outcome": "learning",
+     "finding": {"en": "38 university students revising essays sought help from ChatGPT or an experienced teacher. With ChatGPT they asked more operational questions and often skipped evaluating the help received; with the teacher, help-seeking followed the classic diagnose–ask–evaluate cycle.", "it": "38 universitari che rivedevano saggi chiedevano aiuto a ChatGPT o a un docente esperto. Con ChatGPT facevano più domande operative e spesso saltavano la valutazione dell'aiuto ricevuto; con il docente seguivano il ciclo classico diagnosi–domanda–valutazione."},
+     "relevance": {"en": "Small lab study; explains a mechanism rather than measuring learning.", "it": "Piccolo studio di laboratorio; spiega un meccanismo più che misurare l'apprendimento."}},
+    {"source": "kaliisa-2025", "outcome": "learning",
+     "finding": {"en": "Across 41 studies (4,813 students), AI-generated feedback and human feedback produced statistically similar learning performance (g = 0.25, CI −0.11 to 0.60); language and writing studies showed the same pattern with very high heterogeneity.", "it": "Su 41 studi (4.813 studenti), il feedback generato dall'IA e quello umano hanno prodotto risultati di apprendimento statisticamente simili (g = 0,25, IC da −0,11 a 0,60); negli studi su lingua e scrittura il quadro è lo stesso, con differenze molto ampie tra studi."},
+     "relevance": {"en": "The most relevant synthesis for AI feedback on student work; covers 'all forms of AI', not only generative; a correction was published in October 2026.", "it": "La sintesi più pertinente sul feedback dell'IA ai lavori degli studenti; copre «ogni forma di IA», non solo quella generativa; nell'ottobre 2026 è stata pubblicata una correzione."}},
+    {"source": "escalante-2023", "outcome": "learning",
+     "finding": {"en": "Over six weeks, 48 university English-language learners receiving GPT-4 feedback on their essays showed no difference in writing gains from those receiving tutor feedback; in a second group of 43, preferences for AI or human feedback were split almost evenly.", "it": "In sei settimane, 48 universitari che studiavano inglese e ricevevano commenti di GPT-4 sui loro saggi non hanno mostrato differenze di miglioramento rispetto a chi riceveva i commenti del tutor; in un secondo gruppo di 43, le preferenze tra IA e persona erano divise quasi a metà."},
+     "relevance": {"en": "Direct HE evidence on AI feedback (not AI drafting); small quasi-experiment.", "it": "Evidenza diretta universitaria sul feedback dell'IA (non sulla scrittura fatta dall'IA); piccolo quasi-esperimento."}},
+    {"source": "kosmyna-2025", "outcome": "retention",
+     "finding": {"en": "54 participants from five US universities wrote short essays alone, with a search engine or with ChatGPT over three sessions. The ChatGPT group showed lower brain connectivity, could rarely quote their own essay shortly after writing, reported lower ownership and produced more similar essays.", "it": "54 partecipanti di cinque università statunitensi hanno scritto brevi saggi da soli, con un motore di ricerca o con ChatGPT in tre sessioni. Il gruppo con ChatGPT ha mostrato una connettività cerebrale più bassa, raramente sapeva citare il proprio testo poco dopo averlo scritto, sentiva meno suo il lavoro e produceva saggi più simili tra loro."},
+     "relevance": {"en": "Preprint with a small sample; striking but needs replication.", "it": "Preprint con un campione piccolo; risultati vistosi ma da replicare."}}
+   ],
+   "benefits": [
+    {"kind": "research", "text": {"en": "AI feedback on your own draft can be as effective for learning as feedback from a tutor, and it is available immediately.", "it": "I commenti dell'IA sulla tua bozza possono essere efficaci quanto quelli di un tutor, e arrivano subito."}, "sources": ["kaliisa-2025", "escalante-2023"]},
+    {"kind": "research", "text": {"en": "AI support raises the quality of the text you hand in.", "it": "Il supporto dell'IA alza la qualità del testo consegnato."}, "sources": ["fan-2025"]}
+   ],
+   "risks": [
+    {"kind": "research", "text": {"en": "A better essay can hide no gain in knowledge, and less self-monitoring ('metacognitive laziness').", "it": "Un saggio migliore può nascondere nessun guadagno di conoscenza e meno autocontrollo («pigrizia metacognitiva»)."}, "sources": ["fan-2025", "chen-2025-helpseeking"]},
+    {"kind": "research", "text": {"en": "Starting with the LLM may weaken memory and ownership of what you wrote, and make texts more alike.", "it": "Partire dal modello linguistico può indebolire il ricordo e il senso di paternità di ciò che si è scritto, e rendere i testi più simili."}, "sources": ["kosmyna-2025"]},
+    {"kind": "research", "text": {"en": "Students trust AI feedback less than human feedback, which can reduce how much they act on it.", "it": "Gli studenti si fidano meno del feedback dell'IA che di quello umano, e questo può ridurre quanto lo mettono in pratica."}, "sources": ["gasevic-yan-2026"]},
+    {"kind": "interpretation", "text": {"en": "Submitting AI-written text may breach your institution's academic integrity rules.", "it": "Consegnare testi scritti dall'IA può violare le regole di integrità accademica del tuo ateneo."}, "sources": ["oecd-2026"]}
+   ],
+   "conditions": [
+    {"en": "Whether the student writes first and uses AI for feedback, or the AI drafts and the student edits.", "it": "Se lo studente scrive prima e usa l'IA per i commenti, oppure l'IA scrive e lo studente corregge."},
+    {"en": "Whether the goal of the assignment is the product or the skill of writing and thinking.", "it": "Se l'obiettivo del compito è il prodotto finale o la capacità di scrivere e ragionare."},
+    {"en": "Feedback literacy: students who can judge and act on feedback gain more.", "it": "La capacità di usare il feedback: chi sa valutarlo e metterlo in pratica ne trae di più."}
+   ],
+   "goodPractice": [
+    {"en": "Write your own first draft before opening any AI tool.", "it": "Scrivi la tua prima bozza prima di aprire qualsiasi strumento di IA."},
+    {"en": "Ask for feedback against the assignment rubric, not for a rewrite.", "it": "Chiedi commenti in base ai criteri di valutazione del compito, non una riscrittura."},
+    {"en": "Decide yourself which comments to accept, and note why; reject what you cannot justify.", "it": "Decidi tu quali commenti accettare e annota perché; scarta ciò che non sai giustificare."},
+    {"en": "After revising, summarise your main argument from memory to check you still own it.", "it": "Dopo la revisione, riassumi a memoria la tua tesi principale per verificare che sia ancora tua."},
+    {"en": "Check your course's AI policy and declare how you used AI.", "it": "Controlla le regole del corso sull'IA e dichiara come l'hai usata."}
+   ],
+   "noAI": [
+    {"title": {"en": "Peer feedback", "it": "Revisione tra pari"}, "text": {"en": "In 24 HE studies, peer feedback on academic writing produced larger writing gains than no feedback (g = 0.91) and similar gains to teacher feedback.", "it": "In 24 studi universitari, la revisione tra pari sulla scrittura accademica ha prodotto miglioramenti maggiori dell'assenza di feedback (g = 0,91) e simili a quelli del feedback del docente."}, "sources": ["huisman-2019"]}
+   ],
+   "toolTypes": ["writing-feedback", "general-assistant"],
+   "gaps": [
+    {"en": "Few studies follow students over a semester to see whether AI feedback improves unassisted writing later.", "it": "Pochi studi seguono gli studenti per un semestre per vedere se il feedback dell'IA migliora la scrittura successiva senza aiuto."},
+    {"en": "Effects in languages other than English and in disciplinary writing (law, business cases, lab reports) are little studied.", "it": "Gli effetti in lingue diverse dall'inglese e nella scrittura disciplinare (diritto, casi aziendali, relazioni di laboratorio) sono poco studiati."}
+   ]
+  },
+  {
+   "id": "s-coding",
+   "role": "student",
+   "title": {"en": "Learn programming", "it": "Imparare a programmare"},
+   "question": {"en": "Should I use AI while I learn to code?", "it": "Devo usare l'IA mentre imparo a programmare?"},
+   "description": {"en": "Using chatbots or coding assistants to explain code, fix errors or write code while learning to program.", "it": "Usare chatbot o assistenti di programmazione per spiegare il codice, correggere errori o scrivere codice mentre si impara a programmare."},
+   "oecd": "Ch.1 p.23 (teachable agent) and p.25 (Kosar et al. course redesign); Ch.2 p.42 (Lehmann et al.); Ch.4 pp.100–101 (collaborative programming studies)",
+   "evidenceLevel": "mixed",
+   "verdict": {
+    "en": "Several controlled studies with university programming students find no overall effect of AI access on learning, and a preprint meta-analysis finds a productivity gain but no significant learning gain. How students use AI matters: asking for explanations or teaching the AI helped, copying solutions hurt, and struggling novices can end up with an illusion of competence. When a course redesigns assessment (oral defences, paper exams), students with and without AI reached similar results.",
+    "it": "Diversi studi controllati con studenti universitari di programmazione non trovano un effetto complessivo dell'accesso all'IA sull'apprendimento, e una meta-analisi non ancora revisionata trova un aumento di produttività ma nessun guadagno significativo di apprendimento. Conta come si usa l'IA: chiedere spiegazioni o insegnare all'IA ha aiutato, copiare le soluzioni ha danneggiato, e i principianti in difficoltà possono finire con un'illusione di competenza. Quando un corso ripensa la valutazione (discussione orale, esami su carta), studenti con e senza IA ottengono risultati simili."
+   },
+   "outcomesMeasured": ["learning", "assisted-performance", "time", "equity", "satisfaction"],
+   "findings": [
+    {"source": "maier-2026", "outcome": "learning",
+     "finding": {"en": "A meta-analysis of 23 studies found a moderate productivity gain from GenAI coding assistants (g = 0.33) but no significant effect on learning measured by exam performance (g = 0.14, CI −0.18 to 0.47).", "it": "Una meta-analisi di 23 studi ha trovato un aumento moderato di produttività con gli assistenti di programmazione (g = 0,33) ma nessun effetto significativo sull'apprendimento misurato con gli esami (g = 0,14, IC da −0,18 a 0,47)."},
+     "relevance": {"en": "Preprint; mixes professional and educational settings.", "it": "Preprint; mescola contesti professionali ed educativi."}},
+    {"source": "kosar-2024", "outcome": "learning",
+     "finding": {"en": "In a first-year object-oriented programming course (182 students), allowing ChatGPT for practical assignments made no difference to assignment grades or midterm exams; the course had adapted assignments, oral defences of code and paper-based exams.", "it": "In un corso del primo anno di programmazione a oggetti (182 studenti), permettere ChatGPT nei compiti pratici non ha cambiato i voti dei compiti né gli esami intermedi; il corso aveva adattato i compiti, previsto la discussione orale del codice ed esami su carta."},
+     "relevance": {"en": "Direct HE evidence; shows that course design can neutralise AI effects.", "it": "Evidenza diretta universitaria; mostra che il disegno del corso può neutralizzare gli effetti dell'IA."}},
+    {"source": "lehmann-2025", "outcome": "learning",
+     "finding": {"en": "No overall effect of ChatGPT on learning basic Python in two lab experiments; solution requests reduced understanding, explanation requests improved it, and below-median students understood less than controls.", "it": "Nessun effetto complessivo di ChatGPT sull'apprendimento delle basi di Python in due esperimenti; chiedere soluzioni riduceva la comprensione, chiedere spiegazioni la migliorava, e gli studenti sotto la mediana capivano meno del gruppo di controllo."},
+     "relevance": {"en": "Direct HE evidence; preprint.", "it": "Evidenza diretta universitaria; preprint."}},
+    {"source": "prather-2024", "outcome": "learning",
+     "finding": {"en": "In 21 observed lab sessions, novices who were already doing well used GenAI to go faster, while struggling novices had their metacognitive difficulties compounded and often finished with an illusion of competence.", "it": "In 21 sessioni osservate in laboratorio, i principianti già bravi usavano l'IA per andare più veloci, mentre quelli in difficoltà vedevano aggravarsi i problemi di autocontrollo e spesso finivano con un'illusione di competenza."},
+     "relevance": {"en": "Qualitative study; explains why gaps may widen.", "it": "Studio qualitativo; spiega perché i divari possono allargarsi."}},
+    {"source": "chen-2026-teachable", "outcome": "learning",
+     "finding": {"en": "Students who taught ChatGPT as a 'teachable agent' improved knowledge and code-writing skills and self-regulated learning; effects on debugging skills were limited.", "it": "Gli studenti che «insegnavano» a ChatGPT come a un allievo hanno migliorato conoscenze, capacità di scrivere codice e autoregolazione; gli effetti sulla correzione degli errori sono stati limitati."},
+     "relevance": {"en": "A pedagogical use of a general chatbot; details of sample and comparison read from the abstract only.", "it": "Un uso didattico di un chatbot generico; dettagli su campione e confronto letti solo nell'abstract."}},
+    {"source": "wang-2026-srl", "outcome": "learning",
+     "finding": {"en": "Over seven weeks with 83 sophomores, ChatGPT groups reported higher motivation and engagement, and adding self-regulation strategies raised self-efficacy, but programming knowledge did not differ from traditional instruction (p = .79).", "it": "In sette settimane con 83 studenti del secondo anno, i gruppi con ChatGPT hanno riportato più motivazione e coinvolgimento, e l'aggiunta di strategie di autoregolazione ha aumentato l'autoefficacia, ma le conoscenze di programmazione non erano diverse dalla didattica tradizionale (p = 0,79)."},
+     "relevance": {"en": "Direct HE evidence; small groups, 80% male.", "it": "Evidenza diretta universitaria; gruppi piccoli, 80% maschi."}}
+   ],
+   "benefits": [
+    {"kind": "research", "text": {"en": "Explanations of code and errors, and teaching the AI, are linked to better understanding.", "it": "Spiegazioni del codice e degli errori, e il fatto di insegnare all'IA, sono legati a una comprensione migliore."}, "sources": ["lehmann-2025", "chen-2026-teachable"]},
+    {"kind": "research", "text": {"en": "Students report more motivation and engagement when using ChatGPT in programming courses.", "it": "Gli studenti dichiarano più motivazione e coinvolgimento quando usano ChatGPT nei corsi di programmazione."}, "sources": ["wang-2026-srl"]},
+    {"kind": "research", "text": {"en": "AI assistance increases coding productivity, a skill relevant for later work.", "it": "L'assistenza dell'IA aumenta la produttività nella scrittura di codice, una competenza utile nel lavoro futuro."}, "sources": ["maier-2026"]}
+   ],
+   "risks": [
+    {"kind": "research", "text": {"en": "Copying generated solutions completes more exercises but leaves less understanding.", "it": "Copiare le soluzioni generate fa completare più esercizi ma lascia meno comprensione."}, "sources": ["lehmann-2025"]},
+    {"kind": "research", "text": {"en": "Struggling novices may feel they performed better than they did.", "it": "I principianti in difficoltà possono credere di aver fatto meglio di quanto sia vero."}, "sources": ["prather-2024", "lehmann-2025"]},
+    {"kind": "research", "text": {"en": "Gaps between stronger and weaker students can widen.", "it": "Il divario tra studenti più forti e più deboli può allargarsi."}, "sources": ["prather-2024", "lehmann-2025"]}
+   ],
+   "conditions": [
+    {"en": "Prior programming knowledge: stronger students benefit more.", "it": "Conoscenze di programmazione di partenza: chi è più forte ne trae più beneficio."},
+    {"en": "Assessment design: oral defences and closed-book exams change how students use AI.", "it": "Il tipo di valutazione: discussioni orali ed esami a libro chiuso cambiano il modo in cui gli studenti usano l'IA."},
+    {"en": "Whether copy-paste of generated code is easy or discouraged.", "it": "Se copiare e incollare il codice generato è facile o scoraggiato."}
+   ],
+   "goodPractice": [
+    {"en": "Plan your solution (in words or pseudocode) before asking the AI anything.", "it": "Pianifica la soluzione (a parole o in pseudocodice) prima di chiedere qualsiasi cosa all'IA."},
+    {"en": "Ask the AI to explain an error or a concept, not to write the function for you.", "it": "Chiedi all'IA di spiegare un errore o un concetto, non di scrivere la funzione al posto tuo."},
+    {"en": "Retype rather than paste, and be ready to explain every line you submit.", "it": "Riscrivi invece di incollare, e sii pronto a spiegare ogni riga che consegni."},
+    {"en": "Try explaining your code to the AI as if teaching it, and ask it to find gaps in your explanation.", "it": "Prova a spiegare il tuo codice all'IA come se le facessi lezione, e chiedile di trovare i buchi nella tua spiegazione."},
+    {"en": "Regularly solve exercises with the assistant switched off.", "it": "Risolvi regolarmente esercizi con l'assistente spento."}
+   ],
+   "noAI": [
+    {"title": {"en": "Pair programming", "it": "Programmazione in coppia"}, "text": {"en": "A meta-analysis of 18 studies (3,308 students) found positive effects of pair programming over solo programming on assignments, exams and pass rates.", "it": "Una meta-analisi di 18 studi (3.308 studenti) ha trovato effetti positivi della programmazione in coppia rispetto a quella individuale su compiti, esami e tassi di superamento."}, "sources": ["umapathy-2017"]}
+   ],
+   "toolTypes": ["coding-assistant", "tutoring-system", "general-assistant"],
+   "gaps": [
+    {"en": "Few semester-long RCTs in CS1 with delayed, unassisted tests.", "it": "Pochi studi randomizzati lunghi un semestre nei corsi introduttivi, con prove successive senza aiuto."},
+    {"en": "Little evidence on which tool configurations (hints only, no code output) work best for novices.", "it": "Poche evidenze su quali configurazioni degli strumenti (solo suggerimenti, niente codice) funzionino meglio per i principianti."}
+   ]
+  },
+  {
+   "id": "s-literature",
+   "role": "student",
+   "title": {"en": "Search and synthesise literature", "it": "Cercare e sintetizzare la letteratura"},
+   "question": {"en": "Can AI find sources and summarise the literature for my paper or thesis?", "it": "L'IA può trovarmi le fonti e riassumere la letteratura per la mia tesina o tesi?"},
+   "description": {"en": "Using chatbots or AI research assistants to find references, summarise papers and draft literature reviews.", "it": "Usare chatbot o assistenti di ricerca basati sull'IA per trovare riferimenti, riassumere articoli e abbozzare rassegne della letteratura."},
+   "oecd": "Ch.1 p.14 (hallucinations) and Fig. 1.3 p.18 (literature research is a common student use); Ch.2 p.52 (Stadler et al.). No dedicated OECD section.",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "Audits consistently show that chatbots asked for references produce many that are wrong or invented: from 18% to over 90% depending on model and task, and still about 40% flawed or fabricated across eight free chatbots in a recent audit. Tools that retrieve real sources reduce but do not remove the problem. On learning, one university RCT found that researching a topic with ChatGPT instead of Google lowered mental effort but also the quality of students' reasoning. No study measures whether AI tools help students learn to search or synthesise.",
+    "it": "Le verifiche mostrano in modo coerente che i chatbot, quando si chiedono riferimenti bibliografici, ne producono molti sbagliati o inventati: dal 18% a oltre il 90% secondo modello e compito, e ancora circa il 40% errati o inventati su otto chatbot gratuiti in una verifica recente. Gli strumenti che recuperano fonti reali riducono il problema ma non lo eliminano. Sull'apprendimento, uno studio randomizzato all'università ha trovato che documentarsi con ChatGPT invece che con Google riduce la fatica ma anche la qualità del ragionamento. Nessuno studio misura se gli strumenti di IA aiutino gli studenti a imparare a cercare e sintetizzare."
+   },
+   "outcomesMeasured": ["integrity", "learning", "assisted-performance"],
+   "findings": [
+    {"source": "walters-2023", "outcome": "integrity",
+     "finding": {"en": "In 84 short literature reviews on 42 topics, 55% of GPT-3.5 citations and 18% of GPT-4 citations were fabricated; among real citations, 43% (GPT-3.5) and 24% (GPT-4) contained substantive errors.", "it": "In 84 brevi rassegne su 42 argomenti, il 55% delle citazioni di GPT-3.5 e il 18% di quelle di GPT-4 erano inventate; tra quelle reali, il 43% (GPT-3.5) e il 24% (GPT-4) conteneva errori sostanziali."},
+     "relevance": {"en": "Older models (2023), but shows the type of error to expect.", "it": "Modelli ormai vecchi (2023), ma mostra il tipo di errore da aspettarsi."}},
+    {"source": "chelli-2024", "outcome": "integrity",
+     "finding": {"en": "Asked to reproduce 11 published systematic reviews, GPT-3.5, GPT-4 and Bard retrieved few relevant papers (recall ≤ 13.7%), and 28.6–91.4% of the references they gave were hallucinated.", "it": "Chiamati a riprodurre 11 revisioni sistematiche pubblicate, GPT-3.5, GPT-4 e Bard hanno trovato pochi articoli pertinenti (richiamo ≤ 13,7%), e tra il 28,6% e il 91,4% dei riferimenti forniti erano inventati."},
+     "relevance": {"en": "Medical domain; shows chatbots are poor at systematic searching.", "it": "Ambito medico; mostra che i chatbot sono scarsi nella ricerca sistematica."}},
+    {"source": "cabezas-2026", "outcome": "integrity",
+     "finding": {"en": "Of 400 references generated by eight free chatbots across five fields, 26.5% were fully correct and 39.8% erroneous or fabricated; two models produced no fabricated references, others had high failure rates, especially for journal articles.", "it": "Su 400 riferimenti generati da otto chatbot gratuiti in cinque aree, il 26,5% era del tutto corretto e il 39,8% errato o inventato; due modelli non hanno inventato riferimenti, altri avevano tassi di errore alti, soprattutto per gli articoli di rivista."},
+     "relevance": {"en": "Recent audit of free versions; results change with model versions.", "it": "Verifica recente sulle versioni gratuite; i risultati cambiano con le versioni dei modelli."}},
+    {"source": "rao-2026", "outcome": "integrity",
+     "finding": {"en": "Across 10 LLMs and deep-research agents, 3–13% of citation URLs were hallucinated and 5–18% did not resolve; deep-research agents cited more but hallucinated more. An automatic link check cut non-resolving URLs to under 1%.", "it": "Su 10 modelli e agenti di «deep research», tra il 3% e il 13% degli indirizzi citati era inventato e tra il 5% e il 18% non funzionava; gli agenti di ricerca approfondita citavano di più ma inventavano di più. Un controllo automatico dei link ha ridotto quelli non funzionanti sotto l'1%."},
+     "relevance": {"en": "Preprint; covers retrieval-based tools; checks that a link exists, not that it supports the claim.", "it": "Preprint; riguarda strumenti che cercano fonti reali; verifica che il link esista, non che sostenga l'affermazione."}},
+    {"source": "stadler-2024", "outcome": "learning",
+     "finding": {"en": "University students who researched a topic with ChatGPT rather than Google had lower cognitive load but lower-quality reasoning in their recommendations.", "it": "Gli universitari che si documentavano con ChatGPT invece che con Google avevano meno carico cognitivo ma ragionamenti di qualità inferiore nelle loro raccomandazioni."},
+     "relevance": {"en": "The only direct HE learning study found for information gathering.", "it": "L'unico studio diretto sull'apprendimento all'università trovato per la ricerca di informazioni."}}
+   ],
+   "benefits": [
+    {"kind": "interpretation", "text": {"en": "AI tools can suggest search terms and help a first orientation in an unfamiliar field, provided every source is then checked.", "it": "Gli strumenti di IA possono suggerire parole chiave e aiutare un primo orientamento in un campo nuovo, a patto di verificare poi ogni fonte."}, "sources": ["oecd-2026"]},
+    {"kind": "research", "text": {"en": "Automatic link checking sharply reduces broken or invented URLs in tools that retrieve sources.", "it": "Il controllo automatico dei link riduce molto gli indirizzi inventati o non funzionanti negli strumenti che cercano fonti."}, "sources": ["rao-2026"]}
+   ],
+   "risks": [
+    {"kind": "research", "text": {"en": "Invented or distorted references are common and can end up in submitted work.", "it": "Riferimenti inventati o distorti sono frequenti e possono finire nei lavori consegnati."}, "sources": ["walters-2023", "chelli-2024", "cabezas-2026"]},
+    {"kind": "research", "text": {"en": "Chatbots miss most relevant studies when used for systematic searching.", "it": "Usati per una ricerca sistematica, i chatbot perdono la maggior parte degli studi pertinenti."}, "sources": ["chelli-2024"]},
+    {"kind": "research", "text": {"en": "Easier information gathering can mean shallower reasoning.", "it": "Raccogliere informazioni più facilmente può significare ragionare in modo più superficiale."}, "sources": ["stadler-2024"]},
+    {"kind": "vendor", "text": {"en": "Vendors of research assistants often claim that answers are 'grounded in real papers'; independent audits show error rates still vary widely by tool.", "it": "I produttori di assistenti di ricerca dichiarano spesso che le risposte sono «basate su articoli reali»; le verifiche indipendenti mostrano che gli errori variano ancora molto da uno strumento all'altro."}, "sources": ["cabezas-2026", "rao-2026"]}
+   ],
+   "conditions": [
+    {"en": "Whether the tool searches a real database and links to the source, or generates references from memory.", "it": "Se lo strumento cerca in una banca dati reale e collega la fonte, oppure genera i riferimenti «a memoria»."},
+    {"en": "Model and version: error rates differ greatly and change over time.", "it": "Modello e versione: i tassi di errore sono molto diversi e cambiano nel tempo."},
+    {"en": "Whether the student reads the cited sources.", "it": "Se lo studente legge davvero le fonti citate."}
+   ],
+   "goodPractice": [
+    {"en": "Never cite a reference you have not opened and read yourself.", "it": "Non citare mai un riferimento che non hai aperto e letto tu."},
+    {"en": "Use AI to brainstorm keywords, then run the search in the library catalogue or a scholarly database.", "it": "Usa l'IA per trovare parole chiave, poi fai la ricerca nel catalogo della biblioteca o in una banca dati scientifica."},
+    {"en": "Check every DOI and title in a database before adding it to your bibliography.", "it": "Controlla ogni DOI e titolo in una banca dati prima di aggiungerlo alla bibliografia."},
+    {"en": "Write your own synthesis; use AI only to check whether you missed a theme.", "it": "Scrivi tu la sintesi; usa l'IA solo per controllare se hai tralasciato un tema."},
+    {"en": "Ask your university library for training on search and on AI research tools.", "it": "Chiedi alla biblioteca d'ateneo una formazione sulla ricerca bibliografica e sugli strumenti di IA per la ricerca."}
+   ],
+   "noAI": [],
+   "toolTypes": ["research-assistant", "general-assistant"],
+   "gaps": [
+    {"en": "No study measures whether students who use AI research assistants become better or worse at searching, evaluating and synthesising literature.", "it": "Nessuno studio misura se gli studenti che usano assistenti di ricerca con IA diventino più o meno capaci di cercare, valutare e sintetizzare la letteratura."},
+    {"en": "Audits check whether references exist, rarely whether they support the claims made.", "it": "Le verifiche controllano se i riferimenti esistono, raramente se sostengono davvero ciò che si afferma."},
+    {"en": "Results for paid and retrieval-based tools are scarce and quickly outdated.", "it": "I dati sugli strumenti a pagamento e su quelli che cercano fonti reali sono pochi e invecchiano in fretta."}
+   ]
+  },
+  {
+   "id": "s-argue",
+   "role": "student",
+   "title": {"en": "Prepare discussions, cases and arguments", "it": "Preparare discussioni, casi e argomentazioni"},
+   "question": {"en": "Can AI help me build and test my arguments for a debate or case discussion?", "it": "L'IA mi può aiutare a costruire e mettere alla prova le mie argomentazioni per un dibattito o la discussione di un caso?"},
+   "description": {"en": "Using AI to gather arguments, play devil's advocate or structure a position for seminars, debates and case discussions.", "it": "Usare l'IA per raccogliere argomenti, fare l'avvocato del diavolo o strutturare una posizione per seminari, dibattiti e discussioni di casi."},
+   "oecd": "Ch.1 p.23 (Darmawansah et al.); Ch.2 p.52 (Stadler et al.); Ch.4 p.101",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "When ChatGPT was embedded in a structured activity (prompting training, a collaboration script, argument mapping), university EFL students improved their argumentation more than a group using search engines. When students simply used ChatGPT to gather information for a recommendation, their reasoning was weaker than with Google. Evidence comes from few studies, mostly outside business and case teaching.",
+    "it": "Quando ChatGPT è stato inserito in un'attività strutturata (formazione sui prompt, un copione di collaborazione, mappe argomentative), studenti universitari di inglese come lingua straniera hanno migliorato l'argomentazione più di un gruppo che usava i motori di ricerca. Quando invece gli studenti usavano semplicemente ChatGPT per raccogliere informazioni, i loro ragionamenti erano più deboli che con Google. Le evidenze vengono da pochi studi, quasi tutti fuori dalla didattica aziendale e per casi."
+   },
+   "outcomesMeasured": ["learning", "assisted-performance"],
+   "findings": [
+    {"source": "darmawansah-2025", "outcome": "learning",
+     "finding": {"en": "EFL students who used ChatGPT within a collaboration script and argument-mapping activity outperformed a search-engine group on argumentative speaking and argument complexity (reported as a large effect); results depended on prompting quality and English proficiency.", "it": "Studenti di inglese come lingua straniera che usavano ChatGPT dentro un copione di collaborazione e un'attività di mappe argomentative hanno superato un gruppo con motore di ricerca nel parlato argomentativo e nella complessità degli argomenti (effetto riportato come ampio); i risultati dipendevano dalla qualità dei prompt e dal livello di inglese."},
+     "relevance": {"en": "Direct evidence of a structured pedagogical use; read via OECD summaries, not the full paper.", "it": "Evidenza diretta di un uso didattico strutturato; letta tramite le sintesi OCSE, non l'articolo completo."}},
+    {"source": "stadler-2024", "outcome": "learning",
+     "finding": {"en": "Using ChatGPT rather than Google to research a socio-scientific issue led to lower-quality reasoning and argumentation, despite lower cognitive load.", "it": "Usare ChatGPT invece di Google per documentarsi su un tema socio-scientifico ha portato a ragionamenti e argomentazioni di qualità inferiore, nonostante il minore carico cognitivo."},
+     "relevance": {"en": "Direct HE RCT on unstructured use.", "it": "Studio randomizzato universitario sull'uso non strutturato."}},
+    {"source": "lee-2025-chi", "outcome": "assisted-performance",
+     "finding": {"en": "In a survey of 319 knowledge workers, higher confidence in GenAI was associated with less critical thinking, and higher self-confidence with more.", "it": "In un sondaggio su 319 lavoratori della conoscenza, maggiore fiducia nell'IA generativa si associava a meno pensiero critico, mentre maggiore fiducia in sé stessi a più pensiero critico."},
+     "relevance": {"en": "Self-reported, not students: indirect.", "it": "Dati dichiarati e non studenti: evidenza indiretta."}},
+    {"source": "zhai-2024", "outcome": "learning",
+     "finding": {"en": "A systematic review of 14 studies concludes that over-reliance on AI dialogue systems pushes users towards fast shortcuts and can weaken critical thinking and analytical reasoning.", "it": "Una revisione sistematica di 14 studi conclude che l'eccessiva dipendenza dai sistemi di dialogo con IA spinge verso scorciatoie rapide e può indebolire pensiero critico e ragionamento analitico."},
+     "relevance": {"en": "Small, heterogeneous review; mechanisms rather than effect sizes.", "it": "Revisione piccola ed eterogenea; descrive meccanismi più che misurare effetti."}}
+   ],
+   "benefits": [
+    {"kind": "research", "text": {"en": "Within a structured script, AI rebuttals and backing information can strengthen students' arguments.", "it": "Dentro un'attività strutturata, le obiezioni e le informazioni fornite dall'IA possono rafforzare le argomentazioni degli studenti."}, "sources": ["darmawansah-2025"]},
+    {"kind": "interpretation", "text": {"en": "AI can play an opponent at any time, which helps rehearse counter-arguments before a seminar.", "it": "L'IA può fare da avversario in qualsiasi momento, utile per provare le obiezioni prima di un seminario."}, "sources": ["darmawansah-2025"]}
+   ],
+   "risks": [
+    {"kind": "research", "text": {"en": "Relying on AI to gather information can produce weaker reasoning.", "it": "Affidarsi all'IA per raccogliere informazioni può portare a ragionamenti più deboli."}, "sources": ["stadler-2024"]},
+    {"kind": "research", "text": {"en": "Trust in the AI is linked to less critical thinking.", "it": "La fiducia nell'IA è legata a meno pensiero critico."}, "sources": ["lee-2025-chi", "zhai-2024"]},
+    {"kind": "interpretation", "text": {"en": "Students may all bring the same AI-generated arguments, making discussions less varied.", "it": "Gli studenti potrebbero portare tutti gli stessi argomenti generati dall'IA, rendendo le discussioni meno varie."}, "sources": ["doshi-2024"]}
+   ],
+   "conditions": [
+    {"en": "Structured activity (scripts, argument maps, assigned roles) versus open use.", "it": "Attività strutturata (copioni, mappe argomentative, ruoli assegnati) rispetto a un uso libero."},
+    {"en": "Students' prompting skill and language proficiency.", "it": "Capacità di formulare prompt e padronanza della lingua da parte degli studenti."}
+   ],
+   "goodPractice": [
+    {"en": "Write your position and main reasons first; then ask the AI to attack them.", "it": "Scrivi prima la tua posizione e le ragioni principali; poi chiedi all'IA di attaccarle."},
+    {"en": "Map the argument yourself (claim, evidence, objection, reply) and use AI to find missing objections.", "it": "Costruisci tu la mappa dell'argomento (tesi, prove, obiezione, risposta) e usa l'IA per trovare le obiezioni mancanti."},
+    {"en": "Verify every fact or figure the AI offers before using it in class.", "it": "Verifica ogni fatto o dato proposto dall'IA prima di usarlo in aula."},
+    {"en": "Bring at least one argument the AI did not suggest.", "it": "Porta almeno un argomento che l'IA non ti ha suggerito."}
+   ],
+   "noAI": [
+    {"title": {"en": "Collaboration scripts", "it": "Copioni di collaborazione"}, "text": {"en": "Structuring group work with scripts that prompt learners to build on each other's reasoning improves collaboration skills (d = 0.95) and, less, domain knowledge (d = 0.20).", "it": "Strutturare il lavoro di gruppo con copioni che spingono a costruire sul ragionamento dei compagni migliora le capacità di collaborazione (d = 0,95) e, meno, le conoscenze disciplinari (d = 0,20)."}, "sources": ["vogel-2017"]}
+   ],
+   "toolTypes": ["general-assistant", "custom-chatbot"],
+   "gaps": [
+    {"en": "No controlled studies found on AI for case-method preparation in business or law schools.", "it": "Non sono stati trovati studi controllati sull'uso dell'IA per preparare casi nelle scuole di economia o di diritto."},
+    {"en": "Effects on the quality of live class discussion are unknown.", "it": "Gli effetti sulla qualità della discussione in aula non sono noti."}
+   ]
+  },
+  {
+   "id": "s-stem-problems",
+   "role": "student",
+   "title": {"en": "Solve maths and STEM problems", "it": "Risolvere problemi di matematica e materie scientifiche"},
+   "question": {"en": "Can AI help me with maths, physics or statistics problems?", "it": "L'IA mi può aiutare con problemi di matematica, fisica o statistica?"},
+   "description": {"en": "Using AI tutors or chatbots for step-by-step help, hints or worked solutions on quantitative problems.", "it": "Usare tutor IA o chatbot per avere aiuto passo per passo, suggerimenti o soluzioni svolte su problemi quantitativi."},
+   "oecd": "Ch.1 pp.20–23 (Bastani et al.; Kestin et al.); Ch.2 p.42; Ch.3 pp.77–79",
+   "evidenceLevel": "mixed",
+   "verdict": {
+    "en": "Results depend on design. A purpose-built physics tutor beat active learning in a university RCT; ChatGPT hints matched human hints for adult learners online. By contrast, free chatbot use during practice harmed later exam results in a large school study, and general chatbots often give wrong solutions unless they are given the correct ones. Meta-analyses on maths and chatbots are positive on average but mix school and university studies and are partly preprints.",
+    "it": "I risultati dipendono dal modo in cui lo strumento è progettato. Un tutor di fisica costruito apposta ha superato l'apprendimento attivo in uno studio randomizzato all'università; i suggerimenti di ChatGPT hanno eguagliato quelli umani per adulti che studiavano online. Al contrario, l'uso libero del chatbot durante l'esercitazione ha peggiorato i risultati della verifica in un grande studio scolastico, e i chatbot generici danno spesso soluzioni sbagliate se non ricevono quelle corrette. Le meta-analisi su matematica e chatbot sono positive in media, ma mescolano scuola e università e in parte non sono ancora revisionate."
+   },
+   "outcomesMeasured": ["learning", "assisted-performance", "time", "satisfaction"],
+   "findings": [
+    {"source": "kestin-2025", "outcome": "learning",
+     "finding": {"en": "A GPT-4 physics tutor with expert-written step-by-step solutions produced larger immediate learning gains than in-class active learning (0.73–1.3 SD) in less median time.", "it": "Un tutor di fisica basato su GPT-4, con soluzioni passo per passo scritte da esperti, ha prodotto guadagni immediati maggiori dell'apprendimento attivo in aula (0,73–1,3 deviazioni standard) in un tempo mediano inferiore."},
+     "relevance": {"en": "Direct HE evidence for a structured tutor; two lessons, immediate tests only.", "it": "Evidenza diretta universitaria per un tutor strutturato; due lezioni, solo test immediati."}},
+    {"source": "bastani-2025", "outcome": "learning",
+     "finding": {"en": "Unrestricted GPT-4 during maths practice lowered later unassisted exam grades by 17%; a tutor version with teacher hints and solutions in the prompt avoided most of this harm. The general version often gave incorrect answers.", "it": "GPT-4 senza limiti durante l'esercitazione di matematica ha abbassato del 17% i voti della verifica senza aiuto; una versione tutor con suggerimenti e soluzioni del docente nel prompt ha evitato gran parte del danno. La versione generica dava spesso risposte errate."},
+     "relevance": {"en": "High-school level: indirect for HE.", "it": "Livello scuola superiore: evidenza indiretta per l'università."}},
+    {"source": "pardos-2024", "outcome": "learning",
+     "finding": {"en": "ChatGPT-generated hints on algebra and statistics problems produced learning gains not significantly different from human-tutor hints, but failed quality checks on 32% of problems before mitigation.", "it": "I suggerimenti di ChatGPT su problemi di algebra e statistica hanno prodotto guadagni non diversi da quelli di tutor umani, ma prima delle correzioni non superavano i controlli di qualità nel 32% dei problemi."},
+     "relevance": {"en": "Online adults, very short sessions.", "it": "Adulti online, sessioni molto brevi."}},
+    {"source": "strohmaier-2026", "outcome": "learning",
+     "finding": {"en": "A living meta-analysis of 34 studies on GenAI for learning mathematics estimates g = 0.57, with larger effects when AI supplements teacher instruction and in longer interventions, and some evidence of larger effects for younger learners.", "it": "Una meta-analisi aggiornata di continuo su 34 studi sull'IA generativa per imparare la matematica stima g = 0,57, con effetti maggiori quando l'IA affianca l'insegnamento del docente e negli interventi più lunghi, e qualche indicazione di effetti maggiori per i più giovani."},
+     "relevance": {"en": "Preprint; not limited to HE; does not separate assisted performance from learning in the abstract.", "it": "Preprint; non limitato all'università; nell'abstract non separa la prestazione assistita dall'apprendimento."}},
+    {"source": "laun-wolff-2025", "outcome": "learning",
+     "finding": {"en": "Chatbot effects on learning performance were larger in STEM than in other fields, but small-to-moderate overall after correction for publication bias.", "it": "Gli effetti dei chatbot sul rendimento erano maggiori nelle materie STEM che negli altri ambiti, ma nel complesso piccoli-moderati dopo la correzione per il bias di pubblicazione."},
+     "relevance": {"en": "Includes non-generative chatbots and school levels.", "it": "Include chatbot non generativi e livelli scolastici."}}
+   ],
+   "benefits": [
+    {"kind": "research", "text": {"en": "Step-by-step tutoring with verified solutions can speed up and deepen learning of new STEM content.", "it": "Un tutoraggio passo per passo con soluzioni verificate può rendere più rapido e profondo l'apprendimento di nuovi contenuti scientifici."}, "sources": ["kestin-2025"]},
+    {"kind": "research", "text": {"en": "AI hints can be as useful as human hints when checked for accuracy.", "it": "I suggerimenti dell'IA possono essere utili quanto quelli umani se ne viene controllata la correttezza."}, "sources": ["pardos-2024"]}
+   ],
+   "risks": [
+    {"kind": "research", "text": {"en": "General chatbots make calculation and reasoning errors that students may not spot.", "it": "I chatbot generici fanno errori di calcolo e di ragionamento che lo studente può non notare."}, "sources": ["bastani-2025", "pardos-2024"]},
+    {"kind": "research", "text": {"en": "Getting full solutions during practice can lower performance when working alone.", "it": "Ottenere le soluzioni complete durante l'esercitazione può peggiorare il rendimento quando si lavora da soli."}, "sources": ["bastani-2025"]}
+   ],
+   "conditions": [
+    {"en": "Whether the tool has verified solutions and is set to give hints rather than answers.", "it": "Se lo strumento dispone di soluzioni verificate ed è impostato per dare suggerimenti invece delle risposte."},
+    {"en": "Whether AI supplements teaching or replaces practice.", "it": "Se l'IA affianca l'insegnamento o sostituisce l'esercizio."}
+   ],
+   "goodPractice": [
+    {"en": "Work out the problem on paper first; use AI to check a step, not to get the final result.", "it": "Risolvi prima il problema su carta; usa l'IA per controllare un passaggio, non per avere il risultato finale."},
+    {"en": "Ask for the next hint only, and say what you have tried.", "it": "Chiedi solo il suggerimento successivo e spiega cosa hai già provato."},
+    {"en": "Verify numerical results with a calculator, software or the answer key.", "it": "Verifica i risultati numerici con la calcolatrice, un software o le soluzioni del libro."},
+    {"en": "Use the course's own AI tutor if your teacher provides one.", "it": "Usa il tutor IA del corso, se il docente ne mette a disposizione uno."}
+   ],
+   "noAI": [
+    {"title": {"en": "Active learning", "it": "Apprendimento attivo"}, "text": {"en": "Active learning in undergraduate STEM raises exam scores by about 0.47 SD over lecturing.", "it": "Nelle materie STEM universitarie, l'apprendimento attivo alza i voti d'esame di circa 0,47 deviazioni standard rispetto alla lezione frontale."}, "sources": ["freeman-2014"]},
+    {"title": {"en": "Practice testing", "it": "Esercitarsi con test"}, "text": {"en": "Regular practice tests improve learning more than restudying.", "it": "Fare regolarmente test di prova migliora l'apprendimento più che rileggere."}, "sources": ["adesope-2017"]}
+   ],
+   "toolTypes": ["tutoring-system", "general-assistant"],
+   "gaps": [
+    {"en": "Few HE studies beyond introductory physics; none found over a full semester with delayed tests.", "it": "Pochi studi universitari oltre la fisica introduttiva; nessuno trovato su un intero semestre con test a distanza di tempo."},
+    {"en": "Accuracy of newer reasoning models on course-specific problems is changing fast and is rarely checked in education studies.", "it": "L'accuratezza dei modelli più recenti sui problemi specifici di un corso cambia rapidamente ed è raramente verificata negli studi educativi."}
+   ]
+  },
+  {
+   "id": "s-language",
+   "role": "student",
+   "title": {"en": "Study in a second language and learn languages", "it": "Studiare in una seconda lingua e imparare le lingue"},
+   "question": {"en": "Can AI help me improve my English (or another language) for my studies?", "it": "L'IA mi può aiutare a migliorare l'inglese (o un'altra lingua) per i miei studi?"},
+   "description": {"en": "Using AI for conversation practice, writing feedback, translation and explanations when studying in or learning a second language.", "it": "Usare l'IA per esercitarsi nella conversazione, ricevere commenti sulla scrittura, tradurre e avere spiegazioni quando si studia in una seconda lingua o la si impara."},
+   "oecd": "Ch.1 p.23 (EFL argumentation studies: Darmawansah et al.; Bui, Ngo & Mai); Ch.2 p.45 (Escalante et al.); Fig. 1.3 p.18 (translation is a common HE use)",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "Meta-analyses of dialogue-based systems (mostly pre-generative chatbots) show moderate positive effects on speaking and on vocabulary and productive skills, with a smaller effect for adults and none on comprehension. For generative AI specifically, HE evidence is a handful of small studies: GPT-4 feedback on essays matched tutor feedback, and ChatGPT inside a structured argumentation activity improved EFL argumentation. Translation tools and studying content in a second language with AI have not been rigorously tested.",
+    "it": "Le meta-analisi sui sistemi di dialogo (in gran parte chatbot precedenti all'IA generativa) mostrano effetti positivi moderati sul parlato, sul lessico e sulla produzione, con un effetto minore per gli adulti e nessun effetto sulla comprensione. Per l'IA generativa in particolare, all'università ci sono pochi studi piccoli: i commenti di GPT-4 sui saggi hanno eguagliato quelli del tutor, e ChatGPT dentro un'attività di argomentazione strutturata ha migliorato l'argomentazione in inglese. Gli strumenti di traduzione e lo studio di contenuti in una seconda lingua con l'IA non sono stati verificati in modo rigoroso."
+   },
+   "outcomesMeasured": ["learning", "satisfaction"],
+   "findings": [
+    {"source": "hou-min-2026", "outcome": "learning",
+     "finding": {"en": "A three-level meta-analysis of 16 studies (89 effect sizes) found a moderate effect of dialogue-based systems on L2 speaking (g = .61); education stage and proficiency did not moderate the effect.", "it": "Una meta-analisi a tre livelli su 16 studi (89 effetti) ha trovato un effetto moderato dei sistemi di dialogo sul parlato in lingua seconda (g = 0,61); livello di istruzione e competenza linguistica non modificavano l'effetto."},
+     "relevance": {"en": "Peer-reviewed; mostly pre-generative systems.", "it": "Revisionata; in gran parte sistemi precedenti all'IA generativa."}},
+    {"source": "wang-bibauw-2026", "outcome": "learning",
+     "finding": {"en": "A meta-analysis of 67 studies (2011–2025, 4,544 participants) reports g = 0.61 overall, g = 0.54 for adults, the largest effect for vocabulary (g = 0.92), no significant effect on comprehension, and the largest estimate for recent LLM-based chatbots (g = 0.64; technology not a significant moderator).", "it": "Una meta-analisi di 67 studi (2011–2025, 4.544 partecipanti) riporta g = 0,61 nel complesso, g = 0,54 per gli adulti, l'effetto maggiore sul lessico (g = 0,92), nessun effetto significativo sulla comprensione, e la stima più alta per i chatbot recenti basati su modelli linguistici (g = 0,64; la tecnologia non è un moderatore significativo)."},
+     "relevance": {"en": "Conference abstract only (not peer-reviewed as a paper); treat as provisional.", "it": "Solo abstract di convegno (non articolo revisionato); da considerare provvisorio."}},
+    {"source": "escalante-2023", "outcome": "learning",
+     "finding": {"en": "University English-language learners receiving GPT-4 essay feedback for six weeks improved as much as those receiving tutor feedback; preferences were split.", "it": "Universitari che studiavano inglese e ricevevano per sei settimane commenti di GPT-4 sui saggi sono migliorati quanto chi riceveva i commenti del tutor; le preferenze erano divise."},
+     "relevance": {"en": "Direct HE, small (n = 48).", "it": "Diretta, universitaria, piccola (n = 48)."}},
+    {"source": "darmawansah-2025", "outcome": "learning",
+     "finding": {"en": "ChatGPT combined with a collaboration script and argument mapping improved EFL students' argumentative speaking more than search engines.", "it": "ChatGPT combinato con un copione di collaborazione e mappe argomentative ha migliorato il parlato argomentativo in inglese più dei motori di ricerca."},
+     "relevance": {"en": "Structured activity, not free use.", "it": "Attività strutturata, non uso libero."}}
+   ],
+   "benefits": [
+    {"kind": "research", "text": {"en": "Conversation practice with dialogue systems improves speaking and vocabulary on average.", "it": "Esercitarsi a conversare con sistemi di dialogo migliora in media il parlato e il lessico."}, "sources": ["hou-min-2026", "wang-bibauw-2026"]},
+    {"kind": "research", "text": {"en": "AI feedback on L2 essays can be as effective as tutor feedback.", "it": "I commenti dell'IA sui saggi in lingua straniera possono essere efficaci quanto quelli del tutor."}, "sources": ["escalante-2023"]},
+    {"kind": "interpretation", "text": {"en": "Unlimited, low-pressure practice may reduce speaking anxiety.", "it": "La pratica illimitata e senza pressione può ridurre l'ansia di parlare."}, "sources": ["hou-min-2026"]}
+   ],
+   "risks": [
+    {"kind": "research", "text": {"en": "No measurable gain in comprehension from chatbot practice.", "it": "Nessun guadagno misurabile nella comprensione con la pratica su chatbot."}, "sources": ["wang-bibauw-2026"]},
+    {"kind": "interpretation", "text": {"en": "If AI rewrites or translates your text, the product improves but your language skill may not.", "it": "Se l'IA riscrive o traduce il tuo testo, migliora il prodotto ma non necessariamente la tua competenza linguistica."}, "sources": ["fan-2025"]},
+    {"kind": "interpretation", "text": {"en": "LLM outputs reflect mainly English-language and Western perspectives.", "it": "Le risposte dei modelli linguistici riflettono soprattutto prospettive anglofone e occidentali."}, "sources": ["oecd-2026"]}
+   ],
+   "conditions": [
+    {"en": "Matching practice to the skill tested (e.g., speaking practice for speaking).", "it": "Far corrispondere la pratica all'abilità valutata (per esempio esercizio orale per l'orale)."},
+    {"en": "Whether the student produces language or the AI produces it for them.", "it": "Se la lingua la produce lo studente o l'IA al suo posto."}
+   ],
+   "goodPractice": [
+    {"en": "Use voice or text conversation with AI to practise, asking it to correct you only at the end.", "it": "Usa la conversazione a voce o per iscritto con l'IA per esercitarti, chiedendole di correggerti solo alla fine."},
+    {"en": "Ask for explanations of your mistakes, then rewrite the sentence yourself.", "it": "Chiedi spiegazioni sui tuoi errori, poi riscrivi tu la frase."},
+    {"en": "Keep a list of recurring errors and new words and review it regularly.", "it": "Tieni un elenco degli errori ricorrenti e delle parole nuove e ripassalo regolarmente."},
+    {"en": "Use translation to check understanding, not to produce work you hand in, unless allowed.", "it": "Usa la traduzione per verificare di aver capito, non per produrre i lavori da consegnare, salvo che sia permesso."}
+   ],
+   "noAI": [],
+   "toolTypes": ["general-assistant", "translation", "tutoring-system", "writing-feedback"],
+   "gaps": [
+    {"en": "Few rigorous HE studies of LLM conversation partners; most meta-analysed studies predate generative AI.", "it": "Pochi studi universitari rigorosi sui modelli linguistici come partner di conversazione; la maggior parte degli studi nelle meta-analisi è precedente all'IA generativa."},
+    {"en": "No studies found on how AI translation affects learning of disciplinary content by international students.", "it": "Non sono stati trovati studi su come la traduzione con IA influenzi l'apprendimento dei contenuti disciplinari da parte degli studenti internazionali."}
+   ]
+  },
+  {
+   "id": "s-plan",
+   "role": "student",
+   "title": {"en": "Plan and self-regulate study", "it": "Pianificare e autoregolare lo studio"},
+   "question": {"en": "Can AI help me organise my study and stay on track?", "it": "L'IA mi può aiutare a organizzare lo studio e a non perdere il ritmo?"},
+   "description": {"en": "Using AI to make study plans, set goals, monitor progress and reflect on how one learns.", "it": "Usare l'IA per fare piani di studio, fissare obiettivi, monitorare i progressi e riflettere su come si impara."},
+   "oecd": "Ch.2 pp.47–49 (process feedback; FLoRA, Box 2.2) and pp.51–53 (metacognitive laziness, over-reliance); Ch.1 Fig. 1.2 p.17 (few students use AI for planning)",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "No rigorous study tests AI study planners for university students. What exists points both ways: general chatbots used for tasks reduce self-monitoring and evaluation, and students rely on automated prompts rather than internalising them; but AI combined with explicit self-regulation strategies raised self-efficacy and motivation, and research platforms that feed learning-process data to an LLM can produce scaffolds that students follow. Correlational surveys linking heavy ChatGPT use to procrastination cannot show cause.",
+    "it": "Nessuno studio rigoroso mette alla prova i pianificatori di studio con IA per universitari. Le evidenze esistenti vanno in due direzioni: i chatbot generici usati per svolgere compiti riducono l'autocontrollo e la valutazione, e gli studenti si appoggiano ai suggerimenti automatici invece di farli propri; ma l'IA combinata con strategie esplicite di autoregolazione ha aumentato autoefficacia e motivazione, e piattaforme di ricerca che passano a un modello linguistico i dati sul processo di studio producono indicazioni che gli studenti seguono. I sondaggi che collegano l'uso intenso di ChatGPT alla procrastinazione non possono dimostrare un rapporto di causa."
+   },
+   "outcomesMeasured": ["learning", "wellbeing", "satisfaction", "assisted-performance"],
+   "findings": [
+    {"source": "fan-2025", "outcome": "learning",
+     "finding": {"en": "Students revising with ChatGPT showed fewer metacognitive activities (especially evaluation and orientation) than other groups.", "it": "Gli studenti che rivedevano con ChatGPT mostravano meno attività metacognitive (soprattutto valutazione e orientamento) degli altri gruppi."},
+     "relevance": {"en": "Direct HE RCT; single session.", "it": "Studio randomizzato universitario; una sola sessione."}},
+    {"source": "darvishi-2024", "outcome": "learning",
+     "finding": {"en": "Students relied on AI prompts rather than learning from them; when prompts were removed, self-monitoring checklists helped but did not fully compensate.", "it": "Gli studenti si appoggiavano ai suggerimenti dell'IA invece di imparare da essi; tolti i suggerimenti, le liste di autocontrollo aiutavano ma non compensavano del tutto."},
+     "relevance": {"en": "Large HE RCT; non-generative AI.", "it": "Ampio studio randomizzato universitario; IA non generativa."}},
+    {"source": "wang-2026-srl", "outcome": "satisfaction",
+     "finding": {"en": "Adding self-regulated learning strategies to ChatGPT use raised self-efficacy (η² = .152) and motivation, without differences in knowledge.", "it": "Aggiungere strategie di autoregolazione all'uso di ChatGPT ha aumentato autoefficacia (η² = 0,152) e motivazione, senza differenze nelle conoscenze."},
+     "relevance": {"en": "Small HE study in programming.", "it": "Piccolo studio universitario in programmazione."}},
+    {"source": "gasevic-yan-2026", "outcome": "learning",
+     "finding": {"en": "In the FLoRA research platform, an LLM turns real-time analytics of students' learning processes into personalised scaffolds; students tended to follow them and improve their learning strategies.", "it": "Nella piattaforma di ricerca FLoRA, un modello linguistico trasforma l'analisi in tempo reale del processo di studio in indicazioni personalizzate; gli studenti tendevano a seguirle e a migliorare le proprie strategie."},
+     "relevance": {"en": "Research prototype, reported via the OECD chapter; not a consumer tool.", "it": "Prototipo di ricerca, riportato nel capitolo OCSE; non è uno strumento commerciale."}},
+    {"source": "abbas-2024", "outcome": "wellbeing",
+     "finding": {"en": "In a three-wave survey of 494 university students, workload and time pressure predicted ChatGPT use, and use was associated with more procrastination, self-reported memory loss and lower grades.", "it": "In un sondaggio in tre tempi su 494 universitari, carico di lavoro e pressione del tempo predicevano l'uso di ChatGPT, e l'uso era associato a più procrastinazione, perdita di memoria dichiarata e voti più bassi."},
+     "relevance": {"en": "Correlational and self-reported; cannot show that ChatGPT causes these outcomes.", "it": "Studio correlazionale e basato su dichiarazioni; non dimostra che sia ChatGPT a causarli."}},
+    {"source": "gerlich-2025", "outcome": "learning",
+     "finding": {"en": "In 666 participants, frequent AI tool use correlated with lower critical-thinking scores, mediated by cognitive offloading; younger participants were more dependent.", "it": "Su 666 partecipanti, l'uso frequente di strumenti di IA era correlato a punteggi più bassi di pensiero critico, attraverso la delega cognitiva; i più giovani erano più dipendenti."},
+     "relevance": {"en": "Correlational, mixed adult sample; a correction was published.", "it": "Correlazionale, campione misto di adulti; è stata pubblicata una correzione."}}
+   ],
+   "benefits": [
+    {"kind": "research", "text": {"en": "Combining AI use with explicit self-regulation strategies can raise self-efficacy and motivation.", "it": "Combinare l'uso dell'IA con strategie esplicite di autoregolazione può aumentare autoefficacia e motivazione."}, "sources": ["wang-2026-srl"]},
+    {"kind": "research", "text": {"en": "AI that reacts to your actual study behaviour (not just your request) can guide better strategies.", "it": "Un'IA che reagisce al tuo modo reale di studiare (non solo alle tue richieste) può guidare verso strategie migliori."}, "sources": ["gasevic-yan-2026"]}
+   ],
+   "risks": [
+    {"kind": "research", "text": {"en": "Delegating tasks to AI reduces the planning, monitoring and evaluation that build self-regulation.", "it": "Delegare i compiti all'IA riduce la pianificazione, il monitoraggio e la valutazione che costruiscono l'autoregolazione."}, "sources": ["fan-2025", "darvishi-2024"]},
+    {"kind": "research", "text": {"en": "Heavy use under time pressure is associated with procrastination and lower grades (association, not proven cause).", "it": "L'uso intenso sotto pressione è associato a procrastinazione e voti più bassi (associazione, non causa dimostrata)."}, "sources": ["abbas-2024", "gerlich-2025"]},
+    {"kind": "research", "text": {"en": "Over-reliance favours fast shortcuts over effortful reasoning.", "it": "La dipendenza eccessiva favorisce scorciatoie rapide al posto del ragionamento impegnativo."}, "sources": ["zhai-2024"]}
+   ],
+   "conditions": [
+    {"en": "Whether the student remains the one who sets goals and judges progress.", "it": "Se resta lo studente a fissare gli obiettivi e a giudicare i progressi."},
+    {"en": "Whether AI use is combined with explicit self-regulation training.", "it": "Se l'uso dell'IA è accompagnato da una formazione esplicita all'autoregolazione."}
+   ],
+   "goodPractice": [
+    {"en": "Set your own goals and deadlines first; use AI to break them into steps and spot conflicts.", "it": "Fissa prima i tuoi obiettivi e le scadenze; usa l'IA per suddividerli in passi e individuare sovrapposizioni."},
+    {"en": "At the end of each week, write what worked and what did not before asking the AI for suggestions.", "it": "A fine settimana scrivi cosa ha funzionato e cosa no, prima di chiedere suggerimenti all'IA."},
+    {"en": "Use AI to quiz yourself and judge your readiness, rather than to feel prepared.", "it": "Usa l'IA per interrogarti e capire se sei pronto, non per sentirti preparato."},
+    {"en": "Notice when you reach for AI because of time pressure, and plan time for unassisted work.", "it": "Accorgiti di quando ricorri all'IA per la fretta, e prevedi tempo per lavorare senza aiuto."}
+   ],
+   "noAI": [
+    {"title": {"en": "Self-regulated learning training", "it": "Formazione all'autoregolazione dello studio"}, "text": {"en": "Across 49 studies with university students, SRL training programmes improved academic performance (g = .37) and metacognitive strategies (g = .40).", "it": "Su 49 studi con universitari, i programmi di formazione all'autoregolazione hanno migliorato il rendimento (g = 0,37) e le strategie metacognitive (g = 0,40)."}, "sources": ["theobald-2021"]}
+   ],
+   "toolTypes": ["general-assistant", "tutoring-system", "lms-integrated"],
+   "gaps": [
+    {"en": "No RCT found on AI study planners or AI study coaches for university students.", "it": "Non è stato trovato alcuno studio randomizzato su pianificatori o «coach» di studio basati sull'IA per universitari."},
+    {"en": "Long-term effects of habitual AI use on self-regulation are unknown; current evidence is mostly correlational.", "it": "Gli effetti a lungo termine dell'uso abituale dell'IA sull'autoregolazione non sono noti; le evidenze attuali sono soprattutto correlazionali."}
+   ]
+  },
+  {
+   "id": "s-ideas",
+   "role": "student",
+   "title": {"en": "Generate ideas and creative work", "it": "Generare idee e lavori creativi"},
+   "question": {"en": "Can AI help me come up with ideas for a project?", "it": "L'IA mi può aiutare a trovare idee per un progetto?"},
+   "description": {"en": "Using AI to brainstorm, explore options or co-create texts, images or designs.", "it": "Usare l'IA per fare brainstorming, esplorare alternative o co-creare testi, immagini o progetti."},
+   "oecd": "Ch.1 pp.23–24 (Doshi & Hauser, Fig. 1.7); Ch.5 pp.117–121 (Beghetto: 'fast' versus 'slow' AI use)",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "Experiments with adults show that AI ideas make individual outputs more creative, especially for less creative people, but make outputs across people more similar. A large experiment found that people who used an LLM did worse on creativity tasks once the AI was removed. Most studies use online adult samples, not students, and short tasks; one university study with GenAI tools in team storytelling reported better collaboration and team creativity.",
+    "it": "Esperimenti con adulti mostrano che le idee dell'IA rendono più creativi i singoli lavori, soprattutto per chi è meno creativo, ma rendono i lavori di persone diverse più simili tra loro. Un ampio esperimento ha trovato che chi aveva usato un modello linguistico andava peggio nei compiti creativi una volta tolta l'IA. La maggior parte degli studi usa campioni di adulti online, non studenti, e compiti brevi; uno studio universitario con strumenti di IA generativa nella narrazione digitale di gruppo ha riportato migliore collaborazione e creatività del team."
+   },
+   "outcomesMeasured": ["assisted-performance", "learning", "equity"],
+   "findings": [
+    {"source": "doshi-2024", "outcome": "assisted-performance",
+     "finding": {"en": "In an online experiment, writers who could get story ideas from an LLM wrote stories rated more creative, better written and more enjoyable, especially less creative writers; but the AI-assisted stories were more similar to each other.", "it": "In un esperimento online, chi poteva ricevere idee da un modello linguistico ha scritto racconti giudicati più creativi, scritti meglio e più piacevoli, soprattutto chi era meno creativo; ma i racconti assistiti dall'IA si somigliavano di più tra loro."},
+     "relevance": {"en": "Adults, not students; participants wrote the story themselves.", "it": "Adulti, non studenti; i partecipanti scrivevano il racconto da soli."}},
+    {"source": "meincke-2025", "outcome": "assisted-performance",
+     "finding": {"en": "Across five experiments, brainstorming with ChatGPT produced less diverse sets of ideas than brainstorming without it (37 of 45 comparisons significant).", "it": "In cinque esperimenti, il brainstorming con ChatGPT ha prodotto insiemi di idee meno vari rispetto a quello senza (37 confronti significativi su 45)."},
+     "relevance": {"en": "Read from a university press summary; sample details not verified.", "it": "Letto da una sintesi universitaria; dettagli del campione non verificati."}},
+    {"source": "kumar-2025", "outcome": "learning",
+     "finding": {"en": "In two pre-registered experiments (1,100 participants), LLM assistance boosted creativity during assisted tasks but participants performed worse in a final unassisted stage; this held for both a direct-answer LLM and a coach-like LLM.", "it": "In due esperimenti preregistrati (1.100 partecipanti), l'assistenza di un modello linguistico ha aumentato la creatività durante i compiti assistiti, ma i partecipanti sono andati peggio nella fase finale senza aiuto; valeva sia per un modello che dava risposte sia per uno che faceva da coach."},
+     "relevance": {"en": "Online adults; short tasks; abstract read only.", "it": "Adulti online; compiti brevi; letto solo l'abstract."}},
+    {"source": "wei-2025", "outcome": "learning",
+     "finding": {"en": "60 university students randomly assigned to create digital stories with ChatGPT, Midjourney and Runway over 20 weeks reported higher collaborative problem-solving and showed better team creativity (user experience, novelty) than a traditional group; students voiced concerns about over-reliance.", "it": "60 universitari assegnati a caso a creare racconti digitali con ChatGPT, Midjourney e Runway per 20 settimane hanno riportato migliori capacità di risolvere problemi in gruppo e mostrato maggiore creatività del team (esperienza d'uso, novità) rispetto a un gruppo tradizionale; gli studenti hanno espresso timori di dipendenza."},
+     "relevance": {"en": "Direct HE evidence; small sample; collaboration skill measured by self-report questionnaire.", "it": "Evidenza diretta universitaria; campione piccolo; capacità di collaborazione misurata con questionario."}},
+    {"source": "vaccaro-2024", "outcome": "assisted-performance",
+     "finding": {"en": "Across 106 experiments, human–AI combinations on average did worse than the best of human or AI alone (g = −0.23), but gained in content-creation tasks.", "it": "Su 106 esperimenti, le combinazioni persona–IA hanno fatto in media peggio del migliore tra persona e IA da sole (g = −0,23), ma hanno guadagnato nei compiti di creazione di contenuti."},
+     "relevance": {"en": "Not education-specific.", "it": "Non specifico per l'istruzione."}}
+   ],
+   "benefits": [
+    {"kind": "research", "text": {"en": "AI ideas can raise the creativity of individual work, especially for people who start with fewer ideas.", "it": "Le idee dell'IA possono aumentare la creatività del singolo lavoro, soprattutto per chi parte con poche idee."}, "sources": ["doshi-2024"]},
+    {"kind": "research", "text": {"en": "Content-creation tasks are where human–AI combinations most often outperform either alone.", "it": "I compiti di creazione di contenuti sono quelli in cui la combinazione persona–IA più spesso supera entrambe da sole."}, "sources": ["vaccaro-2024"]}
+   ],
+   "risks": [
+    {"kind": "research", "text": {"en": "Ideas converge: groups using the same AI produce more similar work.", "it": "Le idee si assomigliano: gruppi che usano la stessa IA producono lavori più simili."}, "sources": ["doshi-2024", "meincke-2025"]},
+    {"kind": "research", "text": {"en": "Unassisted creativity may drop after relying on an LLM.", "it": "La creatività senza aiuto può calare dopo aver contato su un modello linguistico."}, "sources": ["kumar-2025"]}
+   ],
+   "conditions": [
+    {"en": "Generating your own ideas before seeing AI ideas ('slow' use) versus starting from the AI ('fast' use).", "it": "Generare idee proprie prima di vedere quelle dell'IA (uso «lento») rispetto a partire dall'IA (uso «veloce»)."},
+    {"en": "Whether the goal is a good product or developing your own creative ability.", "it": "Se l'obiettivo è un buon prodotto o lo sviluppo della propria capacità creativa."}
+   ],
+   "goodPractice": [
+    {"en": "List your own ideas first (e.g., ten in ten minutes), then ask the AI for more.", "it": "Elenca prima le tue idee (per esempio dieci in dieci minuti), poi chiedi all'IA di aggiungerne."},
+    {"en": "Ask the AI to criticise or combine your ideas rather than replace them.", "it": "Chiedi all'IA di criticare o combinare le tue idee invece di sostituirle."},
+    {"en": "Compare with classmates: if ideas look alike, push for less obvious ones.", "it": "Confrontati con i compagni: se le idee si somigliano, cerca quelle meno ovvie."},
+    {"en": "Keep a record of which ideas were yours and which came from AI.", "it": "Tieni traccia di quali idee sono tue e quali vengono dall'IA."}
+   ],
+   "noAI": [],
+   "toolTypes": ["general-assistant"],
+   "gaps": [
+    {"en": "Very few studies with university students in design, business or arts courses.", "it": "Pochissimi studi con universitari in corsi di design, economia o arti."},
+    {"en": "Whether creative skill develops or declines over months of AI use is unknown.", "it": "Non si sa se la capacità creativa cresca o diminuisca dopo mesi di uso dell'IA."}
+   ]
+  },
+  {
+   "id": "s-groupwork",
+   "role": "student",
+   "title": {"en": "Collaborate in group projects", "it": "Collaborare nei progetti di gruppo"},
+   "question": {"en": "Can AI help our group work better together?", "it": "L'IA può aiutare il nostro gruppo a lavorare meglio insieme?"},
+   "description": {"en": "Using AI within group work: as an information source, a facilitator, a reflection prompter or a creative tool.", "it": "Usare l'IA nel lavoro di gruppo: come fonte di informazioni, facilitatore, stimolo alla riflessione o strumento creativo."},
+   "oecd": "Ch.4 pp.91–108 (Strauß & Rummel), esp. pp.96–104; Ch.1 p.23",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "An OECD review of the emerging research finds that most studies configure the AI for a specific role rather than using a general chatbot, and that experimental studies (mostly university programming courses) tend to show positive effects on domain knowledge, with methodological limits. Effects on collaboration skills come from very few studies, some based on self-report. There is no evidence yet on students simply using ChatGPT in their own group projects.",
+    "it": "Una rassegna OCSE della ricerca emergente rileva che la maggior parte degli studi configura l'IA per un ruolo preciso invece di usare un chatbot generico, e che gli studi sperimentali (soprattutto in corsi universitari di programmazione) tendono a mostrare effetti positivi sulle conoscenze disciplinari, con limiti di metodo. Sugli effetti per le capacità di collaborazione ci sono pochissimi studi, alcuni basati su autovalutazioni. Non ci sono ancora evidenze su studenti che usano semplicemente ChatGPT nei propri progetti di gruppo."
+   },
+   "outcomesMeasured": ["learning", "assisted-performance", "satisfaction"],
+   "findings": [
+    {"source": "strauss-rummel-2026", "outcome": "learning",
+     "finding": {"en": "Reviewing studies on GenAI in collaborative learning (often in HE), the authors find that experimental studies on domain knowledge all concerned programming and tended to be positive, while studies on collaboration skills as an outcome are very few; most systems were configured with human-defined rules and roles.", "it": "Esaminando gli studi sull'IA generativa nell'apprendimento collaborativo (spesso all'università), gli autori rilevano che gli studi sperimentali sulle conoscenze riguardano tutti la programmazione e tendono a essere positivi, mentre quelli che misurano le capacità di collaborazione sono pochissimi; la maggior parte dei sistemi era configurata con regole e ruoli definiti da persone."},
+     "relevance": {"en": "The most complete overview available; narrative review in the OECD report.", "it": "La sintesi più completa disponibile; rassegna narrativa nel rapporto OCSE."}},
+    {"source": "wei-2025", "outcome": "learning",
+     "finding": {"en": "University teams using GenAI tools for digital storytelling over 20 weeks scored higher on a collaborative problem-solving questionnaire and on team creativity than teams working traditionally.", "it": "Gruppi universitari che hanno usato strumenti di IA generativa per la narrazione digitale per 20 settimane hanno ottenuto punteggi più alti in un questionario sulla risoluzione di problemi in gruppo e nella creatività del team rispetto ai gruppi tradizionali."},
+     "relevance": {"en": "Small RCT (n = 60); self-reported collaboration measure.", "it": "Piccolo studio randomizzato (n = 60); misura della collaborazione dichiarata."}},
+    {"source": "darmawansah-2025", "outcome": "learning",
+     "finding": {"en": "Groups using ChatGPT inside a collaboration script and argument-mapping activity improved argumentation more than groups using search engines.", "it": "Gruppi che usavano ChatGPT dentro un copione di collaborazione e un'attività di mappe argomentative hanno migliorato l'argomentazione più dei gruppi con motori di ricerca."},
+     "relevance": {"en": "EFL context; structured design.", "it": "Contesto di inglese come lingua straniera; attività strutturata."}},
+    {"source": "vaccaro-2024", "outcome": "assisted-performance",
+     "finding": {"en": "Human–AI teams outperform the best single agent only in some tasks (notably content creation) and when humans alone already outperform the AI.", "it": "I gruppi persona–IA superano il miglior singolo solo in alcuni compiti (soprattutto la creazione di contenuti) e quando le persone da sole sono già migliori dell'IA."},
+     "relevance": {"en": "General evidence, not education-specific.", "it": "Evidenza generale, non specifica per l'istruzione."}}
+   ],
+   "benefits": [
+    {"kind": "research", "text": {"en": "AI configured for a clear role (information source, summariser of group understanding, reflection prompter) can support group learning.", "it": "Un'IA configurata per un ruolo preciso (fonte di informazioni, sintesi di ciò che il gruppo ha capito, stimolo alla riflessione) può sostenere l'apprendimento di gruppo."}, "sources": ["strauss-rummel-2026"]},
+    {"kind": "research", "text": {"en": "Creative group projects with GenAI tools were linked to better team creativity in one HE study.", "it": "In uno studio universitario, i progetti creativi di gruppo con strumenti di IA generativa sono stati associati a una migliore creatività del team."}, "sources": ["wei-2025"]}
+   ],
+   "risks": [
+    {"kind": "research", "text": {"en": "Students worry about over-reliance and cognitive offloading in AI-supported group work.", "it": "Gli studenti temono dipendenza e delega cognitiva nel lavoro di gruppo con l'IA."}, "sources": ["wei-2025"]},
+    {"kind": "interpretation", "text": {"en": "If each member delegates their part to AI, the group may skip the discussion that makes collaboration useful for learning.", "it": "Se ognuno delega all'IA la propria parte, il gruppo può saltare la discussione che rende utile la collaborazione per imparare."}, "sources": ["strauss-rummel-2026"]}
+   ],
+   "conditions": [
+    {"en": "Whether AI has a defined role in a structured activity or is used freely by individuals.", "it": "Se l'IA ha un ruolo definito in un'attività strutturata o viene usata liberamente dai singoli."},
+    {"en": "Prior knowledge: in one study, weaker students benefited from AI-generated contrasting cases, stronger ones from generating them themselves.", "it": "Conoscenze di partenza: in uno studio i più deboli hanno tratto vantaggio dai casi di confronto generati dall'IA, i più forti dal generarli da soli."}
+   ],
+   "goodPractice": [
+    {"en": "Agree as a group on what AI will and will not be used for, and record it.", "it": "Decidete come gruppo per cosa userete l'IA e per cosa no, e mettetelo per iscritto."},
+    {"en": "Discuss ideas together before asking the AI; use it to summarise where the group stands and what is still open.", "it": "Discutete le idee insieme prima di chiedere all'IA; usatela per riassumere a che punto è il gruppo e cosa resta aperto."},
+    {"en": "Give the AI a specific role (devil's advocate, timekeeper, summariser) rather than asking it to do the task.", "it": "Date all'IA un ruolo preciso (avvocato del diavolo, controllo dei tempi, sintesi) invece di chiederle di fare il lavoro."},
+    {"en": "Make sure every member can explain the whole project, not only their part.", "it": "Assicuratevi che ogni membro sappia spiegare l'intero progetto, non solo la propria parte."}
+   ],
+   "noAI": [
+    {"title": {"en": "Collaboration scripts", "it": "Copioni di collaborazione"}, "text": {"en": "Scripts that structure roles and interactions in group work substantially improve collaboration skills (d = 0.95) and modestly improve domain knowledge (d = 0.20).", "it": "I copioni che strutturano ruoli e interazioni nel lavoro di gruppo migliorano molto le capacità di collaborazione (d = 0,95) e un po' le conoscenze disciplinari (d = 0,20)."}, "sources": ["vogel-2017"]}
+   ],
+   "toolTypes": ["custom-chatbot", "general-assistant"],
+   "gaps": [
+    {"en": "No studies found on everyday student use of general chatbots in group assignments.", "it": "Non sono stati trovati studi sull'uso quotidiano dei chatbot generici da parte degli studenti nei compiti di gruppo."},
+    {"en": "Collaboration skills are rarely measured objectively; most evidence is about knowledge or self-report.", "it": "Le capacità di collaborazione sono raramente misurate in modo oggettivo; la maggior parte delle evidenze riguarda le conoscenze o le autovalutazioni."}
+   ]
+  }
+ ],
+ "sources": [
+  {"id": "oecd-2026", "kind": "grey", "read": "full", "accessed": "2026-10-22", "doi": "10.1787/062a7394-en", "url": null, "short": "OECD 2026",
+   "citation": "OECD. (2026). <em>OECD Digital Education Outlook 2026: Exploring effective uses of generative AI in education</em>. OECD Publishing. https://doi.org/10.1787/062a7394-en"},
+  {"id": "gasevic-yan-2026", "kind": "review", "read": "full", "accessed": "2026-10-22", "doi": "10.1787/062a7394-en", "url": null, "short": "Gašević & Yan 2026",
+   "citation": "Gašević, D., & Yan, L. (2026). Generative AI for human skill development and assessment: Implications for existing practices and new horizons. In OECD, <em>OECD Digital Education Outlook 2026: Exploring effective uses of generative AI in education</em> (Chapter 2). OECD Publishing. https://doi.org/10.1787/062a7394-en"},
+  {"id": "strauss-rummel-2026", "kind": "review", "read": "page", "accessed": "2026-10-22", "doi": "10.1787/062a7394-en", "url": null, "short": "Strauß & Rummel 2026",
+   "citation": "Strauß, S., & Rummel, N. (2026). Fostering collaborative learning and promoting collaboration skills: What generative AI could contribute. In OECD, <em>OECD Digital Education Outlook 2026: Exploring effective uses of generative AI in education</em> (Chapter 4). OECD Publishing. https://doi.org/10.1787/062a7394-en"},
+  {"id": "bastani-2025", "kind": "peer-reviewed", "read": "full", "accessed": "2026-10-22", "doi": "10.1073/pnas.2422633122", "url": null, "short": "Bastani et al. 2025",
+   "citation": "Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. <em>Proceedings of the National Academy of Sciences</em>, 122(26), e2422633122. https://doi.org/10.1073/pnas.2422633122",
+   "study": {
+    "design": {"en": "Randomised controlled field experiment (classes assigned to conditions)", "it": "Esperimento randomizzato sul campo (classi assegnate alle condizioni)"},
+    "sample": {"en": "Nearly 1,000 students in about 50 grade 9–11 classes", "it": "Quasi 1.000 studenti in circa 50 classi dal primo al terzo anno delle superiori"},
+    "context": {"en": "One large high school in Türkiye, mathematics, autumn 2023 (school level: indirect for HE)", "it": "Una grande scuola superiore in Turchia, matematica, autunno 2023 (livello scolastico: indiretto per l'università)"},
+    "comparison": {"en": "GPT Base (ChatGPT-like) vs GPT Tutor (teacher hints, solutions in prompt) vs no AI", "it": "GPT Base (simile a ChatGPT) vs GPT Tutor (suggerimenti del docente, soluzioni nel prompt) vs nessuna IA"},
+    "outcome": {"en": "Grades on assisted practice problems and on a subsequent unassisted exam", "it": "Voti negli esercizi assistiti e in una verifica successiva senza aiuto"},
+    "duration": {"en": "Four 90-minute sessions (about 15% of the curriculum)", "it": "Quattro sessioni da 90 minuti (circa il 15% del programma)"},
+    "result": {"en": "Practice +48% (Base), +127% (Tutor); exam −17% for Base vs control; Tutor harm largely mitigated", "it": "Esercizi +48% (Base), +127% (Tutor); verifica −17% per Base rispetto al controllo; danno in gran parte evitato con Tutor"},
+    "uncertainty": {"en": "Short-term outcomes only; one school; a correction was published in August 2025", "it": "Solo risultati a breve termine; una sola scuola; correzione pubblicata ad agosto 2025"},
+    "funding": {"en": "Authors declare no competing interests", "it": "Gli autori dichiarano nessun conflitto di interessi"},
+    "system": {"en": "GPT-4 via two custom interfaces", "it": "GPT-4 tramite due interfacce personalizzate"}}},
+  {"id": "kestin-2025", "kind": "peer-reviewed", "read": "full", "accessed": "2026-10-22", "doi": "10.1038/s41598-025-97652-6", "url": null, "short": "Kestin et al. 2025",
+   "citation": "Kestin, G., Miller, K., Klales, A., Milbourne, T., & Ponti, G. (2025). AI tutoring outperforms in-class active learning: An RCT introducing a novel research-based design in an authentic educational setting. <em>Scientific Reports</em>, 15, 17458. https://doi.org/10.1038/s41598-025-97652-6",
+   "study": {
+    "design": {"en": "Randomised crossover trial", "it": "Studio randomizzato con disegno incrociato"},
+    "sample": {"en": "194 eligible students of 233 enrolled", "it": "194 studenti idonei su 233 iscritti"},
+    "context": {"en": "Introductory physics for life sciences, Harvard University, autumn 2023", "it": "Fisica introduttiva per le scienze della vita, Harvard University, autunno 2023"},
+    "comparison": {"en": "AI tutor at home vs in-class active learning with identical content", "it": "Tutor IA a casa vs lezione attiva in aula con contenuti identici"},
+    "outcome": {"en": "Immediate post-test scores; time on task; self-reported engagement and motivation", "it": "Test subito dopo la lezione; tempo impiegato; coinvolgimento e motivazione dichiarati"},
+    "duration": {"en": "Two lessons in consecutive weeks", "it": "Due lezioni in settimane consecutive"},
+    "result": {"en": "Median post-test 4.5 vs 3.5; effect 0.63 SD (regression), 0.73–1.3 SD (quantile regression); median 49 min on AI tutor", "it": "Mediana nel test 4,5 vs 3,5; effetto 0,63 DS (regressione), 0,73–1,3 DS (regressione quantile); mediana 49 minuti con il tutor IA"},
+    "uncertainty": {"en": "No delayed test; two topics only; instructors and authors overlap; tutor relied on expert-written solutions; elite institution", "it": "Nessun test a distanza; solo due argomenti; docenti e autori coincidono in parte; il tutor si basava su soluzioni scritte da esperti; ateneo d'élite"},
+    "funding": {"en": "Authors declare no competing interests", "it": "Gli autori dichiarano nessun conflitto di interessi"},
+    "system": {"en": "Custom GPT-4 tutor with structured, sequential problem steps and step-by-step solutions in prompts", "it": "Tutor personalizzato su GPT-4 con passaggi guidati in sequenza e soluzioni passo per passo nei prompt"}}},
+  {"id": "lehmann-2025", "kind": "preprint", "read": "full", "accessed": "2026-10-22", "doi": "10.48550/arXiv.2409.09047", "url": "https://arxiv.org/abs/2409.09047", "short": "Lehmann et al. 2025",
+   "citation": "Lehmann, M., Cornelius, P. B., & Sting, F. J. (2025). <em>AI meets the classroom: When do large language models harm learning?</em> (arXiv:2409.09047v2) [Preprint]. arXiv. https://doi.org/10.48550/arXiv.2409.09047",
+   "study": {
+    "design": {"en": "Field study (panel data) plus two pre-registered randomised lab experiments", "it": "Studio sul campo (dati ripetuti) più due esperimenti randomizzati preregistrati in laboratorio"},
+    "sample": {"en": "Field: 113 graduate students; labs: 107 and 69 university students", "it": "Campo: 113 studenti magistrali; laboratorio: 107 e 69 universitari"},
+    "context": {"en": "Python programming; a Dutch and a German public university", "it": "Programmazione in Python; un'università pubblica olandese e una tedesca"},
+    "comparison": {"en": "ChatGPT access vs no access during learning", "it": "Accesso a ChatGPT vs nessun accesso durante lo studio"},
+    "outcome": {"en": "Unassisted post-test; topics covered; perceived learning", "it": "Test finale senza aiuto; argomenti affrontati; apprendimento percepito"},
+    "duration": {"en": "Lab: 45-minute learning phase; field: one semester", "it": "Laboratorio: 45 minuti di studio; campo: un semestre"},
+    "result": {"en": "No overall effect (e.g., 9.0 vs 7.9 correct, p = 0.206); solutions-seeking lowers, explanation-seeking raises understanding; below-median students understand less", "it": "Nessun effetto complessivo (per es. 9,0 vs 7,9 risposte corrette, p = 0,206); chiedere soluzioni abbassa e chiedere spiegazioni alza la comprensione; chi è sotto la mediana capisce meno"},
+    "uncertainty": {"en": "Usage analyses are exploratory; field study uses a similarity proxy; not yet peer-reviewed", "it": "Le analisi sull'uso sono esplorative; lo studio sul campo usa una misura indiretta; non ancora revisionato"},
+    "funding": null,
+    "system": {"en": "ChatGPT (gpt-3.5-turbo-0125 in labs)", "it": "ChatGPT (gpt-3.5-turbo-0125 in laboratorio)"}}},
+  {"id": "fan-2025", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1111/bjet.13544", "url": null, "short": "Fan et al. 2025",
+   "citation": "Fan, Y., Tang, L., Le, H., Shen, K., Tan, S., Zhao, Y., Shen, Y., Li, X., & Gašević, D. (2025). Beware of metacognitive laziness: Effects of generative artificial intelligence on learning motivation, processes, and performance. <em>British Journal of Educational Technology</em>, 56(2), 489–530. https://doi.org/10.1111/bjet.13544",
+   "study": {
+    "design": {"en": "Randomised lab experiment, four conditions", "it": "Esperimento randomizzato in laboratorio, quattro condizioni"},
+    "sample": {"en": "117 university students", "it": "117 studenti universitari"},
+    "context": {"en": "Essay revision in English (participants in China according to the OECD summary)", "it": "Revisione di un saggio in inglese (partecipanti in Cina secondo la sintesi OCSE)"},
+    "comparison": {"en": "ChatGPT vs human expert vs writing-analytics checklist vs no extra support", "it": "ChatGPT vs esperto umano vs checklist di analisi della scrittura vs nessun supporto"},
+    "outcome": {"en": "Essay score improvement, knowledge gain and transfer, intrinsic motivation, self-regulated learning processes", "it": "Miglioramento del voto del saggio, guadagno di conoscenza e trasferimento, motivazione intrinseca, processi di autoregolazione"},
+    "duration": {"en": "Single lab session", "it": "Una sola sessione in laboratorio"},
+    "result": {"en": "ChatGPT group best essay improvement; no difference in knowledge gain, transfer or motivation; fewer metacognitive processes", "it": "Miglior progresso del saggio con ChatGPT; nessuna differenza in conoscenze, trasferimento o motivazione; meno processi metacognitivi"},
+    "uncertainty": {"en": "Lab setting; short task; abstract only read", "it": "Laboratorio; compito breve; letto solo l'abstract"},
+    "funding": null,
+    "system": {"en": "ChatGPT (version not verified)", "it": "ChatGPT (versione non verificata)"}}},
+  {"id": "chen-2025-helpseeking", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1016/j.compedu.2024.105198", "url": null, "short": "Chen et al. 2025",
+   "citation": "Chen, A., Xiang, M., Zhou, J., Jia, J., Shang, J., Li, X., Gašević, D., & Fan, Y. (2025). Unpacking help-seeking process through multimodal learning analytics: A comparative study of ChatGPT vs human expert. <em>Computers & Education</em>, 226, 105198. https://doi.org/10.1016/j.compedu.2024.105198",
+   "study": {
+    "design": {"en": "Randomised lab experiment with process mining of multimodal data", "it": "Esperimento randomizzato in laboratorio con analisi dei processi su dati multimodali"},
+    "sample": {"en": "38 university students", "it": "38 studenti universitari"},
+    "context": {"en": "Essay writing and revision", "it": "Scrittura e revisione di saggi"},
+    "comparison": {"en": "Help from ChatGPT vs an experienced teacher", "it": "Aiuto da ChatGPT vs da un docente esperto"},
+    "outcome": {"en": "Help-seeking process (trace, eye-tracking, conversation data)", "it": "Processo di richiesta di aiuto (tracce digitali, tracciamento oculare, conversazioni)"},
+    "duration": {"en": "Single session", "it": "Una sola sessione"},
+    "result": {"en": "AI group non-linear help-seeking, often skipping evaluation; teacher group followed classic model", "it": "Con l'IA richiesta di aiuto non lineare, spesso senza valutazione; con il docente modello classico"},
+    "uncertainty": {"en": "Small sample; process, not learning outcome", "it": "Campione piccolo; misura il processo, non l'apprendimento"},
+    "funding": null,
+    "system": {"en": "ChatGPT", "it": "ChatGPT"}}},
+  {"id": "kosmyna-2025", "kind": "preprint", "read": "abstract", "accessed": "2026-10-22", "doi": "10.48550/arXiv.2506.08872", "url": "https://arxiv.org/abs/2506.08872", "short": "Kosmyna et al. 2025",
+   "citation": "Kosmyna, N., Hauptmann, E., Yuan, Y. T., Situ, J., Liao, X.-H., Beresnitzky, A. V., Braunstein, I., & Maes, P. (2025). <em>Your brain on ChatGPT: Accumulation of cognitive debt when using an AI assistant for essay writing task</em> (arXiv:2506.08872) [Preprint]. arXiv. https://doi.org/10.48550/arXiv.2506.08872",
+   "study": {
+    "design": {"en": "Three-group experiment with EEG over three sessions, plus a fourth crossover session", "it": "Esperimento a tre gruppi con EEG in tre sessioni, più una quarta sessione con scambio dei gruppi"},
+    "sample": {"en": "54 participants (18 in session 4) from five US universities", "it": "54 partecipanti (18 nella quarta sessione) di cinque università statunitensi"},
+    "context": {"en": "Timed essay writing", "it": "Scrittura di saggi a tempo"},
+    "comparison": {"en": "LLM vs search engine vs no tools ('brain-only')", "it": "Modello linguistico vs motore di ricerca vs nessuno strumento"},
+    "outcome": {"en": "Brain connectivity, recall of own essay, perceived ownership, essay similarity", "it": "Connettività cerebrale, ricordo del proprio saggio, senso di paternità, somiglianza dei saggi"},
+    "duration": {"en": "Three sessions plus a fourth crossover session", "it": "Tre sessioni più una quarta con scambio dei gruppi"},
+    "result": {"en": "Lowest connectivity, recall and ownership in the LLM group; more homogeneous essays", "it": "Connettività, ricordo e senso di paternità più bassi nel gruppo con il modello; saggi più omogenei"},
+    "uncertainty": {"en": "Small sample; not peer-reviewed; interpretation ('cognitive debt') debated", "it": "Campione piccolo; non revisionato; interpretazione («debito cognitivo») discussa"},
+    "funding": null,
+    "system": {"en": "ChatGPT", "it": "ChatGPT"}}},
+  {"id": "deng-2025", "kind": "review", "read": "page", "accessed": "2026-10-22", "doi": "10.1016/j.compedu.2024.105224", "url": null, "short": "Deng et al. 2025",
+   "citation": "Deng, R., Jiang, M., Yu, X., Lu, Y., & Liu, S. (2025). Does ChatGPT enhance student learning? A systematic review and meta-analysis of experimental studies. <em>Computers & Education</em>, 227, 105224. https://doi.org/10.1016/j.compedu.2024.105224",
+   "study": {
+    "design": {"en": "Systematic review and meta-analysis of experimental studies", "it": "Revisione sistematica e meta-analisi di studi sperimentali"},
+    "sample": {"en": "69 studies, 2022–2024 (count from secondary summaries; not verified in full text)", "it": "69 studi, 2022–2024 (numero da sintesi secondarie; non verificato nel testo completo)"},
+    "context": {"en": "Mixed education levels and subjects", "it": "Livelli scolastici e materie diversi"},
+    "comparison": {"en": "ChatGPT interventions vs control conditions", "it": "Interventi con ChatGPT vs condizioni di controllo"},
+    "outcome": {"en": "Academic performance, affective-motivational states, higher-order thinking propensities, self-efficacy, mental effort", "it": "Rendimento, stati affettivo-motivazionali, propensione al pensiero di ordine superiore, autoefficacia, sforzo mentale"},
+    "duration": null,
+    "result": {"en": "Positive effects on performance, motivation and higher-order thinking propensities; reduced mental effort; no effect on self-efficacy (effect sizes not verified here)", "it": "Effetti positivi su rendimento, motivazione e propensione al pensiero di ordine superiore; meno sforzo mentale; nessun effetto sull'autoefficacia (valori non verificati qui)"},
+    "uncertainty": {"en": "Full text and abstract not accessible; audit by Weidlich et al. found few included studies with clear treatment, control and learning measure", "it": "Testo completo e abstract non accessibili; la verifica di Weidlich et al. ha trovato pochi studi inclusi con intervento, controllo e misura di apprendimento chiari"},
+    "funding": null,
+    "system": {"en": "ChatGPT (various versions)", "it": "ChatGPT (varie versioni)"}}},
+  {"id": "weidlich-2025", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1111/jcal.70105", "url": null, "short": "Weidlich et al. 2025",
+   "citation": "Weidlich, J., Gašević, D., Drachsler, H., & Kirschner, P. (2025). ChatGPT in education: An effect in search of a cause. <em>Journal of Computer Assisted Learning</em>, 41(5), e70105. https://doi.org/10.1111/jcal.70105"},
+  {"id": "laun-wolff-2025", "kind": "review", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1016/j.lindif.2025.102646", "url": null, "short": "Laun & Wolff 2025",
+   "citation": "Laun, M., & Wolff, F. (2025). Chatbots in education: Hype or help? A meta-analysis. <em>Learning and Individual Differences</em>, 119, 102646. https://doi.org/10.1016/j.lindif.2025.102646",
+   "study": {
+    "design": {"en": "Meta-analysis (PRISMA)", "it": "Meta-analisi (PRISMA)"},
+    "sample": {"en": "62 studies, 135 effect sizes", "it": "62 studi, 135 effetti"},
+    "context": {"en": "Educational chatbots across levels and subjects, generative and not", "it": "Chatbot educativi a tutti i livelli e materie, generativi e non"},
+    "comparison": {"en": "Chatbot vs no-chatbot conditions", "it": "Con chatbot vs senza chatbot"},
+    "outcome": {"en": "Learning performance", "it": "Rendimento"},
+    "duration": null,
+    "result": {"en": "Large initial effect, small-to-moderate after publication-bias correction; larger for STEM, text-based, longer interventions, lower levels", "it": "Effetto iniziale ampio, piccolo-moderato dopo correzione per il bias di pubblicazione; maggiore per STEM, testo, interventi lunghi, livelli più bassi"},
+    "uncertainty": {"en": "Publication bias; heterogeneous designs", "it": "Bias di pubblicazione; disegni eterogenei"},
+    "funding": null,
+    "system": null}},
+  {"id": "stadler-2024", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1016/j.chb.2024.108386", "url": null, "short": "Stadler et al. 2024",
+   "citation": "Stadler, M., Bannert, M., & Sailer, M. (2024). Cognitive ease at a cost: LLMs reduce mental effort but compromise depth in student scientific inquiry. <em>Computers in Human Behavior</em>, 160, 108386. https://doi.org/10.1016/j.chb.2024.108386",
+   "study": {
+    "design": {"en": "Randomised experiment", "it": "Esperimento randomizzato"},
+    "sample": {"en": "91 university students", "it": "91 studenti universitari"},
+    "context": {"en": "Researching a socio-scientific issue (nanoparticles in sunscreen)", "it": "Documentarsi su un tema socio-scientifico (nanoparticelle nelle creme solari)"},
+    "comparison": {"en": "ChatGPT-3.5 vs Google search", "it": "ChatGPT-3.5 vs ricerca Google"},
+    "outcome": {"en": "Cognitive load; quality and homogeneity of recommendations and justifications", "it": "Carico cognitivo; qualità e omogeneità di raccomandazioni e giustificazioni"},
+    "duration": {"en": "Single task", "it": "Un solo compito"},
+    "result": {"en": "Lower cognitive load but lower-quality reasoning with ChatGPT; no difference in homogeneity", "it": "Carico cognitivo minore ma ragionamenti di qualità inferiore con ChatGPT; nessuna differenza di omogeneità"},
+    "uncertainty": {"en": "Single task and topic; older model", "it": "Un solo compito e argomento; modello ormai superato"},
+    "funding": null,
+    "system": {"en": "ChatGPT-3.5", "it": "ChatGPT-3.5"}}},
+  {"id": "kaliisa-2025", "kind": "review", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1080/01443410.2025.2553639", "url": null, "short": "Kaliisa et al. 2025",
+   "citation": "Kaliisa, R., Misiejuk, K., López-Pernas, S., & Saqr, M. (2026). How does artificial intelligence compare to human feedback? A meta-analysis of performance, feedback perception, and learning dispositions. <em>Educational Psychology</em>, 46(1), 80–111. https://doi.org/10.1080/01443410.2025.2553639",
+   "study": {
+    "design": {"en": "Exploratory meta-analysis", "it": "Meta-analisi esplorativa"},
+    "sample": {"en": "41 studies, 4,813 students", "it": "41 studi, 4.813 studenti"},
+    "context": {"en": "AI-generated vs human feedback, various levels and subjects", "it": "Feedback generato dall'IA vs umano, vari livelli e materie"},
+    "comparison": {"en": "AI feedback vs human feedback", "it": "Feedback dell'IA vs feedback umano"},
+    "outcome": {"en": "Learning performance; feedback perception; learning dispositions", "it": "Rendimento; percezione del feedback; disposizioni verso l'apprendimento"},
+    "duration": null,
+    "result": {"en": "Performance g = 0.25 (CI −0.11 to 0.60, n.s.); perception g = −0.20 (n.s.)", "it": "Rendimento g = 0,25 (IC da −0,11 a 0,60, non significativo); percezione g = −0,20 (non significativo)"},
+    "uncertainty": {"en": "Very high heterogeneity (I² = 95% in language/writing); correction published October 2026 (content not checked)", "it": "Eterogeneità molto alta (I² = 95% in lingua/scrittura); correzione pubblicata a ottobre 2026 (contenuto non verificato)"},
+    "funding": null,
+    "system": {"en": "Various AI systems, not only generative", "it": "Vari sistemi di IA, non solo generativa"}}},
+  {"id": "escalante-2023", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1186/s41239-023-00425-2", "url": null, "short": "Escalante et al. 2023",
+   "citation": "Escalante, J., Pack, A., & Barrett, A. (2023). AI-generated feedback on writing: Insights into efficacy and ENL student preference. <em>International Journal of Educational Technology in Higher Education</em>, 20, 57. https://doi.org/10.1186/s41239-023-00425-2",
+   "study": {
+    "design": {"en": "Repeated-measures quasi-experiment (Study 1) and perception study (Study 2)", "it": "Quasi-esperimento a misure ripetute (studio 1) e studio sulle percezioni (studio 2)"},
+    "sample": {"en": "48 (Study 1) and 43 (Study 2) university English-as-a-new-language learners", "it": "48 (studio 1) e 43 (studio 2) universitari che studiano inglese come nuova lingua"},
+    "context": {"en": "Academic English essay writing", "it": "Scrittura di saggi in inglese accademico"},
+    "comparison": {"en": "GPT-4 feedback vs human tutor feedback", "it": "Feedback di GPT-4 vs feedback del tutor"},
+    "outcome": {"en": "Writing scores; preference", "it": "Punteggi di scrittura; preferenze"},
+    "duration": {"en": "Six weeks", "it": "Sei settimane"},
+    "result": {"en": "No difference in learning outcomes; preferences split nearly evenly", "it": "Nessuna differenza di apprendimento; preferenze divise quasi a metà"},
+    "uncertainty": {"en": "Small sample; non-randomised", "it": "Campione piccolo; non randomizzato"},
+    "funding": null,
+    "system": {"en": "ChatGPT (GPT-4)", "it": "ChatGPT (GPT-4)"}}},
+  {"id": "darvishi-2024", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1016/j.compedu.2023.104967", "url": null, "short": "Darvishi et al. 2024",
+   "citation": "Darvishi, A., Khosravi, H., Sadiq, S., Gašević, D., & Siemens, G. (2024). Impact of AI assistance on student agency. <em>Computers & Education</em>, 210, 104967. https://doi.org/10.1016/j.compedu.2023.104967",
+   "study": {
+    "design": {"en": "Randomised controlled experiment", "it": "Esperimento randomizzato controllato"},
+    "sample": {"en": "1,625 students in 10 courses", "it": "1.625 studenti in 10 corsi"},
+    "context": {"en": "Peer review of assignments on a university learning platform", "it": "Revisione tra pari dei compiti su una piattaforma universitaria"},
+    "comparison": {"en": "AI prompts vs none vs self-monitoring checklists vs both, after four weeks of AI support", "it": "Suggerimenti IA vs nessuno vs liste di autocontrollo vs entrambi, dopo quattro settimane con l'IA"},
+    "outcome": {"en": "Quality of peer feedback with and without AI assistance", "it": "Qualità dei commenti tra pari con e senza assistenza dell'IA"},
+    "duration": {"en": "Eight weeks", "it": "Otto settimane"},
+    "result": {"en": "Students relied on rather than learned from AI assistance; checklists partly compensated", "it": "Gli studenti si appoggiavano all'IA invece di imparare; le liste compensavano in parte"},
+    "uncertainty": {"en": "Assistance was rule-based and semantic-similarity AI, not generative AI", "it": "L'assistenza era IA basata su regole e somiglianza semantica, non IA generativa"},
+    "funding": null,
+    "system": {"en": "Rule-based suggestion detection and semantic-similarity checks (non-generative)", "it": "Rilevamento di suggerimenti basato su regole e controlli di somiglianza semantica (non generativo)"}}},
+  {"id": "pardos-2024", "kind": "peer-reviewed", "read": "full", "accessed": "2026-10-22", "doi": "10.1371/journal.pone.0304013", "url": null, "short": "Pardos & Bhandari 2024",
+   "citation": "Pardos, Z. A., & Bhandari, S. (2024). ChatGPT-generated help produces learning gains equivalent to human tutor-authored help on mathematics skills. <em>PLOS ONE</em>, 19(5), e0304013. https://doi.org/10.1371/journal.pone.0304013",
+   "study": {
+    "design": {"en": "Randomised 3 × 4 experiment", "it": "Esperimento randomizzato 3 × 4"},
+    "sample": {"en": "274 adults analysed (394 recruited) on Amazon Mechanical Turk", "it": "274 adulti analizzati (394 reclutati) su Amazon Mechanical Turk"},
+    "context": {"en": "Elementary, intermediate and college algebra; statistics", "it": "Algebra elementare, intermedia e universitaria; statistica"},
+    "comparison": {"en": "ChatGPT hints vs human-tutor hints vs no hints", "it": "Suggerimenti di ChatGPT vs di tutor umani vs nessun suggerimento"},
+    "outcome": {"en": "Pre/post-test learning gain; time on task", "it": "Guadagno tra pre-test e post-test; tempo impiegato"},
+    "duration": {"en": "One session of about 10–20 minutes", "it": "Una sessione di circa 10–20 minuti"},
+    "result": {"en": "ChatGPT gain significant vs control; no significant difference vs human hints; 32% of ChatGPT hints failed quality checks before mitigation", "it": "Guadagno con ChatGPT significativo rispetto al controllo; nessuna differenza significativa con i suggerimenti umani; il 32% dei suggerimenti non superava i controlli prima delle correzioni"},
+    "uncertainty": {"en": "Crowd-workers, not enrolled students; very short; about 30% attrition; hints checked before use", "it": "Lavoratori online, non studenti; molto breve; circa 30% di abbandoni; suggerimenti controllati prima dell'uso"},
+    "funding": {"en": "UC Berkeley internal grants; no competing interests declared", "it": "Fondi interni di UC Berkeley; nessun conflitto dichiarato"},
+    "system": {"en": "ChatGPT-generated hints with self-consistency checks", "it": "Suggerimenti generati da ChatGPT con controlli di coerenza"}}},
+  {"id": "kosar-2024", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.3390/math12050629", "url": null, "short": "Kosar et al. 2024",
+   "citation": "Kosar, T., Ostojić, D., Liu, Y. D., & Mernik, M. (2024). Computer science education in ChatGPT era: Experiences from an experiment in a programming course for novice programmers. <em>Mathematics</em>, 12(5), 629. https://doi.org/10.3390/math12050629",
+   "study": {
+    "design": {"en": "Controlled experiment with two groups", "it": "Esperimento controllato con due gruppi"},
+    "sample": {"en": "182 first-year undergraduates", "it": "182 studenti del primo anno"},
+    "context": {"en": "Object-oriented programming course, redesigned assignments and assessment", "it": "Corso di programmazione a oggetti, con compiti e valutazione ripensati"},
+    "comparison": {"en": "ChatGPT allowed vs not allowed for practical assignments", "it": "ChatGPT permesso vs non permesso nei compiti pratici"},
+    "outcome": {"en": "Overall performance, assignment grades, midterm exams", "it": "Rendimento complessivo, voti dei compiti, esami intermedi"},
+    "duration": {"en": "One semester", "it": "Un semestre"},
+    "result": {"en": "No significant differences (p = 0.730, 0.760, 0.856)", "it": "Nessuna differenza significativa (p = 0,730, 0,760, 0,856)"},
+    "uncertainty": {"en": "Assignment method to groups not verified; results depend on the course redesign", "it": "Modalità di assegnazione ai gruppi non verificata; i risultati dipendono dal ridisegno del corso"},
+    "funding": null,
+    "system": {"en": "ChatGPT", "it": "ChatGPT"}}},
+  {"id": "prather-2024", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1145/3632620.3671116", "url": null, "short": "Prather et al. 2024",
+   "citation": "Prather, J., Reeves, B., Leinonen, J., MacNeil, S., Randrianasolo, A., Becker, B., Kimmel, B., Wright, J., & Briggs, B. (2024). The widening gap: The benefits and harms of generative AI for novice programmers. In <em>Proceedings of the 2024 ACM Conference on International Computing Education Research – Volume 1</em> (pp. 469–486). ACM. https://doi.org/10.1145/3632620.3671116",
+   "study": {
+    "design": {"en": "Qualitative lab study (observation, interviews, eye tracking)", "it": "Studio qualitativo in laboratorio (osservazione, interviste, tracciamento oculare)"},
+    "sample": {"en": "21 novice programmers", "it": "21 programmatori principianti"},
+    "context": {"en": "Introductory programming problem solving", "it": "Risoluzione di problemi di programmazione introduttiva"},
+    "comparison": null,
+    "outcome": {"en": "Problem-solving behaviour and metacognitive difficulties", "it": "Comportamento di risoluzione e difficoltà metacognitive"},
+    "duration": {"en": "Single session each", "it": "Una sessione per partecipante"},
+    "result": {"en": "Divide between students who accelerated and those whose difficulties were compounded; illusion of competence", "it": "Divario tra chi accelerava e chi vedeva aggravarsi le difficoltà; illusione di competenza"},
+    "uncertainty": {"en": "No comparison group; small sample", "it": "Nessun gruppo di confronto; campione piccolo"},
+    "funding": null,
+    "system": {"en": "GenAI coding tools (specific products not verified)", "it": "Strumenti di IA per la programmazione (prodotti specifici non verificati)"}}},
+  {"id": "maier-2026", "kind": "preprint", "read": "abstract", "accessed": "2026-10-22", "doi": "10.48550/arXiv.2605.04779", "url": "https://arxiv.org/abs/2605.04779", "short": "Maier et al. 2026",
+   "citation": "Maier, S., Gunzenhäuser, M., Schweisthal, J., Schneider, M., & Feuerriegel, S. (2026). <em>A meta-analysis of the effect of generative AI on productivity and learning in programming</em> (arXiv:2605.04779) [Preprint]. arXiv. https://doi.org/10.48550/arXiv.2605.04779",
+   "study": {
+    "design": {"en": "Meta-analysis with risk-of-bias assessment", "it": "Meta-analisi con valutazione del rischio di distorsione"},
+    "sample": {"en": "23 studies, 27 effect sizes (2019–2025)", "it": "23 studi, 27 effetti (2019–2025)"},
+    "context": {"en": "Programming in experimental, open-source, enterprise and educational settings", "it": "Programmazione in contesti sperimentali, open source, aziendali ed educativi"},
+    "comparison": {"en": "GenAI-assisted vs unassisted programming", "it": "Programmazione con vs senza IA generativa"},
+    "outcome": {"en": "Productivity; learning (exam performance)", "it": "Produttività; apprendimento (risultati d'esame)"},
+    "duration": null,
+    "result": {"en": "Productivity g = 0.33 [0.09, 0.58]; learning g = 0.14 [−0.18, 0.47], n.s.", "it": "Produttività g = 0,33 [0,09; 0,58]; apprendimento g = 0,14 [−0,18; 0,47], non significativo"},
+    "uncertainty": {"en": "Not peer-reviewed; few learning studies; student vs professional split not checked", "it": "Non revisionato; pochi studi sull'apprendimento; distinzione studenti/professionisti non verificata"},
+    "funding": null,
+    "system": {"en": "Various coding assistants", "it": "Vari assistenti di programmazione"}}},
+  {"id": "chen-2026-teachable", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1111/bjet.70001", "url": null, "short": "Chen et al. 2026",
+   "citation": "Chen, A., Wei, Y., Le, H., & Zhang, Y. (2026). Learning by teaching with ChatGPT: The effect of teachable ChatGPT agent on programming education. <em>British Journal of Educational Technology</em>, 57(1), 163–184. https://doi.org/10.1111/bjet.70001",
+   "study": {
+    "design": {"en": "Experimental comparison (details not verified from abstract)", "it": "Confronto sperimentale (dettagli non verificati dall'abstract)"},
+    "sample": null,
+    "context": {"en": "Programming education", "it": "Didattica della programmazione"},
+    "comparison": {"en": "Teaching ChatGPT vs a comparison condition (studying alone, per OECD summary)", "it": "Insegnare a ChatGPT vs condizione di confronto (studio individuale, secondo la sintesi OCSE)"},
+    "outcome": {"en": "Knowledge gain, code quality, debugging, self-regulated learning", "it": "Guadagno di conoscenze, qualità del codice, correzione degli errori, autoregolazione"},
+    "duration": null,
+    "result": {"en": "Improved knowledge, code writing and SRL; limited effect on debugging", "it": "Migliori conoscenze, scrittura del codice e autoregolazione; effetto limitato sulla correzione degli errori"},
+    "uncertainty": {"en": "Sample size and level not verified", "it": "Dimensione e livello del campione non verificati"},
+    "funding": null,
+    "system": {"en": "ChatGPT configured as a teachable agent", "it": "ChatGPT configurato come «allievo» da istruire"}}},
+  {"id": "wang-2026-srl", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1080/10494820.2025.2559919", "url": null, "short": "Wang et al. 2026",
+   "citation": "Wang, Z., Zou, D., Zhang, R., Lee, L., Xie, H., & Wang, F. (2026). ChatGPT-enhanced self-regulated learning in programming education: Impacts on motivation, self-efficacy, and learning outcomes. <em>Interactive Learning Environments</em>, 34(5), 3041–3066. https://doi.org/10.1080/10494820.2025.2559919",
+   "study": {
+    "design": {"en": "Three-group quasi-experiment (assignment method not verified)", "it": "Quasi-esperimento a tre gruppi (modalità di assegnazione non verificata)"},
+    "sample": {"en": "83 sophomores (66 male, 17 female)", "it": "83 studenti del secondo anno (66 maschi, 17 femmine)"},
+    "context": {"en": "University programming course", "it": "Corso universitario di programmazione"},
+    "comparison": {"en": "Traditional instruction vs ChatGPT vs ChatGPT + SRL strategies", "it": "Didattica tradizionale vs ChatGPT vs ChatGPT + strategie di autoregolazione"},
+    "outcome": {"en": "Motivation, engagement, self-efficacy, programming knowledge", "it": "Motivazione, coinvolgimento, autoefficacia, conoscenze di programmazione"},
+    "duration": {"en": "Seven weeks", "it": "Sette settimane"},
+    "result": {"en": "Higher motivation and engagement with ChatGPT; higher self-efficacy with SRL; no knowledge difference (p = .79)", "it": "Più motivazione e coinvolgimento con ChatGPT; più autoefficacia con l'autoregolazione; nessuna differenza nelle conoscenze (p = 0,79)"},
+    "uncertainty": {"en": "Small groups; gender imbalance; self-report measures", "it": "Gruppi piccoli; squilibrio di genere; misure dichiarate"},
+    "funding": null,
+    "system": {"en": "ChatGPT", "it": "ChatGPT"}}},
+  {"id": "walters-2023", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1038/s41598-023-41032-5", "url": null, "short": "Walters & Wilder 2023",
+   "citation": "Walters, W. H., & Wilder, E. I. (2023). Fabrication and errors in the bibliographic citations generated by ChatGPT. <em>Scientific Reports</em>, 13, 14045. https://doi.org/10.1038/s41598-023-41032-5",
+   "study": {
+    "design": {"en": "Audit of generated references", "it": "Verifica dei riferimenti generati"},
+    "sample": {"en": "636 citations in 84 short literature reviews on 42 topics", "it": "636 citazioni in 84 brevi rassegne su 42 argomenti"},
+    "context": {"en": "Multidisciplinary", "it": "Multidisciplinare"},
+    "comparison": {"en": "GPT-3.5 vs GPT-4", "it": "GPT-3.5 vs GPT-4"},
+    "outcome": {"en": "Fabricated citations; errors in real citations", "it": "Citazioni inventate; errori nelle citazioni reali"},
+    "duration": null,
+    "result": {"en": "Fabricated: 55% (GPT-3.5), 18% (GPT-4); errors in real citations: 43% and 24%", "it": "Inventate: 55% (GPT-3.5), 18% (GPT-4); errori nelle citazioni reali: 43% e 24%"},
+    "uncertainty": {"en": "2023 models; no retrieval tools", "it": "Modelli del 2023; senza strumenti di ricerca"},
+    "funding": null,
+    "system": {"en": "ChatGPT-3.5 and ChatGPT-4", "it": "ChatGPT-3.5 e ChatGPT-4"}}},
+  {"id": "chelli-2024", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.2196/53164", "url": null, "short": "Chelli et al. 2024",
+   "citation": "Chelli, M., Descamps, J., Lavoué, V., Trojani, C., Azar, M., Deckert, M., Raynier, J., Clowez, G., Boileau, P., & Ruetsch-Chelli, C. (2024). Hallucination rates and reference accuracy of ChatGPT and Bard for systematic reviews: Comparative analysis. <em>Journal of Medical Internet Research</em>, 26, e53164. https://doi.org/10.2196/53164",
+   "study": {
+    "design": {"en": "Comparative analysis against published systematic reviews", "it": "Analisi comparativa rispetto a revisioni sistematiche pubblicate"},
+    "sample": {"en": "11 systematic reviews, 33 prompts, 471 references", "it": "11 revisioni sistematiche, 33 prompt, 471 riferimenti"},
+    "context": {"en": "Orthopaedics (rotator cuff pathology)", "it": "Ortopedia (patologia della cuffia dei rotatori)"},
+    "comparison": {"en": "GPT-3.5 vs GPT-4 vs Bard", "it": "GPT-3.5 vs GPT-4 vs Bard"},
+    "outcome": {"en": "Precision, recall, hallucination rate", "it": "Precisione, richiamo, tasso di invenzione"},
+    "duration": null,
+    "result": {"en": "Precision 9.4%, 13.4%, 0%; recall 11.9%, 13.7%, 0%; hallucination 39.6%, 28.6%, 91.4%", "it": "Precisione 9,4%, 13,4%, 0%; richiamo 11,9%, 13,7%, 0%; invenzione 39,6%, 28,6%, 91,4%"},
+    "uncertainty": {"en": "One medical domain; 2023 models", "it": "Un solo ambito medico; modelli del 2023"},
+    "funding": null,
+    "system": {"en": "ChatGPT (GPT-3.5, GPT-4), Bard", "it": "ChatGPT (GPT-3.5, GPT-4), Bard"}}},
+  {"id": "cabezas-2026", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1515/jdis-2025-0326", "url": null, "short": "Cabezas-Clavijo & Sidorenko-Bautista 2026",
+   "citation": "Cabezas-Clavijo, Á., & Sidorenko-Bautista, P. (2026). Assessing the performance of 8 AI chatbots in bibliographic reference retrieval: Grok and DeepSeek outperform ChatGPT, but none are fully accurate. <em>Journal of Data and Information Science</em>. https://doi.org/10.1515/jdis-2025-0326",
+   "study": {
+    "design": {"en": "Audit with standardised prompts", "it": "Verifica con prompt standardizzati"},
+    "sample": {"en": "400 references from 8 chatbots", "it": "400 riferimenti da 8 chatbot"},
+    "context": {"en": "Five fields: health, engineering, experimental sciences, social sciences, humanities", "it": "Cinque aree: salute, ingegneria, scienze sperimentali, scienze sociali, discipline umanistiche"},
+    "comparison": {"en": "ChatGPT, Claude, Copilot, DeepSeek, Gemini, Grok, Le Chat, Perplexity (free versions)", "it": "ChatGPT, Claude, Copilot, DeepSeek, Gemini, Grok, Le Chat, Perplexity (versioni gratuite)"},
+    "outcome": {"en": "Accuracy of authorship, year, title, source, location", "it": "Correttezza di autori, anno, titolo, fonte, collocazione"},
+    "duration": null,
+    "result": {"en": "26.5% fully correct, 33.8% partially correct, 39.8% erroneous or fabricated", "it": "26,5% del tutto corretti, 33,8% in parte corretti, 39,8% errati o inventati"},
+    "uncertainty": {"en": "Free versions at one point in time; results vary by model version", "it": "Versioni gratuite in un dato momento; i risultati cambiano con le versioni"},
+    "funding": null,
+    "system": {"en": "Eight free general chatbots", "it": "Otto chatbot generici gratuiti"}}},
+  {"id": "rao-2026", "kind": "preprint", "read": "abstract", "accessed": "2026-10-22", "doi": "10.48550/arXiv.2604.03173", "url": "https://arxiv.org/abs/2604.03173", "short": "Rao et al. 2026",
+   "citation": "Rao, D., Wong, E., & Callison-Burch, C. (2026). <em>Detecting and correcting reference hallucinations in commercial LLMs and deep research agents</em> (arXiv:2604.03173) [Preprint]. arXiv. https://doi.org/10.48550/arXiv.2604.03173",
+   "study": {
+    "design": {"en": "Large-scale audit of citation URLs plus a correction tool", "it": "Verifica su larga scala degli indirizzi citati più uno strumento di correzione"},
+    "sample": {"en": "53,090 URLs (10 models/agents) and 168,021 URLs (3 models, 32 fields)", "it": "53.090 indirizzi (10 modelli/agenti) e 168.021 indirizzi (3 modelli, 32 ambiti)"},
+    "context": {"en": "Search-augmented LLMs and deep-research agents", "it": "Modelli con ricerca web e agenti di ricerca approfondita"},
+    "comparison": {"en": "Across models; with vs without automatic URL checking", "it": "Tra modelli; con e senza controllo automatico dei link"},
+    "outcome": {"en": "Hallucinated and non-resolving URLs", "it": "Indirizzi inventati e non funzionanti"},
+    "duration": null,
+    "result": {"en": "3–13% hallucinated, 5–18% non-resolving; reduced to under 1% with checking", "it": "3–13% inventati, 5–18% non funzionanti; sotto l'1% con il controllo"},
+    "uncertainty": {"en": "Not peer-reviewed; checks link existence, not whether sources support claims", "it": "Non revisionato; verifica l'esistenza del link, non se la fonte sostiene l'affermazione"},
+    "funding": null,
+    "system": {"en": "Commercial LLMs and deep-research agents", "it": "Modelli commerciali e agenti di ricerca approfondita"}}},
+  {"id": "darmawansah-2025", "kind": "peer-reviewed", "read": "page", "accessed": "2026-10-22", "doi": "10.1007/s10639-024-12986-4", "url": null, "short": "Darmawansah et al. 2025",
+   "citation": "Darmawansah, D., Rachman, D., Febiyani, F., & Hwang, G.-J. (2025). ChatGPT-supported collaborative argumentation: Integrating collaboration script and argument mapping to enhance EFL students' argumentation skills. <em>Education and Information Technologies</em>, 30(3), 3803–3827. https://doi.org/10.1007/s10639-024-12986-4",
+   "study": {
+    "design": {"en": "Experimental comparison of two groups (per OECD summaries)", "it": "Confronto sperimentale tra due gruppi (secondo le sintesi OCSE)"},
+    "sample": null,
+    "context": {"en": "English as a foreign language, Indonesia (per OECD); argumentative speeches", "it": "Inglese come lingua straniera, Indonesia (secondo l'OCSE); discorsi argomentativi"},
+    "comparison": {"en": "ChatGPT vs search engines, both with collaboration script and argument mapping", "it": "ChatGPT vs motori di ricerca, entrambi con copione di collaborazione e mappe argomentative"},
+    "outcome": {"en": "Argumentative speaking performance and argument complexity; self-reported critical thinking awareness", "it": "Parlato argomentativo e complessità degli argomenti; consapevolezza critica dichiarata"},
+    "duration": null,
+    "result": {"en": "ChatGPT group outperformed (reported η² = 0.33)", "it": "Il gruppo con ChatGPT ha fatto meglio (η² riportato = 0,33)"},
+    "uncertainty": {"en": "Abstract and full text not accessed; details from OECD chapters 1 and 4", "it": "Abstract e testo completo non consultati; dettagli dai capitoli 1 e 4 dell'OCSE"},
+    "funding": null,
+    "system": {"en": "ChatGPT with predefined prompts", "it": "ChatGPT con prompt predefiniti"}}},
+  {"id": "strohmaier-2026", "kind": "preprint", "read": "abstract", "accessed": "2026-10-22", "doi": "10.48550/arXiv.2601.18685", "url": "https://arxiv.org/abs/2601.18685", "short": "Strohmaier et al. 2026",
+   "citation": "Strohmaier, A., Bödefeld, S., Straser, O., & Reinhold, F. (2026). <em>LLAMA LIMA: A living meta-analysis on the effects of generative AI on learning mathematics</em> (arXiv:2601.18685v5) [Preprint]. arXiv. https://doi.org/10.48550/arXiv.2601.18685",
+   "study": {
+    "design": {"en": "Living Bayesian multilevel meta-analysis", "it": "Meta-analisi bayesiana multilivello aggiornata di continuo"},
+    "sample": {"en": "34 studies (version 5)", "it": "34 studi (versione 5)"},
+    "context": {"en": "GenAI interventions for learning mathematics, all levels", "it": "Interventi con IA generativa per imparare la matematica, tutti i livelli"},
+    "comparison": {"en": "GenAI vs non-GenAI conditions", "it": "Con vs senza IA generativa"},
+    "outcome": {"en": "Mathematics learning", "it": "Apprendimento della matematica"},
+    "duration": null,
+    "result": {"en": "g = 0.57 [0.36, 0.79]; larger when supplementing teachers and in longer interventions", "it": "g = 0,57 [0,36; 0,79]; maggiore quando affianca il docente e negli interventi più lunghi"},
+    "uncertainty": {"en": "Not peer-reviewed; changes with each update; HE share not checked", "it": "Non revisionata; cambia a ogni aggiornamento; quota di studi universitari non verificata"},
+    "funding": null,
+    "system": null}},
+  {"id": "hou-min-2026", "kind": "review", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1017/S0958344025100268", "url": null, "short": "Hou & Min 2026",
+   "citation": "Hou, Z., & Min, S. (2026). Dialogue-based computer-assisted language learning systems for second language speaking development: A three-level meta-analysis. <em>ReCALL</em>, 38(1), 40–56. https://doi.org/10.1017/S0958344025100268",
+   "study": {
+    "design": {"en": "Three-level meta-analysis", "it": "Meta-analisi a tre livelli"},
+    "sample": {"en": "16 studies, 89 effect sizes", "it": "16 studi, 89 effetti"},
+    "context": {"en": "L2 speaking development with dialogue systems", "it": "Sviluppo del parlato in lingua seconda con sistemi di dialogo"},
+    "comparison": {"en": "Dialogue-based CALL vs comparison conditions", "it": "Sistemi di dialogo vs condizioni di confronto"},
+    "outcome": {"en": "L2 speaking", "it": "Parlato in lingua seconda"},
+    "duration": null,
+    "result": {"en": "g = .61; moderators: system type, meaning constraint, modality", "it": "g = 0,61; moderatori: tipo di sistema, vincoli di significato, modalità"},
+    "uncertainty": {"en": "Few studies; mostly pre-generative systems", "it": "Pochi studi; in gran parte sistemi precedenti all'IA generativa"},
+    "funding": null,
+    "system": {"en": "Dialogue systems, chatbots, some with speech", "it": "Sistemi di dialogo e chatbot, alcuni vocali"}}},
+  {"id": "wang-bibauw-2026", "kind": "grey", "read": "page", "accessed": "2026-10-22", "doi": null, "url": "https://hdl.handle.net/2078.5/278464", "short": "Wang et al. 2026 (conference)",
+   "citation": "Wang, Z., Bibauw, S., Noreillie, A.-S., & Desmet, P. (2026, September 8). <em>Hype or hope? A meta-analysis of conversational chatbots on L2 learning</em> [Conference presentation]. EUROCALL 2026, Ulster University, Belfast. https://hdl.handle.net/2078.5/278464",
+   "study": {
+    "design": {"en": "Three-level random-effects meta-analysis", "it": "Meta-analisi a effetti casuali a tre livelli"},
+    "sample": {"en": "67 studies (2011–2025), 237 effect sizes, 4,544 participants", "it": "67 studi (2011–2025), 237 effetti, 4.544 partecipanti"},
+    "context": {"en": "L2 learning with chatbots, robots and XR agents", "it": "Apprendimento della lingua seconda con chatbot, robot e agenti in realtà estesa"},
+    "comparison": {"en": "Dialogue-based CALL vs comparison conditions", "it": "Sistemi di dialogo vs condizioni di confronto"},
+    "outcome": {"en": "Productive skills, language knowledge, comprehension", "it": "Abilità produttive, conoscenze linguistiche, comprensione"},
+    "duration": null,
+    "result": {"en": "g = 0.61; adults 0.54; vocabulary 0.92; comprehension n.s.; LLM chatbots 0.64", "it": "g = 0,61; adulti 0,54; lessico 0,92; comprensione non significativa; chatbot con modelli linguistici 0,64"},
+    "uncertainty": {"en": "Conference abstract only; no full paper available", "it": "Solo abstract di convegno; articolo completo non disponibile"},
+    "funding": null,
+    "system": null}},
+  {"id": "abbas-2024", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1186/s41239-024-00444-7", "url": null, "short": "Abbas et al. 2024",
+   "citation": "Abbas, M., Jam, F., & Khan, T. (2024). Is it harmful or helpful? Examining the causes and consequences of generative AI usage among university students. <em>International Journal of Educational Technology in Higher Education</em>, 21, 10. https://doi.org/10.1186/s41239-024-00444-7",
+   "study": {
+    "design": {"en": "Scale development plus three-wave time-lagged survey (correlational)", "it": "Sviluppo di una scala più sondaggio in tre tempi (correlazionale)"},
+    "sample": {"en": "165 and 494 university students", "it": "165 e 494 studenti universitari"},
+    "context": {"en": "University students (country not verified)", "it": "Studenti universitari (paese non verificato)"},
+    "comparison": null,
+    "outcome": {"en": "ChatGPT use, procrastination, self-reported memory loss, academic performance", "it": "Uso di ChatGPT, procrastinazione, perdita di memoria dichiarata, rendimento"},
+    "duration": {"en": "Three survey waves", "it": "Tre rilevazioni"},
+    "result": {"en": "Workload and time pressure predicted use; use associated with procrastination, memory loss and lower performance", "it": "Carico e pressione predicevano l'uso; l'uso era associato a procrastinazione, perdita di memoria e rendimento più basso"},
+    "uncertainty": {"en": "Correlational; self-reports; causal language in the abstract is not supported by the design", "it": "Correlazionale; dati dichiarati; il linguaggio causale dell'abstract non è sostenuto dal disegno"},
+    "funding": null,
+    "system": {"en": "ChatGPT", "it": "ChatGPT"}}},
+  {"id": "gerlich-2025", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.3390/soc15010006", "url": null, "short": "Gerlich 2025",
+   "citation": "Gerlich, M. (2025). AI tools in society: Impacts on cognitive offloading and the future of critical thinking. <em>Societies</em>, 15(1), 6. https://doi.org/10.3390/soc15010006",
+   "study": {
+    "design": {"en": "Mixed-methods survey and interviews (correlational)", "it": "Sondaggio e interviste a metodi misti (correlazionale)"},
+    "sample": {"en": "666 participants of different ages and education levels", "it": "666 partecipanti di età e titoli di studio diversi"},
+    "context": {"en": "General population, not students specifically", "it": "Popolazione generale, non specificamente studenti"},
+    "comparison": null,
+    "outcome": {"en": "Self-reported AI use, cognitive offloading, critical thinking", "it": "Uso dell'IA, delega cognitiva e pensiero critico (dichiarati)"},
+    "duration": null,
+    "result": {"en": "Negative correlation between frequent AI use and critical thinking, mediated by offloading", "it": "Correlazione negativa tra uso frequente dell'IA e pensiero critico, attraverso la delega cognitiva"},
+    "uncertainty": {"en": "Correlational; self-report; a correction has been published", "it": "Correlazionale; dati dichiarati; è stata pubblicata una correzione"},
+    "funding": null,
+    "system": {"en": "AI tools in general", "it": "Strumenti di IA in generale"}}},
+  {"id": "lee-2025-chi", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1145/3706598.3713778", "url": null, "short": "Lee et al. 2025",
+   "citation": "Lee, H.-P., Sarkar, A., Tankelevitch, L., Drosos, I., Rintel, S., Banks, R., & Wilson, N. (2025). The impact of generative AI on critical thinking: Self-reported reductions in cognitive effort and confidence effects from a survey of knowledge workers. In <em>Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems</em> (pp. 1–22). ACM. https://doi.org/10.1145/3706598.3713778",
+   "study": {
+    "design": {"en": "Survey (correlational) with qualitative examples", "it": "Sondaggio (correlazionale) con esempi qualitativi"},
+    "sample": {"en": "319 knowledge workers, 936 examples", "it": "319 lavoratori della conoscenza, 936 esempi"},
+    "context": {"en": "Workplace use of GenAI (not students)", "it": "Uso dell'IA generativa al lavoro (non studenti)"},
+    "comparison": null,
+    "outcome": {"en": "Self-reported critical thinking and effort", "it": "Pensiero critico e sforzo dichiarati"},
+    "duration": null,
+    "result": {"en": "Confidence in GenAI associated with less critical thinking; self-confidence with more", "it": "Fiducia nell'IA associata a meno pensiero critico; fiducia in sé a più pensiero critico"},
+    "uncertainty": {"en": "Self-report; not students", "it": "Dati dichiarati; non studenti"},
+    "funding": {"en": "Most authors appear to be affiliated with Microsoft Research, a GenAI vendor (affiliations not verified in the paper)", "it": "La maggior parte degli autori risulta affiliata a Microsoft Research, produttore di IA generativa (affiliazioni non verificate nell'articolo)"},
+    "system": {"en": "Various GenAI tools", "it": "Vari strumenti di IA generativa"}}},
+  {"id": "zhai-2024", "kind": "review", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1186/s40561-024-00316-7", "url": null, "short": "Zhai et al. 2024",
+   "citation": "Zhai, C., Wibowo, S., & Li, L. (2024). The effects of over-reliance on AI dialogue systems on students' cognitive abilities: A systematic review. <em>Smart Learning Environments</em>, 11, 28. https://doi.org/10.1186/s40561-024-00316-7"},
+  {"id": "doshi-2024", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1126/sciadv.adn5290", "url": null, "short": "Doshi & Hauser 2024",
+   "citation": "Doshi, A., & Hauser, O. (2024). Generative AI enhances individual creativity but reduces the collective diversity of novel content. <em>Science Advances</em>, 10(28), eadn5290. https://doi.org/10.1126/sciadv.adn5290",
+   "study": {
+    "design": {"en": "Online randomised experiment", "it": "Esperimento randomizzato online"},
+    "sample": {"en": "Online adult writers plus evaluators (numbers not re-checked)", "it": "Scrittori adulti online più valutatori (numeri non ricontrollati)"},
+    "context": {"en": "Writing eight-sentence short stories (UK, per OECD)", "it": "Scrittura di racconti brevi di otto frasi (Regno Unito, secondo l'OCSE)"},
+    "comparison": {"en": "No AI vs one AI idea vs up to five AI ideas", "it": "Nessuna IA vs un'idea dell'IA vs fino a cinque idee"},
+    "outcome": {"en": "Rated creativity, writing quality, similarity between stories", "it": "Creatività e qualità giudicate, somiglianza tra racconti"},
+    "duration": {"en": "Single task", "it": "Un solo compito"},
+    "result": {"en": "More creative and better-written stories with AI ideas, especially for less creative writers; higher similarity across stories", "it": "Racconti più creativi e scritti meglio con le idee dell'IA, soprattutto per i meno creativi; maggiore somiglianza tra racconti"},
+    "uncertainty": {"en": "Not students; short creative task", "it": "Non studenti; compito creativo breve"},
+    "funding": null,
+    "system": {"en": "LLM generating three-sentence story ideas", "it": "Modello linguistico che genera idee di tre frasi"}}},
+  {"id": "meincke-2025", "kind": "peer-reviewed", "read": "page", "accessed": "2026-10-22", "doi": "10.1038/s41562-025-02173-x", "url": null, "short": "Meincke et al. 2025",
+   "citation": "Meincke, L., Nave, G., & Terwiesch, C. (2025). ChatGPT decreases idea diversity in brainstorming. <em>Nature Human Behaviour</em>, 9(6), 1107–1109. https://doi.org/10.1038/s41562-025-02173-x",
+   "study": {
+    "design": {"en": "Five experiments", "it": "Cinque esperimenti"},
+    "sample": null,
+    "context": {"en": "Idea generation tasks (e.g., toy invention)", "it": "Compiti di generazione di idee (per esempio inventare giocattoli)"},
+    "comparison": {"en": "Brainstorming with ChatGPT vs without (incl. web search)", "it": "Brainstorming con ChatGPT vs senza (anche con ricerca web)"},
+    "outcome": {"en": "Diversity of idea pools", "it": "Varietà degli insiemi di idee"},
+    "duration": null,
+    "result": {"en": "Lower diversity with ChatGPT in 37 of 45 comparisons", "it": "Minore varietà con ChatGPT in 37 confronti su 45"},
+    "uncertainty": {"en": "Only a press summary read; sample and design details not verified", "it": "Letta solo una sintesi divulgativa; campione e disegno non verificati"},
+    "funding": null,
+    "system": {"en": "ChatGPT (GPT-3.5 and GPT-4 per press coverage)", "it": "ChatGPT (GPT-3.5 e GPT-4 secondo la stampa)"}}},
+  {"id": "kumar-2025", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1145/3706598.3714198", "url": null, "short": "Kumar et al. 2025",
+   "citation": "Kumar, H., Vincentius, J., Jordan, E., & Anderson, A. (2025). Human creativity in the age of LLMs: Randomized experiments on divergent and convergent thinking. In <em>Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems</em> (pp. 1–18). ACM. https://doi.org/10.1145/3706598.3714198",
+   "study": {
+    "design": {"en": "Two pre-registered randomised experiments", "it": "Due esperimenti randomizzati preregistrati"},
+    "sample": {"en": "1,100 participants (online)", "it": "1.100 partecipanti (online)"},
+    "context": {"en": "Divergent and convergent thinking tasks", "it": "Compiti di pensiero divergente e convergente"},
+    "comparison": {"en": "Standard LLM (direct answers) vs coach-like LLM vs no AI", "it": "Modello standard (risposte dirette) vs modello «coach» vs nessuna IA"},
+    "outcome": {"en": "Creativity during assisted tasks and in a final unassisted stage", "it": "Creatività durante i compiti assistiti e in una fase finale senza aiuto"},
+    "duration": {"en": "Single session", "it": "Una sola sessione"},
+    "result": {"en": "Short-term boost while assisted; worse independent performance afterwards", "it": "Aumento a breve termine con l'aiuto; prestazione autonoma peggiore dopo"},
+    "uncertainty": {"en": "Online adults, not students; abstract only read", "it": "Adulti online, non studenti; letto solo l'abstract"},
+    "funding": null,
+    "system": {"en": "LLM in two configurations", "it": "Modello linguistico in due configurazioni"}}},
+  {"id": "vaccaro-2024", "kind": "review", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1038/s41562-024-02024-1", "url": null, "short": "Vaccaro et al. 2024",
+   "citation": "Vaccaro, M., Almaatouq, A., & Malone, T. (2024). When combinations of humans and AI are useful: A systematic review and meta-analysis. <em>Nature Human Behaviour</em>, 8(12), 2293–2303. https://doi.org/10.1038/s41562-024-02024-1",
+   "study": {
+    "design": {"en": "Pre-registered systematic review and meta-analysis", "it": "Revisione sistematica e meta-analisi preregistrate"},
+    "sample": {"en": "106 experiments, 370 effect sizes (2020–2023)", "it": "106 esperimenti, 370 effetti (2020–2023)"},
+    "context": {"en": "Human–AI collaboration across domains (not education-specific)", "it": "Collaborazione persona–IA in vari ambiti (non specifico per l'istruzione)"},
+    "comparison": {"en": "Human–AI combination vs best of human or AI alone", "it": "Combinazione persona–IA vs il migliore tra persona e IA da sole"},
+    "outcome": {"en": "Task performance", "it": "Prestazione nel compito"},
+    "duration": null,
+    "result": {"en": "g = −0.23 on average; losses in decision tasks, gains in content creation", "it": "g = −0,23 in media; perdite nei compiti decisionali, guadagni nella creazione di contenuti"},
+    "uncertainty": {"en": "Possible publication bias; varied designs", "it": "Possibile bias di pubblicazione; disegni diversi"},
+    "funding": null,
+    "system": null}},
+  {"id": "wei-2025", "kind": "peer-reviewed", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1186/s41239-025-00526-0", "url": null, "short": "Wei et al. 2025",
+   "citation": "Wei, X., Wang, L., Lee, L.-K., & Liu, R. (2025). The effects of generative AI on collaborative problem-solving and team creativity performance in digital story creation: An experimental study. <em>International Journal of Educational Technology in Higher Education</em>, 22, 23. https://doi.org/10.1186/s41239-025-00526-0",
+   "study": {
+    "design": {"en": "Randomised experiment, mixed methods", "it": "Esperimento randomizzato, metodi misti"},
+    "sample": {"en": "60 university students", "it": "60 studenti universitari"},
+    "context": {"en": "Digital storytelling training programme", "it": "Programma di formazione alla narrazione digitale"},
+    "comparison": {"en": "GenAI tools vs traditional methods", "it": "Strumenti di IA generativa vs metodi tradizionali"},
+    "outcome": {"en": "Collaborative problem-solving (questionnaire), team creativity, perceptions", "it": "Risoluzione di problemi in gruppo (questionario), creatività del team, percezioni"},
+    "duration": {"en": "20 weeks", "it": "20 settimane"},
+    "result": {"en": "Higher CPS scores and team creativity (user experience, novelty) with GenAI", "it": "Punteggi più alti di risoluzione in gruppo e creatività del team con l'IA generativa"},
+    "uncertainty": {"en": "Small sample; self-reported collaboration measure", "it": "Campione piccolo; misura della collaborazione dichiarata"},
+    "funding": null,
+    "system": {"en": "ChatGPT, Midjourney, Runway", "it": "ChatGPT, Midjourney, Runway"}}},
+  {"id": "freeman-2014", "kind": "review", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1073/pnas.1319030111", "url": null, "short": "Freeman et al. 2014",
+   "citation": "Freeman, S., Eddy, S. L., McDonough, M., Smith, M. K., Okoroafor, N., Jordt, H., & Wenderoth, M. P. (2014). Active learning increases student performance in science, engineering, and mathematics. <em>Proceedings of the National Academy of Sciences</em>, 111(23), 8410–8415. https://doi.org/10.1073/pnas.1319030111"},
+  {"id": "dunlosky-2013", "kind": "review", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1177/1529100612453266", "url": null, "short": "Dunlosky et al. 2013",
+   "citation": "Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., & Willingham, D. T. (2013). Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology. <em>Psychological Science in the Public Interest</em>, 14(1), 4–58. https://doi.org/10.1177/1529100612453266"},
+  {"id": "adesope-2017", "kind": "review", "read": "abstract", "accessed": "2026-10-22", "doi": "10.3102/0034654316689306", "url": null, "short": "Adesope et al. 2017",
+   "citation": "Adesope, O. O., Trevisan, D. A., & Sundararajan, N. (2017). Rethinking the use of tests: A meta-analysis of practice testing. <em>Review of Educational Research</em>, 87(3), 659–701. https://doi.org/10.3102/0034654316689306"},
+  {"id": "huisman-2019", "kind": "review", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1080/02602938.2018.1545896", "url": null, "short": "Huisman et al. 2019",
+   "citation": "Huisman, B., Saab, N., van den Broek, P., & van Driel, J. (2019). The impact of formative peer feedback on higher education students' academic writing: A meta-analysis. <em>Assessment & Evaluation in Higher Education</em>, 44(6), 863–880. https://doi.org/10.1080/02602938.2018.1545896"},
+  {"id": "umapathy-2017", "kind": "review", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1145/2996201", "url": null, "short": "Umapathy & Ritzhaupt 2017",
+   "citation": "Umapathy, K., & Ritzhaupt, A. D. (2017). A meta-analysis of pair-programming in computer programming courses. <em>ACM Transactions on Computing Education</em>, 17(4), 1–13. https://doi.org/10.1145/2996201"},
+  {"id": "theobald-2021", "kind": "review", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1016/j.cedpsych.2021.101976", "url": null, "short": "Theobald 2021",
+   "citation": "Theobald, M. (2021). Self-regulated learning training programs enhance university students' academic performance, self-regulated learning strategies, and motivation: A meta-analysis. <em>Contemporary Educational Psychology</em>, 66, 101976. https://doi.org/10.1016/j.cedpsych.2021.101976"},
+  {"id": "vogel-2017", "kind": "review", "read": "abstract", "accessed": "2026-10-22", "doi": "10.1007/s10648-016-9361-7", "url": null, "short": "Vogel et al. 2017",
+   "citation": "Vogel, F., Wecker, C., Kollar, I., & Fischer, F. (2017). Socio-cognitive scaffolding with computer-supported collaboration scripts: A meta-analysis. <em>Educational Psychology Review</em>, 29(3), 477–511. https://doi.org/10.1007/s10648-016-9361-7"}
+ ]
+}

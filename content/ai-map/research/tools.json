@@ -1,0 +1,3393 @@
+{
+ "landscape": {
+  "accessModes": [
+   {
+    "id": "closed-free",
+    "title": {
+     "en": "Closed, free",
+     "it": "Chiuso, gratuito"
+    },
+    "text": {
+     "en": "Hosted service, free of charge, model not released. Free does not mean private: check where data goes and whether it trains models.",
+     "it": "Servizio online gratuito, modello non rilasciato. Gratis non vuol dire riservato: verificare dove vanno i dati e se addestrano i modelli."
+    },
+    "examples": [
+     "deepseek",
+     "github-copilot-student",
+     "semantic-scholar"
+    ]
+   },
+   {
+    "id": "closed-freemium",
+    "title": {
+     "en": "Closed, freemium",
+     "it": "Chiuso, freemium"
+    },
+    "text": {
+     "en": "Free tier with limits plus paid plans. Personal accounts often allow training on your data by default; organisation plans usually do not.",
+     "it": "Piano gratuito limitato più piani a pagamento. Gli account personali spesso usano i dati per l'addestramento di default; i piani per organizzazioni di solito no."
+    },
+    "examples": [
+     "chatgpt",
+     "claude",
+     "gemini-notebook",
+     "mistral-vibe",
+     "perplexity",
+     "cursor",
+     "replit",
+     "elicit",
+     "consensus",
+     "researchrabbit",
+     "grammarly",
+     "deepl",
+     "gptzero",
+     "khanmigo",
+     "quizlet",
+     "otter",
+     "gamma"
+    ]
+   },
+   {
+    "id": "closed-paid",
+    "title": {
+     "en": "Closed, paid",
+     "it": "Chiuso, a pagamento"
+    },
+    "text": {
+     "en": "Paid licence or add-on only.",
+     "it": "Solo con licenza o componente aggiuntivo a pagamento."
+    },
+    "examples": [
+     "copilot-powerpoint",
+     "scite"
+    ]
+   },
+   {
+    "id": "closed-institutional",
+    "title": {
+     "en": "Closed, institutional licence",
+     "it": "Chiuso, licenza d'ateneo"
+    },
+    "text": {
+     "en": "Contracted by the university for everyone. Usually: no training on data, admin controls, DPA, sometimes EU data residency.",
+     "it": "Acquistato dall'ateneo per tutti. Di solito: nessun addestramento sui dati, controlli per amministratori, DPA, talvolta residenza dei dati in UE."
+    },
+    "examples": [
+     "chatgpt-edu",
+     "claude-education",
+     "gemini-education",
+     "m365-copilot-chat-edu",
+     "m365-study-learn",
+     "turnitin-ai"
+    ]
+   },
+   {
+    "id": "open-weights",
+    "title": {
+     "en": "Open weights",
+     "it": "Pesi aperti"
+    },
+    "text": {
+     "en": "Model weights downloadable and runnable locally, so data can stay on campus. Training data is not disclosed: not 'open source' under the OSI definition. Licences vary (Apache 2.0, MIT, or custom like Llama, which excludes EU-based licensees for multimodal models).",
+     "it": "Pesi del modello scaricabili ed eseguibili in locale: i dati possono restare in ateneo. I dati di addestramento non sono divulgati: non è 'open source' secondo l'OSI. Le licenze variano (Apache 2.0, MIT o proprie come Llama, che esclude licenziatari con sede UE per i modelli multimodali)."
+    },
+    "examples": [
+     "llama",
+     "mistral-open-weights",
+     "qwen",
+     "gpt-oss",
+     "eurollm",
+     "minerva",
+     "ollama",
+     "lm-studio"
+    ]
+   },
+   {
+    "id": "open-source-osi",
+    "title": {
+     "en": "Open source (OSI definition)",
+     "it": "Open source (definizione OSI)"
+    },
+    "text": {
+     "en": "Weights, full training code and enough data information to rebuild the system, with free use, study, modification and sharing. Few models qualify.",
+     "it": "Pesi, codice completo di addestramento e informazioni sui dati sufficienti a ricostruire il sistema, con libertà di usare, studiare, modificare e condividere. Pochi modelli rientrano."
+    },
+    "examples": [
+     "olmo"
+    ]
+   },
+   {
+    "id": "edu-platform",
+    "title": {
+     "en": "Education platform",
+     "it": "Piattaforma per la didattica"
+    },
+    "text": {
+     "en": "Tools built for teaching (feedback, grading, course chatbots), bought by institutions and usually linked to the LMS.",
+     "it": "Strumenti pensati per la didattica (feedback, valutazione, chatbot di corso), acquistati dagli atenei e di solito collegati all'LMS."
+    },
+    "examples": [
+     "gradescope",
+     "packback",
+     "feedbackfruits-acai",
+     "cogniti"
+    ]
+   },
+   {
+    "id": "lms-builtin",
+    "title": {
+     "en": "Built into the LMS",
+     "it": "Integrato nell'LMS"
+    },
+    "text": {
+     "en": "AI features inside Moodle, Canvas or Brightspace. Data handling depends on the LMS vendor or, for Moodle, on the provider the institution connects.",
+     "it": "Funzioni IA dentro Moodle, Canvas o Brightspace. La gestione dei dati dipende dal fornitore dell'LMS o, per Moodle, dal fornitore collegato dall'ateneo."
+    },
+    "examples": [
+     "moodle-ai",
+     "canvas-igniteai",
+     "d2l-lumi"
+    ]
+   }
+  ],
+  "notes": [
+   {
+    "en": "Facts come only from vendor pages, Hugging Face model cards and the OSI definition, checked on 2026-10-22. Where a vendor states nothing, the field is null. Vendor claims (accuracy, privacy) are not independent evidence.",
+    "it": "I fatti provengono solo da pagine dei fornitori, schede dei modelli su Hugging Face e definizione OSI, verificate il 22/10/2026. Se il fornitore non dice nulla, il campo è null. Le dichiarazioni dei fornitori (accuratezza, privacy) non sono prove indipendenti."
+   },
+   {
+    "en": "Several vendor sites (OpenAI, Turnitin, Packback and others) blocked automated reading. For those, facts come from search-index excerpts of the official pages (read = 'excerpt') and should be re-checked by a person before publication.",
+    "it": "Diversi siti (OpenAI, Turnitin, Packback e altri) bloccano la lettura automatica. Per questi i fatti vengono da estratti indicizzati delle pagine ufficiali (read = 'excerpt') e vanno ricontrollati da una persona prima della pubblicazione."
+   },
+   {
+    "en": "Products change fast: in 2026 NotebookLM became Gemini Notebook (16 Jul) and Mistral Le Chat became Vibe (12 Aug).",
+    "it": "I prodotti cambiano in fretta: nel 2026 NotebookLM è diventato Gemini Notebook (16 luglio) e Mistral Le Chat è diventato Vibe (12 agosto)."
+   },
+   {
+    "en": "The same brand can sit in different access modes: ChatGPT Free vs ChatGPT Edu, Claude Pro vs Claude for Education. Privacy terms differ a lot between personal and institutional accounts.",
+    "it": "Lo stesso marchio può stare in modalità diverse: ChatGPT Free contro ChatGPT Edu, Claude Pro contro Claude for Education. Le condizioni sulla privacy cambiano molto tra account personali e d'ateneo."
+   },
+   {
+    "en": "'Open weights' is not 'open source': only OLMo (Ai2) in this list passed OSI's validation, and OSI says that is not a certification.",
+    "it": "'Pesi aperti' non vuol dire 'open source': in questo elenco solo OLMo (Ai2) ha superato la validazione OSI, e l'OSI precisa che non è una certificazione."
+   },
+   {
+    "en": "AI detectors (Turnitin, GPTZero, Grammarly) all warn against using scores as sole proof.",
+    "it": "I rilevatori di IA (Turnitin, GPTZero, Grammarly) avvertono tutti di non usare i punteggi come unica prova."
+   }
+  ]
+ },
+ "tools": [
+  {
+   "id": "chatgpt",
+   "name": "ChatGPT (Free / Plus)",
+   "vendor": "OpenAI",
+   "url": "https://chatgpt.com/",
+   "types": [
+    "general-assistant"
+   ],
+   "tasks": [
+    "s-understand",
+    "s-practice"
+   ],
+   "access": "closed-freemium",
+   "pricing": "freemium",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "General chat assistant. Includes 'study mode', which OpenAI says is powered by custom system instructions and may behave inconsistently.",
+     "it": "Assistente conversazionale generale. Include la 'modalità studio', che secondo OpenAI funziona con istruzioni di sistema dedicate e può comportarsi in modo non sempre coerente."
+    },
+    "model": {
+     "en": "OpenAI GPT models (closed).",
+     "it": "Modelli GPT di OpenAI (chiusi)."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "OpenAI documents a setting to turn off model training for personal accounts; default and scope not verified on the full page.",
+     "it": "OpenAI descrive un'impostazione per disattivare l'uso dei dati per l'addestramento negli account personali; impostazione predefinita e portata non verificate sulla pagina completa."
+    },
+    "eduFeatures": {
+     "en": "Study mode (guided, step-by-step help).",
+     "it": "Modalità studio (aiuto guidato, passo dopo passo)."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": {
+     "en": "13+ (or local minimum); under-18s need parental or guardian permission.",
+     "it": "13+ (o età minima del Paese); sotto i 18 anni serve il permesso di un genitore o tutore."
+    },
+    "citations": null
+   },
+   "sources": [
+    "openai-terms",
+    "openai-eu-terms",
+    "openai-training-help",
+    "openai-edu-release-notes"
+   ]
+  },
+  {
+   "id": "chatgpt-edu",
+   "name": "ChatGPT Edu",
+   "vendor": "OpenAI",
+   "url": "https://openai.com/index/introducing-chatgpt-edu/",
+   "types": [
+    "general-assistant",
+    "custom-chatbot"
+   ],
+   "tasks": [
+    "s-understand",
+    "s-practice",
+    "d-chatbot"
+   ],
+   "access": "closed-institutional",
+   "pricing": "institutional",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Institution-wide ChatGPT workspace for universities, with admin controls; custom GPTs and projects inside the workspace.",
+     "it": "Spazio ChatGPT per tutto l'ateneo, con controlli per gli amministratori; GPT personalizzati e progetti dentro lo spazio di lavoro."
+    },
+    "model": {
+     "en": "OpenAI GPT models (closed).",
+     "it": "Modelli GPT di OpenAI (chiusi)."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "By default, content from Edu workspaces is not used to train OpenAI models (unless a user explicitly opts in, e.g. via feedback).",
+     "it": "Per impostazione predefinita i contenuti degli spazi Edu non servono ad addestrare i modelli OpenAI (salvo consenso esplicito, ad esempio con il feedback)."
+    },
+    "eduFeatures": {
+     "en": "Study mode available to Edu users since 6 Aug 2025; workspace-shared custom GPTs.",
+     "it": "Modalità studio disponibile per Edu dal 6 agosto 2025; GPT personalizzati condivisi nello spazio di lavoro."
+    },
+    "dataLocation": {
+     "en": "Eligible new Edu customers can store in-scope content at rest in Europe (EEA + Switzerland); inference residency available separately. Account and usage metadata are out of scope.",
+     "it": "I nuovi clienti Edu idonei possono conservare i contenuti in Europa (SEE + Svizzera); la residenza dell'elaborazione è un'opzione a parte. Dati di account e metadati d'uso sono esclusi."
+    },
+    "dpa": {
+     "en": "OpenAI states Edu data is processed under its Student Data Privacy Agreement; EU DPA wording not verified.",
+     "it": "OpenAI dichiara che i dati Edu sono trattati secondo il suo Student Data Privacy Agreement; il testo del DPA per l'UE non è stato verificato."
+    },
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "openai-enterprise-privacy",
+    "openai-business-data",
+    "openai-data-residency",
+    "openai-edu-release-notes"
+   ]
+  },
+  {
+   "id": "claude",
+   "name": "Claude (Free / Pro)",
+   "vendor": "Anthropic",
+   "url": "https://claude.ai/",
+   "types": [
+    "general-assistant"
+   ],
+   "tasks": [
+    "s-understand"
+   ],
+   "access": "closed-freemium",
+   "pricing": "freemium",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "General chat assistant with a 'Learning' style that guides with questions instead of giving answers.",
+     "it": "Assistente conversazionale generale con uno stile 'Learning' che guida con domande invece di dare la risposta."
+    },
+    "model": {
+     "en": "Anthropic Claude models (closed).",
+     "it": "Modelli Claude di Anthropic (chiusi)."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "Consumer terms (effective 8 Oct 2025): Anthropic may use chats to train models; users can opt out, but feedback and safety-flagged content may still be used.",
+     "it": "Termini consumer (in vigore dall'8 ottobre 2025): Anthropic può usare le chat per addestrare i modelli; si può rinunciare, ma feedback e contenuti segnalati per sicurezza possono comunque essere usati."
+    },
+    "eduFeatures": {
+     "en": "Learning mode (Socratic style).",
+     "it": "Modalità di apprendimento (stile socratico)."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": {
+     "en": "18+ (consumer terms).",
+     "it": "18+ (termini consumer)."
+    },
+    "citations": null
+   },
+   "sources": [
+    "anthropic-consumer-terms",
+    "claude-edu"
+   ]
+  },
+  {
+   "id": "claude-education",
+   "name": "Claude for Education",
+   "vendor": "Anthropic",
+   "url": "https://claude.com/solutions/education",
+   "types": [
+    "general-assistant"
+   ],
+   "tasks": [
+    "s-understand",
+    "t-materials",
+    "d-course-design"
+   ],
+   "access": "closed-institutional",
+   "pricing": "institutional",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "University-wide plan for students, faculty and staff; vendor lists drafting syllabi and assignments, research and admin uses.",
+     "it": "Piano per tutto l'ateneo (studenti, docenti, personale); il fornitore cita stesura di programmi e consegne, ricerca e usi amministrativi."
+    },
+    "model": {
+     "en": "Anthropic Claude models (closed).",
+     "it": "Modelli Claude di Anthropic (chiusi)."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "Vendor: data used to improve models only with permission. For commercial products training is off by default.",
+     "it": "Fornitore: i dati servono a migliorare i modelli solo con permesso. Per i prodotti commerciali l'addestramento è disattivato di default."
+    },
+    "eduFeatures": {
+     "en": "Learning mode that 'asks questions' like a tutor.",
+     "it": "Modalità di apprendimento che 'fa domande' come un tutor."
+    },
+    "dataLocation": {
+     "en": "Commercial data stored in the US; traffic may be routed to the US, Europe, Asia, Australia. Regional residency only via cloud platforms (AWS Bedrock, Google Vertex, Microsoft Foundry).",
+     "it": "Dati commerciali conservati negli USA; il traffico può passare per USA, Europa, Asia, Australia. Residenza regionale solo tramite piattaforme cloud (AWS Bedrock, Google Vertex, Microsoft Foundry)."
+    },
+    "dpa": {
+     "en": "Yes: DPA with Standard Contractual Clauses is part of the Commercial Terms; Anthropic acts as processor.",
+     "it": "Sì: il DPA con Clausole Contrattuali Standard fa parte dei Commercial Terms; Anthropic agisce come responsabile del trattamento."
+    },
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "claude-edu",
+    "anthropic-dpa",
+    "anthropic-servers",
+    "anthropic-processor"
+   ]
+  },
+  {
+   "id": "gemini-education",
+   "name": "Gemini for Education (incl. Guided Learning)",
+   "vendor": "Google",
+   "url": "https://edu.google.com/intl/ALL_us/ai/gemini-for-education/",
+   "types": [
+    "general-assistant",
+    "tutoring-system"
+   ],
+   "tasks": [
+    "s-understand",
+    "s-practice"
+   ],
+   "access": "closed-institutional",
+   "pricing": "mixed",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Gemini app for Workspace for Education accounts. Guided Learning mode asks questions, breaks problems into steps and adds diagrams, videos and quizzes.",
+     "it": "App Gemini per gli account Workspace for Education. La modalità Guided Learning fa domande, scompone i problemi in passi e aggiunge diagrammi, video e quiz."
+    },
+    "model": {
+     "en": "Google Gemini models; Guided Learning draws on LearnLM (models fine-tuned for learning).",
+     "it": "Modelli Gemini di Google; Guided Learning usa LearnLM (modelli adattati per l'apprendimento)."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "Education editions: chats and files are not reviewed by humans or used to train models.",
+     "it": "Edizioni Education: chat e file non sono letti da revisori umani né usati per addestrare i modelli."
+    },
+    "eduFeatures": {
+     "en": "Core service at no cost in all Education editions; paid 'Google AI Pro for Education' add-on (US$15/user/month, annual) for more models and limits.",
+     "it": "Servizio incluso senza costi in tutte le edizioni Education; componente aggiuntivo a pagamento 'Google AI Pro for Education' (15 USD/utente/mese, annuale) per più modelli e limiti."
+    },
+    "dataLocation": {
+     "en": "Since 29 Jun 2026 the Gemini app follows Workspace data regions; for Education Plus and Standard this covers in-region storage only (not processing).",
+     "it": "Dal 29 giugno 2026 l'app Gemini rispetta le regioni dati di Workspace; per Education Plus e Standard vale solo per la conservazione in regione (non per l'elaborazione)."
+    },
+    "dpa": {
+     "en": "Covered by the Workspace for Education terms; a separate DPA is not mentioned on the pages read.",
+     "it": "Coperto dai termini di Workspace for Education; un DPA separato non è citato nelle pagine lette."
+    },
+    "minAge": {
+     "en": "Add-on: 18+. Under-18 students get a separate experience with extra safeguards.",
+     "it": "Componente aggiuntivo: 18+. Gli studenti minorenni hanno un'esperienza separata con tutele aggiuntive."
+    },
+    "citations": null
+   },
+   "sources": [
+    "google-gemini-edu",
+    "google-edu-faq",
+    "google-data-regions",
+    "google-guided-learning",
+    "google-learning-tools-help"
+   ]
+  },
+  {
+   "id": "gemini-notebook",
+   "name": "Gemini Notebook (formerly NotebookLM)",
+   "vendor": "Google",
+   "url": "https://notebook.google/",
+   "types": [
+    "research-assistant",
+    "general-assistant"
+   ],
+   "tasks": [
+    "s-understand"
+   ],
+   "access": "closed-freemium",
+   "pricing": "mixed",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Research and study tool grounded in the sources you upload. Renamed from NotebookLM on 16 Jul 2026; notebooks and links carried over.",
+     "it": "Strumento di studio e ricerca basato sulle fonti caricate. Ha cambiato nome da NotebookLM il 16 luglio 2026; quaderni e link restano validi."
+    },
+    "model": {
+     "en": "Google Gemini models (closed).",
+     "it": "Modelli Gemini di Google (chiusi)."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "Education editions: uploads, queries and responses are not human-reviewed or used to train models.",
+     "it": "Edizioni Education: caricamenti, domande e risposte non sono letti da umani né usati per l'addestramento."
+    },
+    "eduFeatures": {
+     "en": "Core service in Workspace for Education.",
+     "it": "Servizio incluso in Workspace for Education."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "google-notebook-rename",
+    "google-edu-faq"
+   ]
+  },
+  {
+   "id": "m365-copilot-chat-edu",
+   "name": "Microsoft 365 Copilot Chat (education)",
+   "vendor": "Microsoft",
+   "url": "https://www.microsoft.com/en-us/education/products/copilot-in-education",
+   "types": [
+    "general-assistant",
+    "item-generator"
+   ],
+   "tasks": [
+    "t-materials",
+    "t-items"
+   ],
+   "access": "closed-institutional",
+   "pricing": "mixed",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Copilot Chat at no added cost with Microsoft 365 A1/A3/A5 school accounts. The paid Microsoft 365 Copilot app includes a 'Teach' module for lesson plans, quizzes and rubrics.",
+     "it": "Copilot Chat senza costi aggiuntivi con gli account scolastici Microsoft 365 A1/A3/A5. L'app Microsoft 365 Copilot a pagamento include il modulo 'Teach' per lezioni, quiz e rubriche."
+    },
+    "model": {
+     "en": "OpenAI models via Microsoft; Anthropic models in some Office apps.",
+     "it": "Modelli OpenAI tramite Microsoft; modelli Anthropic in alcune app Office."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "Prompts, responses and Graph data are not used to train foundation models.",
+     "it": "Prompt, risposte e dati di Graph non sono usati per addestrare i modelli di base."
+    },
+    "eduFeatures": {
+     "en": "Teach module (M365 Copilot); academic add-on price US$18/user/month.",
+     "it": "Modulo Teach (M365 Copilot); prezzo accademico del componente aggiuntivo 18 USD/utente/mese."
+    },
+    "dataLocation": {
+     "en": "Covered by the EU Data Boundary, with exceptions: Bing web queries, Anthropic models in Word/Excel/PowerPoint (on by default for EU tenants created after 25 Mar 2026), optional flex routing.",
+     "it": "Coperto dall'EU Data Boundary, con eccezioni: ricerche web Bing, modelli Anthropic in Word/Excel/PowerPoint (attivi di default per i tenant UE creati dopo il 25 marzo 2026), instradamento flessibile opzionale."
+    },
+    "dpa": {
+     "en": "Yes: enterprise data protection under the Microsoft Data Protection Addendum and Product Terms.",
+     "it": "Sì: protezione dei dati aziendali secondo il Data Protection Addendum e i Product Terms di Microsoft."
+    },
+    "minAge": {
+     "en": "13+ for students; under-13 accounts are blocked.",
+     "it": "13+ per gli studenti; gli account sotto i 13 anni sono bloccati."
+    },
+    "citations": null
+   },
+   "sources": [
+    "ms-copilot-edu",
+    "ms-copilot-privacy",
+    "ms-copilot-anthropic"
+   ]
+  },
+  {
+   "id": "m365-study-learn",
+   "name": "Study and Learn agent (Microsoft 365 Copilot)",
+   "vendor": "Microsoft",
+   "url": "https://www.microsoft.com/en-us/education/blog/2026/07/study-and-learn-ai-built-for-learning-in-microsoft-365-copilot/",
+   "types": [
+    "tutoring-system",
+    "general-assistant"
+   ],
+   "tasks": [
+    "s-practice",
+    "s-understand"
+   ],
+   "access": "closed-institutional",
+   "pricing": "institutional",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Learning agent inside Copilot Chat: guides students rather than giving finished answers; flashcards, quizzes, matching and fill-in-the-blank from the student's own files.",
+     "it": "Agente per lo studio dentro Copilot Chat: guida lo studente invece di dare risposte pronte; flashcard, quiz, abbinamenti e completamenti a partire dai file dello studente."
+    },
+    "model": null,
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "Microsoft states content and conversations are not used to train the underlying models; conversations are private to the student.",
+     "it": "Microsoft dichiara che contenuti e conversazioni non servono ad addestrare i modelli; le conversazioni restano private per lo studente."
+    },
+    "eduFeatures": {
+     "en": "Included with A1/A3/A5 licences. Vendor cites learning-science principles (scaffolding, productive struggle, active learning, transfer); no outcome data on the page. Off by default for higher education.",
+     "it": "Incluso nelle licenze A1/A3/A5. Il fornitore cita principi delle scienze dell'apprendimento (scaffolding, sforzo produttivo, apprendimento attivo, transfer); nessun dato sui risultati nella pagina. Disattivato di default per l'università."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": {
+     "en": "13+, requires Copilot Chat to be enabled.",
+     "it": "13+, richiede Copilot Chat attivo."
+    },
+    "citations": {
+     "en": "Yes, cites the student's source files.",
+     "it": "Sì, cita i file di partenza dello studente."
+    }
+   },
+   "sources": [
+    "ms-study-learn-blog",
+    "ms-copilot-edu",
+    "ms-study-learn-privacy"
+   ]
+  },
+  {
+   "id": "copilot-powerpoint",
+   "name": "Copilot in PowerPoint",
+   "vendor": "Microsoft",
+   "url": "https://support.microsoft.com/en-us/powerpoint/copilot/create-a-new-presentation-with-copilot-in-powerpoint",
+   "types": [
+    "presentation-generator"
+   ],
+   "tasks": [
+    "t-materials"
+   ],
+   "access": "closed-paid",
+   "pricing": "paid",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Builds a draft deck (with images and speaker notes) from a prompt or from a Word/PDF file; can keep an institutional template.",
+     "it": "Crea una bozza di presentazione (con immagini e note) da una richiesta o da un file Word/PDF; può mantenere il modello grafico dell'ateneo."
+    },
+    "model": null,
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "As Microsoft 365 Copilot: not used to train foundation models.",
+     "it": "Come Microsoft 365 Copilot: non usato per addestrare i modelli di base."
+    },
+    "eduFeatures": null,
+    "dataLocation": {
+     "en": "Note: Anthropic models in PowerPoint process data outside the EU Data Boundary.",
+     "it": "Nota: i modelli Anthropic in PowerPoint trattano i dati fuori dall'EU Data Boundary."
+    },
+    "dpa": {
+     "en": "Microsoft Data Protection Addendum.",
+     "it": "Data Protection Addendum di Microsoft."
+    },
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "ms-ppt-copilot",
+    "ms-copilot-privacy",
+    "ms-copilot-anthropic"
+   ]
+  },
+  {
+   "id": "mistral-vibe",
+   "name": "Mistral Vibe (formerly Le Chat)",
+   "vendor": "Mistral AI (France)",
+   "url": "https://mistral.ai/products/vibe/",
+   "types": [
+    "general-assistant",
+    "coding-assistant"
+   ],
+   "tasks": [
+    "s-coding"
+   ],
+   "access": "closed-freemium",
+   "pricing": "freemium",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Le Chat was renamed Vibe on 12 Aug 2026: Work, Code and Chat modes; Free, Pro, Team, Enterprise plans. Free plan includes web search.",
+     "it": "Le Chat è diventato Vibe il 12 agosto 2026: modalità Work, Code e Chat; piani Free, Pro, Team, Enterprise. Il piano gratuito include la ricerca web."
+    },
+    "model": {
+     "en": "Mistral models.",
+     "it": "Modelli Mistral."
+    },
+    "weights": {
+     "en": "The app is closed; several Mistral models are also released as open weights (see mistral-open-weights).",
+     "it": "L'app è chiusa; diversi modelli Mistral sono anche rilasciati con pesi aperti (vedi mistral-open-weights)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Mistral cloud; Enterprise also on-premises or private cloud.",
+     "it": "Cloud Mistral; per Enterprise anche on-premise o cloud privato."
+    },
+    "training": {
+     "en": "Inputs and outputs are used for training by default unless you opt out (setting 'Enable data sharing').",
+     "it": "Input e output sono usati per l'addestramento di default, salvo rinuncia (impostazione 'Enable data sharing')."
+    },
+    "eduFeatures": null,
+    "dataLocation": {
+     "en": "Hosted in the EU by default; some features may temporarily transfer data to subprocessors outside the EU.",
+     "it": "Ospitato nell'UE di default; alcune funzioni possono trasferire temporaneamente dati a subfornitori fuori dall'UE."
+    },
+    "dpa": {
+     "en": "Yes: Data Processing Addendum listed for commercial customers.",
+     "it": "Sì: Data Processing Addendum disponibile per i clienti commerciali."
+    },
+    "minAge": {
+     "en": "13+; minors need parental permission where required.",
+     "it": "13+; i minori necessitano del permesso dei genitori dove richiesto."
+    },
+    "citations": null
+   },
+   "sources": [
+    "mistral-vibe-product",
+    "mistral-vibe-rename",
+    "mistral-data-location",
+    "mistral-training",
+    "mistral-terms-eu",
+    "mistral-legal-hub"
+   ]
+  },
+  {
+   "id": "perplexity",
+   "name": "Perplexity (incl. Education Pro)",
+   "vendor": "Perplexity AI",
+   "url": "https://www.perplexity.ai/",
+   "types": [
+    "research-assistant",
+    "general-assistant"
+   ],
+   "tasks": [
+    "s-understand"
+   ],
+   "access": "closed-freemium",
+   "pricing": "freemium",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Answer engine with web search. Education Pro: discounted Pro plan for verified students and educators (SheerID), with Learn Mode.",
+     "it": "Motore di risposte con ricerca web. Education Pro: piano Pro scontato per studenti e docenti verificati (SheerID), con Learn Mode."
+    },
+    "model": {
+     "en": "Mix of Perplexity and third-party premium models.",
+     "it": "Mix di modelli Perplexity e di terzi."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "Consumer Pro/Max: users can opt out of training. Enterprise: never used for training.",
+     "it": "Pro/Max consumer: si può rinunciare all'addestramento. Enterprise: mai usati per l'addestramento."
+    },
+    "eduFeatures": {
+     "en": "Learn Mode and study nudges in Education Pro.",
+     "it": "Learn Mode e suggerimenti di studio in Education Pro."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": {
+     "en": "13+; 13–17 need a parent or guardian to accept the terms.",
+     "it": "13+; tra 13 e 17 anni i termini vanno accettati da un genitore o tutore."
+    },
+    "citations": null
+   },
+   "sources": [
+    "perplexity-edu-pro",
+    "perplexity-terms",
+    "perplexity-enterprise"
+   ]
+  },
+  {
+   "id": "deepseek",
+   "name": "DeepSeek (chat app)",
+   "vendor": "DeepSeek (China)",
+   "url": "https://chat.deepseek.com/",
+   "types": [
+    "general-assistant"
+   ],
+   "tasks": [],
+   "access": "closed-free",
+   "pricing": "free",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Free chat assistant and API.",
+     "it": "Assistente conversazionale gratuito e API."
+    },
+    "model": {
+     "en": "DeepSeek V-series models (V3.2, V4 per vendor technical docs).",
+     "it": "Modelli DeepSeek serie V (V3.2, V4 secondo la documentazione tecnica)."
+    },
+    "weights": {
+     "en": "Recent model weights released openly (MIT); the app itself is a hosted service.",
+     "it": "Pesi dei modelli recenti rilasciati apertamente (MIT); l'app è un servizio ospitato."
+    },
+    "licence": {
+     "en": "App: DeepSeek terms. Weights V3.2/V4: MIT; older V3 used a custom licence with use restrictions.",
+     "it": "App: termini DeepSeek. Pesi V3.2/V4: MIT; il vecchio V3 aveva una licenza propria con limiti d'uso."
+    },
+    "execution": {
+     "en": "DeepSeek cloud (app/API); weights can also run locally.",
+     "it": "Cloud DeepSeek (app/API); i pesi possono girare anche in locale."
+    },
+    "training": null,
+    "eduFeatures": null,
+    "dataLocation": {
+     "en": "Privacy policy: personal data collected, processed and stored in the People's Republic of China.",
+     "it": "Informativa privacy: dati personali raccolti, trattati e conservati nella Repubblica Popolare Cinese."
+    },
+    "dpa": null,
+    "minAge": {
+     "en": "Primarily for adults; under-18s should use it with guardian consent.",
+     "it": "Pensato soprattutto per adulti; i minori dovrebbero usarlo con il consenso di un tutore."
+    },
+    "citations": null
+   },
+   "sources": [
+    "deepseek-privacy",
+    "deepseek-terms",
+    "deepseek-v32-license"
+   ]
+  },
+  {
+   "id": "llama",
+   "name": "Meta Llama 4 (open weights)",
+   "vendor": "Meta",
+   "url": "https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E",
+   "types": [
+    "local-open-weights"
+   ],
+   "tasks": [],
+   "access": "open-weights",
+   "pricing": "free",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Downloadable model family for local or self-hosted use.",
+     "it": "Famiglia di modelli scaricabili per uso locale o su server propri."
+    },
+    "model": {
+     "en": "Llama 4 Scout / Maverick (multimodal, mixture-of-experts).",
+     "it": "Llama 4 Scout / Maverick (multimodali, mixture-of-experts)."
+    },
+    "weights": {
+     "en": "Available after accepting the licence.",
+     "it": "Disponibili dopo aver accettato la licenza."
+    },
+    "licence": {
+     "en": "Llama 4 Community License + Acceptable Use Policy. For multimodal models the licence is NOT granted to individuals or companies based in the EU (end users of products built on them excepted). Not OSI open source.",
+     "it": "Llama 4 Community License + Acceptable Use Policy. Per i modelli multimodali la licenza NON è concessa a persone o aziende con sede nell'UE (salvo gli utenti finali di prodotti che li incorporano). Non è open source secondo l'OSI."
+    },
+    "execution": {
+     "en": "Runs on your own computer or server.",
+     "it": "Gira sul proprio computer o server."
+    },
+    "training": {
+     "en": "Not applicable when run locally: prompts stay on your machine.",
+     "it": "Non applicabile in locale: i prompt restano sul proprio computer."
+    },
+    "eduFeatures": null,
+    "dataLocation": {
+     "en": "Wherever you run it (can be fully on-premises in the EU).",
+     "it": "Dove lo si esegue (anche interamente on-premise nell'UE)."
+    },
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "llama4-card",
+    "llama4-aup",
+    "osi-validation"
+   ]
+  },
+  {
+   "id": "mistral-open-weights",
+   "name": "Mistral open-weight models (e.g. Mistral Small 4)",
+   "vendor": "Mistral AI (France)",
+   "url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+   "types": [
+    "local-open-weights"
+   ],
+   "tasks": [],
+   "access": "open-weights",
+   "pricing": "free",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Downloadable models for self-hosting.",
+     "it": "Modelli scaricabili da ospitare in proprio."
+    },
+    "model": {
+     "en": "Mistral Small 4 (119B mixture-of-experts, ~6.5B active), combining reasoning, multimodal and coding lines.",
+     "it": "Mistral Small 4 (119B mixture-of-experts, ~6,5B attivi), che unisce ragionamento, multimodalità e codice."
+    },
+    "weights": {
+     "en": "Open weights.",
+     "it": "Pesi aperti."
+    },
+    "licence": {
+     "en": "Apache 2.0 for the weights. Training data is not disclosed, so it does not meet the OSI Open Source AI Definition (Mixtral failed OSI validation).",
+     "it": "Apache 2.0 per i pesi. I dati di addestramento non sono divulgati, quindi non rispetta la Open Source AI Definition dell'OSI (Mixtral non ha superato la validazione OSI)."
+    },
+    "execution": {
+     "en": "Runs on your own computer or server.",
+     "it": "Gira sul proprio computer o server."
+    },
+    "training": {
+     "en": "Not applicable when run locally: prompts stay on your machine.",
+     "it": "Non applicabile in locale: i prompt restano sul proprio computer."
+    },
+    "eduFeatures": null,
+    "dataLocation": {
+     "en": "Wherever you run it (can be fully on-premises in the EU).",
+     "it": "Dove lo si esegue (anche interamente on-premise nell'UE)."
+    },
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "mistral-small-4-card",
+    "osi-validation"
+   ]
+  },
+  {
+   "id": "qwen",
+   "name": "Qwen 3.x (open weights)",
+   "vendor": "Alibaba Cloud (Qwen team)",
+   "url": "https://huggingface.co/Qwen/Qwen3.6-27B",
+   "types": [
+    "local-open-weights"
+   ],
+   "tasks": [],
+   "access": "open-weights",
+   "pricing": "free",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Downloadable models in many sizes for local use.",
+     "it": "Modelli scaricabili in molte taglie per uso locale."
+    },
+    "model": {
+     "en": "Qwen3 and Qwen3.6 (April 2026) families.",
+     "it": "Famiglie Qwen3 e Qwen3.6 (aprile 2026)."
+    },
+    "weights": {
+     "en": "Open weights.",
+     "it": "Pesi aperti."
+    },
+    "licence": {
+     "en": "Apache 2.0 (check each repo; derivatives may add terms). Training data not disclosed: not OSI open source.",
+     "it": "Apache 2.0 (verificare ogni repository; i derivati possono aggiungere condizioni). Dati di addestramento non divulgati: non open source secondo l'OSI."
+    },
+    "execution": {
+     "en": "Runs on your own computer or server.",
+     "it": "Gira sul proprio computer o server."
+    },
+    "training": {
+     "en": "Not applicable when run locally: prompts stay on your machine.",
+     "it": "Non applicabile in locale: i prompt restano sul proprio computer."
+    },
+    "eduFeatures": null,
+    "dataLocation": {
+     "en": "Wherever you run it (can be fully on-premises in the EU).",
+     "it": "Dove lo si esegue (anche interamente on-premise nell'UE)."
+    },
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "qwen36-license",
+    "osi-osaid"
+   ]
+  },
+  {
+   "id": "gpt-oss",
+   "name": "gpt-oss (open weights)",
+   "vendor": "OpenAI",
+   "url": "https://huggingface.co/openai/gpt-oss-120b",
+   "types": [
+    "local-open-weights"
+   ],
+   "tasks": [],
+   "access": "open-weights",
+   "pricing": "free",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Open-weight reasoning models for local or self-hosted use.",
+     "it": "Modelli di ragionamento con pesi aperti, per uso locale o su server propri."
+    },
+    "model": {
+     "en": "gpt-oss-120b (117B, 5.1B active; one 80GB GPU) and gpt-oss-20b (21B; runs within 16GB memory).",
+     "it": "gpt-oss-120b (117B, 5,1B attivi; una GPU da 80GB) e gpt-oss-20b (21B; gira con 16GB di memoria)."
+    },
+    "weights": {
+     "en": "Open weights.",
+     "it": "Pesi aperti."
+    },
+    "licence": {
+     "en": "Apache 2.0. Training data sources not disclosed on the model card: not OSI open source.",
+     "it": "Apache 2.0. Le fonti dei dati di addestramento non sono indicate: non open source secondo l'OSI."
+    },
+    "execution": {
+     "en": "Runs on your own computer or server.",
+     "it": "Gira sul proprio computer o server."
+    },
+    "training": {
+     "en": "Not applicable when run locally: prompts stay on your machine.",
+     "it": "Non applicabile in locale: i prompt restano sul proprio computer."
+    },
+    "eduFeatures": null,
+    "dataLocation": {
+     "en": "Wherever you run it (can be fully on-premises in the EU).",
+     "it": "Dove lo si esegue (anche interamente on-premise nell'UE)."
+    },
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "gpt-oss-card",
+    "osi-osaid"
+   ]
+  },
+  {
+   "id": "olmo",
+   "name": "OLMo 3 (Ai2)",
+   "vendor": "Allen Institute for AI (Ai2)",
+   "url": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct",
+   "types": [
+    "local-open-weights"
+   ],
+   "tasks": [],
+   "access": "open-source-osi",
+   "pricing": "free",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Fully open model family: weights, code, checkpoints and training data released.",
+     "it": "Famiglia di modelli completamente aperta: pesi, codice, checkpoint e dati di addestramento rilasciati."
+    },
+    "model": {
+     "en": "Olmo 3 / 3.1 (e.g. 32B Instruct).",
+     "it": "Olmo 3 / 3.1 (es. 32B Instruct)."
+    },
+    "weights": {
+     "en": "Open weights plus checkpoints.",
+     "it": "Pesi aperti più checkpoint."
+    },
+    "licence": {
+     "en": "Model and code Apache 2.0; training data (Dolma 3) ODC-By. OLMo passed OSI's 2024 validation against the draft definition (OSI says this is not a certification).",
+     "it": "Modello e codice Apache 2.0; dati (Dolma 3) ODC-By. OLMo ha superato la validazione OSI del 2024 sulla bozza della definizione (l'OSI precisa che non è una certificazione)."
+    },
+    "execution": {
+     "en": "Runs on your own computer or server.",
+     "it": "Gira sul proprio computer o server."
+    },
+    "training": {
+     "en": "Not applicable when run locally: prompts stay on your machine.",
+     "it": "Non applicabile in locale: i prompt restano sul proprio computer."
+    },
+    "eduFeatures": null,
+    "dataLocation": {
+     "en": "Wherever you run it (can be fully on-premises in the EU).",
+     "it": "Dove lo si esegue (anche interamente on-premise nell'UE)."
+    },
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "olmo3-card",
+    "osi-osaid",
+    "osi-validation"
+   ]
+  },
+  {
+   "id": "eurollm",
+   "name": "EuroLLM",
+   "vendor": "UTTER project (EU-funded consortium)",
+   "url": "https://huggingface.co/utter-project/EuroLLM-22B-Instruct-2512",
+   "types": [
+    "local-open-weights",
+    "translation"
+   ],
+   "tasks": [],
+   "access": "open-weights",
+   "pricing": "free",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Multilingual models built for European languages, including Italian.",
+     "it": "Modelli multilingue pensati per le lingue europee, italiano incluso."
+    },
+    "model": {
+     "en": "EuroLLM 1.7B, 9B, 22B.",
+     "it": "EuroLLM 1.7B, 9B, 22B."
+    },
+    "weights": {
+     "en": "Open weights.",
+     "it": "Pesi aperti."
+    },
+    "licence": {
+     "en": "Apache 2.0. OSI status not assessed.",
+     "it": "Apache 2.0. Stato OSI non valutato."
+    },
+    "execution": {
+     "en": "Runs on your own computer or server.",
+     "it": "Gira sul proprio computer o server."
+    },
+    "training": {
+     "en": "Not applicable when run locally: prompts stay on your machine.",
+     "it": "Non applicabile in locale: i prompt restano sul proprio computer."
+    },
+    "eduFeatures": null,
+    "dataLocation": {
+     "en": "Wherever you run it (can be fully on-premises in the EU).",
+     "it": "Dove lo si esegue (anche interamente on-premise nell'UE)."
+    },
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "eurollm-card"
+   ]
+  },
+  {
+   "id": "minerva",
+   "name": "Minerva (Sapienza NLP)",
+   "vendor": "Sapienza University of Rome",
+   "url": "https://huggingface.co/sapienzanlp/Minerva-7B-base-v1.0",
+   "types": [
+    "local-open-weights"
+   ],
+   "tasks": [],
+   "access": "open-weights",
+   "pricing": "free",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Italian-English language models trained by an Italian university.",
+     "it": "Modelli linguistici italiano-inglese addestrati da un'università italiana."
+    },
+    "model": {
+     "en": "Minerva 350M, 1B, 3B, 7B (base).",
+     "it": "Minerva 350M, 1B, 3B, 7B (base)."
+    },
+    "weights": {
+     "en": "Open weights (some repos gated).",
+     "it": "Pesi aperti (alcuni repository ad accesso controllato)."
+    },
+    "licence": {
+     "en": "Apache 2.0 on model cards; the 1B repo also has a separate licence file (not read). OSI status not assessed.",
+     "it": "Apache 2.0 nelle schede; il repository 1B ha anche un file di licenza separato (non letto). Stato OSI non valutato."
+    },
+    "execution": {
+     "en": "Runs on your own computer or server.",
+     "it": "Gira sul proprio computer o server."
+    },
+    "training": {
+     "en": "Not applicable when run locally: prompts stay on your machine.",
+     "it": "Non applicabile in locale: i prompt restano sul proprio computer."
+    },
+    "eduFeatures": null,
+    "dataLocation": {
+     "en": "Wherever you run it (can be fully on-premises in the EU).",
+     "it": "Dove lo si esegue (anche interamente on-premise nell'UE)."
+    },
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "minerva-card"
+   ]
+  },
+  {
+   "id": "ollama",
+   "name": "Ollama",
+   "vendor": "Ollama",
+   "url": "https://ollama.com/",
+   "types": [
+    "local-open-weights"
+   ],
+   "tasks": [],
+   "access": "open-weights",
+   "pricing": "mixed",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "App to download and run open-weight models on your own computer.",
+     "it": "App per scaricare ed eseguire modelli a pesi aperti sul proprio computer."
+    },
+    "model": {
+     "en": "Any supported open-weight model (Llama, Qwen, Mistral, gpt-oss, etc.).",
+     "it": "Qualsiasi modello a pesi aperti supportato (Llama, Qwen, Mistral, gpt-oss, ecc.)."
+    },
+    "weights": {
+     "en": "Depends on the model you pull.",
+     "it": "Dipende dal modello scaricato."
+    },
+    "licence": null,
+    "execution": {
+     "en": "Local by default; optional cloud models and web search can be disabled (OLLAMA_NO_CLOUD=1).",
+     "it": "Locale di default; modelli cloud e ricerca web opzionali, disattivabili (OLLAMA_NO_CLOUD=1)."
+    },
+    "training": {
+     "en": "Local: Ollama does not see prompts. Cloud models: not stored, logged or used for training (vendor).",
+     "it": "In locale Ollama non vede i prompt. Modelli cloud: non conservati, registrati né usati per l'addestramento (fornitore)."
+    },
+    "eduFeatures": null,
+    "dataLocation": {
+     "en": "Wherever you run it (can be fully on-premises in the EU).",
+     "it": "Dove lo si esegue (anche interamente on-premise nell'UE)."
+    },
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "ollama-faq"
+   ]
+  },
+  {
+   "id": "lm-studio",
+   "name": "LM Studio",
+   "vendor": "LM Studio (Element Labs)",
+   "url": "https://lmstudio.ai/",
+   "types": [
+    "local-open-weights"
+   ],
+   "tasks": [],
+   "access": "open-weights",
+   "pricing": "free",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Desktop app to run open-weight models locally; free for personal and work use.",
+     "it": "App desktop per eseguire modelli a pesi aperti in locale; gratuita per uso personale e lavorativo."
+    },
+    "model": {
+     "en": "Any supported open-weight model.",
+     "it": "Qualsiasi modello a pesi aperti supportato."
+    },
+    "weights": {
+     "en": "Depends on the model.",
+     "it": "Dipende dal modello."
+    },
+    "licence": {
+     "en": "Proprietary app (LM Studio App Terms); models keep their own licences.",
+     "it": "App proprietaria (LM Studio App Terms); i modelli mantengono le proprie licenze."
+    },
+    "execution": {
+     "en": "Runs on your own computer or server.",
+     "it": "Gira sul proprio computer o server."
+    },
+    "training": {
+     "en": "Vendor: data never leaves your device (Community tier).",
+     "it": "Fornitore: i dati non lasciano il dispositivo (livello Community)."
+    },
+    "eduFeatures": null,
+    "dataLocation": {
+     "en": "Wherever you run it (can be fully on-premises in the EU).",
+     "it": "Dove lo si esegue (anche interamente on-premise nell'UE)."
+    },
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "lmstudio-free-work"
+   ]
+  },
+  {
+   "id": "github-copilot-student",
+   "name": "GitHub Copilot Student",
+   "vendor": "GitHub (Microsoft)",
+   "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students",
+   "types": [
+    "coding-assistant"
+   ],
+   "tasks": [
+    "s-coding"
+   ],
+   "access": "closed-free",
+   "pricing": "free",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Free Copilot plan for verified students (GitHub Education); eligibility re-checked monthly.",
+     "it": "Piano Copilot gratuito per studenti verificati (GitHub Education); idoneità ricontrollata ogni mese."
+    },
+    "model": {
+     "en": "Automatic model selection only on the Student plan.",
+     "it": "Nel piano Student solo selezione automatica del modello."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": null,
+    "eduFeatures": {
+     "en": "Free for students; monthly AI credits and unlimited code completions (vendor plans page).",
+     "it": "Gratuito per gli studenti; crediti IA mensili e completamenti di codice illimitati (pagina piani)."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": {
+     "en": "13+ students enrolled in a degree or diploma course.",
+     "it": "Studenti di almeno 13 anni iscritti a un corso che rilascia un titolo."
+    },
+    "citations": null
+   },
+   "sources": [
+    "github-copilot-students",
+    "github-copilot-plans"
+   ]
+  },
+  {
+   "id": "cursor",
+   "name": "Cursor",
+   "vendor": "Anysphere",
+   "url": "https://cursor.com/",
+   "types": [
+    "coding-assistant"
+   ],
+   "tasks": [
+    "s-coding"
+   ],
+   "access": "closed-freemium",
+   "pricing": "freemium",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "AI code editor.",
+     "it": "Editor di codice con IA."
+    },
+    "model": {
+     "en": "Third-party and own models.",
+     "it": "Modelli di terzi e propri."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "With Privacy Mode on (available on all plans), code is never used for training; with it off, Cursor may use code data to train.",
+     "it": "Con la Privacy Mode attiva (disponibile su tutti i piani) il codice non è mai usato per l'addestramento; se disattivata, Cursor può usarlo."
+    },
+    "eduFeatures": {
+     "en": "Student offer not verified on vendor pages.",
+     "it": "Offerta per studenti non verificata sulle pagine del fornitore."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "cursor-data-use",
+    "cursor-security"
+   ]
+  },
+  {
+   "id": "replit",
+   "name": "Replit",
+   "vendor": "Replit",
+   "url": "https://replit.com/edu",
+   "types": [
+    "coding-assistant"
+   ],
+   "tasks": [
+    "s-coding"
+   ],
+   "access": "closed-freemium",
+   "pricing": "freemium",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Browser-based coding environment with an AI agent; education programme for students and educators.",
+     "it": "Ambiente di programmazione nel browser con agente IA; programma education per studenti e docenti."
+    },
+    "model": null,
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": null,
+    "eduFeatures": {
+     "en": "Education programme; current eligibility and discounts to check on replit.com/education.",
+     "it": "Programma education; idoneità e sconti da verificare su replit.com/education."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": {
+     "en": "13+; under-18s need parental or guardian permission.",
+     "it": "13+; sotto i 18 anni serve il permesso di genitore o tutore."
+    },
+    "citations": null
+   },
+   "sources": [
+    "replit-terms",
+    "replit-edu"
+   ]
+  },
+  {
+   "id": "elicit",
+   "name": "Elicit",
+   "vendor": "Elicit",
+   "url": "https://elicit.com/",
+   "types": [
+    "research-assistant"
+   ],
+   "tasks": [
+    "s-literature"
+   ],
+   "access": "closed-freemium",
+   "pricing": "freemium",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Searches papers, extracts data into tables, supports systematic reviews (PRISMA 2020 workflow).",
+     "it": "Cerca articoli, estrae dati in tabelle, supporta revisioni sistematiche (flusso PRISMA 2020)."
+    },
+    "model": null,
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "No training on Enterprise data; API input not used unless opted in. Uploaded PDFs stay private.",
+     "it": "Nessun addestramento sui dati Enterprise; input API non usati salvo consenso. I PDF caricati restano privati."
+    },
+    "eduFeatures": {
+     "en": "Systematic reviews on Pro and above (help centre); Pro US$39/user/month billed annually. Vendor-reported extraction accuracy, not independent.",
+     "it": "Revisioni sistematiche da Pro in su (centro assistenza); Pro 39 USD/utente/mese annuale. Accuratezza di estrazione dichiarata dal fornitore, non indipendente."
+    },
+    "dataLocation": null,
+    "dpa": {
+     "en": "Yes, a Data Processing Addendum is published.",
+     "it": "Sì, è pubblicato un Data Processing Addendum."
+    },
+    "minAge": null,
+    "citations": {
+     "en": "Yes, answers linked to papers.",
+     "it": "Sì, risposte collegate agli articoli."
+    }
+   },
+   "sources": [
+    "elicit-pricing",
+    "elicit-sr",
+    "elicit-dpa"
+   ]
+  },
+  {
+   "id": "consensus",
+   "name": "Consensus",
+   "vendor": "Consensus",
+   "url": "https://consensus.app/",
+   "types": [
+    "research-assistant"
+   ],
+   "tasks": [
+    "s-literature"
+   ],
+   "access": "closed-freemium",
+   "pricing": "freemium",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Search engine over scholarly papers; AI summarises only the papers retrieved.",
+     "it": "Motore di ricerca su articoli scientifici; l'IA riassume solo gli articoli trovati."
+    },
+    "model": null,
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": null,
+    "eduFeatures": {
+     "en": "Free tier; Pro US$20/month; university access offered.",
+     "it": "Piano gratuito; Pro 20 USD/mese; disponibile accesso per università."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": {
+     "en": "Yes: every sentence links to its source paper; retracted papers flagged and excluded.",
+     "it": "Sì: ogni frase rimanda all'articolo di origine; articoli ritirati segnalati ed esclusi."
+    }
+   },
+   "sources": [
+    "consensus-docs",
+    "consensus-plans"
+   ]
+  },
+  {
+   "id": "scite",
+   "name": "Scite",
+   "vendor": "Research Solutions",
+   "url": "https://scite.ai/",
+   "types": [
+    "research-assistant"
+   ],
+   "tasks": [
+    "s-literature"
+   ],
+   "access": "closed-paid",
+   "pricing": "paid",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Smart Citations show whether a paper is cited as supporting, contrasting or mentioning; Assistant answers from literature.",
+     "it": "Le Smart Citations mostrano se un articolo è citato a supporto, in contrasto o come semplice menzione; l'Assistant risponde a partire dalla letteratura."
+    },
+    "model": {
+     "en": "Deep-learning citation classifier plus LLM assistant.",
+     "it": "Classificatore di citazioni con deep learning più assistente LLM."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": null,
+    "eduFeatures": null,
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": {
+     "en": "Yes, answers link to sources.",
+     "it": "Sì, le risposte rimandano alle fonti."
+    }
+   },
+   "sources": [
+    "scite-features"
+   ]
+  },
+  {
+   "id": "semantic-scholar",
+   "name": "Semantic Scholar",
+   "vendor": "Allen Institute for AI (Ai2)",
+   "url": "https://www.semanticscholar.org/",
+   "types": [
+    "research-assistant"
+   ],
+   "tasks": [
+    "s-literature"
+   ],
+   "access": "closed-free",
+   "pricing": "free",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Free AI-powered search engine for scientific literature, with TLDR summaries.",
+     "it": "Motore di ricerca gratuito con IA per la letteratura scientifica, con riassunti TLDR."
+    },
+    "model": null,
+    "weights": null,
+    "licence": null,
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": null,
+    "eduFeatures": {
+     "en": "TLDRs limited to computer science and biomedical papers.",
+     "it": "TLDR limitati a informatica e biomedicina."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": {
+     "en": "Works from indexed papers.",
+     "it": "Lavora su articoli indicizzati."
+    }
+   },
+   "sources": [
+    "s2-tldr"
+   ]
+  },
+  {
+   "id": "researchrabbit",
+   "name": "ResearchRabbit",
+   "vendor": "ResearchRabbit",
+   "url": "https://www.researchrabbit.ai/",
+   "types": [
+    "research-assistant"
+   ],
+   "tasks": [
+    "s-literature"
+   ],
+   "access": "closed-freemium",
+   "pricing": "freemium",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Discovers related papers from 'seed' articles and maps citation networks.",
+     "it": "Trova articoli collegati a partire da articoli 'seme' e mappa le reti di citazioni."
+    },
+    "model": null,
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": null,
+    "eduFeatures": {
+     "en": "Free tier (up to 50 seed articles); RR+ about US$10/month with country-based pricing.",
+     "it": "Piano gratuito (fino a 50 articoli seme); RR+ circa 10 USD/mese con prezzi per Paese."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "rr-pricing"
+   ]
+  },
+  {
+   "id": "grammarly",
+   "name": "Grammarly for Education",
+   "vendor": "Superhuman (formerly Grammarly)",
+   "url": "https://www.grammarly.com/edu",
+   "types": [
+    "writing-feedback",
+    "ai-detector"
+   ],
+   "tasks": [
+    "s-writing",
+    "t-detect"
+   ],
+   "access": "closed-freemium",
+   "pricing": "mixed",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Writing feedback and AI agents; Authorship tracks the writing process; AI Detector agent for Education accounts.",
+     "it": "Feedback sulla scrittura e agenti IA; Authorship registra il processo di scrittura; agente AI Detector per gli account Education."
+    },
+    "model": {
+     "en": "Own and partner models (e.g. Azure OpenAI).",
+     "it": "Modelli propri e di partner (es. Azure OpenAI)."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "Education accounts (bought via sales): training off by default; vendor says education data never used to train. Team accounts bought online: on by default, admin can opt out.",
+     "it": "Account Education (acquistati tramite vendite): addestramento disattivato di default; il fornitore dichiara che i dati education non sono mai usati. Account team acquistati online: attivo di default, l'amministratore può disattivarlo."
+    },
+    "eduFeatures": {
+     "en": "Authorship; vendor warns AI detection scores are not an objective source of truth.",
+     "it": "Authorship; il fornitore avverte che i punteggi di rilevamento IA non sono una verità oggettiva."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "grammarly-edu",
+    "grammarly-training",
+    "grammarly-ai-detector"
+   ]
+  },
+  {
+   "id": "deepl",
+   "name": "DeepL Translator / DeepL Write",
+   "vendor": "DeepL (Germany)",
+   "url": "https://www.deepl.com/",
+   "types": [
+    "translation",
+    "writing-feedback"
+   ],
+   "tasks": [
+    "s-language",
+    "t-accessibility"
+   ],
+   "access": "closed-freemium",
+   "pricing": "freemium",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Machine translation and writing improvement (Write).",
+     "it": "Traduzione automatica e miglioramento dei testi (Write)."
+    },
+    "model": {
+     "en": "DeepL proprietary models.",
+     "it": "Modelli proprietari DeepL."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "Pro: texts stored only temporarily and never used to train models. Free-tier policy not verified.",
+     "it": "Pro: testi conservati solo temporaneamente e mai usati per l'addestramento. Politica del piano gratuito non verificata."
+    },
+    "eduFeatures": null,
+    "dataLocation": {
+     "en": "ISO 27001 data centres; EU/EEA processing stated in some policy passages (not verified for all Pro content).",
+     "it": "Data center ISO 27001; trattamento in UE/SEE indicato in alcuni passaggi dell'informativa (non verificato per tutti i contenuti Pro)."
+    },
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "deepl-pro",
+    "deepl-pro-terms",
+    "deepl-privacy"
+   ]
+  },
+  {
+   "id": "turnitin-ai",
+   "name": "Turnitin AI writing detection",
+   "vendor": "Turnitin",
+   "url": "https://www.turnitin.com/solutions/topics/ai-writing/",
+   "types": [
+    "ai-detector"
+   ],
+   "tasks": [
+    "t-detect"
+   ],
+   "access": "closed-institutional",
+   "pricing": "institutional",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "AI Writing Report flags likely AI-generated and AI-paraphrased text in submissions.",
+     "it": "L'AI Writing Report segnala testo probabilmente generato o parafrasato con IA."
+    },
+    "model": null,
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": null,
+    "eduFeatures": {
+     "en": "Vendor: should not be the sole basis for action against a student; scores 1–19% shown only with an asterisk because of more false positives; claimed <1% document false-positive rate (vendor testing).",
+     "it": "Fornitore: non deve essere l'unica base per provvedimenti verso uno studente; i punteggi tra 1% e 19% sono mostrati solo con asterisco per i falsi positivi più frequenti; tasso di falsi positivi <1% dichiarato (test del fornitore)."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "turnitin-ai-report",
+    "turnitin-fp-blog"
+   ]
+  },
+  {
+   "id": "gptzero",
+   "name": "GPTZero",
+   "vendor": "GPTZero",
+   "url": "https://gptzero.me/educators",
+   "types": [
+    "ai-detector"
+   ],
+   "tasks": [
+    "t-detect"
+   ],
+   "access": "closed-freemium",
+   "pricing": "freemium",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "AI-text detector for educators and students.",
+     "it": "Rilevatore di testo generato con IA per docenti e studenti."
+    },
+    "model": null,
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": null,
+    "eduFeatures": {
+     "en": "Free tier (10,000 words/month); paid tiers with LMS integration. Vendor accuracy claims are self-reported.",
+     "it": "Piano gratuito (10.000 parole/mese); piani a pagamento con integrazione LMS. Le dichiarazioni di accuratezza sono del fornitore."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "gptzero-educators"
+   ]
+  },
+  {
+   "id": "khanmigo",
+   "name": "Khanmigo",
+   "vendor": "Khan Academy",
+   "url": "https://www.khanmigo.ai/",
+   "types": [
+    "tutoring-system",
+    "item-generator"
+   ],
+   "tasks": [
+    "t-materials"
+   ],
+   "access": "closed-freemium",
+   "pricing": "mixed",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "AI tutor and teacher assistant, built mainly for school (K-12). Teacher tools free in 180+ countries; learner plan US$4/month.",
+     "it": "Tutor IA e assistente per docenti, pensato soprattutto per la scuola. Strumenti per docenti gratuiti in oltre 180 Paesi; piano studenti 4 USD/mese."
+    },
+    "model": null,
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": null,
+    "eduFeatures": {
+     "en": "No higher-education institutional offer found on vendor pages; HE fit not verified.",
+     "it": "Nessuna offerta istituzionale per l'università trovata; adeguatezza per l'università non verificata."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "khanmigo-pricing",
+    "khanmigo-teachers-global"
+   ]
+  },
+  {
+   "id": "quizlet",
+   "name": "Quizlet",
+   "vendor": "Quizlet",
+   "url": "https://quizlet.com/features/ai-study-tools",
+   "types": [
+    "tutoring-system",
+    "item-generator"
+   ],
+   "tasks": [
+    "s-practice"
+   ],
+   "access": "closed-freemium",
+   "pricing": "freemium",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Flashcards, AI practice tests, study guides from notes (formerly Magic Notes), Learn mode.",
+     "it": "Flashcard, test di pratica con IA, guide di studio dagli appunti (ex Magic Notes), modalità Learn."
+    },
+    "model": null,
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": null,
+    "eduFeatures": {
+     "en": "Q-Chat tutor discontinued (June 2025).",
+     "it": "Il tutor Q-Chat è stato chiuso (giugno 2025)."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": {
+     "en": "Study Guides: 14–18 depending on country (18 in many countries).",
+     "it": "Guide di studio: 14–18 anni secondo il Paese (18 in molti Paesi)."
+    },
+    "citations": null
+   },
+   "sources": [
+    "quizlet-ai-tools",
+    "quizlet-study-guides-help"
+   ]
+  },
+  {
+   "id": "gradescope",
+   "name": "Gradescope (AI-assisted grading)",
+   "vendor": "Turnitin",
+   "url": "https://www.gradescope.com/",
+   "types": [
+    "item-generator",
+    "analytics"
+   ],
+   "tasks": [
+    "t-grading"
+   ],
+   "access": "edu-platform",
+   "pricing": "institutional",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "AI suggests answer groups so instructors grade similar answers together; instructor confirms.",
+     "it": "L'IA propone gruppi di risposte simili da valutare insieme; il docente conferma."
+    },
+    "model": null,
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": null,
+    "eduFeatures": {
+     "en": "Only on fixed-template PDF assignments and some question types; Institutional licence.",
+     "it": "Solo su compiti PDF a modello fisso e alcuni tipi di domanda; licenza Institutional."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "gradescope-ai"
+   ]
+  },
+  {
+   "id": "moodle-ai",
+   "name": "Moodle AI subsystem",
+   "vendor": "Moodle",
+   "url": "https://docs.moodle.org/503/en/AI_tools",
+   "types": [
+    "lms-integrated"
+   ],
+   "tasks": [
+    "t-materials",
+    "s-understand"
+   ],
+   "access": "lms-builtin",
+   "pricing": "free",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "AI features inside Moodle: generate text/images in the editor; summarise and explain course content.",
+     "it": "Funzioni IA in Moodle: generare testo e immagini nell'editor; riassumere e spiegare i contenuti del corso."
+    },
+    "model": {
+     "en": "Provider chosen by the institution (core: OpenAI, Azure AI; plugins for others).",
+     "it": "Fornitore scelto dall'ateneo (di base: OpenAI, Azure AI; plugin per altri)."
+    },
+    "weights": null,
+    "licence": {
+     "en": "Moodle is open source (GPL); the external AI provider has its own terms.",
+     "it": "Moodle è open source (GPL); il fornitore IA esterno ha i propri termini."
+    },
+    "execution": {
+     "en": "Depends on the configured provider; a local model can be connected via plugins.",
+     "it": "Dipende dal fornitore configurato; un modello locale si può collegare con plugin."
+    },
+    "training": {
+     "en": "Depends on the provider.",
+     "it": "Dipende dal fornitore."
+    },
+    "eduFeatures": {
+     "en": "Admins control placements and providers.",
+     "it": "Gli amministratori controllano posizioni e fornitori."
+    },
+    "dataLocation": {
+     "en": "Depends on the provider.",
+     "it": "Dipende dal fornitore."
+    },
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "moodle-ai-tools",
+    "moodledev-ai"
+   ]
+  },
+  {
+   "id": "canvas-igniteai",
+   "name": "Canvas IgniteAI",
+   "vendor": "Instructure",
+   "url": "https://www.instructure.com/igniteai",
+   "types": [
+    "lms-integrated",
+    "item-generator"
+   ],
+   "tasks": [
+    "t-items",
+    "t-accessibility"
+   ],
+   "access": "lms-builtin",
+   "pricing": "mixed",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "AI in Canvas: discussion summaries, translation, reassessment item generation, rubric generator, 'Ask Your Data'.",
+     "it": "IA in Canvas: riassunti delle discussioni, traduzione, generazione di item di recupero, generatore di rubriche, 'Ask Your Data'."
+    },
+    "model": {
+     "en": "Listed per feature in 'AI Nutrition Facts' labels.",
+     "it": "Indicati per funzione nelle etichette 'AI Nutrition Facts'."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "Vendor: none of the models it uses train on customer data.",
+     "it": "Fornitore: nessuno dei modelli usati si addestra sui dati dei clienti."
+    },
+    "eduFeatures": {
+     "en": "Transparency labels per AI feature; IgniteAgent as premium add-on.",
+     "it": "Etichette di trasparenza per ogni funzione IA; IgniteAgent come componente premium."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "canvas-igniteai",
+    "canvas-nutrition-grading"
+   ]
+  },
+  {
+   "id": "d2l-lumi",
+   "name": "D2L Lumi (Brightspace)",
+   "vendor": "D2L",
+   "url": "https://www.d2l.com/lumi/",
+   "types": [
+    "lms-integrated",
+    "item-generator",
+    "tutoring-system"
+   ],
+   "tasks": [
+    "t-items",
+    "t-feedback",
+    "s-practice"
+   ],
+   "access": "lms-builtin",
+   "pricing": "paid",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Lumi Question/Quiz generates questions; Study Support suggests topics after a failed quiz; Lumi Feedback drafts feedback from instructor notes; Lumi Tutor chat.",
+     "it": "Lumi Question/Quiz genera domande; Study Support suggerisce argomenti dopo un quiz sbagliato; Lumi Feedback prepara il feedback dagli appunti del docente; chat Lumi Tutor."
+    },
+    "model": null,
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": null,
+    "eduFeatures": {
+     "en": "Controlled through Brightspace generative AI permissions (Lumi Pro).",
+     "it": "Gestito con i permessi di IA generativa di Brightspace (Lumi Pro)."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "d2l-lumi-question",
+    "d2l-study-support"
+   ]
+  },
+  {
+   "id": "otter",
+   "name": "Otter.ai",
+   "vendor": "Otter.ai",
+   "url": "https://otter.ai/",
+   "types": [
+    "transcription-notes"
+   ],
+   "tasks": [
+    "s-understand"
+   ],
+   "access": "closed-freemium",
+   "pricing": "freemium",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Records and transcribes lectures and meetings; generates summaries, study guides and quizzes.",
+     "it": "Registra e trascrive lezioni e riunioni; crea riassunti, guide di studio e quiz."
+    },
+    "model": null,
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "Privacy policy: trains its own AI on de-identified audio and on transcripts (which may contain personal information).",
+     "it": "Informativa: addestra la propria IA su audio de-identificato e su trascrizioni (che possono contenere dati personali)."
+    },
+    "eduFeatures": {
+     "en": "Student discount (50% off annual Pro, Aug 2026). Recording lectures can capture other people: check consent rules.",
+     "it": "Sconto studenti (50% sul Pro annuale, agosto 2026). Registrare le lezioni coinvolge altre persone: verificare le regole sul consenso."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "otter-students",
+    "otter-privacy-policy"
+   ]
+  },
+  {
+   "id": "gamma",
+   "name": "Gamma",
+   "vendor": "Gamma",
+   "url": "https://gamma.app/",
+   "types": [
+    "presentation-generator"
+   ],
+   "tasks": [
+    "t-materials"
+   ],
+   "access": "closed-freemium",
+   "pricing": "freemium",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Generates presentations, documents and web pages from a prompt or notes.",
+     "it": "Genera presentazioni, documenti e pagine web da una richiesta o da appunti."
+    },
+    "model": null,
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "Individual plans (Free/Plus/Pro/Ultra): content may train AI by default, opt-out available. Business/Enterprise: always off.",
+     "it": "Piani individuali (Free/Plus/Pro/Ultra): i contenuti possono addestrare l'IA di default, con possibilità di rinuncia. Business/Enterprise: sempre disattivato."
+    },
+    "eduFeatures": null,
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "gamma-training",
+    "gamma-educators"
+   ]
+  },
+  {
+   "id": "packback",
+   "name": "Packback",
+   "vendor": "Packback",
+   "url": "https://packback.co/",
+   "types": [
+    "writing-feedback",
+    "lms-integrated"
+   ],
+   "tasks": [
+    "s-writing",
+    "t-feedback"
+   ],
+   "access": "edu-platform",
+   "pricing": "institutional",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Discussion platform; AI gives students instant feedback while they write posts (curiosity, communication, credibility, convention).",
+     "it": "Piattaforma di discussione; l'IA dà feedback immediato mentre si scrive un post (curiosità, comunicazione, credibilità, convenzioni)."
+    },
+    "model": null,
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": null,
+    "eduFeatures": null,
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "packback-ai",
+    "packback-instant"
+   ]
+  },
+  {
+   "id": "feedbackfruits-acai",
+   "name": "FeedbackFruits Acai",
+   "vendor": "FeedbackFruits (Netherlands)",
+   "url": "https://feedbackfruits.com/solutions/acai",
+   "types": [
+    "writing-feedback",
+    "lms-integrated"
+   ],
+   "tasks": [
+    "t-feedback",
+    "t-grading"
+   ],
+   "access": "edu-platform",
+   "pricing": "institutional",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "AI in FeedbackFruits tools: Feedback Coach for peer review, Grading Assistant suggesting rubric ratings and draft feedback; uses activity rubrics and criteria.",
+     "it": "IA negli strumenti FeedbackFruits: Feedback Coach per la revisione tra pari, Grading Assistant che propone livelli di rubrica e bozze di feedback; usa rubriche e criteri dell'attività."
+    },
+    "model": {
+     "en": "Azure OpenAI Service.",
+     "it": "Azure OpenAI Service."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Proprietary service; vendor terms apply.",
+     "it": "Servizio proprietario; valgono i termini del fornitore."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": {
+     "en": "Inputs not used to train Azure or FeedbackFruits models; Azure abuse monitoring may store data up to 30 days.",
+     "it": "Input non usati per addestrare i modelli Azure o FeedbackFruits; il monitoraggio abusi di Azure può conservarli fino a 30 giorni."
+    },
+    "eduFeatures": {
+     "en": "AI never gives ratings directly to students; instructor decides. Transparency notes per feature.",
+     "it": "L'IA non assegna mai voti direttamente agli studenti; decide il docente. Note di trasparenza per ogni funzione."
+    },
+    "dataLocation": {
+     "en": "Processed by Azure in the region where you use the tool (specific EU region not named).",
+     "it": "Trattati da Azure nella regione d'uso (regione UE specifica non indicata)."
+    },
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "ff-acai-faq",
+    "ff-grading-assistant"
+   ]
+  },
+  {
+   "id": "cogniti",
+   "name": "Cogniti",
+   "vendor": "University of Sydney",
+   "url": "https://cogniti.ai/",
+   "types": [
+    "custom-chatbot",
+    "tutoring-system",
+    "lms-integrated"
+   ],
+   "tasks": [
+    "d-chatbot",
+    "t-assistant",
+    "t-tutoring"
+   ],
+   "access": "edu-platform",
+   "pricing": "institutional",
+   "checked": "2026-10-22",
+   "factsKind": "vendor",
+   "facts": {
+    "application": {
+     "en": "Teachers build their own AI agents with instructions and course resources; students use them from the LMS; teachers see how students interact.",
+     "it": "I docenti creano propri agenti IA con istruzioni e materiali del corso; gli studenti li usano dall'LMS; i docenti vedono come interagiscono."
+    },
+    "model": {
+     "en": "GPT-4 family hosted on Microsoft Azure (per University of Sydney).",
+     "it": "Famiglia GPT-4 ospitata su Microsoft Azure (secondo l'Università di Sydney)."
+    },
+    "weights": {
+     "en": "Not released (closed model).",
+     "it": "Non rilasciati (modello chiuso)."
+    },
+    "licence": {
+     "en": "Institutional accounts; on Microsoft Marketplace since June 2026.",
+     "it": "Account istituzionali; su Microsoft Marketplace da giugno 2026."
+    },
+    "execution": {
+     "en": "Vendor cloud (SaaS).",
+     "it": "Cloud del fornitore (SaaS)."
+    },
+    "training": null,
+    "eduFeatures": {
+     "en": "Built by educators; equal access for all students.",
+     "it": "Costruito da docenti; accesso uguale per tutti gli studenti."
+    },
+    "dataLocation": null,
+    "dpa": null,
+    "minAge": null,
+    "citations": null
+   },
+   "sources": [
+    "cogniti-site",
+    "cogniti-marketplace-news"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "openai-terms",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://openai.com/policies/row-terms-of-use/",
+   "short": "OpenAI Terms of Use",
+   "citation": "OpenAI. Terms of Use. openai.com/policies/row-terms-of-use (accessed 2026-10-22)."
+  },
+  {
+   "id": "openai-eu-terms",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://openai.com/policies/eu-terms-of-use/",
+   "short": "OpenAI Europe Terms of Use",
+   "citation": "OpenAI. Europe Terms of Use. openai.com/policies/eu-terms-of-use (accessed 2026-10-22)."
+  },
+  {
+   "id": "openai-training-help",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://help.openai.com/en/articles/8983130-what-if-i-want-to-keep-my-history-on-but-disable-model-training",
+   "short": "OpenAI help: disable model training",
+   "citation": "OpenAI Help Center. What if I want to keep my history on but disable model training? (accessed 2026-10-22)."
+  },
+  {
+   "id": "openai-edu-release-notes",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://help.openai.com/en/articles/10128477-chatgpt-enterprise-and-edu-release-notes",
+   "short": "ChatGPT Enterprise and Edu release notes",
+   "citation": "OpenAI Help Center. ChatGPT Enterprise and Edu release notes (accessed 2026-10-22)."
+  },
+  {
+   "id": "openai-enterprise-privacy",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://openai.com/enterprise-privacy/",
+   "short": "OpenAI Enterprise privacy",
+   "citation": "OpenAI. Enterprise privacy at OpenAI (accessed 2026-10-22)."
+  },
+  {
+   "id": "openai-business-data",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://openai.com/business-data/",
+   "short": "OpenAI Business data privacy",
+   "citation": "OpenAI. Business data privacy, security, and compliance (accessed 2026-10-22)."
+  },
+  {
+   "id": "openai-data-residency",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt",
+   "short": "ChatGPT data and inference residency",
+   "citation": "OpenAI Help Center. Data residency and inference residency for ChatGPT (accessed 2026-10-22)."
+  },
+  {
+   "id": "claude-edu",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://claude.com/solutions/education",
+   "short": "Claude for Higher Education",
+   "citation": "Anthropic. Claude for Education. claude.com/solutions/education (accessed 2026-10-22)."
+  },
+  {
+   "id": "anthropic-consumer-terms",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://www.anthropic.com/legal/consumer-terms",
+   "short": "Anthropic Consumer Terms (eff. 8 Oct 2025)",
+   "citation": "Anthropic. Consumer Terms of Service, effective 8 October 2025 (accessed 2026-10-22)."
+  },
+  {
+   "id": "anthropic-dpa",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://privacy.claude.com/en/articles/7996862-how-do-i-view-and-sign-your-data-processing-addendum-dpa",
+   "short": "Anthropic DPA",
+   "citation": "Anthropic Privacy Center. How do I view and sign your Data Processing Addendum (DPA)? (accessed 2026-10-22)."
+  },
+  {
+   "id": "anthropic-servers",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://privacy.claude.com/en/articles/7996890-where-are-your-servers-located-do-you-host-your-models-on-eu-servers",
+   "short": "Anthropic server locations",
+   "citation": "Anthropic Privacy Center. Where are your servers located? (accessed 2026-10-22)."
+  },
+  {
+   "id": "anthropic-processor",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://privacy.claude.com/en/articles/9267385-does-anthropic-act-as-a-data-processor-or-controller",
+   "short": "Anthropic processor/controller",
+   "citation": "Anthropic Privacy Center. Does Anthropic act as a data processor or controller? (accessed 2026-10-22)."
+  },
+  {
+   "id": "google-gemini-edu",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://edu.google.com/intl/ALL_us/ai/gemini-for-education/",
+   "short": "Gemini for Education",
+   "citation": "Google for Education. Gemini for Education (accessed 2026-10-22)."
+  },
+  {
+   "id": "google-edu-faq",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://knowledge.workspace.google.com/admin/generative-ai/workspace-with-gemini/gemini-for-google-workspace-faq-education?hl=en",
+   "short": "Workspace with Gemini FAQ for Education",
+   "citation": "Google Workspace Admin Help. Google Workspace with Gemini FAQ for Education (accessed 2026-10-22)."
+  },
+  {
+   "id": "google-data-regions",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://workspaceupdates.googleblog.com/2026/06/gemini-app-data-regions-support.html",
+   "short": "Gemini app data regions (29 Jun 2026)",
+   "citation": "Google Workspace Updates. Data regions support for the Gemini app, 29 June 2026 (accessed 2026-10-22)."
+  },
+  {
+   "id": "google-guided-learning",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://blog.google/outreach-initiatives/education/guided-learning/",
+   "short": "Guided Learning in Gemini (6 Aug 2025)",
+   "citation": "Google. Guided Learning in Gemini: From answers to understanding, 6 August 2025 (accessed 2026-10-22)."
+  },
+  {
+   "id": "google-learning-tools-help",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://support.google.com/gemini/answer/16448384",
+   "short": "Use learning tools in Gemini Apps",
+   "citation": "Google Gemini Help. Use learning tools in Gemini Apps (accessed 2026-10-22)."
+  },
+  {
+   "id": "google-notebook-rename",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://workspaceupdates.googleblog.com/2026/07/notebooklm-now-gemini-notebook.html",
+   "short": "NotebookLM is now Gemini Notebook (16 Jul 2026)",
+   "citation": "Google Workspace Updates. NotebookLM is now Gemini Notebook, 16 July 2026 (accessed 2026-10-22)."
+  },
+  {
+   "id": "ms-copilot-edu",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://www.microsoft.com/en-us/education/products/copilot-in-education",
+   "short": "Microsoft 365 Copilot in Education",
+   "citation": "Microsoft. Learn about Microsoft 365 Copilot in Education (accessed 2026-10-22)."
+  },
+  {
+   "id": "ms-study-learn-blog",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://www.microsoft.com/en-us/education/blog/2026/07/study-and-learn-ai-built-for-learning-in-microsoft-365-copilot/",
+   "short": "Study and Learn agent (Jul 2026)",
+   "citation": "Microsoft Education Blog. Study and Learn: AI built for learning in Microsoft 365 Copilot, July 2026 (accessed 2026-10-22)."
+  },
+  {
+   "id": "ms-study-learn-privacy",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://support.microsoft.com/en-us/education/copilot/privacy-responsible-ai-study-learn-agent",
+   "short": "Study and Learn privacy",
+   "citation": "Microsoft Support. Privacy and Responsible AI in the Study and Learn Agent (accessed 2026-10-22)."
+  },
+  {
+   "id": "ms-copilot-privacy",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy",
+   "short": "Copilot data, privacy and security",
+   "citation": "Microsoft Learn. Data, Privacy, and Security for Microsoft 365 Copilot (accessed 2026-10-22)."
+  },
+  {
+   "id": "ms-copilot-anthropic",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/copilot-anthropic-apps",
+   "short": "Copilot with Anthropic models (EUDB exception)",
+   "citation": "Microsoft Learn. Copilot in Microsoft 365 apps with Anthropic models (accessed 2026-10-22)."
+  },
+  {
+   "id": "ms-ppt-copilot",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://support.microsoft.com/en-us/powerpoint/copilot/create-a-new-presentation-with-copilot-in-powerpoint",
+   "short": "Copilot in PowerPoint",
+   "citation": "Microsoft Support. Create a new presentation with Copilot in PowerPoint (accessed 2026-10-22)."
+  },
+  {
+   "id": "mistral-vibe-product",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://mistral.ai/products/le-chat",
+   "short": "Mistral Vibe product page",
+   "citation": "Mistral AI. Vibe (formerly Le Chat) product page (accessed 2026-10-22)."
+  },
+  {
+   "id": "mistral-vibe-rename",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://help.mistral.ai/en/articles/682992-le-chat-is-now-vibe",
+   "short": "Le Chat is now Vibe (12 Aug 2026)",
+   "citation": "Mistral AI Help Center. Le Chat is now Vibe, 12 August 2026 (accessed 2026-10-22)."
+  },
+  {
+   "id": "mistral-data-location",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://help.mistral.ai/en/articles/347629-where-do-you-store-my-data-or-my-organization-s-data",
+   "short": "Mistral data storage location",
+   "citation": "Mistral AI Help Center. Where do you store my data or my Organization's data? (accessed 2026-10-22)."
+  },
+  {
+   "id": "mistral-training",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://help.mistral.ai/en/articles/347617-do-you-use-my-user-data-to-train-your-artificial-intelligence-models",
+   "short": "Mistral training on user data",
+   "citation": "Mistral AI Help Center. Do you use my user data to train your AI models? (accessed 2026-10-22)."
+  },
+  {
+   "id": "mistral-terms-eu",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://legal.mistral.ai/terms/eu-consumers-terms-of-service/",
+   "short": "Mistral EEA consumer terms",
+   "citation": "Mistral AI. Terms of Service for consumers in the EEA (accessed 2026-10-22)."
+  },
+  {
+   "id": "mistral-legal-hub",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://legal.mistral.ai/terms",
+   "short": "Mistral legal documents (DPA listed)",
+   "citation": "Mistral AI. Legal terms hub (accessed 2026-10-22)."
+  },
+  {
+   "id": "mistral-small-4-card",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+   "short": "Mistral Small 4 model card",
+   "citation": "Mistral AI. Mistral-Small-4-119B-2603 model card, Hugging Face (accessed 2026-10-22)."
+  },
+  {
+   "id": "perplexity-edu-pro",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://www.perplexity.ai/help-center/en/articles/12590157-what-is-education-pro",
+   "short": "Perplexity Education Pro",
+   "citation": "Perplexity Help Center. What is Education Pro? (accessed 2026-10-22)."
+  },
+  {
+   "id": "perplexity-terms",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://www.perplexity.ai/hub/legal/terms-of-service",
+   "short": "Perplexity Terms of Service",
+   "citation": "Perplexity. Terms of Service (accessed 2026-10-22)."
+  },
+  {
+   "id": "perplexity-enterprise",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://www.perplexity.ai/help-center/en/articles/10352973-what-is-enterprise-pro",
+   "short": "Perplexity Enterprise Pro",
+   "citation": "Perplexity Help Center. What is Enterprise Pro? (accessed 2026-10-22)."
+  },
+  {
+   "id": "deepseek-privacy",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
+   "short": "DeepSeek Privacy Policy",
+   "citation": "DeepSeek. Privacy Policy (accessed 2026-10-22)."
+  },
+  {
+   "id": "deepseek-terms",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://cdn.deepseek.com/policies/en-US/deepseek-terms-of-use.html",
+   "short": "DeepSeek Terms of Use",
+   "citation": "DeepSeek. Terms of Use (accessed 2026-10-22)."
+  },
+  {
+   "id": "deepseek-v32-license",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2/blob/main/LICENSE",
+   "short": "DeepSeek-V3.2 licence (MIT)",
+   "citation": "DeepSeek. DeepSeek-V3.2 LICENSE, Hugging Face (accessed 2026-10-22)."
+  },
+  {
+   "id": "llama4-card",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E",
+   "short": "Llama 4 Scout model card",
+   "citation": "Meta. Llama-4-Scout-17B-16E model card, Hugging Face (accessed 2026-10-22)."
+  },
+  {
+   "id": "llama4-aup",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://www.llama.com/llama4/use-policy/",
+   "short": "Llama 4 Acceptable Use Policy",
+   "citation": "Meta. Llama 4 Acceptable Use Policy (accessed 2026-10-22)."
+  },
+  {
+   "id": "qwen36-license",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://huggingface.co/Qwen/Qwen3.6-27B",
+   "short": "Qwen3.6-27B model card and licence",
+   "citation": "Qwen Team, Alibaba Cloud. Qwen3.6-27B, Hugging Face (accessed 2026-10-22)."
+  },
+  {
+   "id": "gpt-oss-card",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://huggingface.co/openai/gpt-oss-120b",
+   "short": "gpt-oss-120b model card",
+   "citation": "OpenAI. gpt-oss-120b model card, Hugging Face (accessed 2026-10-22)."
+  },
+  {
+   "id": "olmo3-card",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://huggingface.co/allenai/Olmo-3.1-32B-Instruct",
+   "short": "Olmo 3.1 32B Instruct model card",
+   "citation": "Ai2. Olmo-3.1-32B-Instruct model card, Hugging Face (accessed 2026-10-22)."
+  },
+  {
+   "id": "eurollm-card",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://huggingface.co/utter-project/EuroLLM-22B-Instruct-2512",
+   "short": "EuroLLM-22B-Instruct model card",
+   "citation": "UTTER project. EuroLLM-22B-Instruct-2512 model card, Hugging Face (accessed 2026-10-22)."
+  },
+  {
+   "id": "minerva-card",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://huggingface.co/sapienzanlp/Minerva-7B-base-v1.0",
+   "short": "Minerva 7B model card",
+   "citation": "Sapienza NLP. Minerva-7B-base-v1.0 model card, Hugging Face (accessed 2026-10-22)."
+  },
+  {
+   "id": "osi-osaid",
+   "kind": "standard",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://opensource.org/ai/open-source-ai-definition",
+   "short": "OSI Open Source AI Definition 1.0",
+   "citation": "Open Source Initiative. The Open Source AI Definition, version 1.0 (accessed 2026-10-22)."
+  },
+  {
+   "id": "osi-validation",
+   "kind": "standard",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://opensource.org/blog/2024-end-of-year-review-open-source-ai-definition-v1-0",
+   "short": "OSI 2024 review: model validation results",
+   "citation": "Open Source Initiative. 2024 end-of-year review: Open Source AI Definition v1.0 (accessed 2026-10-22)."
+  },
+  {
+   "id": "ollama-faq",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://docs.ollama.com/faq",
+   "short": "Ollama FAQ",
+   "citation": "Ollama. FAQ (accessed 2026-10-22)."
+  },
+  {
+   "id": "lmstudio-free-work",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://lmstudio.ai/blog/free-for-work",
+   "short": "LM Studio is free for work",
+   "citation": "LM Studio. LM Studio is free for use at work (accessed 2026-10-22)."
+  },
+  {
+   "id": "github-copilot-students",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students",
+   "short": "GitHub Copilot for students",
+   "citation": "GitHub Docs. Access GitHub Copilot for free as a student (accessed 2026-10-22)."
+  },
+  {
+   "id": "github-copilot-plans",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://docs.github.com/en/copilot/get-started/plans",
+   "short": "GitHub Copilot plans",
+   "citation": "GitHub Docs. Plans for GitHub Copilot (accessed 2026-10-22)."
+  },
+  {
+   "id": "cursor-data-use",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://cursor.com/data-use",
+   "short": "Cursor data use",
+   "citation": "Cursor. Data Use & Privacy Overview (accessed 2026-10-22)."
+  },
+  {
+   "id": "cursor-security",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://cursor.com/security",
+   "short": "Cursor security",
+   "citation": "Cursor. Security (accessed 2026-10-22)."
+  },
+  {
+   "id": "replit-terms",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://replit.com/terms-of-service",
+   "short": "Replit Terms of Service",
+   "citation": "Replit. Terms of Service (accessed 2026-10-22)."
+  },
+  {
+   "id": "replit-edu",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://replit.com/edu",
+   "short": "Replit for Education",
+   "citation": "Replit. Replit for Education (accessed 2026-10-22)."
+  },
+  {
+   "id": "elicit-pricing",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://elicit.com/pricing",
+   "short": "Elicit pricing",
+   "citation": "Elicit. Pricing (accessed 2026-10-22)."
+  },
+  {
+   "id": "elicit-sr",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit",
+   "short": "Systematic reviews in Elicit",
+   "citation": "Elicit Help Center. Systematic Reviews in Elicit (accessed 2026-10-22)."
+  },
+  {
+   "id": "elicit-dpa",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://elicit.com/operations/dpa",
+   "short": "Elicit Data Processing Addendum",
+   "citation": "Elicit. Data Processing Addendum (accessed 2026-10-22)."
+  },
+  {
+   "id": "consensus-docs",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://docs.consensus.app/get-started/what-is-consensus",
+   "short": "What is Consensus",
+   "citation": "Consensus. What is Consensus (accessed 2026-10-22)."
+  },
+  {
+   "id": "consensus-plans",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://help.consensus.app/en/articles/10087865-subscription-plans",
+   "short": "Consensus subscription plans",
+   "citation": "Consensus Help Center. Subscription Plans (accessed 2026-10-22)."
+  },
+  {
+   "id": "scite-features",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://scite.ai/features",
+   "short": "Scite features",
+   "citation": "Scite (Research Solutions). AI for Research - features (accessed 2026-10-22)."
+  },
+  {
+   "id": "s2-tldr",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://www.semanticscholar.org/product/tldr",
+   "short": "Semantic Scholar TLDR",
+   "citation": "Ai2. Semantic Scholar TLDR (accessed 2026-10-22)."
+  },
+  {
+   "id": "rr-pricing",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://www.researchrabbit.ai/pricing",
+   "short": "ResearchRabbit pricing",
+   "citation": "ResearchRabbit. Pricing (accessed 2026-10-22)."
+  },
+  {
+   "id": "grammarly-edu",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://www.grammarly.com/edu",
+   "short": "Grammarly for Education",
+   "citation": "Grammarly. Grammarly for Education (accessed 2026-10-22)."
+  },
+  {
+   "id": "grammarly-training",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://support.grammarly.com/hc/en-us/articles/25555503115277-Product-Improvement-and-Training-Control",
+   "short": "Grammarly training control",
+   "citation": "Grammarly Support. Product Improvement and Training Control (accessed 2026-10-22)."
+  },
+  {
+   "id": "grammarly-ai-detector",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://support.grammarly.com/hc/en-us/articles/28936304999949-AI-Detector-user-guide",
+   "short": "Grammarly AI Detector guide",
+   "citation": "Grammarly Support. AI Detector user guide (accessed 2026-10-22)."
+  },
+  {
+   "id": "deepl-pro",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://www.deepl.com/en/pro",
+   "short": "DeepL Pro",
+   "citation": "DeepL. DeepL Pro (accessed 2026-10-22)."
+  },
+  {
+   "id": "deepl-pro-terms",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://www.deepl.com/en/pro-license",
+   "short": "DeepL Pro terms",
+   "citation": "DeepL. Terms and Conditions: DeepL Pro (accessed 2026-10-22)."
+  },
+  {
+   "id": "deepl-privacy",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://www.deepl.com/en/privacy_app",
+   "short": "DeepL privacy policy",
+   "citation": "DeepL. Privacy Policy (accessed 2026-10-22)."
+  },
+  {
+   "id": "turnitin-ai-report",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://guides.turnitin.com/hc/en-us/articles/22774058814093-Using-the-AI-Writing-Report",
+   "short": "Using the AI Writing Report",
+   "citation": "Turnitin Guides. Using the AI Writing Report (accessed 2026-10-22)."
+  },
+  {
+   "id": "turnitin-fp-blog",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://www.turnitin.com/blog/understanding-false-positives-within-our-ai-writing-detection-capabilities",
+   "short": "Turnitin on false positives",
+   "citation": "Turnitin. Understanding false positives within our AI writing detection capabilities (accessed 2026-10-22)."
+  },
+  {
+   "id": "gptzero-educators",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://gptzero.me/educators",
+   "short": "GPTZero for educators",
+   "citation": "GPTZero. AI Detector for Teachers (accessed 2026-10-22)."
+  },
+  {
+   "id": "khanmigo-pricing",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://www.khanmigo.ai/pricing",
+   "short": "Khanmigo pricing",
+   "citation": "Khan Academy. Khanmigo pricing (accessed 2026-10-22)."
+  },
+  {
+   "id": "khanmigo-teachers-global",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://support.khanacademy.org/hc/en-us/articles/28494037644941-Khanmigo-Teacher-Tools-now-available-in-multiple-languages-around-the-world-for-free",
+   "short": "Khanmigo Teacher Tools worldwide",
+   "citation": "Khan Academy Help Center. Khanmigo Teacher Tools now available around the world for free (accessed 2026-10-22)."
+  },
+  {
+   "id": "quizlet-ai-tools",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://quizlet.com/features/ai-study-tools",
+   "short": "Quizlet AI study tools",
+   "citation": "Quizlet. AI-Powered Tools (accessed 2026-10-22)."
+  },
+  {
+   "id": "quizlet-study-guides-help",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://help.quizlet.com/hc/en-us/articles/18312306436365-Creating-study-materials-with-Magic-Notes",
+   "short": "Quizlet Study Guides help (age limits)",
+   "citation": "Quizlet Help Center. Studying with Study Guides (accessed 2026-10-22)."
+  },
+  {
+   "id": "gradescope-ai",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://guides.gradescope.com/hc/en-us/articles/24838908062093-AI-assisted-grading-and-answer-groups",
+   "short": "Gradescope AI-assisted grading",
+   "citation": "Gradescope Guides. AI-assisted grading and answer groups (accessed 2026-10-22)."
+  },
+  {
+   "id": "moodle-ai-tools",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://docs.moodle.org/503/en/AI_tools",
+   "short": "MoodleDocs: AI tools",
+   "citation": "MoodleDocs. AI tools (accessed 2026-10-22)."
+  },
+  {
+   "id": "moodledev-ai",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://moodledev.io/docs/5.0/apis/plugintypes/ai",
+   "short": "Moodle AI plugins (dev docs)",
+   "citation": "Moodle Developer Resources. AI Plugins, 5.0 (accessed 2026-10-22)."
+  },
+  {
+   "id": "canvas-igniteai",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://www.instructure.com/igniteai",
+   "short": "Instructure IgniteAI",
+   "citation": "Instructure. IgniteAI (accessed 2026-10-22)."
+  },
+  {
+   "id": "canvas-nutrition-grading",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://community.instructure.com/en/kb/articles/664397-igniteai-nutrition-facts-grading-assistance",
+   "short": "IgniteAI Nutrition Facts (example)",
+   "citation": "Instructure Community. IgniteAI Nutrition Facts: Grading Assistance (accessed 2026-10-22)."
+  },
+  {
+   "id": "d2l-lumi-question",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://community.d2l.com/brightspace/kb/articles/26321-generate-quiz-questions-using-d2l-lumi-question",
+   "short": "D2L Lumi Question",
+   "citation": "D2L Brightspace Community. Generate quiz questions using D2L Lumi Question (accessed 2026-10-22)."
+  },
+  {
+   "id": "d2l-study-support",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://community.d2l.com/brightspace/kb/articles/32400-suggest-remedial-content-with-d2l-lumi-study-support",
+   "short": "D2L Lumi Study Support",
+   "citation": "D2L Brightspace Community. Suggest remedial content with D2L Lumi Study Support (accessed 2026-10-22)."
+  },
+  {
+   "id": "otter-students",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://otter.ai/blog/back-to-school-half-the-price-otter-ai-offers-students-50-off-to-turn-lectures-into-study-guides-quizzes-and-exam-prep",
+   "short": "Otter student offer (Aug 2026)",
+   "citation": "Otter.ai. Back to School, Half the Price, 26 August 2026 (accessed 2026-10-22)."
+  },
+  {
+   "id": "otter-privacy-policy",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://otter.ai/privacy-policy",
+   "short": "Otter privacy policy",
+   "citation": "Otter.ai. Privacy Policy (accessed 2026-10-22)."
+  },
+  {
+   "id": "gamma-training",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://help.gamma.app/en/articles/12281928-does-gamma-use-my-content-to-train-its-ai-features",
+   "short": "Gamma: training on content",
+   "citation": "Gamma Help Center. Does Gamma use my content to train its AI features? (accessed 2026-10-22)."
+  },
+  {
+   "id": "gamma-educators",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://gamma.app/solutions/educators",
+   "short": "Gamma for educators",
+   "citation": "Gamma. AI for Teachers (accessed 2026-10-22)."
+  },
+  {
+   "id": "packback-ai",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://help.packback.co/hc/en-us/articles/360054363631",
+   "short": "Introduction to Packback's AI",
+   "citation": "Packback Help Center. Introduction to Packback's AI (accessed 2026-10-22)."
+  },
+  {
+   "id": "packback-instant",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://packback.co/news/introducing-packbacks-instant-feedback",
+   "short": "Packback Instant Feedback",
+   "citation": "Packback. Introducing Packback's Instant Feedback (accessed 2026-10-22)."
+  },
+  {
+   "id": "ff-acai-faq",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://help.feedbackfruits.com/hc/en-us/articles/24383541817874-Acai-FAQs",
+   "short": "FeedbackFruits Acai FAQs",
+   "citation": "FeedbackFruits Help Center. Acai: FAQs (accessed 2026-10-22)."
+  },
+  {
+   "id": "ff-grading-assistant",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://help.feedbackfruits.com/hc/en-us/articles/25574435575826-Transparency-Note-Acai-Grading-Assistant",
+   "short": "Acai Grading Assistant transparency note",
+   "citation": "FeedbackFruits Help Center. Transparency Note: Acai Grading Assistant (accessed 2026-10-22)."
+  },
+  {
+   "id": "cogniti-site",
+   "kind": "vendor-doc",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "url": "https://cogniti.ai/",
+   "short": "Cogniti",
+   "citation": "University of Sydney. Cogniti (accessed 2026-10-22)."
+  },
+  {
+   "id": "cogniti-marketplace-news",
+   "kind": "vendor-doc",
+   "read": "excerpt",
+   "accessed": "2026-10-22",
+   "url": "https://www.sydney.edu.au/news-opinion/news/2026/06/15/ai-education-platform-cogniti-goes-global-on-microsoft-marketplace.html",
+   "short": "Cogniti on Microsoft Marketplace (Jun 2026)",
+   "citation": "University of Sydney. AI education platform Cogniti goes global on Microsoft Marketplace, 15 June 2026 (accessed 2026-10-22)."
+  }
+ ]
+}

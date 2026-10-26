@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="/_assets/css/primitives.css" />
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/editorial.css" />
+  <link rel="stylesheet" href="/assets/css/chapters.css" />
   <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
 
   <script type="application/ld+json">
@@ -54,69 +55,75 @@
   <script>document.currentScript.insertAdjacentHTML("beforebegin", DidaflowChrome.header());</script>
 
   <main id="main">
-    <div class="document-header wrap">
-      <p class="ed-eyebrow">Our methodology · Machine in the Loop</p>
-      <h1>Educational intelligence<br><em>Human judgement</em></h1>
-      <p class="lead">A shared data foundation. A model built with experts. A way to examine what could change.</p>
+    <section class="chapter chapter--paper doc-opening">
+<div class="wrap">
+<header class="chapter-head">
+<div class="chapter-head__text">
+      <p class="chapter-mark"><span>Our methodology · Machine in the Loop</span></p>
+      <h1>How Didaflow <em>works</em></h1>
+      <p class="lead">We connect an institution’s data, build a model of its questions together with its experts, and use it to compare interventions before acting.</p>
     </div>
+<figure class="chapter-emblem art--linked" aria-hidden="true"><img src="/assets/bruegel/linked.webp" width="610" height="438" alt="" /></figure>
+</header>
+</div>
+</section>
 
-    <div class="document-body wrap">
-      <nav class="document-nav" aria-label="Methodology">
-        <a href="#question">Begin with a question</a>
-        <a href="#model">Build the model together</a>
-        <a href="#scenarios">Compare possibilities</a>
-        <a href="#evidence">Examine the evidence</a>
-        <a href="#learning">Keep learning</a>
-        <a href="/whitepaper/">Read the full white paper ↗</a>
-      </nav>
-
-      <div class="document-content">
-      <section id="question">
-        <p class="ed-eyebrow">Ask</p>
+      <section class="chapter chapter--stone" id="question">
+<div class="wrap doc-section">
+        <p class="chapter-mark"><span>Ask</span></p>
         <h2>Begin with the institution’s question</h2>
         <p>Which conditions could improve student progression? What should change in a course? Where could support make a difference? Educators and institutional experts define the question, the goals and what counts as a meaningful outcome.</p>
-        <p>The machine enters their process to help make that reasoning explicit. Educational decisions remain with the people responsible for them.</p>
-      </section>
+        <p>Didaflow helps make that reasoning explicit. Decisions stay with the people responsible for them.</p>
+      </div>
+</section>
 
-      <section id="model">
-        <p class="ed-eyebrow">Model</p>
+      <section class="chapter chapter--paper" id="model">
+<div class="wrap doc-section">
+        <p class="chapter-mark"><span>Model</span></p>
         <h2>Build the model together</h2>
         <p>A common data integration layer connects institutional sources. The proprietary causal model is co-built with domain experts and educational scientists, making the hypothesised relationships between context, interventions, mechanisms and outcomes explicit.</p>
         <p>Expert knowledge frames the assumptions. Research and institutional evidence help examine and refine them.</p>
         <details class="technical-detail"><summary data-model-text="summary">Open a technical example of the causal model</summary>
           <figure><div class="causal-diagram" data-causal-model><svg class="causal-svg causal-desktop" viewBox="0 0 800 420" role="img" data-model-label="diagram" aria-label="Educational causal model: context, guidance intervention, satisfaction, motivation, performance and study progression"><defs><marker id="method-model-desktop-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f3a5f"/></marker><marker id="method-model-desktop-context" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#939ba5"/></marker></defs><path class="model-edge model-context-edge" d="M300 45C195 45 115 125 115 224" marker-end="url(#method-model-desktop-context)"/><path class="model-edge model-context-edge" d="M400 85L400 129" marker-end="url(#method-model-desktop-context)"/><path class="model-edge model-context-edge" d="M500 45C605 45 685 125 685 224" marker-end="url(#method-model-desktop-context)"/><path class="model-edge" d="M220 265C265 265 265 170 299 170" marker-end="url(#method-model-desktop-arrow)"/><path class="model-edge" d="M220 265H299" marker-end="url(#method-model-desktop-arrow)"/><path class="model-edge" d="M220 265C265 265 265 360 299 360" marker-end="url(#method-model-desktop-arrow)"/><path class="model-edge" d="M500 170C548 170 546 245 579 245" marker-end="url(#method-model-desktop-arrow)"/><path class="model-edge" d="M500 265H579" marker-end="url(#method-model-desktop-arrow)"/><path class="model-edge" d="M500 360C548 360 546 285 579 285" marker-end="url(#method-model-desktop-arrow)"/><g class="model-context"><rect x="300" y="5" width="200" height="80" rx="5"/><text x="400.0" y="41.0" data-model-text="context">Context C</text><text x="400.0" y="65.0" data-model-text="isee" class="model-subtitle">ISEE</text></g><g class="model-intervention"><rect x="10" y="225" width="210" height="80" rx="5"/><text x="115.0" y="261.0" data-model-text="intervention">Intervention I</text><text x="115.0" y="285.0" data-model-text="guidance" class="model-subtitle">Guidance during studies</text></g><g class="model-mediator"><rect x="300" y="130" width="200" height="80" rx="5"/><text x="400.0" y="176.0" data-model-text="satisfaction">Satisfaction</text></g><g class="model-mediator"><rect x="300" y="225" width="200" height="80" rx="5"/><text x="400.0" y="271.0" data-model-text="motivation">Motivation</text></g><g class="model-mediator"><rect x="300" y="320" width="200" height="80" rx="5"/><text x="400.0" y="366.0" data-model-text="performance">Performance</text></g><g class="model-outcome"><rect x="580" y="225" width="210" height="80" rx="5"/><text x="685.0" y="261.0" data-model-text="outcome">Outcome Y</text><text x="685.0" y="285.0" data-model-text="progression" class="model-subtitle">On-time progression</text></g></svg><svg class="causal-svg causal-mobile" viewBox="0 0 320 620" role="img" data-model-label="diagram" aria-label="Educational causal model: context, guidance intervention, satisfaction, motivation, performance and study progression"><defs><marker id="method-model-mobile-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f3a5f"/></marker><marker id="method-model-mobile-context" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#939ba5"/></marker></defs><path class="model-edge model-context-edge" d="M150 82L150 109" marker-end="url(#method-model-mobile-context)"/><path class="model-edge model-context-edge" d="M70 49H54V250H69" marker-end="url(#method-model-mobile-context)"/><path class="model-edge model-context-edge" d="M230 49H292V564H231" marker-end="url(#method-model-mobile-context)"/><path class="model-edge" d="M230 146H250V250H231" marker-end="url(#method-model-mobile-arrow)"/><path class="model-edge" d="M230 146H265V343H231" marker-end="url(#method-model-mobile-arrow)"/><path class="model-edge" d="M230 146H280V436H231" marker-end="url(#method-model-mobile-arrow)"/><path class="model-edge" d="M70 250H38V563H69" marker-end="url(#method-model-mobile-arrow)"/><path class="model-edge" d="M70 343H24V580H69" marker-end="url(#method-model-mobile-arrow)"/><path class="model-edge" d="M70 436H10V596H69" marker-end="url(#method-model-mobile-arrow)"/><g class="model-context"><rect x="70" y="16" width="160" height="66" rx="5"/><text x="150.0" y="45.0" data-model-text="context">Context C</text><text x="150.0" y="69.0" data-model-text="isee" class="model-subtitle">ISEE</text></g><g class="model-intervention"><rect x="70" y="110" width="160" height="72" rx="5"/><text x="150.0" y="142.0" data-model-text="intervention">Intervention I</text><text x="150.0" y="166.0" data-model-text="guidance" class="model-subtitle">Guidance during studies</text></g><g class="model-mediator"><rect x="70" y="217" width="160" height="66" rx="5"/><text x="150.0" y="256.0" data-model-text="satisfaction">Satisfaction</text></g><g class="model-mediator"><rect x="70" y="310" width="160" height="66" rx="5"/><text x="150.0" y="349.0" data-model-text="motivation">Motivation</text></g><g class="model-mediator"><rect x="70" y="403" width="160" height="66" rx="5"/><text x="150.0" y="442.0" data-model-text="performance">Performance</text></g><g class="model-outcome"><rect x="70" y="536" width="160" height="72" rx="5"/><text x="150.0" y="568.0" data-model-text="outcome">Outcome Y</text><text x="150.0" y="592.0" data-model-text="progression" class="model-subtitle">On-time progression</text></g></svg></div><figcaption data-model-text="caption">Technical example supplied by Didaflow. Arrows represent proposed causal relationships, not effect estimates. The model is co-built with domain experts and educational scientists.</figcaption></figure>
         </details>
-      </section>
+      </div>
+</section>
 
-      <section id="scenarios">
-        <p class="ed-eyebrow">Explore</p>
+      <section class="chapter chapter--stone" id="scenarios">
+<div class="wrap doc-section">
+        <p class="chapter-mark"><span>Explore</span></p>
         <h2>Compare possibilities before acting</h2>
         <p>What-if scenarios help an institution explore an intervention before committing to it. The platform brings programme monitoring and scenario exploration into the same environment.</p>
         <p>Estimates depend on the model, its assumptions and the available evidence. They inform judgement and should remain open to challenge.</p>
-      </section>
+      </div>
+</section>
 
-      <section id="evidence">
-        <p class="ed-eyebrow">Inspect</p>
+      <section class="chapter chapter--paper" id="evidence">
+<div class="wrap doc-section">
+        <p class="chapter-mark"><span>Inspect</span></p>
         <h2>Keep sources and uncertainty visible</h2>
-        <p>The methodology calls for every assumption to be recorded and every effect estimate to carry its source: research, institutional history or declared expert judgement. Uncertainty belongs in the reasoning.</p>
+        <p>The methodology calls for every assumption to be recorded and every effect estimate to carry its source: research, institutional history or declared expert judgement. Uncertainty is shown, not hidden.</p>
         <p>When evidence is insufficient or sources disagree, the expert should see that limitation and decide how to proceed.</p>
-      </section>
+      </div>
+</section>
 
-      <section id="learning">
-        <p class="ed-eyebrow">Learn</p>
+      <section class="chapter chapter--stone" id="learning">
+<div class="wrap doc-section">
+        <p class="chapter-mark"><span>Learn</span></p>
         <h2>Make revision part of the work</h2>
         <p>The long-term aim is a learning institution: decisions designed from explicit hypotheses, evaluated against declared goals and used to enrich shared institutional knowledge.</p>
         <blockquote class="pullquote">Educational decisions belong to educators.</blockquote>
         <p>Read the full white paper for the principles, research origins and responsibilities behind Machine in the Loop.</p>
         <a class="button" href="/whitepaper/">Read the white paper <span aria-hidden="true">↗</span></a>
-      </section>
-
-      <section>
-        <h2>A little curiosity</h2>
-        <p>The decorative figures in the opening scene and stakeholder sections come from Children’s Games by Pieter Bruegel the Elder. Their gentle movements accompany the page as you scroll.</p>
-      </section>
       </div>
-    </div>
+</section>
+
+      <section class="chapter chapter--paper">
+<div class="wrap doc-section">
+        <h2>About the images</h2>
+        <p>The figures on this site come from <em>Children’s Games</em> (1560) by Pieter Bruegel the Elder.</p>
+      </div>
+</section>
   </main>
 
   <script>document.currentScript.insertAdjacentHTML("beforebegin", DidaflowChrome.footer());</script>

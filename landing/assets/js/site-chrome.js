@@ -14,7 +14,7 @@
   // Only the home page is translated; methodology, legal pages, changelog and white paper stay in English.
   var T = {
     en: {
-      platform: "Platform", practice: "In practice", thinking: "Our thinking", people: "People", whitepaper: "White paper",
+      platform: "Platform", practice: "In practice", thinking: "Our thinking", people: "People", map: "Commons", whitepaper: "White paper",
       demo: "Book a demo", menu: "Open menu", home: "didaflow home",
       tagline: "Educational Intelligence. Bologna, Italy.",
       resources: "Resources", methodology: "Methodology", cases: "Case studies", credits: "Artwork & credits",
@@ -34,7 +34,7 @@
       }
     },
     it: {
-      platform: "Piattaforma", practice: "In pratica", thinking: "Il nostro approccio", people: "Persone", whitepaper: "White paper",
+      platform: "Piattaforma", practice: "In pratica", thinking: "Il nostro approccio", people: "Persone", map: "Commons", whitepaper: "White paper",
       demo: "Prenota una demo", menu: "Apri il menu", home: "didaflow, home",
       tagline: "Educational Intelligence. Bologna, Italia.",
       resources: "Risorse", methodology: "Metodologia", cases: "Casi studio", credits: "Opera e crediti",
@@ -78,6 +78,7 @@
       <nav class="nav" aria-label="Primary">
         <a href="${href("platform")}">${T.platform}</a>
         <a href="${href("practice")}">${T.practice}</a>
+        <a href="${LANG === "it" ? "/it/commons/" : "/commons/"}">${T.map}</a>
         <a href="/methodology/">${T.thinking}</a>
         <a href="${href("team")}">${T.people}</a>
         ${langSwitch()}
@@ -93,7 +94,8 @@
     <nav class="container mobile-nav" id="mobile-nav" aria-label="Mobile" role="navigation" aria-modal="false">
       <a href="${href("platform")}">${T.platform}</a>
       <a href="${href("practice")}">${T.practice}</a>
-      <a href="/methodology/">${T.thinking}</a>
+      <a href="${LANG === "it" ? "/it/commons/" : "/commons/"}">${T.map}</a>
+        <a href="/methodology/">${T.thinking}</a>
       <a href="${href("team")}">${T.people}</a>
       ${langSwitch()}
       <a class="btn btn--primary" href="${href("contact")}" data-demo>${T.demo}</a>
@@ -124,6 +126,7 @@
           <div>
             <div class="site-footer__col-title">${T.resources}</div>
             <ul>
+              <li><a href="${LANG === "it" ? "/it/commons/" : "/commons/"}">Commons</a></li>
               <li><a href="/whitepaper/">${T.whitepaper}</a></li>
               <li><a href="/methodology/">${T.methodology}</a></li>
               <li><a href="${href("practice")}">${T.cases}</a></li>

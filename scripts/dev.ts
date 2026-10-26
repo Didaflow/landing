@@ -2,13 +2,22 @@
 // Serves landing/ at / and shared/design/ at /_assets/ — mirrors the Caddy prod map.
 //   bun run dev   →   http://localhost:8765
 
-import { existsSync, statSync } from "node:fs";
+import { existsSync, mkdirSync, statSync } from "node:fs";
 import { join, normalize, resolve } from "node:path";
 
 const ROOT = resolve(import.meta.dir, "..");
 const LANDING = join(ROOT, "landing");
 const ASSETS = join(ROOT, "shared", "design");
 const PORT = Number(Bun.env.PORT ?? 8765);
+
+// The Commons API runs in-process in development, with its own local database (data/ is git-ignored).
+import { createApi } from "../services/commons-api/api";
+mkdirSync(join(ROOT, "data"), { recursive: true });
+const commons = createApi({
+  dbPath: join(ROOT, "data", "commons-dev.db"),
+  dataDir: join(LANDING, "commons", "ai-map", "data"),
+  adminToken: Bun.env.COMMONS_ADMIN_TOKEN ?? "dev",
+});
 
 /** Resolve a request path to a file on disk, or null if it escapes the root. */
 function resolveFile(root: string, pathname: string): string | null {
@@ -23,7 +32,9 @@ function resolveFile(root: string, pathname: string): string | null {
 
 Bun.serve({
   port: PORT,
-  fetch(req) {
+  async fetch(req, srv) {
+    const api = await commons(req, srv.requestIP(req)?.address ?? "");
+    if (api) return api;
     const pathname = decodeURIComponent(new URL(req.url).pathname);
 
     const onAssets = pathname.startsWith("/_assets/");
@@ -37,4 +48,4 @@ Bun.serve({
   },
 });
 
-console.log(`landing → http://localhost:${PORT}`);
+console.log(`landing → http://localhost:${PORT}  (Commons API at /api/commons, admin token "dev")`);

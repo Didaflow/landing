@@ -1,0 +1,2615 @@
+{
+ "tasks": [
+  {
+   "id": "t-materials",
+   "role": "teacher",
+   "title": {
+    "en": "Prepare lessons and materials",
+    "it": "Preparare lezioni e materiali"
+   },
+   "question": {
+    "en": "Does using generative AI to prepare lessons, slides and activities save time without lowering quality?",
+    "it": "Usare l'IA generativa per preparare lezioni, slide e attività fa risparmiare tempo senza abbassare la qualità?"
+   },
+   "description": {
+    "en": "Drafting lesson plans, slides, examples, analogies, worksheets and in-class activities with a general-purpose or education-specific AI assistant.",
+    "it": "Abbozzare piani di lezione, slide, esempi, analogie, esercizi e attività in aula con un assistente IA generico o pensato per la didattica."
+   },
+   "oecd": "Ch. 1 p. 27 and Ch. 7 p. 133 (Roy et al. 2024, EEF trial); Ch. 2 p. 43 (Shiksha Copilot); Ch. 10 pp. 192-193 (Demszky: no efficacy studies for broad lesson-planning tools). Printed page numbers.",
+   "evidenceLevel": "indirect",
+   "verdict": {
+    "en": "Time savings are plausible but the only rigorous trial is in English secondary schools (31% less weekly planning time, no detectable loss in quality). No controlled study with university teachers was found. No study links AI-prepared materials to student learning, at any level.",
+    "it": "Il risparmio di tempo è plausibile, ma l'unico studio rigoroso riguarda le scuole secondarie inglesi (31% di tempo di preparazione in meno a settimana, nessun calo di qualità rilevato). Non abbiamo trovato studi controllati con docenti universitari. Nessuno studio, a nessun livello, collega i materiali preparati con l'IA all'apprendimento degli studenti."
+   },
+   "outcomesMeasured": [
+    "time",
+    "assisted-performance"
+   ],
+   "findings": [
+    {
+     "source": "roy2024-eef",
+     "outcome": "time",
+     "finding": {
+      "en": "In a school-randomised trial with 259 science teachers (68 schools), teachers using ChatGPT plus a short guide spent 56.2 minutes a week on lesson and resource planning, against 81.5 minutes in the comparison group (about 31% less). A blinded expert panel found no difference in resource quality.",
+      "it": "In uno studio randomizzato con 259 insegnanti di scienze (68 scuole), chi usava ChatGPT con una breve guida dedicava 56,2 minuti a settimana alla preparazione di lezioni e materiali, contro 81,5 minuti del gruppo di confronto (circa il 31% in meno). Una commissione di esperti, che non sapeva chi avesse usato l'IA, non ha trovato differenze di qualità."
+     },
+     "relevance": {
+      "en": "Indirect: secondary school (Year 7-8 science), England, 10 weeks. Not tested with university teachers.",
+      "it": "Indiretta: scuola secondaria (scienze, 11-13 anni), Inghilterra, 10 settimane. Non verificato con docenti universitari."
+     }
+    },
+    {
+     "source": "baytas2025-ithaka",
+     "outcome": "time",
+     "finding": {
+      "en": "In interviews at 19 US and Canadian universities, instructors who adopted AI described it as a real time-saver for drafting a first structure of activities and lecture notes, but stressed close supervision. Some found it faster to write materials themselves.",
+      "it": "Nelle interviste in 19 università di Stati Uniti e Canada, i docenti che usano l'IA la descrivono come un vero risparmio di tempo per abbozzare la struttura di attività e appunti, ma insistono sulla necessità di controllarla da vicino. Alcuni trovano più veloce scrivere da sé."
+     },
+     "relevance": {
+      "en": "Direct context (higher education), but self-reported and qualitative: no measurement of time or quality.",
+      "it": "Contesto diretto (università), ma dati qualitativi e auto-dichiarati: tempo e qualità non sono misurati."
+     }
+    },
+    {
+     "source": "oecd2026",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "In the OECD interview, Demszky reports no efficacy studies for broad lesson-planning tools: most evidence is self-reported use or perception. A 2023 study found teachers rated LLM-generated and expert-generated maths warm-ups well above the original curriculum material.",
+      "it": "Nell'intervista OCSE, Demszky segnala che non esistono studi di efficacia sugli strumenti generici per preparare lezioni: quasi tutto si basa su uso o percezioni dichiarate. Uno studio del 2023 ha rilevato che gli insegnanti giudicavano le attività introduttive di matematica generate dall'IA e dagli esperti molto migliori del materiale originale."
+     },
+     "relevance": {
+      "en": "Expert synthesis; the cited studies are K-12 mathematics.",
+      "it": "Sintesi di un'esperta; gli studi citati riguardano la matematica a scuola."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Less planning time with no detectable drop in the quality of materials, at least in secondary school science.",
+      "it": "Meno tempo di preparazione senza un calo di qualità rilevabile, almeno nelle scienze alla scuola secondaria."
+     },
+     "sources": [
+      "roy2024-eef"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Useful for first drafts, varied examples and alternative explanations that the teacher then checks and adapts.",
+      "it": "Utile per prime bozze, esempi diversi e spiegazioni alternative, che il docente poi controlla e adatta."
+     },
+     "sources": [
+      "baytas2025-ithaka"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Output needs close checking: university instructors report errors and generic content, and some found their own refined notes better than GPT-4 output.",
+      "it": "Il risultato va controllato con attenzione: i docenti universitari segnalano errori e contenuti generici, e alcuni trovano i propri appunti, rifiniti negli anni, migliori di quanto produce GPT-4."
+     },
+     "sources": [
+      "baytas2025-ithaka"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Heavy offloading of planning may erode teachers' own expertise and course ownership (deskilling). The OECD flags this risk but it has not been measured.",
+      "it": "Delegare molto della preparazione può impoverire la competenza del docente e il suo controllo sul corso. L'OCSE segnala questo rischio, ma nessuno l'ha ancora misurato."
+     },
+     "sources": [
+      "oecd2026"
+     ]
+    }
+   ],
+   "conditions": [
+    {
+     "en": "The teacher keeps final responsibility and reviews every factual claim, reference and example.",
+     "it": "La responsabilità finale resta al docente, che verifica ogni affermazione, riferimento ed esempio."
+    },
+    {
+     "en": "Ground the tool in your own syllabus, readings and learning outcomes rather than asking for generic content.",
+     "it": "Fornire allo strumento il proprio programma, le letture e i risultati di apprendimento, invece di chiedere contenuti generici."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Use AI for one or two parts of a lesson (questions, examples, activity ideas), which is how teachers in the EEF trial used it.",
+     "it": "Usare l'IA per una o due parti della lezione (domande, esempi, idee per attività), come facevano gli insegnanti nello studio EEF."
+    },
+    {
+     "en": "Keep a short log of what was AI-drafted so colleagues and students know how materials were produced.",
+     "it": "Annotare brevemente cosa è stato abbozzato con l'IA, così colleghi e studenti sanno come sono nati i materiali."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Share and reuse materials",
+      "it": "Condividere e riusare materiali"
+     },
+     "text": {
+      "en": "Open educational resources, publisher materials and shared course folders with colleagues also reduce preparation time, with known quality.",
+      "it": "Risorse educative aperte, materiali degli editori e cartelle condivise con i colleghi riducono anch'essi il tempo di preparazione, con una qualità già nota."
+     },
+     "sources": []
+    }
+   ],
+   "toolTypes": [
+    "general-assistant",
+    "presentation-generator",
+    "lms-integrated"
+   ],
+   "gaps": [
+    {
+     "en": "No controlled study of time or quality with university teachers.",
+     "it": "Nessuno studio controllato su tempo o qualità con docenti universitari."
+    },
+    {
+     "en": "No study links AI-assisted materials to student learning.",
+     "it": "Nessuno studio collega i materiali preparati con l'IA all'apprendimento degli studenti."
+    },
+    {
+     "en": "Unknown how saved time is reused (the OECD notes this evidence is scarce).",
+     "it": "Non si sa come venga usato il tempo risparmiato (l'OCSE nota che mancano dati)."
+    }
+   ]
+  },
+  {
+   "id": "t-items",
+   "role": "teacher",
+   "title": {
+    "en": "Create quiz and exam questions",
+    "it": "Creare domande per quiz ed esami"
+   },
+   "question": {
+    "en": "Are AI-generated quiz and exam questions as good as questions written by teachers?",
+    "it": "Le domande per quiz ed esami generate dall'IA sono valide quanto quelle scritte dai docenti?"
+   },
+   "description": {
+    "en": "Generating multiple-choice and short-answer questions, distractors and answer keys aligned to learning outcomes.",
+    "it": "Generare domande a scelta multipla e a risposta breve, distrattori e soluzioni, allineati ai risultati di apprendimento."
+   },
+   "oecd": "Ch. 2 p. 50 (item generation and validation) and p. 56; Ch. 12 pp. 215-216 (von Davier, human-reviewed item factory). Printed page numbers.",
+   "evidenceLevel": "mixed",
+   "verdict": {
+    "en": "Several university studies agree that LLM-drafted questions are often close to human ones in clarity and difficulty and much faster to produce. Results differ on how well they separate stronger from weaker students, and every study found some faulty items. Expert review remains necessary, especially for summative exams.",
+    "it": "Diversi studi universitari concordano: le domande scritte da un LLM sono spesso simili a quelle umane per chiarezza e difficoltà, e si producono molto più in fretta. I risultati divergono sulla capacità di distinguere studenti più e meno preparati, e tutti gli studi trovano alcune domande sbagliate. La revisione di un esperto resta necessaria, soprattutto per gli esami."
+   },
+   "outcomesMeasured": [
+    "assisted-performance",
+    "time"
+   ],
+   "findings": [
+    {
+     "source": "doughty2024",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "651 GPT-4 multiple-choice questions and 449 human ones for 6 university Python courses were compared: GPT-4 questions mostly had clear wording, one correct answer, good distractors and good alignment with learning objectives.",
+      "it": "Sono state confrontate 651 domande a scelta multipla di GPT-4 e 449 umane per 6 corsi universitari di Python: quelle di GPT-4 avevano in genere testo chiaro, una sola risposta corretta, buoni distrattori e buon allineamento agli obiettivi."
+     },
+     "relevance": {
+      "en": "Direct (higher education), expert ratings only; students did not answer the items.",
+      "it": "Diretta (università), ma solo giudizi di esperti: gli studenti non hanno risposto alle domande."
+     }
+    },
+    {
+     "source": "laupichler2024",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "161 medical students answered 25 human and 21 ChatGPT-3.5 questions in a formative neurophysiology test. Difficulty was similar, but human items discriminated better (0.36 vs 0.24). Students guessed the author correctly only 57% of the time.",
+      "it": "161 studenti di medicina hanno risposto a 25 domande umane e 21 di ChatGPT-3.5 in un test formativo di neurofisiologia. La difficoltà era simile, ma le domande umane distinguevano meglio i livelli (0,36 contro 0,24). Gli studenti hanno indovinato l'autore solo nel 57% dei casi."
+     },
+     "relevance": {
+      "en": "Direct, real students, but one course and an older model.",
+      "it": "Diretta, con studenti reali, ma un solo corso e un modello ormai superato."
+     }
+    },
+    {
+     "source": "isley2026",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "In a field study across 91 classes at dozens of US colleges (about 1,700 students), questions produced by an LLM generate-critique-revise loop performed comparably to expert-written standardised questions under item response theory.",
+      "it": "In uno studio sul campo in 91 classi di decine di college statunitensi (circa 1.700 studenti), le domande prodotte da un LLM con cicli di generazione, critica e revisione si sono comportate come quelle scritte da esperti per test standardizzati, secondo la teoria della risposta all'item."
+     },
+     "relevance": {
+      "en": "Direct and large, but uses a purpose-built pipeline, not a teacher typing into a chatbot.",
+      "it": "Diretta e ampia, ma usa una procedura costruita ad hoc, non un docente che scrive in una chat."
+     }
+    },
+    {
+     "source": "bhandari2024",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "15 ChatGPT algebra items and 15 textbook items answered by 207 respondents did not differ significantly in difficulty or discrimination.",
+      "it": "15 domande di algebra di ChatGPT e 15 di un manuale, somministrate a 207 rispondenti, non differivano in modo significativo per difficoltà o capacità di discriminare."
+     },
+     "relevance": {
+      "en": "Partly direct: college-level algebra content, small item set.",
+      "it": "Parzialmente diretta: algebra di livello universitario iniziale, poche domande."
+     }
+    },
+    {
+     "source": "cheung2023",
+     "outcome": "time",
+     "finding": {
+      "en": "ChatGPT wrote 50 medical exam MCQs in about 20 minutes, against about 211 minutes for two professors. Blind international assessors rated quality similar, except relevance, where AI scored slightly lower.",
+      "it": "ChatGPT ha scritto 50 domande d'esame di medicina in circa 20 minuti, contro circa 211 minuti di due docenti. Valutatori internazionali, senza sapere l'autore, hanno giudicato la qualità simile, tranne la pertinenza, un po' più bassa per l'IA."
+     },
+     "relevance": {
+      "en": "Direct (university medicine), expert ratings only.",
+      "it": "Diretta (medicina all'università), solo giudizi di esperti."
+     }
+    },
+    {
+     "source": "artsi2024",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "A systematic review of 8 early studies on LLM-written medical exam questions found that all of them reported faulty questions unsuitable for exams; some needed changes before use.",
+      "it": "Una revisione sistematica di 8 studi iniziali sulle domande d'esame di medicina scritte da LLM ha trovato che tutti segnalavano domande sbagliate o inadatte; alcune richiedevano modifiche prima dell'uso."
+     },
+     "relevance": {
+      "en": "Review, medicine only, studies up to Nov 2023 with older models.",
+      "it": "Revisione limitata alla medicina, studi fino a novembre 2023 con modelli più vecchi."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Large time savings in drafting questions.",
+      "it": "Grande risparmio di tempo nella stesura delle domande."
+     },
+     "sources": [
+      "cheung2023"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Quality often close to teacher-written items in clarity and difficulty.",
+      "it": "Qualità spesso vicina a quella delle domande scritte dai docenti per chiarezza e difficoltà."
+     },
+     "sources": [
+      "doughty2024",
+      "isley2026",
+      "bhandari2024",
+      "laupichler2024"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Makes it cheaper to offer more practice quizzes, which support learning through retrieval practice.",
+      "it": "Rende più economico offrire più quiz di esercitazione, utili per imparare richiamando ciò che si è studiato."
+     },
+     "sources": []
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Some items are wrong, ambiguous or off-target; discrimination can be lower than for human items.",
+      "it": "Alcune domande sono sbagliate, ambigue o fuori obiettivo; possono distinguere meno bene i livelli rispetto a quelle umane."
+     },
+     "sources": [
+      "artsi2024",
+      "laupichler2024"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Questions tend to test recall unless explicitly asked for higher-order skills; check the cognitive level.",
+      "it": "Le domande tendono a verificare la memoria, se non si chiede esplicitamente di puntare a competenze più alte; va controllato il livello cognitivo."
+     },
+     "sources": []
+    },
+    {
+     "kind": "vendor",
+     "text": {
+      "en": "Standardised-test providers report tenfold productivity gains, but only after expert set-up and with human review of every item.",
+      "it": "Chi produce test standardizzati dichiara una produttività dieci volte maggiore, ma solo dopo una lunga messa a punto da parte di esperti e con la revisione umana di ogni domanda."
+     },
+     "sources": [
+      "oecd2026"
+     ]
+    }
+   ],
+   "conditions": [
+    {
+     "en": "A subject expert reviews every item before use; for summative exams, pilot items or check item statistics afterwards.",
+     "it": "Un esperto della materia rivede ogni domanda prima dell'uso; per gli esami, provare prima le domande o controllarne le statistiche dopo."
+    },
+    {
+     "en": "Give the tool the learning outcomes, the course material and examples of good items.",
+     "it": "Fornire allo strumento i risultati di apprendimento, il materiale del corso ed esempi di buone domande."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Start with low-stakes practice quizzes before using AI items in graded exams.",
+     "it": "Cominciare con quiz di esercitazione senza voto, prima di usare domande generate dall'IA negli esami."
+    },
+    {
+     "en": "Ask the tool to critique and revise its own items, then review them yourself.",
+     "it": "Chiedere allo strumento di criticare e rivedere le proprie domande, poi rivederle personalmente."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Shared item banks",
+      "it": "Banche di domande condivise"
+     },
+     "text": {
+      "en": "Departmental or publisher item banks with known statistics, and student-written questions reviewed by the teacher.",
+      "it": "Banche di domande del dipartimento o degli editori, con statistiche note, e domande scritte dagli studenti e riviste dal docente."
+     },
+     "sources": []
+    }
+   ],
+   "toolTypes": [
+    "item-generator",
+    "general-assistant",
+    "lms-integrated"
+   ],
+   "gaps": [
+    {
+     "en": "Few studies outside STEM, programming and medicine; almost none in languages other than English.",
+     "it": "Pochi studi fuori da materie scientifiche, programmazione e medicina; quasi nessuno in lingue diverse dall'inglese."
+    },
+    {
+     "en": "No study measures whether AI-generated practice quizzes change student learning.",
+     "it": "Nessuno studio misura se i quiz di esercitazione generati dall'IA cambiano l'apprendimento."
+    }
+   ]
+  },
+  {
+   "id": "t-feedback",
+   "role": "teacher",
+   "title": {
+    "en": "Give feedback on student work",
+    "it": "Dare feedback sui lavori degli studenti"
+   },
+   "question": {
+    "en": "Does AI-generated or AI-assisted feedback help students as much as teacher feedback?",
+    "it": "Il feedback generato o assistito dall'IA aiuta gli studenti quanto quello del docente?"
+   },
+   "description": {
+    "en": "Producing formative comments on essays, reports, code or problem sets, either fully by AI or with AI drafting suggestions that the teacher edits.",
+    "it": "Produrre commenti formativi su saggi, relazioni, codice o esercizi, interamente con l'IA oppure con suggerimenti dell'IA che il docente modifica."
+   },
+   "oecd": "Ch. 1 p. 24 (AI vs human feedback, Gašević and Yan); Ch. 9 pp. 182-183 (JeepyTA essay feedback); Ch. 10 pp. 196-197 (Demszky on feedback quality). Printed page numbers.",
+   "evidenceLevel": "mixed",
+   "verdict": {
+    "en": "On average, students learn about as much from AI feedback as from human feedback, but the studies vary a lot and the estimates are uncertain. AI feedback is more polished and more systematic; expert teachers are better at dialogue and at choosing what matters most. Students trust human feedback more. The most promising set-up keeps the teacher in the loop: an AI drafts, the teacher edits.",
+    "it": "In media gli studenti imparano dal feedback dell'IA più o meno quanto da quello umano, ma gli studi variano molto e le stime sono incerte. Il feedback dell'IA è più curato e sistematico; i docenti esperti sono più bravi a dialogare e a scegliere cosa conta davvero. Gli studenti si fidano di più del feedback umano. La soluzione più promettente tiene il docente nel processo: l'IA propone, il docente corregge."
+   },
+   "outcomesMeasured": [
+    "learning",
+    "assisted-performance",
+    "satisfaction",
+    "time"
+   ],
+   "findings": [
+    {
+     "source": "kaliisa2025",
+     "outcome": "learning",
+     "finding": {
+      "en": "Meta-analysis of 41 studies (4,813 students): no significant difference in performance between AI and human feedback (g = 0.25, 95% CI -0.11 to 0.60), with very high heterogeneity. Perception of AI feedback was slightly, not significantly, lower.",
+      "it": "Meta-analisi di 41 studi (4.813 studenti): nessuna differenza significativa di risultato tra feedback dell'IA e umano (g = 0,25, IC 95% da -0,11 a 0,60), con studi molto eterogenei. La percezione del feedback dell'IA era un po' più bassa, ma non in modo significativo."
+     },
+     "relevance": {
+      "en": "Covers all forms of AI and mixed education levels; read as 'no detectable difference', not as proof of equivalence.",
+      "it": "Include ogni tipo di IA e livelli scolastici diversi; va letta come 'nessuna differenza rilevata', non come prova di equivalenza."
+     }
+    },
+    {
+     "source": "escalante2023",
+     "outcome": "learning",
+     "finding": {
+      "en": "Over six weeks, 48 university English-as-a-new-language learners receiving GPT-4 writing feedback improved as much as peers receiving tutor feedback. In a second group of 43, preference was split about evenly.",
+      "it": "In sei settimane, 48 studenti universitari di inglese come nuova lingua che ricevevano feedback da GPT-4 sono migliorati quanto chi lo riceveva dal tutor. In un secondo gruppo di 43, le preferenze erano divise quasi a metà."
+     },
+     "relevance": {
+      "en": "Direct (university), but small and quasi-experimental.",
+      "it": "Diretta (università), ma piccola e quasi-sperimentale."
+     }
+    },
+    {
+     "source": "chevalier2024",
+     "outcome": "learning",
+     "finding": {
+      "en": "In an RCT with undergraduates, students given ChatGPT-3.5 feedback scored lower in later assessments than those given human feedback; no such penalty was found with GPT-4.",
+      "it": "In uno studio randomizzato con studenti universitari, chi riceveva feedback da ChatGPT-3.5 otteneva voti più bassi nelle prove successive rispetto a chi lo riceveva da un docente; con GPT-4 questa penalizzazione non è emersa."
+     },
+     "relevance": {
+      "en": "Direct, randomised; working paper, sample details not verified here.",
+      "it": "Diretta e randomizzata; documento di lavoro, dettagli del campione non verificati."
+     }
+    },
+    {
+     "source": "dai2024",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "On writing tasks in a university data-science course, GPT-4 feedback was more readable than instructors' feedback and more often included feed-forward, process and self-regulation elements.",
+      "it": "Su elaborati scritti in un corso universitario di data science, il feedback di GPT-4 era più leggibile di quello dei docenti e conteneva più spesso indicazioni su come migliorare, sul processo e sull'autoregolazione."
+     },
+     "relevance": {
+      "en": "Direct; measures feedback text quality, not student learning.",
+      "it": "Diretta; misura la qualità del testo del feedback, non l'apprendimento."
+     }
+    },
+    {
+     "source": "steiss2024",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "On 200 secondary-school history essays, trained human raters gave higher-quality feedback than ChatGPT on four of five criteria; the authors judged the practical gap small.",
+      "it": "Su 200 temi di storia di scuola secondaria, valutatori umani formati hanno dato feedback migliore di ChatGPT su quattro criteri su cinque; gli autori giudicano la differenza pratica modesta."
+     },
+     "relevance": {
+      "en": "Indirect: secondary school.",
+      "it": "Indiretta: scuola secondaria."
+     }
+    },
+    {
+     "source": "mah2025-feedback",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "Compared with 12 expert teachers, LLM writing feedback was mostly sentence-level correction that treated students as novices; teachers worked at several levels and treated students as capable writers.",
+      "it": "Rispetto a 12 docenti esperti, il feedback di scrittura dell'LLM consisteva soprattutto in correzioni di frasi e trattava gli studenti da principianti; i docenti lavoravano su più livelli e li trattavano da autori capaci."
+     },
+     "relevance": {
+      "en": "Indirect (K-12), qualitative working paper.",
+      "it": "Indiretta (scuola), documento di lavoro qualitativo."
+     }
+    },
+    {
+     "source": "lu2026-feedbackwriter",
+     "outcome": "learning",
+     "finding": {
+      "en": "In an RCT with 354 students in a large introductory economics course, students whose teaching assistants wrote feedback with AI suggestions produced significantly better essay revisions than students given unaided TA feedback; gains grew as TAs adopted more suggestions.",
+      "it": "In uno studio randomizzato con 354 studenti di un grande corso introduttivo di economia, chi riceveva feedback scritto dai tutor con suggerimenti dell'IA ha prodotto revisioni dei saggi significativamente migliori rispetto a chi riceveva feedback dei tutor senza IA; il vantaggio cresceva quanto più i tutor accettavano i suggerimenti."
+     },
+     "relevance": {
+      "en": "Direct and randomised, but a preprint; outcome is revision quality, not later learning.",
+      "it": "Diretta e randomizzata, ma preprint; misura la qualità della revisione, non l'apprendimento successivo."
+     }
+    },
+    {
+     "source": "oecd-ch9-baker2026",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "In a course using JeepyTA essay feedback, the share of students earning A or A+ on final essays (independent grader) rose from about 64% to 95% compared with the previous semester.",
+      "it": "In un corso che usava il feedback di JeepyTA sui saggi, la quota di studenti con A o A+ nel saggio finale (valutatore indipendente) è passata da circa il 64% al 95% rispetto al semestre precedente."
+     },
+     "relevance": {
+      "en": "Direct (university) but a before-after comparison reported by the tool's developers; not randomised.",
+      "it": "Diretta (università), ma confronto prima/dopo riportato dagli sviluppatori dello strumento; non randomizzato."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Comparable average effect on performance, with faster and more frequent feedback.",
+      "it": "Effetto medio sui risultati paragonabile, con feedback più rapido e frequente."
+     },
+     "sources": [
+      "kaliisa2025",
+      "escalante2023"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "AI suggestions to teaching assistants improved the quality of student revisions in a large course.",
+      "it": "I suggerimenti dell'IA ai tutor hanno migliorato la qualità delle revisioni degli studenti in un corso numeroso."
+     },
+     "sources": [
+      "lu2026-feedbackwriter"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "AI feedback is readable and covers process and self-regulation more systematically.",
+      "it": "Il feedback dell'IA è leggibile e tocca in modo più sistematico processo e autoregolazione."
+     },
+     "sources": [
+      "dai2024"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Older or weaker models can harm later performance.",
+      "it": "Modelli più vecchi o deboli possono peggiorare i risultati successivi."
+     },
+     "sources": [
+      "chevalier2024"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Students find human feedback more credible and are less likely to act on feedback they believe comes from AI.",
+      "it": "Gli studenti trovano più credibile il feedback umano e tendono meno a seguire quello che credono venga dall'IA."
+     },
+     "sources": [
+      "oecd2026"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "LLM feedback is less dialogic, more about surface corrections, and comments can be disjointed.",
+      "it": "Il feedback degli LLM è meno dialogico, più centrato su correzioni superficiali, e i commenti possono essere slegati tra loro."
+     },
+     "sources": [
+      "mah2025-feedback",
+      "oecd2026"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Teachers often accept AI suggestions without editing, which removes the human judgement that gives feedback its value.",
+      "it": "I docenti spesso accettano i suggerimenti dell'IA senza modificarli, perdendo il giudizio umano che dà valore al feedback."
+     },
+     "sources": [
+      "oecd2026"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Uploading student work to external services raises data protection and copyright questions (GDPR).",
+      "it": "Caricare i lavori degli studenti su servizi esterni pone questioni di protezione dei dati e di diritto d'autore (GDPR)."
+     },
+     "sources": []
+    }
+   ],
+   "conditions": [
+    {
+     "en": "Feedback is formative, with a chance to revise.",
+     "it": "Il feedback è formativo e lo studente può rivedere il lavoro."
+    },
+    {
+     "en": "The tool is given the rubric, the assignment brief and examples, and uses a current model.",
+     "it": "Lo strumento riceve la griglia di valutazione, la consegna ed esempi, e usa un modello aggiornato."
+    },
+    {
+     "en": "The teacher reviews and signs off the feedback, and tells students how AI was used.",
+     "it": "Il docente rivede e approva il feedback, e spiega agli studenti come è stata usata l'IA."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Use AI to draft or check your comments, not to replace them; add one or two personal, forward-looking remarks.",
+     "it": "Usare l'IA per abbozzare o controllare i propri commenti, non per sostituirli; aggiungere una o due osservazioni personali su come migliorare."
+    },
+    {
+     "en": "Ask the tool for questions that prompt the student to think, not only for rewrites.",
+     "it": "Chiedere allo strumento domande che facciano riflettere lo studente, non solo frasi riscritte."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Structured peer feedback",
+      "it": "Feedback tra pari strutturato"
+     },
+     "text": {
+      "en": "Peer review with a clear rubric, plus a bank of reusable comments for common issues, also scales feedback in large classes.",
+      "it": "La revisione tra pari con una griglia chiara, più una raccolta di commenti riutilizzabili per gli errori frequenti, permette anch'essa di dare feedback in classi numerose."
+     },
+     "sources": []
+    }
+   ],
+   "toolTypes": [
+    "writing-feedback",
+    "general-assistant",
+    "lms-integrated",
+    "coding-assistant"
+   ],
+   "gaps": [
+    {
+     "en": "Few HE studies measure learning beyond the revised draft (transfer to the next assignment).",
+     "it": "Pochi studi universitari misurano l'apprendimento oltre la revisione immediata (trasferimento al compito successivo)."
+    },
+    {
+     "en": "Little evidence outside English writing and STEM, and on equity effects for different student groups.",
+     "it": "Pochi dati fuori dalla scrittura in inglese e dalle materie scientifiche, e sugli effetti per gruppi diversi di studenti."
+    }
+   ]
+  },
+  {
+   "id": "t-grading",
+   "role": "teacher",
+   "title": {
+    "en": "Mark and grade",
+    "it": "Correggere e dare voti"
+   },
+   "question": {
+    "en": "Can AI mark student work reliably enough to help with grading?",
+    "it": "L'IA può correggere i lavori degli studenti in modo abbastanza affidabile da aiutare nella valutazione?"
+   },
+   "description": {
+    "en": "Scoring essays, short answers, exam scripts or code against a rubric, fully automatically or as a first pass checked by the teacher.",
+    "it": "Assegnare punteggi a saggi, risposte brevi, compiti d'esame o codice secondo una griglia, in modo automatico o come prima correzione verificata dal docente."
+   },
+   "oecd": "Ch. 2 p. 50 (automated scoring: Mansour, Moore et al. 2022 in HE) and p. 56; Ch. 1 p. 24 (Heinrich; Chevalier); Ch. 7 p. 141 (Liu and Liang auto-grader); Ch. 9 p. 170 (summative use needs higher bar). Printed page numbers.",
+   "evidenceLevel": "mixed",
+   "verdict": {
+    "en": "Agreement between AI and human markers varies widely with the task, model and prompt. With good examples and teacher oversight, AI-assisted marking of short answers worked about as well as human marking in one set of trials. Other studies found AI grades and rankings clearly different from human ones. AI is not reliable enough to grade alone in high-stakes assessment.",
+    "it": "L'accordo tra IA e correttori umani varia molto a seconda del compito, del modello e delle istruzioni. Con buoni esempi e il controllo del docente, in una serie di studi la correzione assistita di risposte brevi ha funzionato più o meno come quella umana. Altri studi trovano voti e classifiche dell'IA chiaramente diversi da quelli umani. L'IA non è abbastanza affidabile per valutare da sola quando la posta in gioco è alta."
+   },
+   "outcomesMeasured": [
+    "assisted-performance",
+    "satisfaction",
+    "time",
+    "equity"
+   ],
+   "findings": [
+    {
+     "source": "heinrich2025",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "In randomised trials across four undergraduate political science classes (271 students, 3,080 short answers), GPT-4 grading with about ten instructor-graded examples per question showed no significant overall difference from human grading in how well scores tracked student ability; human-graded answers got slightly more 'helpful' feedback ratings.",
+      "it": "In studi randomizzati in quattro corsi universitari di scienze politiche (271 studenti, 3.080 risposte brevi), la correzione con GPT-4, guidata da circa dieci esempi corretti dal docente per domanda, non ha mostrato differenze complessive significative rispetto a quella umana nel distinguere gli studenti; il feedback umano è stato giudicato un po' più utile."
+     },
+     "relevance": {
+      "en": "Direct and randomised; one discipline and one university; mixed results across classes.",
+      "it": "Diretta e randomizzata; una sola disciplina e un solo ateneo; risultati diversi tra le classi."
+     }
+    },
+    {
+     "source": "chevalier2024",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "When asked to grade undergraduate work, ChatGPT's grades and rankings differed significantly from human grades.",
+      "it": "Chiamato a valutare lavori di studenti universitari, ChatGPT ha dato voti e classifiche significativamente diversi da quelli umani."
+     },
+     "relevance": {
+      "en": "Direct; working paper.",
+      "it": "Diretta; documento di lavoro."
+     }
+    },
+    {
+     "source": "kortemeyer2024",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "On a handwritten thermodynamics exam (252 students), AI reliably identified passing scripts, but failing scripts still needed human grading; converting handwriting and grading diagrams were the main weaknesses.",
+      "it": "Su un esame scritto a mano di termodinamica (252 studenti), l'IA riconosceva bene i compiti sufficienti, ma quelli insufficienti richiedevano comunque una correzione umana; trascrivere la scrittura a mano e valutare i diagrammi erano i punti deboli."
+     },
+     "relevance": {
+      "en": "Direct (university physics), exploratory.",
+      "it": "Diretta (fisica universitaria), esplorativa."
+     }
+    },
+    {
+     "source": "li2025-synthesis",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "A synthesis of 65 studies (2022-2025) comparing LLM and human essay scores found agreement varied substantially across and within studies and was highly context-dependent.",
+      "it": "Una sintesi di 65 studi (2022-2025) che confrontano punteggi di LLM e umani sui saggi ha trovato un accordo molto variabile tra studi e dentro gli stessi studi, fortemente dipendente dal contesto."
+     },
+     "relevance": {
+      "en": "Review (preprint), mixed education levels.",
+      "it": "Revisione (preprint), livelli scolastici diversi."
+     }
+    },
+    {
+     "source": "oecd2026",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "The OECD reports that prompt-based scoring is less reliable than fine-tuned or conventional models (e.g. GPT-3.5 reached a quadratic weighted kappa of about 0.31 vs 0.82 for conventional methods on one essay dataset), and that GPT-3 matched experts only 32-40% of the time on university chemistry short answers.",
+      "it": "L'OCSE riporta che la correzione basata solo su istruzioni (prompt) è meno affidabile dei modelli addestrati ad hoc o tradizionali (per esempio, su un archivio di temi GPT-3.5 raggiungeva un indice di accordo di circa 0,31 contro 0,82 dei metodi tradizionali) e che GPT-3 concordava con gli esperti solo nel 32-40% dei casi su risposte brevi di chimica universitaria."
+     },
+     "relevance": {
+      "en": "Synthesis; older models; mixed school and university data.",
+      "it": "Sintesi; modelli più vecchi; dati di scuola e università."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "With instructor-graded examples and oversight, AI-assisted marking let instructors give individual feedback in large classes without a clear loss of grading quality.",
+      "it": "Con esempi corretti dal docente e il suo controllo, la correzione assistita ha permesso di dare feedback individuale in classi numerose senza un chiaro calo della qualità della valutazione."
+     },
+     "sources": [
+      "heinrich2025"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Useful as a first pass to sort clear passes from scripts needing careful human marking.",
+      "it": "Utile come prima lettura per separare i compiti chiaramente sufficienti da quelli che richiedono una correzione umana attenta."
+     },
+     "sources": [
+      "kortemeyer2024"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Grades and rankings can differ significantly from human ones, and reliability varies with task, model and prompt.",
+      "it": "Voti e classifiche possono differire in modo significativo da quelli umani, e l'affidabilità varia con compito, modello e istruzioni."
+     },
+     "sources": [
+      "chevalier2024",
+      "li2025-synthesis",
+      "oecd2026"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Weak at handwriting, diagrams and long rubrics; failing work still needs human marking.",
+      "it": "Debole con scrittura a mano, diagrammi e griglie lunghe; i lavori insufficienti vanno comunque corretti da una persona."
+     },
+     "sources": [
+      "kortemeyer2024"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "EU AI Act: AI systems intended to evaluate learning outcomes, including to steer the learning process, are listed as high-risk (Annex III, point 3). Using AI to grade may trigger obligations for providers and deployers; see the regulation section.",
+      "it": "AI Act europeo: i sistemi di IA destinati a valutare i risultati di apprendimento, anche per orientare il percorso di studio, sono classificati ad alto rischio (Allegato III, punto 3). Usare l'IA per dare voti può comportare obblighi per fornitori e utilizzatori; vedi la sezione sulla normativa."
+     },
+     "sources": []
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Hidden biases (e.g. against non-native writing styles) have not been ruled out for grading and should be checked locally.",
+      "it": "Distorsioni nascoste (per esempio verso chi scrive in una lingua non materna) non sono state escluse nella correzione e vanno verificate nel proprio contesto."
+     },
+     "sources": []
+    }
+   ],
+   "conditions": [
+    {
+     "en": "Human marker makes the final decision; AI scores are a suggestion.",
+     "it": "La decisione finale spetta al correttore umano; il punteggio dell'IA è solo un suggerimento."
+    },
+    {
+     "en": "Calibrate with a sample of teacher-graded answers and check agreement before relying on it.",
+     "it": "Calibrare con un campione di risposte già corrette dal docente e verificare l'accordo prima di fidarsi."
+    },
+    {
+     "en": "Students are told how AI is used and can ask for a human review.",
+     "it": "Gli studenti sanno come viene usata l'IA e possono chiedere una revisione umana."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Start with low-stakes, short-answer tasks with clear rubrics; avoid full automation for final grades.",
+     "it": "Cominciare con compiti brevi a basso impatto e griglie chiare; evitare l'automazione completa per i voti finali."
+    },
+    {
+     "en": "Double-mark a random sample each time and track disagreements.",
+     "it": "Ricorreggere ogni volta un campione casuale e tenere traccia dei disaccordi."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Rubrics and moderation",
+      "it": "Griglie e moderazione"
+     },
+     "text": {
+      "en": "Clear analytic rubrics, double marking of samples and moderation meetings remain the standard way to make marking consistent.",
+      "it": "Griglie analitiche chiare, doppia correzione di campioni e incontri di allineamento tra correttori restano il modo standard per rendere coerente la valutazione."
+     },
+     "sources": []
+    }
+   ],
+   "toolTypes": [
+    "general-assistant",
+    "lms-integrated",
+    "writing-feedback",
+    "coding-assistant"
+   ],
+   "gaps": [
+    {
+     "en": "Few randomised HE studies; almost none outside English and STEM/social science.",
+     "it": "Pochi studi randomizzati all'università; quasi nessuno fuori dall'inglese e da materie scientifiche o sociali."
+    },
+    {
+     "en": "No HE study measuring real marking time saved with teacher oversight included.",
+     "it": "Nessuno studio universitario misura il tempo di correzione davvero risparmiato includendo il controllo del docente."
+    },
+    {
+     "en": "Fairness across student groups is largely untested.",
+     "it": "L'equità tra gruppi di studenti è in gran parte non verificata."
+    }
+   ]
+  },
+  {
+   "id": "t-assistant",
+   "role": "teacher",
+   "title": {
+    "en": "Run a course Q&A assistant",
+    "it": "Gestire un assistente di domande e risposte per il corso"
+   },
+   "question": {
+    "en": "Does an AI teaching assistant answer students' course questions accurately and reduce staff workload?",
+    "it": "Un assistente IA per il corso risponde correttamente alle domande degli studenti e alleggerisce il lavoro del personale?"
+   },
+   "description": {
+    "en": "A chatbot grounded in course materials that answers logistics and content questions, often in the forum or LMS, sometimes with staff approval before posting.",
+    "it": "Un chatbot basato sui materiali del corso che risponde a domande organizzative e di contenuto, spesso nel forum o nella piattaforma del corso, a volte con approvazione dello staff prima della pubblicazione."
+   },
+   "oecd": "Ch. 1 p. 28 and Ch. 9 pp. 167-187, esp. pp. 170-171 (functions, triage) and pp. 182-183 (JeepyTA evaluation). Printed page numbers.",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "Evidence comes from a few university case studies by the tools' own developers, mostly without control groups. They show faster responses and high student satisfaction, but also a share of wrong or unapproved answers. No study shows an effect on learning.",
+    "it": "I dati vengono da pochi casi universitari, studiati dagli stessi sviluppatori degli strumenti e quasi sempre senza gruppo di controllo. Mostrano risposte più rapide e studenti soddisfatti, ma anche una parte di risposte sbagliate o non approvate. Nessuno studio mostra effetti sull'apprendimento."
+   },
+   "outcomesMeasured": [
+    "time",
+    "satisfaction",
+    "assisted-performance"
+   ],
+   "findings": [
+    {
+     "source": "oecd-ch9-baker2026",
+     "outcome": "time",
+     "finding": {
+      "en": "In the same course taught a year apart, median forum response time fell from 7.09 to 2.23 hours after JeepyTA was introduced with staff approval; even fully human replies got faster (4.14 hours). Only 22 of 89 AI draft answers were approved. Weekend replies rose from 10% to 29%.",
+      "it": "Nello stesso corso tenuto a un anno di distanza, il tempo mediano di risposta nel forum è sceso da 7,09 a 2,23 ore dopo l'introduzione di JeepyTA con approvazione dello staff; anche le risposte interamente umane sono diventate più rapide (4,14 ore). Solo 22 bozze dell'IA su 89 sono state approvate. Le risposte nel fine settimana sono salite dal 10% al 29%."
+     },
+     "relevance": {
+      "en": "Direct (university), before-after comparison of two cohorts, reported by the developers.",
+      "it": "Diretta (università), confronto prima/dopo tra due coorti, riportato dagli sviluppatori."
+     }
+    },
+    {
+     "source": "oecd-ch9-baker2026",
+     "outcome": "satisfaction",
+     "finding": {
+      "en": "Students rated JeepyTA comparable to human TAs on speed, clarity, accuracy and professionalism, but lower on offering useful ideas, supporting their development and motivating them.",
+      "it": "Gli studenti hanno giudicato JeepyTA simile ai tutor umani per rapidità, chiarezza, accuratezza e professionalità, ma inferiore nel suggerire idee utili, sostenere la loro crescita e motivarli."
+     },
+     "relevance": {
+      "en": "Direct; voluntary survey.",
+      "it": "Diretta; questionario volontario."
+     }
+    },
+    {
+     "source": "liu2024-cs50",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "In Harvard's CS50, a staff member judged 88% of the AI's curricular forum answers and 77% of administrative answers correct (summer 2023, 64 answers). In fall 2023 only 70 of 180 answers were endorsed by staff, which the authors think understates accuracy.",
+      "it": "Nel corso CS50 di Harvard, un membro dello staff ha giudicato corrette l'88% delle risposte di contenuto dell'IA nel forum e il 77% di quelle organizzative (estate 2023, 64 risposte). Nell'autunno 2023 solo 70 risposte su 180 sono state approvate dallo staff, dato che secondo gli autori sottostima l'accuratezza."
+     },
+     "relevance": {
+      "en": "Direct (university), descriptive, developers' own evaluation.",
+      "it": "Diretta (università), descrittiva, valutata dagli sviluppatori."
+     }
+    },
+    {
+     "source": "liu2024-cs50",
+     "outcome": "satisfaction",
+     "finding": {
+      "en": "About 500 on-campus students surveyed: 73% found the AI tools helpful or very helpful; 86% 'liked' or 'loved' them at the end of term.",
+      "it": "Su circa 500 studenti in presenza intervistati, il 73% ha trovato gli strumenti IA utili o molto utili; a fine semestre l'86% diceva di 'apprezzarli' o 'amarli'."
+     },
+     "relevance": {
+      "en": "Direct; self-report, no comparison group.",
+      "it": "Diretta; dati auto-dichiarati, nessun gruppo di confronto."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Faster answers, including outside office hours and at weekends.",
+      "it": "Risposte più rapide, anche fuori orario e nel fine settimana."
+     },
+     "sources": [
+      "oecd-ch9-baker2026"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Students value it and use it often.",
+      "it": "Gli studenti lo apprezzano e lo usano spesso."
+     },
+     "sources": [
+      "liu2024-cs50"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Can triage simple questions so staff spend time on complex ones.",
+      "it": "Può smistare le domande semplici e lasciare allo staff quelle complesse."
+     },
+     "sources": [
+      "oecd2026"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "A share of answers is wrong, especially on course logistics that changed recently.",
+      "it": "Una parte delle risposte è sbagliata, soprattutto sugli aspetti organizzativi cambiati di recente."
+     },
+     "sources": [
+      "liu2024-cs50",
+      "oecd-ch9-baker2026"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Weaker than humans at motivation and developmental guidance; risk of over-reliance and of institutions cutting human teaching.",
+      "it": "Meno efficace delle persone nel motivare e nell'orientare; rischio di dipendenza e che le istituzioni riducano la presenza di docenti."
+     },
+     "sources": [
+      "oecd-ch9-baker2026",
+      "oecd2026"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Students may share personal data with the bot; check data processing agreements.",
+      "it": "Gli studenti possono condividere dati personali con il chatbot; verificare gli accordi sul trattamento dei dati."
+     },
+     "sources": []
+    }
+   ],
+   "conditions": [
+    {
+     "en": "Grounded in up-to-date course documents (syllabus, calendar, readings).",
+     "it": "Basato su documenti del corso aggiornati (programma, calendario, letture)."
+    },
+    {
+     "en": "Staff can review, edit or block answers, at least at the start; complex or personal questions are escalated to humans.",
+     "it": "Lo staff può rivedere, modificare o bloccare le risposte, almeno all'inizio; le domande complesse o personali passano alle persone."
+    },
+    {
+     "en": "Designed to guide rather than give away solutions to graded work.",
+     "it": "Pensato per guidare, non per dare le soluzioni dei compiti valutati."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Start in 'review before posting' mode and switch to automatic answers only for categories that prove reliable.",
+     "it": "Partire con la modalità 'revisione prima della pubblicazione' e passare alle risposte automatiche solo per le categorie che si dimostrano affidabili."
+    },
+    {
+     "en": "Label AI answers clearly and track accuracy each term.",
+     "it": "Segnalare chiaramente le risposte dell'IA e misurarne l'accuratezza ogni semestre."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "FAQ and forum moderation",
+      "it": "FAQ e moderazione del forum"
+     },
+     "text": {
+      "en": "A well-maintained FAQ, a searchable forum and peer answers endorsed by staff cover many recurring questions.",
+      "it": "Una FAQ curata, un forum consultabile e risposte tra pari approvate dallo staff coprono molte domande ricorrenti."
+     },
+     "sources": []
+    }
+   ],
+   "toolTypes": [
+    "custom-chatbot",
+    "lms-integrated"
+   ],
+   "gaps": [
+    {
+     "en": "No randomised study and no independent evaluation; no learning outcomes measured.",
+     "it": "Nessuno studio randomizzato né valutazione indipendente; nessun risultato di apprendimento misurato."
+    },
+    {
+     "en": "Most evidence comes from computer science and US universities.",
+     "it": "La maggior parte dei dati viene dall'informatica e da università statunitensi."
+    }
+   ]
+  },
+  {
+   "id": "t-detect",
+   "role": "teacher",
+   "title": {
+    "en": "Detect AI-generated work",
+    "it": "Riconoscere i lavori scritti con l'IA"
+   },
+   "question": {
+    "en": "Can AI detectors reliably tell whether a student used AI to write their work?",
+    "it": "I rilevatori di IA sanno dire in modo affidabile se uno studente ha usato l'IA per scrivere?"
+   },
+   "description": {
+    "en": "Using AI-text detection tools (standalone or inside plagiarism software) to flag submissions possibly written with generative AI.",
+    "it": "Usare strumenti di rilevamento del testo generato dall'IA (autonomi o dentro i software antiplagio) per segnalare elaborati forse scritti con l'IA generativa."
+   },
+   "oecd": null,
+   "evidenceLevel": "consistent",
+   "verdict": {
+    "en": "Independent tests agree: detectors are not accurate enough to prove misconduct. They miss lightly edited AI text, sometimes flag human writing, and are biased against non-native English writers. In a real exam system, almost all AI-written answers went unnoticed by markers. Detection cannot replace assessment design.",
+    "it": "I test indipendenti concordano: i rilevatori non sono abbastanza precisi per dimostrare una violazione. Non riconoscono testi IA appena modificati, a volte segnalano testi umani e penalizzano chi scrive in inglese come seconda lingua. In un vero sistema d'esame, quasi tutte le risposte scritte dall'IA sono passate inosservate ai correttori. Il rilevamento non può sostituire una buona progettazione delle prove."
+   },
+   "outcomesMeasured": [
+    "integrity",
+    "equity"
+   ],
+   "findings": [
+    {
+     "source": "weberwulff2023",
+     "outcome": "integrity",
+     "finding": {
+      "en": "Testing 14 tools (including Turnitin and PlagiarismCheck), the authors found them neither accurate nor reliable: all were below 80% accuracy, they leaned towards labelling text as human, and obfuscation (paraphrasing, translation) made them worse.",
+      "it": "Testando 14 strumenti (tra cui Turnitin e PlagiarismCheck), gli autori li hanno trovati né accurati né affidabili: tutti sotto l'80% di accuratezza, tendenti a classificare i testi come umani, e peggiori dopo parafrasi o traduzione."
+     },
+     "relevance": {
+      "en": "Direct; tools tested in 2023, products change.",
+      "it": "Diretta; strumenti testati nel 2023, i prodotti cambiano."
+     }
+    },
+    {
+     "source": "liang2023-detectors",
+     "outcome": "equity",
+     "finding": {
+      "en": "Seven detectors flagged on average 61% of 91 human-written TOEFL essays by non-native writers as AI-generated; 98% were flagged by at least one detector, while essays by US native students were classified almost perfectly.",
+      "it": "Sette rilevatori hanno classificato in media il 61% di 91 saggi TOEFL scritti da persone non madrelingua come generati dall'IA; il 98% è stato segnalato da almeno un rilevatore, mentre i testi di studenti madrelingua statunitensi erano classificati quasi senza errori."
+     },
+     "relevance": {
+      "en": "Directly relevant to fairness for international students; non-native essays from a test-prep forum.",
+      "it": "Molto rilevante per l'equità verso gli studenti internazionali; saggi raccolti da un forum di preparazione al TOEFL."
+     }
+    },
+    {
+     "source": "perkins2024",
+     "outcome": "integrity",
+     "finding": {
+      "en": "Six detectors had a mean accuracy of 39.5% on unmodified AI text, falling to 22.1% after simple evasion techniques; only 67% of tests on human-written control texts were correct.",
+      "it": "Sei rilevatori avevano un'accuratezza media del 39,5% su testi IA non modificati, scesa al 22,1% dopo semplici tecniche per eluderli; solo il 67% dei test sui testi di controllo scritti da persone era corretto."
+     },
+     "relevance": {
+      "en": "Direct (higher education focus).",
+      "it": "Diretta (focalizzata sull'università)."
+     }
+    },
+    {
+     "source": "sun2026-detectors",
+     "outcome": "integrity",
+     "finding": {
+      "en": "Across more than 280,000 authentic student assignments, theses and code samples, 13 detectors worked acceptably on long theses but failed on short coursework and code, showed bias against STEM writing, and a simple hybrid edit let 88% of AI content evade detection.",
+      "it": "Su oltre 280.000 compiti, tesi e codici reali di studenti, 13 rilevatori funzionavano in modo accettabile sulle tesi lunghe ma fallivano su compiti brevi e codice, penalizzavano la scrittura delle materie scientifiche, e una semplice modifica ibrida faceva sfuggire l'88% dei contenuti IA."
+     },
+     "relevance": {
+      "en": "Direct and large-scale (read: abstract only).",
+      "it": "Diretta e su larga scala (letto solo l'abstract)."
+     }
+    },
+    {
+     "source": "scarfe2024",
+     "outcome": "integrity",
+     "finding": {
+      "en": "AI-written answers submitted blind into real take-home psychology exams at a UK university went 94% undetected by markers and on average scored higher than real students.",
+      "it": "Risposte scritte dall'IA, inserite di nascosto in veri esami da casa di psicologia in un'università britannica, sono passate inosservate ai correttori nel 94% dei casi e in media hanno preso voti più alti degli studenti reali."
+     },
+     "relevance": {
+      "en": "Direct, real-world; concerns human detection and unsupervised take-home formats.",
+      "it": "Diretta, in condizioni reali; riguarda il riconoscimento umano e le prove da casa non sorvegliate."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "vendor",
+     "text": {
+      "en": "A major vendor states a document-level false positive rate below 1% for documents with at least 20% AI writing, with higher false positives below that threshold.",
+      "it": "Un importante fornitore dichiara un tasso di falsi positivi inferiore all'1% per i documenti con almeno il 20% di testo IA, con più falsi positivi sotto questa soglia."
+     },
+     "sources": [
+      "turnitin2023"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "At most, a detector score can open a conversation with the student; it is not evidence on its own.",
+      "it": "Al massimo, il punteggio di un rilevatore può avviare un colloquio con lo studente; da solo non è una prova."
+     },
+     "sources": [
+      "perkins2024"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "False accusations, especially of non-native English writers.",
+      "it": "Accuse ingiuste, soprattutto verso chi scrive in inglese come seconda lingua."
+     },
+     "sources": [
+      "liang2023-detectors",
+      "perkins2024",
+      "elkhatat2023"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Easy to evade with paraphrasing or light editing, so detectors mostly catch the least skilled users.",
+      "it": "Facili da aggirare con parafrasi o piccole modifiche: finiscono per individuare soprattutto chi è meno esperto."
+     },
+     "sources": [
+      "weberwulff2023",
+      "perkins2024",
+      "sun2026-detectors"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Teachers' own judgement also fails to spot AI-written work.",
+      "it": "Anche il giudizio dei docenti non riesce a riconoscere i lavori scritti con l'IA."
+     },
+     "sources": [
+      "scarfe2024"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "EU AI Act: systems intended to monitor and detect prohibited behaviour of students during tests are listed as high-risk (Annex III, point 3). Whether a given detector falls under this depends on its intended use; see the regulation section.",
+      "it": "AI Act europeo: i sistemi destinati a monitorare e rilevare comportamenti vietati degli studenti durante le prove sono classificati ad alto rischio (Allegato III, punto 3). Se un rilevatore rientri in questa categoria dipende dall'uso previsto; vedi la sezione sulla normativa."
+     },
+     "sources": []
+    },
+    {
+     "kind": "vendor",
+     "text": {
+      "en": "Vendor accuracy figures come from the vendor's own tests and are not independently replicated.",
+      "it": "I dati di accuratezza dei fornitori vengono dai loro test interni e non sono stati replicati in modo indipendente."
+     },
+     "sources": [
+      "turnitin2023"
+     ]
+    }
+   ],
+   "conditions": [
+    {
+     "en": "Never use a detector score as the sole basis for a misconduct decision.",
+     "it": "Non usare mai il punteggio di un rilevatore come unica base per una decisione disciplinare."
+    },
+    {
+     "en": "Have a clear course policy on what AI use is allowed.",
+     "it": "Avere una regola chiara, nel corso, su quale uso dell'IA è consentito."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Shift effort from detection to assessment design: in-class or oral components, drafts and process evidence, tasks tied to local or personal material.",
+     "it": "Spostare l'impegno dal rilevamento alla progettazione delle prove: parti in aula o orali, bozze e tracce del processo, compiti legati a materiali locali o personali."
+    },
+    {
+     "en": "If a concern arises, talk with the student about their work and process.",
+     "it": "Se nasce un dubbio, parlare con lo studente del suo lavoro e di come l'ha svolto."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Assessment redesign",
+      "it": "Riprogettare le prove"
+     },
+     "text": {
+      "en": "Oral defences, supervised components, staged submissions with drafts and reflective commentary make undisclosed AI use harder and more visible than any detector.",
+      "it": "Discussioni orali, parti sorvegliate, consegne per tappe con bozze e commenti riflessivi rendono l'uso nascosto dell'IA più difficile e più visibile di qualsiasi rilevatore."
+     },
+     "sources": [
+      "scarfe2024"
+     ]
+    }
+   ],
+   "toolTypes": [
+    "ai-detector"
+   ],
+   "gaps": [
+    {
+     "en": "Independent tests age quickly as models and detectors change; few tests in languages other than English, such as Italian.",
+     "it": "I test indipendenti invecchiano in fretta perché modelli e rilevatori cambiano; pochi test in lingue diverse dall'inglese, come l'italiano."
+    },
+    {
+     "en": "Rating based on several converging independent tests; we did not verify a systematic review.",
+     "it": "Il giudizio si basa su diversi test indipendenti concordi; non abbiamo verificato una revisione sistematica."
+    }
+   ]
+  },
+  {
+   "id": "t-accessibility",
+   "role": "teacher",
+   "title": {
+    "en": "Make materials accessible and translate them",
+    "it": "Rendere accessibili e tradurre i materiali"
+   },
+   "question": {
+    "en": "Does AI help make course materials accessible (captions, alt text, simpler versions, translations) without introducing errors?",
+    "it": "L'IA aiuta a rendere accessibili i materiali del corso (sottotitoli, testi alternativi, versioni semplificate, traduzioni) senza introdurre errori?"
+   },
+   "description": {
+    "en": "Generating captions and transcripts, image descriptions, plain-language summaries and translations of course materials.",
+    "it": "Generare sottotitoli e trascrizioni, descrizioni delle immagini, sintesi in linguaggio semplice e traduzioni dei materiali del corso."
+   },
+   "oecd": null,
+   "evidenceLevel": "none",
+   "verdict": {
+    "en": "We found no controlled study in higher education measuring whether AI-produced captions, alt text, simplified texts or translations improve access or learning for students who need them. Practice is ahead of evidence: use AI for drafts and have them checked, ideally with the students concerned.",
+    "it": "Non abbiamo trovato studi controllati all'università che misurino se sottotitoli, descrizioni, testi semplificati o traduzioni prodotti dall'IA migliorino l'accesso o l'apprendimento degli studenti che ne hanno bisogno. La pratica è più avanti delle prove: usare l'IA per le bozze e farle verificare, possibilmente con gli studenti interessati."
+   },
+   "outcomesMeasured": [],
+   "findings": [],
+   "benefits": [
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Can lower the cost of producing accessible versions, so more materials get them.",
+      "it": "Può ridurre il costo di produrre versioni accessibili, così che più materiali le abbiano."
+     },
+     "sources": []
+    }
+   ],
+   "risks": [
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Errors in technical terms, formulas or translations can mislead exactly the students who rely on the adapted version.",
+      "it": "Errori su termini tecnici, formule o traduzioni possono confondere proprio gli studenti che dipendono dalla versione adattata."
+     },
+     "sources": []
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Simplification can remove rigour; accessible does not mean easier.",
+      "it": "Semplificare può togliere rigore; accessibile non vuol dire più facile."
+     },
+     "sources": [
+      "oecd2026"
+     ]
+    }
+   ],
+   "conditions": [
+    {
+     "en": "A person with subject knowledge checks the output; legal accessibility requirements still apply.",
+     "it": "Una persona competente nella materia controlla il risultato; restano validi gli obblighi di legge sull'accessibilità."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Ask students who use captions, screen readers or translations for feedback on AI-produced versions.",
+     "it": "Chiedere un parere sulle versioni prodotte con l'IA agli studenti che usano sottotitoli, lettori di schermo o traduzioni."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Accessibility services",
+      "it": "Servizi per l'accessibilità"
+     },
+     "text": {
+      "en": "University disability and language services, professional captioning and accessible templates remain the reference.",
+      "it": "I servizi d'ateneo per la disabilità e le lingue, la sottotitolazione professionale e i modelli di documento accessibili restano il riferimento."
+     },
+     "sources": []
+    }
+   ],
+   "toolTypes": [
+    "transcription-notes",
+    "translation",
+    "general-assistant"
+   ],
+   "gaps": [
+    {
+     "en": "No HE study compares AI-produced and human-produced accessible materials with the students who use them.",
+     "it": "Nessuno studio universitario confronta materiali accessibili prodotti dall'IA e da persone, con gli studenti che li usano."
+    },
+    {
+     "en": "Consider merging with a 'design' task on content at scale, or keeping it as a flagged evidence gap.",
+     "it": "Valutare se unirlo a un compito di progettazione sui contenuti su larga scala, o tenerlo come lacuna segnalata."
+    }
+   ]
+  },
+  {
+   "id": "t-case-teaching",
+   "role": "teacher",
+   "title": {
+    "en": "Teach with cases and discussions",
+    "it": "Insegnare con casi e discussioni"
+   },
+   "question": {
+    "en": "Does AI support for case preparation or simulated discussions improve case-based learning?",
+    "it": "Il supporto dell'IA nella preparazione dei casi o nelle discussioni simulate migliora l'apprendimento basato sui casi?"
+   },
+   "description": {
+    "en": "Using AI to help students prepare cases, to role-play stakeholders, or to generate discussion prompts, typical in business and professional schools.",
+    "it": "Usare l'IA per aiutare gli studenti a preparare i casi, per simulare i portatori di interesse o per proporre spunti di discussione, come avviene spesso nelle business school e nelle scuole professionali."
+   },
+   "oecd": "Ch. 9 pp. 172-173 and p. 183 (JeepyTA discussion prompts, personas, brainstorming). Printed page numbers.",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "Only one small field experiment was found: AI-supported case preparation raised quiz scores by about one point out of ten. Role-play and stakeholder simulations are widely piloted but not yet evaluated for learning. Brainstorming with AI produced more ideas but less varied ones.",
+    "it": "Abbiamo trovato un solo piccolo esperimento sul campo: la preparazione dei casi con l'IA ha alzato i punteggi di un quiz di circa un punto su dieci. Simulazioni di ruolo e di portatori di interesse sono molto sperimentate, ma il loro effetto sull'apprendimento non è stato ancora valutato. Il brainstorming con l'IA ha prodotto più idee, ma meno varie."
+   },
+   "outcomesMeasured": [
+    "learning",
+    "assisted-performance"
+   ],
+   "findings": [
+    {
+     "source": "myers2026-cases",
+     "outcome": "learning",
+     "finding": {
+      "en": "In an operations management course, 38 students scored almost 1 point higher (out of 10) on case quizzes when they prepared with an AI-supported 'quest' than without it, and scores were less spread out.",
+      "it": "In un corso di gestione delle operazioni, 38 studenti hanno ottenuto quasi un punto in più (su 10) nei quiz sui casi quando li preparavano con un percorso guidato dall'IA rispetto a quando lo facevano senza, e i punteggi erano meno dispersi."
+     },
+     "relevance": {
+      "en": "Direct (business school) but small, within-subject, short quiz outcome, in partnership with the AI platform.",
+      "it": "Diretta (business school), ma piccola, con confronto sugli stessi studenti, esito misurato con un breve quiz e in collaborazione con la piattaforma IA."
+     }
+    },
+    {
+     "source": "oecd-ch9-baker2026",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "In a 'games and learning' course, students brainstorming with JeepyTA produced more ideas (2.78 vs 1.7 per student) but with more thematic overlap than student-led ideas.",
+      "it": "In un corso su 'giochi e apprendimento', gli studenti che facevano brainstorming con JeepyTA producevano più idee (2,78 contro 1,7 a testa), ma più simili tra loro rispetto alle idee nate solo dagli studenti."
+     },
+     "relevance": {
+      "en": "Direct (university), developers' study.",
+      "it": "Diretta (università), studio degli sviluppatori."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "More consistent student preparation before class.",
+      "it": "Preparazione degli studenti prima della lezione più uniforme."
+     },
+     "sources": [
+      "myers2026-cases"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Homogenisation of ideas in discussion and brainstorming.",
+      "it": "Idee più uniformi nelle discussioni e nel brainstorming."
+     },
+     "sources": [
+      "oecd-ch9-baker2026"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Students can use AI summaries to skip the case altogether, which undermines the method.",
+      "it": "Gli studenti possono usare sintesi dell'IA per saltare del tutto la lettura del caso, svuotando il metodo."
+     },
+     "sources": [
+      "myers2026-cases"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "AI personas may present stereotyped views of real groups or stakeholders.",
+      "it": "I personaggi simulati dall'IA possono dare un'immagine stereotipata di gruppi o portatori di interesse reali."
+     },
+     "sources": []
+    }
+   ],
+   "conditions": [
+    {
+     "en": "AI is built into preparation with a clear structure, not left as an open chatbot.",
+     "it": "L'IA è inserita nella preparazione con una struttura chiara, non lasciata come chat libera."
+    },
+    {
+     "en": "The live discussion stays human-led.",
+     "it": "La discussione in aula resta guidata dal docente."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Ask students to bring and critique the AI's analysis of the case, then compare with their own.",
+     "it": "Chiedere agli studenti di portare e criticare l'analisi del caso fatta dall'IA, e confrontarla con la propria."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Structured preparation",
+      "it": "Preparazione strutturata"
+     },
+     "text": {
+      "en": "Preparation questions, short cold-call quizzes and study groups are the classic ways to ensure students read the case.",
+      "it": "Domande guida, brevi quiz a sorpresa e gruppi di studio sono i modi classici per assicurarsi che gli studenti leggano il caso."
+     },
+     "sources": []
+    }
+   ],
+   "toolTypes": [
+    "general-assistant",
+    "custom-chatbot"
+   ],
+   "gaps": [
+    {
+     "en": "No controlled study of AI role-play or stakeholder simulation on learning.",
+     "it": "Nessuno studio controllato sull'effetto di simulazioni di ruolo o di portatori di interesse sull'apprendimento."
+    },
+    {
+     "en": "This task overlaps with the student task s-argue; consider keeping one teacher view focused on design.",
+     "it": "Il compito si sovrappone a quello degli studenti s-argue; valutare di tenere una sola versione per il docente, centrata sulla progettazione."
+    }
+   ]
+  },
+  {
+   "id": "t-classroom-feedback",
+   "role": "teacher",
+   "title": {
+    "en": "Get feedback on your own teaching",
+    "it": "Ricevere feedback sul proprio insegnamento"
+   },
+   "question": {
+    "en": "Does automated feedback on how I teach (for example, how I question and build on student ideas) improve my teaching?",
+    "it": "Un feedback automatico su come insegno (per esempio su come faccio domande e riprendo le idee degli studenti) migliora il mio insegnamento?"
+   },
+   "description": {
+    "en": "Analysing transcripts of lessons, sections or tutoring sessions to give teachers feedback on talk time, questioning and uptake of student ideas; also simulated students for TA practice.",
+    "it": "Analizzare le trascrizioni di lezioni, esercitazioni o tutorati per dare al docente un riscontro su tempo di parola, domande e ripresa delle idee degli studenti; anche studenti simulati per far esercitare i tutor."
+   },
+   "oecd": "Ch. 10 pp. 193-196 (classroom analytics, M-Powering, Code in Place). Printed page numbers.",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "Randomised trials show that automated feedback on teaching talk changes what instructors do (for example, 13% more uptake of student ideas in a large online programming course). Effects on student learning are not yet established. These tools mostly use specialised language classifiers; general chatbots were found less accurate as teaching coaches.",
+    "it": "Studi randomizzati mostrano che un feedback automatico sul modo di parlare in aula cambia ciò che fanno i docenti (per esempio, il 13% in più di ripresa delle idee degli studenti in un grande corso online di programmazione). Gli effetti sull'apprendimento non sono ancora dimostrati. Questi strumenti usano soprattutto classificatori linguistici specializzati; i chatbot generici si sono rivelati meno precisi come coach."
+   },
+   "outcomesMeasured": [
+    "assisted-performance",
+    "satisfaction",
+    "learning"
+   ],
+   "findings": [
+    {
+     "source": "demszky2023-codeinplace",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "In an RCT with 1,136 volunteer section leaders of Stanford's free online programming course Code in Place, automated feedback raised instructors' uptake of student contributions by 13%, with suggestive evidence of higher student satisfaction and assignment completion.",
+      "it": "In uno studio randomizzato con 1.136 tutor volontari del corso online gratuito di programmazione Code in Place (Stanford), il feedback automatico ha aumentato del 13% la ripresa dei contributi degli studenti, con indizi di maggiore soddisfazione e completamento dei compiti."
+     },
+     "relevance": {
+      "en": "Close to HE (adult online course, novice instructors); uses NLP classifiers, not generative AI.",
+      "it": "Vicina all'università (corso online per adulti, tutor alle prime armi); usa classificatori linguistici, non IA generativa."
+     }
+    },
+    {
+     "source": "demszky-liu2023-mpowering",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "In an RCT with 414 mentors on a one-to-one research mentoring platform, feedback raised uptake of student ideas by about 10%, cut mentor talk time by about 5%, and improved students' reported experience.",
+      "it": "In uno studio randomizzato con 414 mentori di una piattaforma di tutoraggio di ricerca individuale, il feedback ha aumentato di circa il 10% la ripresa delle idee degli studenti, ridotto di circa il 5% il tempo di parola dei mentori e migliorato l'esperienza riferita dagli studenti."
+     },
+     "relevance": {
+      "en": "Indirect: high-school students, but mentors are often graduate students.",
+      "it": "Indiretta: studenti delle superiori, anche se i mentori sono spesso dottorandi."
+     }
+    },
+    {
+     "source": "wang-demszky2023-coach",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "Used zero-shot as a teaching coach on maths lesson transcripts, ChatGPT gave relevant but rarely novel suggestions: 82% pointed to moments where the teacher was already doing what it suggested.",
+      "it": "Usato senza addestramento specifico come coach su trascrizioni di lezioni di matematica, ChatGPT dava suggerimenti pertinenti ma raramente nuovi: l'82% indicava momenti in cui il docente stava già facendo ciò che veniva suggerito."
+     },
+     "relevance": {
+      "en": "Indirect (elementary school).",
+      "it": "Indiretta (scuola primaria)."
+     }
+    },
+    {
+     "source": "markel2023-gpteach",
+     "outcome": "satisfaction",
+     "finding": {
+      "en": "Novice TAs practising office hours with GPT-simulated students valued the chance to rehearse without affecting real students; the tool was then used with over 800 novice teachers in an online course.",
+      "it": "Tutor alle prime armi che simulavano il ricevimento con studenti simulati da GPT hanno apprezzato la possibilità di esercitarsi senza conseguenze per studenti reali; lo strumento è stato poi usato con oltre 800 tutor in un corso online."
+     },
+     "relevance": {
+      "en": "Direct (TA training), small A/B test, mostly perceptions.",
+      "it": "Diretta (formazione dei tutor), piccolo test A/B, soprattutto percezioni."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Private, low-cost and repeated feedback that measurably shifts teaching practice.",
+      "it": "Feedback privato, economico e ripetuto, che cambia in modo misurabile la pratica didattica."
+     },
+     "sources": [
+      "demszky2023-codeinplace",
+      "demszky-liu2023-mpowering"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Especially useful for new instructors and teaching assistants who get little observation.",
+      "it": "Particolarmente utile per docenti e tutor alle prime armi, che vengono osservati raramente."
+     },
+     "sources": [
+      "oecd2026"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "General chatbots misclassify or hallucinate classroom interactions and give generic advice.",
+      "it": "I chatbot generici classificano male o inventano interazioni in aula e danno consigli generici."
+     },
+     "sources": [
+      "wang-demszky2023-coach",
+      "oecd2026"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Recording lessons raises consent and privacy issues for students and staff; feedback must never become covert performance surveillance.",
+      "it": "Registrare le lezioni pone questioni di consenso e privacy per studenti e personale; il feedback non deve mai diventare un controllo nascosto delle prestazioni."
+     },
+     "sources": []
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Some teachers find it hard to act on the feedback without a human coach.",
+      "it": "Alcuni docenti fanno fatica a tradurre il feedback in azioni senza un coach umano."
+     },
+     "sources": [
+      "oecd2026"
+     ]
+    }
+   ],
+   "conditions": [
+    {
+     "en": "Voluntary, private to the teacher, with informed consent from those recorded.",
+     "it": "Volontario, riservato al docente, con consenso informato di chi viene registrato."
+    },
+    {
+     "en": "Focused on a few concrete, evidence-based practices.",
+     "it": "Concentrato su poche pratiche concrete e basate su prove."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Review the report with a colleague or teaching centre coach.",
+     "it": "Rivedere il rapporto con un collega o con un coach del centro per la didattica."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Peer observation",
+      "it": "Osservazione tra colleghi"
+     },
+     "text": {
+      "en": "Peer observation and mid-term student feedback remain effective, low-tech ways to reflect on teaching.",
+      "it": "L'osservazione tra colleghi e il feedback degli studenti a metà corso restano modi efficaci e semplici per riflettere sul proprio insegnamento."
+     },
+     "sources": []
+    }
+   ],
+   "toolTypes": [
+    "teaching-analytics",
+    "transcription-notes"
+   ],
+   "gaps": [
+    {
+     "en": "No study in regular university lectures or seminars; effects on student learning not shown.",
+     "it": "Nessuno studio su normali lezioni o seminari universitari; effetti sull'apprendimento non dimostrati."
+    },
+    {
+     "en": "Tools are mostly English-only.",
+     "it": "Gli strumenti funzionano quasi solo in inglese."
+    }
+   ]
+  },
+  {
+   "id": "t-tutoring",
+   "role": "teacher",
+   "title": {
+    "en": "Scale tutoring and support",
+    "it": "Estendere tutorato e supporto"
+   },
+   "question": {
+    "en": "Can AI tutors, or AI support for human tutors, give more students effective one-to-one help?",
+    "it": "Tutor IA, o l'IA a supporto dei tutor umani, possono dare a più studenti un aiuto individuale efficace?"
+   },
+   "description": {
+    "en": "Deploying AI tutors designed by the teacher, or giving human tutors and TAs real-time AI suggestions.",
+    "it": "Mettere a disposizione tutor IA progettati dal docente, oppure dare ai tutor e assistenti umani suggerimenti dell'IA in tempo reale."
+   },
+   "oecd": "Ch. 1 p. 22 and Ch. 10 pp. 194-195 (Tutor CoPilot); Ch. 2 p. 43. Printed page numbers.",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "One well-run university RCT found that a carefully designed AI tutor taught a physics lesson better and faster than an active-learning class. School-level trials show that design matters: guarded tutors help, unguarded chatbots can harm later learning, and AI suggestions help weaker human tutors most. The effect depends on teacher-built content and scaffolding, not on the chatbot alone.",
+    "it": "Un solido studio randomizzato universitario ha trovato che un tutor IA progettato con cura insegnava una lezione di fisica meglio e più in fretta di una lezione attiva in aula. Gli studi nelle scuole mostrano che la progettazione conta: tutor con limiti chiari aiutano, chatbot senza limiti possono peggiorare l'apprendimento successivo, e i suggerimenti dell'IA aiutano soprattutto i tutor umani meno esperti. L'effetto dipende dai contenuti e dalla struttura preparati dal docente, non dal chatbot da solo."
+   },
+   "outcomesMeasured": [
+    "learning",
+    "time",
+    "satisfaction",
+    "equity"
+   ],
+   "findings": [
+    {
+     "source": "kestin2025",
+     "outcome": "learning",
+     "finding": {
+      "en": "In a crossover RCT with 194 Harvard introductory physics students, learning gains were larger with an AI tutor built on instructor-written prompts and step-by-step solutions than in an active-learning class (effect size about 0.73-1.3 SD), with a median of 49 minutes on task versus 60 in class.",
+      "it": "In uno studio randomizzato incrociato con 194 studenti di fisica di base a Harvard, i progressi sono stati maggiori con un tutor IA costruito su istruzioni e soluzioni passo passo scritte dai docenti che in una lezione attiva in aula (effetto di circa 0,73-1,3 deviazioni standard), con un tempo mediano di 49 minuti contro 60 in aula."
+     },
+     "relevance": {
+      "en": "Direct (university), but two lessons only, one course, immediate post-test.",
+      "it": "Diretta (università), ma solo due lezioni, un corso, test subito dopo."
+     }
+    },
+    {
+     "source": "wang2025-tutorcopilot",
+     "outcome": "learning",
+     "finding": {
+      "en": "In an RCT with human tutors of low-income school students, those with Tutor CoPilot's real-time suggestions had students about 4 percentage points more likely to master topics; +9 points for lower-rated tutors. Cost about $20 per tutor per year.",
+      "it": "In uno studio randomizzato con tutor umani di studenti a basso reddito, chi usava i suggerimenti in tempo reale di Tutor CoPilot aveva studenti con circa 4 punti percentuali in più di probabilità di padroneggiare gli argomenti; +9 punti per i tutor valutati meno bravi. Costo circa 20 dollari per tutor all'anno."
+     },
+     "relevance": {
+      "en": "Indirect: K-12 maths. Sample reported as over 700 tutors and 1,000 students in the latest version (OECD cites 900 and 1,800 from an earlier version).",
+      "it": "Indiretta: matematica a scuola. Campione indicato come oltre 700 tutor e 1.000 studenti nell'ultima versione (l'OCSE cita 900 e 1.800 da una versione precedente)."
+     }
+    },
+    {
+     "source": "bastani2025",
+     "outcome": "learning",
+     "finding": {
+      "en": "Among nearly 1,000 high-school maths students, unrestricted GPT-4 access improved practice performance but lowered later unaided exam scores by 17%; a tutor version with safeguards largely avoided this harm.",
+      "it": "Su quasi 1.000 studenti di matematica delle superiori, l'accesso libero a GPT-4 migliorava i risultati negli esercizi, ma abbassava del 17% quelli del successivo esame senza IA; una versione con limiti pedagogici evitava in gran parte il danno."
+     },
+     "relevance": {
+      "en": "Indirect (high school), but the design lesson is general.",
+      "it": "Indiretta (scuola superiore), ma la lezione sulla progettazione è generale."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Well-designed AI tutoring can produce strong learning gains in less time.",
+      "it": "Un tutorato IA ben progettato può dare grandi progressi in meno tempo."
+     },
+     "sources": [
+      "kestin2025"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "AI suggestions to human tutors narrow the gap between weaker and stronger tutors at low cost.",
+      "it": "I suggerimenti dell'IA ai tutor umani riducono, a basso costo, il divario tra tutor più e meno bravi."
+     },
+     "sources": [
+      "wang2025-tutorcopilot"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Unguarded chatbots become a crutch: better practice scores, worse independent performance.",
+      "it": "Chatbot senza limiti diventano una stampella: migliori risultati negli esercizi, peggiori quando si lavora da soli."
+     },
+     "sources": [
+      "bastani2025"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Building a good AI tutor took instructors several days per lesson; results may not hold for off-the-shelf tools.",
+      "it": "Costruire un buon tutor IA ha richiesto ai docenti alcuni giorni per lezione; i risultati potrebbero non valere per strumenti pronti all'uso."
+     },
+     "sources": [
+      "kestin2025"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Using AI to replace human contact can widen inequalities in access to teachers.",
+      "it": "Usare l'IA per sostituire il contatto umano può aumentare le disuguaglianze nell'accesso ai docenti."
+     },
+     "sources": [
+      "oecd2026"
+     ]
+    }
+   ],
+   "conditions": [
+    {
+     "en": "Teacher-written content, worked solutions and a structure that guides students step by step without giving answers.",
+     "it": "Contenuti e soluzioni scritti dal docente, e una struttura che guidi lo studente passo dopo passo senza dare le risposte."
+    },
+    {
+     "en": "Complements, not replaces, contact with teachers and tutors.",
+     "it": "Integra, non sostituisce, il contatto con docenti e tutor."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Pilot one topic, compare with your usual format, and check unaided performance afterwards.",
+     "it": "Provare su un solo argomento, confrontare con il formato abituale e verificare poi i risultati senza IA."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Peer tutoring and active learning",
+      "it": "Tutorato tra pari e didattica attiva"
+     },
+     "text": {
+      "en": "Peer-assisted learning schemes and active-learning sessions are well-established ways to scale support.",
+      "it": "Programmi di tutorato tra pari e lezioni di didattica attiva sono modi consolidati per estendere il supporto."
+     },
+     "sources": []
+    }
+   ],
+   "toolTypes": [
+    "tutoring-system",
+    "custom-chatbot",
+    "lms-integrated"
+   ],
+   "gaps": [
+    {
+     "en": "Only one rigorous HE trial; no long-term retention or transfer data.",
+     "it": "Un solo studio rigoroso all'università; nessun dato su memoria a lungo termine o trasferimento."
+    },
+    {
+     "en": "Overlaps with student tasks s-understand and s-practice; consider framing this teacher task around design and deployment.",
+     "it": "Si sovrappone ai compiti degli studenti s-understand e s-practice; valutare di centrare questo compito del docente su progettazione e messa in uso."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "oecd2026",
+   "kind": "grey",
+   "read": "full",
+   "accessed": "2026-10-22",
+   "doi": "10.1787/062a7394-en",
+   "url": "https://doi.org/10.1787/062a7394-en",
+   "short": "OECD (2026), Digital Education Outlook 2026",
+   "citation": "OECD (2026), OECD Digital Education Outlook 2026: Exploring Effective Uses of Generative AI in Education, OECD Publishing, Paris. CC BY 4.0.",
+   "study": {
+    "design": "Expert report (chapters, interviews, case studies)",
+    "sample": "n/a",
+    "context": "OECD countries, all education levels",
+    "comparison": "n/a",
+    "outcome": "Synthesis of evidence on GenAI uses",
+    "duration": "n/a",
+    "result": "Used as pointer to primary studies; relevant chapters 1, 2, 7, 9, 10, 12 read in full",
+    "uncertainty": "Secondary synthesis; some cited studies are working papers or forthcoming; interview chapters reflect individual expert views (e.g. Ch. 12 interviewee works for Duolingo)",
+    "funding": "OECD",
+    "system": "Various"
+   }
+  },
+  {
+   "id": "oecd-ch9-baker2026",
+   "kind": "grey",
+   "read": "full",
+   "accessed": "2026-10-22",
+   "doi": "10.1787/062a7394-en",
+   "url": "https://doi.org/10.1787/062a7394-en",
+   "short": "Baker et al. (2026), Generative AI as a Teaching Assistant (OECD Ch. 9)",
+   "citation": "Baker, R., X. Liu, M. Shah, M. Pankiewicz, Y.J. Kim, Y. Lee and C. Porter (2026), \"Generative AI as a Teaching Assistant\", in OECD Digital Education Outlook 2026, OECD Publishing, Paris.",
+   "study": {
+    "design": "Case study with semester-on-semester comparisons and a student survey",
+    "sample": "Courses at a US university (University of Pennsylvania); 89 AI draft forum answers; 153 vs 136 staff responses; survey n not stated in the chapter",
+    "context": "Higher education; JeepyTA deployed in 16 courses by Spring 2025",
+    "comparison": "Same course one year earlier without JeepyTA (not randomised)",
+    "outcome": "Response time, weekend replies, student perceptions, essay grades, brainstorming ideas",
+    "duration": "Fall 2023 vs prior year",
+    "result": "Median response time 7.09h to 2.23h; weekend replies 10% to 29%; A/A+ essays 64% to 95%; students rated AI TA comparable on clarity/accuracy but lower on motivation and development",
+    "uncertainty": "Developer-authored; non-randomised cohort comparisons; essay result described as initial work; primary paper listed as forthcoming",
+    "funding": "Not stated in chapter",
+    "system": "JeepyTA (OpenAI GPT models, retrieval over course materials, optional staff approval)"
+   }
+  },
+  {
+   "id": "roy2024-eef",
+   "kind": "grey",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "doi": null,
+   "url": "https://www.nfer.ac.uk/publications/chatgpt-in-lesson-preparation-a-teacher-choices-trial/",
+   "short": "Roy et al. (2024), ChatGPT in lesson preparation (EEF/NFER)",
+   "citation": "Roy, P., H. Poet, R. Staunton, K. Aston and D. Thomas (2024), ChatGPT in Lesson Preparation: A Teacher Choices Trial. Evaluation report. Education Endowment Foundation / NFER, 12 December 2024.",
+   "study": {
+    "design": "School-randomised controlled trial",
+    "sample": "259 Year 7-8 science teachers, 68 schools",
+    "context": "Secondary schools, England",
+    "comparison": "Teachers asked not to use GenAI for these lessons",
+    "outcome": "Weekly planning time; blinded expert rating of resource quality",
+    "duration": "10 weeks, summer term 2024",
+    "result": "56.2 vs 81.5 minutes per week (about 31% less); no evidence of quality difference",
+    "uncertainty": "Read from NFER summary page, not full report; time self-reported; one subject and age group; short duration",
+    "funding": "Education Endowment Foundation and Hg Foundation",
+    "system": "ChatGPT plus an online guide"
+   }
+  },
+  {
+   "id": "baytas2025-ithaka",
+   "kind": "grey",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "doi": "10.18665/sr.322677",
+   "url": "https://sr.ithaka.org/publications/making-ai-generative-for-higher-education/",
+   "short": "Baytas & Ruediger (2025), Making AI Generative for Higher Education (Ithaka S+R)",
+   "citation": "Baytas, C. and D. Ruediger (2025), Making AI Generative for Higher Education, Ithaka S+R, 1 May 2025.",
+   "study": {
+    "design": "Qualitative interviews (grounded theory)",
+    "sample": "246 interviews at 19 US and Canadian universities; 45 coded in depth",
+    "context": "Higher education faculty, postdocs, graduate students",
+    "comparison": "None",
+    "outcome": "Reported uses, perceived benefits and concerns",
+    "duration": "Interviews March-May 2024",
+    "result": "Adopters report time savings for first drafts of materials; close supervision needed; few use AI to generate student feedback",
+    "uncertainty": "Self-report; no measurement of time or quality; only first part of long page read",
+    "funding": "Ithaka S+R with participating universities",
+    "system": "Various, mostly ChatGPT/GPT-4"
+   }
+  },
+  {
+   "id": "doughty2024",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1145/3636243.3636256",
+   "url": "https://doi.org/10.1145/3636243.3636256",
+   "short": "Doughty et al. (2024), GPT-4 vs human MCQs in programming",
+   "citation": "Doughty, J. et al. (2024), \"A Comparative Study of AI-Generated (GPT-4) and Human-crafted MCQs in Programming Education\", Proceedings of the 26th Australasian Computing Education Conference (ACE 2024), ACM.",
+   "study": {
+    "design": "Comparative evaluation of item quality by reviewers",
+    "sample": "651 GPT-4 and 449 human MCQs; 246 learning objectives; 6 Python courses",
+    "context": "Higher education, programming",
+    "comparison": "Human-crafted MCQs",
+    "outcome": "Clarity, single correct answer, distractor quality, alignment with objectives",
+    "duration": "n/a",
+    "result": "GPT-4 items mostly clear, one correct option, good distractors, well aligned",
+    "uncertainty": "Abstract only; no student response data; reviewer details not checked",
+    "funding": "Not checked",
+    "system": "GPT-4 pipeline"
+   }
+  },
+  {
+   "id": "laupichler2024",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1097/ACM.0000000000005626",
+   "url": "https://doi.org/10.1097/ACM.0000000000005626",
+   "short": "Laupichler et al. (2024), ChatGPT vs human exam questions in medicine",
+   "citation": "Laupichler, M.C., J.F. Rother, I.C. Grunwald Kadow, S. Ahmadi and T. Raupach (2024), \"Large Language Models in Medical Education: Comparing ChatGPT- to Human-Generated Exam Questions\", Academic Medicine 99(5): 508-512.",
+   "study": {
+    "design": "Within-test comparison of item statistics",
+    "sample": "161 medical students; 25 human and 21 LLM MCQs retained",
+    "context": "Higher education, medicine (neurophysiology), Germany",
+    "comparison": "Questions by an experienced medical educator",
+    "outcome": "Item difficulty, discrimination, source identification",
+    "duration": "One formative test, summer 2023",
+    "result": "Similar difficulty; discrimination higher for human items (0.36 vs 0.24); students identified source 57% of the time",
+    "uncertainty": "Abstract only; single course; ChatGPT-3.5",
+    "funding": "Not checked",
+    "system": "ChatGPT-3.5"
+   }
+  },
+  {
+   "id": "cheung2023",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1371/journal.pone.0290691",
+   "url": "https://doi.org/10.1371/journal.pone.0290691",
+   "short": "Cheung et al. (2023), ChatGPT vs human medical exam MCQs",
+   "citation": "Cheung, B.H.H. et al. (2023), \"ChatGPT versus human in generating medical graduate exam multiple choice questions: A multinational prospective study (Hong Kong S.A.R., Singapore, Ireland, and the United Kingdom)\", PLOS ONE 18(8): e0290691.",
+   "study": {
+    "design": "Blinded expert rating",
+    "sample": "50 ChatGPT and 50 professor-written MCQs; 5 international assessors",
+    "context": "Higher education, medicine",
+    "comparison": "MCQs by two university professors from the same textbooks",
+    "outcome": "Quality on five domains; time to write",
+    "duration": "n/a",
+    "result": "20 min vs 211 min; only relevance slightly lower for AI",
+    "uncertainty": "Abstract only; no student data",
+    "funding": "Not checked",
+    "system": "ChatGPT (2023)"
+   }
+  },
+  {
+   "id": "artsi2024",
+   "kind": "review",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1186/s12909-024-05239-y",
+   "url": "https://doi.org/10.1186/s12909-024-05239-y",
+   "short": "Artsi et al. (2024), LLMs for medical exam questions: systematic review",
+   "citation": "Artsi, Y., V. Sorin, E. Konen, B.S. Glicksberg, G. Nadkarni and E. Klang (2024), \"Large language models for generating medical examinations: systematic review\", BMC Medical Education 24: 354.",
+   "study": {
+    "design": "Systematic review (MEDLINE, QUADAS-2 adapted)",
+    "sample": "8 studies (April-October 2023)",
+    "context": "Medical education",
+    "comparison": "Varies",
+    "outcome": "Validity and quality of LLM-generated MCQs",
+    "duration": "Studies to November 2023",
+    "result": "Five studies found LLMs can produce valid questions; all studies reported some faulty questions",
+    "uncertainty": "Abstract only; small, early, one database; mostly ChatGPT-3.5",
+    "funding": "Not checked",
+    "system": "ChatGPT-3.5 and GPT-4"
+   }
+  },
+  {
+   "id": "bhandari2024",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1016/j.caeai.2024.100284",
+   "url": "https://doi.org/10.1016/j.caeai.2024.100284",
+   "short": "Bhandari et al. (2024), psychometric properties of ChatGPT questions",
+   "citation": "Bhandari, S., Y. Liu, Y. Kwak and Z.A. Pardos (2024), \"Evaluating the psychometric properties of ChatGPT-generated questions\", Computers and Education: Artificial Intelligence 7: 100284.",
+   "study": {
+    "design": "Item response theory comparison with linking",
+    "sample": "207 respondents; 15 ChatGPT and 15 OpenStax algebra items",
+    "context": "College algebra content (respondent population not verified)",
+    "comparison": "Open textbook items",
+    "outcome": "Difficulty, discrimination, response time, dimensionality",
+    "duration": "n/a",
+    "result": "No significant differences; ChatGPT items marginally better at discrimination",
+    "uncertainty": "Abstract only; small item set; single lesson",
+    "funding": "Not checked",
+    "system": "ChatGPT"
+   }
+  },
+  {
+   "id": "isley2026",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1609/aaai.v40i45.41205",
+   "url": "https://doi.org/10.1609/aaai.v40i45.41205",
+   "short": "Isley et al. (2026), AI-generated exams field study",
+   "citation": "Isley, C. et al. (2026), \"Assessing the Quality of AI-Generated Exams: A Large-Scale Field Study\", Proceedings of the AAAI Conference on Artificial Intelligence 40.",
+   "study": {
+    "design": "Field study with item response theory",
+    "sample": "91 classes, dozens of US colleges, about 1,700 students",
+    "context": "Higher education; CS, maths, chemistry and others",
+    "comparison": "Expert-created standardised-exam questions",
+    "outcome": "IRT item properties",
+    "duration": "Not checked",
+    "result": "AI-generated questions performed comparably",
+    "uncertainty": "Abstract only; specific IRT statistics not checked; purpose-built generation pipeline",
+    "funding": "Not checked",
+    "system": "LLM with iterative critique-and-revise loop"
+   }
+  },
+  {
+   "id": "kaliisa2025",
+   "kind": "review",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1080/01443410.2025.2553639",
+   "url": "https://doi.org/10.1080/01443410.2025.2553639",
+   "short": "Kaliisa et al. (2025), AI vs human feedback meta-analysis",
+   "citation": "Kaliisa, R., K. Misiejuk, S. López-Pernas and M. Saqr (2025), \"How does artificial intelligence compare to human feedback? A meta-analysis of performance, feedback perception, and learning dispositions\", Educational Psychology 46(1): 80-111.",
+   "study": {
+    "design": "Exploratory meta-analysis",
+    "sample": "41 studies, 4,813 students",
+    "context": "Mixed education levels; all forms of AI",
+    "comparison": "Human feedback",
+    "outcome": "Learning performance; feedback perception",
+    "duration": "n/a",
+    "result": "g = 0.25, 95% CI -0.11 to 0.60 (n.s.); perception g = -0.20 (n.s.)",
+    "uncertainty": "Abstract only; very high heterogeneity (I2 = 95% in language/writing subset); CIs include zero",
+    "funding": "Not checked",
+    "system": "Various AI, not only generative"
+   }
+  },
+  {
+   "id": "escalante2023",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1186/s41239-023-00425-2",
+   "url": "https://doi.org/10.1186/s41239-023-00425-2",
+   "short": "Escalante, Pack & Barrett (2023), AI-generated writing feedback",
+   "citation": "Escalante, J., A. Pack and A. Barrett (2023), \"AI-generated feedback on writing: insights into efficacy and ENL student preference\", International Journal of Educational Technology in Higher Education 20: 57.",
+   "study": {
+    "design": "Quasi-experimental repeated measures (Study 1); perception study (Study 2)",
+    "sample": "48 (Study 1) and 43 (Study 2) university English-as-a-new-language learners",
+    "context": "Higher education, English writing",
+    "comparison": "Human tutor feedback",
+    "outcome": "Writing performance; preference",
+    "duration": "6 weeks",
+    "result": "No difference in learning outcomes; preference split roughly evenly",
+    "uncertainty": "Abstract only; small samples; not randomised",
+    "funding": "Not checked",
+    "system": "ChatGPT (GPT-4)"
+   }
+  },
+  {
+   "id": "chevalier2024",
+   "kind": "preprint",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.2139/ssrn.5049998",
+   "url": "https://ideas.repec.org/p/iza/izadps/dp17511.html",
+   "short": "Chevalier, Orzech & Stankov (2024), Man vs Machine",
+   "citation": "Chevalier, A., J. Orzech and P. Stankov (2024), \"Man vs Machine: Can AI Grade and Give Feedback Like a Human?\", IZA Discussion Paper No. 17511.",
+   "study": {
+    "design": "Randomised controlled trial (feedback); grading comparison",
+    "sample": "Undergraduate students (n not verified)",
+    "context": "Higher education (institution not verified)",
+    "comparison": "Human instructor feedback and grades",
+    "outcome": "Subsequent grades; agreement of AI grades with human grades",
+    "duration": "Not verified",
+    "result": "ChatGPT-3.5 feedback led to lower later grades; no penalty with GPT-4; AI grades and ranks significantly different from human ones",
+    "uncertainty": "Working paper, abstract only; sample and setting not verified",
+    "funding": "Not checked",
+    "system": "ChatGPT-3.5 and GPT-4"
+   }
+  },
+  {
+   "id": "dai2024",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1016/j.caeai.2024.100299",
+   "url": "https://doi.org/10.1016/j.caeai.2024.100299",
+   "short": "Dai et al. (2024), LLM feedback generation evaluation",
+   "citation": "Dai, W., Y.-S. Tsai, J. Lin, A. Aldino, H. Jin, T. Li, D. Gašević and G. Chen (2024), \"Assessing the proficiency of large language models in automatic feedback generation: An evaluation study\", Computers and Education: Artificial Intelligence 7: 100299.",
+   "study": {
+    "design": "Comparative evaluation of feedback texts",
+    "sample": "Student writing in a data-science course (n not verified)",
+    "context": "Higher education",
+    "comparison": "Instructor feedback",
+    "outcome": "Readability, effective-feedback components, reliability",
+    "duration": "n/a",
+    "result": "GPT feedback more readable; GPT-4 more often included feed-up, feed-forward, process and self-regulation elements; GPT-4 more reliable than GPT-3.5",
+    "uncertainty": "Abstract only; no learning outcome",
+    "funding": "Not checked",
+    "system": "GPT-3.5 and GPT-4"
+   }
+  },
+  {
+   "id": "steiss2024",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1016/j.learninstruc.2024.101894",
+   "url": "https://doi.org/10.1016/j.learninstruc.2024.101894",
+   "short": "Steiss et al. (2024), human vs ChatGPT writing feedback",
+   "citation": "Steiss, J. et al. (2024), \"Comparing the quality of human and ChatGPT feedback of students' writing\", Learning and Instruction 91: 101894.",
+   "study": {
+    "design": "Comparative rating of feedback quality",
+    "sample": "200 secondary-school essays",
+    "context": "Secondary school (indirect for HE), US",
+    "comparison": "Trained human evaluators' feedback",
+    "outcome": "Five feedback-quality criteria",
+    "duration": "n/a",
+    "result": "Humans better on 4 of 5 criteria; practical differences judged small; no difference by language status",
+    "uncertainty": "Abstract only; school level",
+    "funding": "Not checked",
+    "system": "ChatGPT"
+   }
+  },
+  {
+   "id": "mah2025-feedback",
+   "kind": "preprint",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.26300/p397-2p46",
+   "url": "https://edworkingpapers.com/ai25-1193",
+   "short": "Mah et al. (2025), LLM vs teacher writing feedback",
+   "citation": "Mah, C., M. Tan, L. Phalen, A. Sparks and D. Demszky (2025), \"From Sentence-Corrections to Deeper Dialogue: Qualitative Insights from LLM and Teacher Feedback on Student Writing\", EdWorkingPaper 25-1193, Annenberg Institute at Brown University.",
+   "study": {
+    "design": "Qualitative comparison",
+    "sample": "12 expert teachers vs LLM feedback",
+    "context": "K-12 (indirect for HE)",
+    "comparison": "Expert teacher feedback",
+    "outcome": "Dialogic feedback dimensions",
+    "duration": "n/a",
+    "result": "LLM feedback mostly sentence-level and remedial; teachers multi-level and agentic",
+    "uncertainty": "Working paper, abstract only; qualitative",
+    "funding": "Not checked",
+    "system": "LLM (not checked)"
+   }
+  },
+  {
+   "id": "lu2026-feedbackwriter",
+   "kind": "preprint",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.48550/arXiv.2602.16820",
+   "url": "https://arxiv.org/abs/2602.16820",
+   "short": "Lu et al. (2026), FeedbackWriter RCT",
+   "citation": "Lu, X., K.P. Ju, M. Dudley, L. Sano and X. Wang (2026), \"AI-Mediated Feedback Improves Student Revisions: A Randomized Trial with FeedbackWriter in a Large Undergraduate Course\", arXiv:2602.16820.",
+   "study": {
+    "design": "Randomised controlled trial",
+    "sample": "354 students; 1,366 essays",
+    "context": "Higher education, introductory economics",
+    "comparison": "TA feedback without AI suggestions",
+    "outcome": "Quality of essay revisions",
+    "duration": "Not checked",
+    "result": "Significantly better revisions with AI-mediated feedback; dose-response with TA adoption",
+    "uncertainty": "Preprint, abstract only; effect size not reported in abstract; developer-led",
+    "funding": "Not checked",
+    "system": "FeedbackWriter (AI suggestions inside TA workflow)"
+   }
+  },
+  {
+   "id": "heinrich2025",
+   "kind": "peer-reviewed",
+   "read": "full",
+   "accessed": "2026-10-22",
+   "doi": "10.1371/journal.pone.0328041",
+   "url": "https://doi.org/10.1371/journal.pone.0328041",
+   "short": "Heinrich et al. (2025), AI-assisted grading RCTs in political science",
+   "citation": "Heinrich, T., S. Baily, K.W. Chen, J. DeOliveira, S. Park and N.C.H. Wang (2025), \"AI-assisted grading and personalized feedback in large political science classes: Results from randomized controlled trials\", PLOS ONE 20(8): e0328041.",
+   "study": {
+    "design": "Randomised assignment of answers to AI-assisted vs human grading",
+    "sample": "271 students, 26 tests, 3,080 short answers, 4 classes",
+    "context": "Higher education, political science, US (2023/24)",
+    "comparison": "Intensive human grading",
+    "outcome": "Grade discrimination, regrade requests, perceived feedback helpfulness",
+    "duration": "2023/2024 academic year",
+    "result": "Pooled discrimination difference -0.04 (n.s.), mixed by class; few regrade requests; human feedback rated slightly more helpful",
+    "uncertainty": "Single discipline and institution; some deviations from pre-analysis plan; no learning or time measures; read via summary of full text",
+    "funding": "No specific funding; no competing interests declared",
+    "system": "GPT-4 few-shot with about ten instructor-graded examples"
+   }
+  },
+  {
+   "id": "kortemeyer2024",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1103/PhysRevPhysEducRes.20.020144",
+   "url": "https://doi.org/10.1103/PhysRevPhysEducRes.20.020144",
+   "short": "Kortemeyer et al. (2024), AI grading of handwritten thermodynamics exam",
+   "citation": "Kortemeyer, G., J. Nöhl and D. Onishchuk (2024), \"Grading assistance for a handwritten thermodynamics exam using artificial intelligence: An exploratory study\", Physical Review Physics Education Research 20: 020144.",
+   "study": {
+    "design": "Exploratory comparison of four AI grading workflows",
+    "sample": "252 students, four multipart problems",
+    "context": "Higher education, physics (ETH Zurich affiliation of first author; exam institution not verified)",
+    "comparison": "Human grading",
+    "outcome": "Grading reliability",
+    "duration": "One exam",
+    "result": "Reliable at identifying passing exams; failing exams need human grading; diagrams and handwriting conversion weak",
+    "uncertainty": "Abstract only; exploratory",
+    "funding": "Not checked",
+    "system": "GPT-4 based workflows with handwriting conversion"
+   }
+  },
+  {
+   "id": "li2025-synthesis",
+   "kind": "preprint",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.48550/arXiv.2512.14561",
+   "url": "https://arxiv.org/abs/2512.14561",
+   "short": "Li et al. (2025), LLM-human agreement in essay scoring: synthesis",
+   "citation": "Li, H., C.H. Chen, K. Fan, C. Young-Johnson, S. Lim and Y. Feng (2025), \"Agreement Between Large Language Models and Human Raters in Essay Scoring: A Research Synthesis\", arXiv:2512.14561 (v2 May 2026).",
+   "study": {
+    "design": "Research synthesis following PRISMA 2020",
+    "sample": "65 published and unpublished studies",
+    "context": "Essay scoring, mixed levels",
+    "comparison": "Human raters",
+    "outcome": "Agreement indices",
+    "duration": "Studies Jan 2022-Aug 2025",
+    "result": "Agreement varied substantially across and within studies; highly context-dependent",
+    "uncertainty": "Preprint, abstract only",
+    "funding": "Not checked",
+    "system": "Various LLMs"
+   }
+  },
+  {
+   "id": "liu2024-cs50",
+   "kind": "peer-reviewed",
+   "read": "full",
+   "accessed": "2026-10-22",
+   "doi": "10.1145/3626252.3630938",
+   "url": "https://doi.org/10.1145/3626252.3630938",
+   "short": "Liu et al. (2024), Teaching CS50 with AI",
+   "citation": "Liu, R., C. Zenke, C. Liu, A. Holmes, P. Thornton and D.J. Malan (2024), \"Teaching CS50 with AI: Leveraging Generative Artificial Intelligence in Computer Science Education\", Proceedings of SIGCSE 2024, ACM.",
+   "study": {
+    "design": "Descriptive case study with surveys and staff accuracy review",
+    "sample": "About 70 summer students; about 500 on-campus students surveyed; 64 and 180 forum answers reviewed",
+    "context": "Higher education, introductory computer science, Harvard",
+    "comparison": "None (accuracy compared informally with baseline ChatGPT figures from literature)",
+    "outcome": "Usage, perceived helpfulness, answer accuracy",
+    "duration": "Summer and Fall 2023",
+    "result": "88% curricular and 77% administrative answers correct (summer); 70 of 180 answers endorsed (fall); 73% found tools helpful",
+    "uncertainty": "Developer-authored; no control group; self-report",
+    "funding": "Not checked",
+    "system": "CS50 Duck (GPT-4 with retrieval)"
+   }
+  },
+  {
+   "id": "weberwulff2023",
+   "kind": "peer-reviewed",
+   "read": "full",
+   "accessed": "2026-10-22",
+   "doi": "10.1007/s40979-023-00146-z",
+   "url": "https://doi.org/10.1007/s40979-023-00146-z",
+   "short": "Weber-Wulff et al. (2023), Testing of detection tools",
+   "citation": "Weber-Wulff, D. et al. (2023), \"Testing of detection tools for AI-generated text\", International Journal for Educational Integrity 19: 26.",
+   "study": {
+    "design": "Controlled test with original document set",
+    "sample": "14 tools (12 public, Turnitin, PlagiarismCheck); human, AI, translated and obfuscated documents",
+    "context": "Academic writing, European team",
+    "comparison": "Known authorship",
+    "outcome": "Accuracy and error types",
+    "duration": "Tests in spring 2023",
+    "result": "All tools below 80% accuracy; bias towards 'human'; obfuscation worsens performance",
+    "uncertainty": "Read via arXiv preprint version; tools and models change quickly",
+    "funding": "Not checked",
+    "system": "AI detectors (2023 versions)"
+   }
+  },
+  {
+   "id": "liang2023-detectors",
+   "kind": "peer-reviewed",
+   "read": "full",
+   "accessed": "2026-10-22",
+   "doi": "10.1016/j.patter.2023.100779",
+   "url": "https://doi.org/10.1016/j.patter.2023.100779",
+   "short": "Liang et al. (2023), GPT detectors are biased against non-native writers",
+   "citation": "Liang, W., M. Yuksekgonul, Y. Mao, E. Wu and J. Zou (2023), \"GPT detectors are biased against non-native English writers\", Patterns 4(7): 100779.",
+   "study": {
+    "design": "Controlled detector test",
+    "sample": "7 detectors; 91 human TOEFL essays; US 8th-grade essays",
+    "context": "Non-native vs native English writing",
+    "comparison": "Native-speaker essays",
+    "outcome": "False positive rate",
+    "duration": "2023",
+    "result": "Average false positive 61.22% on TOEFL essays; 19.78% flagged by all detectors; 97.8% by at least one; prompt-based word enrichment reduced false positives to 11.77%",
+    "uncertainty": "Read via arXiv preprint; small essay set from test-prep forum; detectors since updated",
+    "funding": "Not checked",
+    "system": "Seven public GPT detectors (2023)"
+   }
+  },
+  {
+   "id": "perkins2024",
+   "kind": "peer-reviewed",
+   "read": "full",
+   "accessed": "2026-10-22",
+   "doi": "10.1186/s41239-024-00487-w",
+   "url": "https://doi.org/10.1186/s41239-024-00487-w",
+   "short": "Perkins et al. (2024), Simple techniques to bypass GenAI detectors",
+   "citation": "Perkins, M., J. Roe, B.H. Vu, D. Postma, D. Hickerson, J. McGaughran and H.Q. Khuat (2024), \"Simple techniques to bypass GenAI text detectors: implications for inclusive education\", International Journal of Educational Technology in Higher Education 21: 53.",
+   "study": {
+    "design": "Controlled detector test with adversarial manipulations",
+    "sample": "6 detectors; 805 tests; 114 samples incl. 10 human controls",
+    "context": "Higher education",
+    "comparison": "Unmodified AI text and human-written controls",
+    "outcome": "Detection accuracy; false accusations",
+    "duration": "2024",
+    "result": "Mean accuracy 39.5% falling to 22.1% after manipulation; 67% accuracy on human controls",
+    "uncertainty": "Read via arXiv preprint; few human controls written by the researchers",
+    "funding": "Not checked",
+    "system": "Six commercial/free AI detectors"
+   }
+  },
+  {
+   "id": "elkhatat2023",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1007/s40979-023-00140-5",
+   "url": "https://doi.org/10.1007/s40979-023-00140-5",
+   "short": "Elkhatat et al. (2023), Efficacy of AI content detection tools",
+   "citation": "Elkhatat, A.M., K. Elsaid and S. Almeer (2023), \"Evaluating the efficacy of AI content detection tools in differentiating between human and AI-generated text\", International Journal for Educational Integrity 19: 17.",
+   "study": {
+    "design": "Controlled detector test",
+    "sample": "15 GPT-3.5 and 15 GPT-4 paragraphs; 5 human controls; 5 tools",
+    "context": "Engineering topic",
+    "comparison": "Human-written control responses",
+    "outcome": "Classification accuracy",
+    "duration": "2023",
+    "result": "Better on GPT-3.5 than GPT-4; inconsistent with human text, including false positives",
+    "uncertainty": "Abstract only; very small sample",
+    "funding": "Not checked",
+    "system": "OpenAI classifier, Writer, Copyleaks, GPTZero, CrossPlag"
+   }
+  },
+  {
+   "id": "sun2026-detectors",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1016/j.compedu.2026.105616",
+   "url": "https://doi.org/10.1016/j.compedu.2026.105616",
+   "short": "Sun, Liao & Ma (2026), Trusting AI to detect AI?",
+   "citation": "Sun, Y., Y. Liao and X. Ma (2026), \"Trusting AI to detect AI? A systematic evaluation of the reliability and robustness of current AIGC detection tools for student academic work\", Computers & Education 249: 105616.",
+   "study": {
+    "design": "Large-scale benchmark evaluation",
+    "sample": "Over 280,000 authentic coursework, thesis and code samples; 13 detectors",
+    "context": "Higher education (likely Chinese institutions; not verified)",
+    "comparison": "Known human vs AI content",
+    "outcome": "Accuracy by task, discipline; robustness to edits",
+    "duration": "Not checked",
+    "result": "Acceptable on long theses; systematic failures on short coursework and code; bias against STEM writing; 88% evasion with hybrid edits",
+    "uncertainty": "Abstract only; language and setting not verified",
+    "funding": "Not checked",
+    "system": "13 commercial and open-source detectors"
+   }
+  },
+  {
+   "id": "scarfe2024",
+   "kind": "peer-reviewed",
+   "read": "full",
+   "accessed": "2026-10-22",
+   "doi": "10.1371/journal.pone.0305354",
+   "url": "https://doi.org/10.1371/journal.pone.0305354",
+   "short": "Scarfe et al. (2024), Real-world 'Turing test' of a university exam system",
+   "citation": "Scarfe, P., K. Watcham, A. Clarke and E. Roesch (2024), \"A real-world test of artificial intelligence infiltration of a university examinations system: A 'Turing Test' case study\", PLOS ONE 19(6): e0305354.",
+   "study": {
+    "design": "Blind field test",
+    "sample": "AI submissions (about 5% per module) via 33 fake student accounts; 5 modules",
+    "context": "Higher education, BSc Psychology, University of Reading, UK",
+    "comparison": "Real student submissions",
+    "outcome": "Detection by markers; grades",
+    "duration": "One exam period",
+    "result": "94% undetected; AI submissions scored on average about half a grade boundary higher; 83.4% chance AI outperformed a random real student",
+    "uncertainty": "Take-home, unsupervised formats; one department; GPT-4 unmodified",
+    "funding": "Not checked",
+    "system": "GPT-4"
+   }
+  },
+  {
+   "id": "turnitin2023",
+   "kind": "grey",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "doi": null,
+   "url": "https://www.turnitin.co.uk/blog/ai-writing-detection-update-from-turnitins-chief-product-officer",
+   "short": "Turnitin (2023), AI writing detection update (vendor blog)",
+   "citation": "Chechitelli, A. (2023), \"AI writing detection update from Turnitin's Chief Product Officer\", Turnitin blog, 23 May 2023.",
+   "study": {
+    "design": "Vendor statement",
+    "sample": "Not specified on page",
+    "context": "Commercial detector",
+    "comparison": "n/a",
+    "outcome": "False positive rates",
+    "duration": "n/a",
+    "result": "Document-level false positives below 1% for documents with at least 20% AI writing; sentence-level about 4%; asterisk for scores below 20%",
+    "uncertainty": "Vendor-authored, not independently verified; 2023 figures",
+    "funding": "Turnitin (vendor)",
+    "system": "Turnitin AI writing detection"
+   }
+  },
+  {
+   "id": "demszky2023-codeinplace",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.3102/01623737231169270",
+   "url": "https://doi.org/10.3102/01623737231169270",
+   "short": "Demszky et al. (2023/2024), Automated feedback on uptake (Code in Place RCT)",
+   "citation": "Demszky, D., J. Liu, H.C. Hill, D. Jurafsky and C. Piech (2024), \"Can Automated Feedback Improve Teachers' Uptake of Student Ideas? Evidence From a Randomized Controlled Trial in a Large-Scale Online Course\", Educational Evaluation and Policy Analysis 46(3): 483-505 (online 2023).",
+   "study": {
+    "design": "Randomised controlled trial",
+    "sample": "1,136 instructors",
+    "context": "Free global online introductory programming course (Stanford Code in Place), volunteer section leaders",
+    "comparison": "No automated feedback",
+    "outcome": "Uptake of student contributions; student satisfaction; assignment completion",
+    "duration": "One course run",
+    "result": "Uptake +13%; suggestive improvements in satisfaction and completion",
+    "uncertainty": "Abstract only; NLP classifier, not generative AI; adult learners but not a degree course",
+    "funding": "Not checked",
+    "system": "M-Powering Teachers (NLP classifiers)"
+   }
+  },
+  {
+   "id": "demszky-liu2023-mpowering",
+   "kind": "preprint",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.26300/s8xh-zp45",
+   "url": "https://edworkingpapers.com/ai23-759",
+   "short": "Demszky & Liu (2023), M-Powering Teachers in 1:1 instruction",
+   "citation": "Demszky, D. and J. Liu (2023), \"M-Powering Teachers: Natural Language Processing Powered Feedback Improves 1:1 Instruction and Student Outcomes\", EdWorkingPaper 23-759, Annenberg Institute at Brown University.",
+   "study": {
+    "design": "Randomised controlled trial",
+    "sample": "414 mentors",
+    "context": "Polygence online research mentoring for high-school students",
+    "comparison": "No feedback",
+    "outcome": "Uptake, talk time, student experience",
+    "duration": "Not checked",
+    "result": "Uptake about +10%; mentor talk time about -5%; better student experience and optimism",
+    "uncertainty": "Working paper, abstract only; school-age students (indirect)",
+    "funding": "Not checked",
+    "system": "M-Powering Teachers (NLP)"
+   }
+  },
+  {
+   "id": "wang-demszky2023-coach",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.18653/v1/2023.bea-1.53",
+   "url": "https://doi.org/10.18653/v1/2023.bea-1.53",
+   "short": "Wang & Demszky (2023), Is ChatGPT a good teacher coach?",
+   "citation": "Wang, R. and D. Demszky (2023), \"Is ChatGPT a Good Teacher Coach? Measuring Zero-Shot Performance For Scoring and Providing Actionable Insights on Classroom Instruction\", Proceedings of the 18th Workshop on Innovative Use of NLP for Building Educational Applications (BEA 2023).",
+   "study": {
+    "design": "Expert evaluation of model outputs",
+    "sample": "Elementary maths classroom transcripts; expert maths teachers as raters",
+    "context": "Elementary school (indirect)",
+    "comparison": "Expert judgement",
+    "outcome": "Quality of scoring and suggestions",
+    "duration": "n/a",
+    "result": "Relevant but rarely novel; 82% of suggestions targeted moments where the teacher already did the suggested practice",
+    "uncertainty": "Abstract only; 2023 model, zero-shot",
+    "funding": "Not checked",
+    "system": "ChatGPT (2023)"
+   }
+  },
+  {
+   "id": "markel2023-gpteach",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1145/3573051.3593393",
+   "url": "https://doi.org/10.1145/3573051.3593393",
+   "short": "Markel et al. (2023), GPTeach",
+   "citation": "Markel, J.M., S.G. Opferman, J.A. Landay and C. Piech (2023), \"GPTeach: Interactive TA Training with GPT-based Students\", Proceedings of the Tenth ACM Conference on Learning @ Scale, pp. 226-236.",
+   "study": {
+    "design": "Think-aloud study and A/B test",
+    "sample": "Novice TAs (n not verified)",
+    "context": "TA training for an online programming course",
+    "comparison": "Baseline training tool",
+    "outcome": "Perceived value of practice",
+    "duration": "Short sessions",
+    "result": "Participants valued risk-free practice; later deployed to over 800 novice teachers",
+    "uncertainty": "Abstract only; small samples; perception outcomes",
+    "funding": "Not checked",
+    "system": "GPT-simulated students"
+   }
+  },
+  {
+   "id": "wang2025-tutorcopilot",
+   "kind": "preprint",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.26300/81nh-8262",
+   "url": "https://edworkingpapers.com/ai24-1054",
+   "short": "Wang et al. (2025), Tutor CoPilot",
+   "citation": "Wang, R.E., A.T. Ribeiro, C.D. Robinson, S. Loeb and D. Demszky (2025), \"Tutor CoPilot: A Human-AI Approach for Scaling Real-Time Expertise\", EdWorkingPaper 24-1056, Annenberg Institute at Brown University.",
+   "study": {
+    "design": "Randomised controlled trial",
+    "sample": "Over 700 tutors and 1,000 students (latest version; OECD reports 900 and 1,800)",
+    "context": "Online K-12 maths tutoring for under-served students, US (indirect)",
+    "comparison": "Tutors without Tutor CoPilot",
+    "outcome": "Topic mastery (exit tickets); tutor strategies",
+    "duration": "Not checked",
+    "result": "+4 pp mastery; +9 pp for lower-rated tutors; more probing questions, less generic praise; about $20 per tutor per year",
+    "uncertainty": "Working paper, abstract plus OECD figure; school level; sample size differs between versions",
+    "funding": "Not checked",
+    "system": "GPT-4 with expert-informed decision-making model"
+   }
+  },
+  {
+   "id": "kestin2025",
+   "kind": "peer-reviewed",
+   "read": "full",
+   "accessed": "2026-10-22",
+   "doi": "10.1038/s41598-025-97652-6",
+   "url": "https://doi.org/10.1038/s41598-025-97652-6",
+   "short": "Kestin et al. (2025), AI tutoring outperforms in-class active learning",
+   "citation": "Kestin, G., K. Miller, A. Klales, T. Milbourne and G. Ponti (2025), \"AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting\", Scientific Reports 15: 17458.",
+   "study": {
+    "design": "Randomised crossover controlled trial",
+    "sample": "194 students",
+    "context": "Higher education, introductory physics for life sciences (PS2), Harvard, Fall 2023",
+    "comparison": "In-class active learning lesson with identical content",
+    "outcome": "Pre/post learning gains; time on task; engagement and motivation",
+    "duration": "Two lessons in consecutive weeks",
+    "result": "Larger gains with AI tutor (effect size 0.73-1.3 SD); median 49 minutes on task vs 60 in class; higher reported engagement",
+    "uncertainty": "Short exposure; immediate post-test; single course; heavy instructor preparation of prompts and solutions; authors are course instructors",
+    "funding": "Not stated in text read; no competing interests declared",
+    "system": "Custom GPT-4 tutor with instructor-written system prompts and step-by-step solutions"
+   }
+  },
+  {
+   "id": "bastani2025",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1073/pnas.2422633122",
+   "url": "https://doi.org/10.1073/pnas.2422633122",
+   "short": "Bastani et al. (2025), GenAI without guardrails can harm learning",
+   "citation": "Bastani, H., O. Bastani, A. Sungu, H. Ge, Ö. Kabakcı and R. Mariman (2025), \"Generative AI without guardrails can harm learning: Evidence from high school mathematics\", PNAS 122(26): e2422633122.",
+   "study": {
+    "design": "Field experiment",
+    "sample": "Nearly 1,000 high-school students",
+    "context": "High-school mathematics (indirect for HE)",
+    "comparison": "No AI access; GPT Base vs GPT Tutor",
+    "outcome": "Assisted practice performance; unaided exam performance",
+    "duration": "Not checked",
+    "result": "Practice +48% (Base) and +127% (Tutor); later unaided exam -17% for GPT Base; harm largely mitigated with GPT Tutor",
+    "uncertainty": "Abstract only; school level",
+    "funding": "Not checked",
+    "system": "GPT-4 (standard interface vs safeguarded tutor prompts)"
+   }
+  },
+  {
+   "id": "myers2026-cases",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1287/ited.2025.0177",
+   "url": "https://doi.org/10.1287/ited.2025.0177",
+   "short": "Myers, Ramachandran & Varadarajan (2026), AI-supported case discussions",
+   "citation": "Myers, R.W., K. Ramachandran and B. Varadarajan (2026), \"Artificial Intelligence-Supported Case Discussions: Harnessing Artificial Intelligence for Critical Engagement\", INFORMS Transactions on Education (online October 2026).",
+   "study": {
+    "design": "Within-subject field experiment (paired t-test)",
+    "sample": "38 students",
+    "context": "Higher education, operations management, case method",
+    "comparison": "Same type of case task without AI-supported preparation",
+    "outcome": "Case quiz score (10 points)",
+    "duration": "Not checked",
+    "result": "Almost +1 point (t(37) = 4.50, p < 0.001); lower variability with AI",
+    "uncertainty": "Abstract only; small, non-randomised order not verified; partnership with an AI upskilling platform (possible conflict of interest)",
+    "funding": "Partnership with AI platform (details not checked)",
+    "system": "AI-based 'quest' preparation platform"
+   }
+  }
+ ]
+}

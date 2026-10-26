@@ -1,0 +1,2556 @@
+{
+ "tasks": [
+  {
+   "id": "d-outcomes",
+   "role": "design",
+   "title": {
+    "en": "Define learning outcomes and align the curriculum",
+    "it": "Definire i risultati di apprendimento e allineare il curriculum"
+   },
+   "question": {
+    "en": "Can AI draft learning outcomes and map courses to programme outcomes or skills frameworks as well as experts do?",
+    "it": "L'AI sa scrivere risultati di apprendimento e collegare i corsi agli obiettivi del corso di laurea o a un quadro di competenze, come farebbe un esperto?"
+   },
+   "description": {
+    "en": "Drafting course learning outcomes, checking that they match programme outcomes (constructive alignment), and mapping courses or materials to skills frameworks or new taxonomies.",
+    "it": "Scrivere i risultati di apprendimento di un insegnamento, verificare che siano coerenti con quelli del corso di studio (allineamento costruttivo) e collegare corsi o materiali a un quadro di competenze o a una nuova classificazione."
+   },
+   "oecd": "Ch. 11, pp. 204-205 (tagging and curriculum alignment; Li et al. 2024; Ren et al. 2024) and p. 209 (Sridhar et al. 2023); Ch. 1, p. 29",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "A few small studies show LLMs can draft well-formed learning outcomes and give skill mappings that often agree with experts. Agreement varies a lot by skill, and when people work with AI suggestions they go faster but can become less accurate. Use AI for a first draft and a gap check; experts must decide.",
+    "it": "Pochi studi, piccoli, mostrano che un modello linguistico sa scrivere risultati di apprendimento ben formulati e proporre mappature delle competenze spesso vicine a quelle degli esperti. L'accordo però cambia molto da competenza a competenza. E chi lavora con i suggerimenti dell'AI va più veloce ma può sbagliare di più. Usatela per una prima bozza e per cercare lacune: la decisione resta agli esperti."
+   },
+   "outcomesMeasured": [
+    "assisted-performance",
+    "time"
+   ],
+   "findings": [
+    {
+     "source": "doyle-2025-lo",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "Two evaluators judged LLM-generated learning outcomes for computing courses comparable to instructor-written ones on measurability, relevance and alignment with course goals; they were sometimes less specific or achievable, and often better ordered.",
+      "it": "Due valutatori hanno giudicato i risultati di apprendimento scritti da un LLM per corsi di informatica simili a quelli dei docenti: misurabili, pertinenti, coerenti con gli obiettivi. A volte erano meno specifici o poco realistici; spesso erano ordinati meglio."
+     },
+     "relevance": {
+      "en": "Direct HE evidence, but only computing courses and two raters.",
+      "it": "Evidenza diretta in ambito universitario, ma solo per corsi di informatica e con due valutatori."
+     }
+    },
+    {
+     "source": "zamecnik-2024-skills",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "Across 26 courses of a teacher-education programme, LLM judgements of which employable skills each course develops were broadly comparable to expert reviewers, but kappa agreement varied widely between skills.",
+      "it": "Su 26 insegnamenti di un corso di formazione degli insegnanti, il giudizio dell'LLM su quali competenze professionali sviluppa ogni insegnamento era in generale simile a quello degli esperti. L'accordo (kappa) però variava molto da una competenza all'altra."
+     },
+     "relevance": {
+      "en": "Closest study to curriculum mapping for quality assurance in HE.",
+      "it": "È lo studio più vicino alla mappatura del curriculum a fini di qualità in università."
+     }
+    },
+    {
+     "source": "ren-2024-tagging",
+     "outcome": "time",
+     "finding": {
+      "en": "In a small experiment (N=22) on tagging content to a skills taxonomy, AI suggestions cut time by about half, but accuracy dropped by 35% (not statistically significant); humans alone were most accurate, AI alone least.",
+      "it": "In un piccolo esperimento (22 persone) sul collegare contenuti a una classificazione di competenze, i suggerimenti dell'AI hanno dimezzato i tempi, ma l'accuratezza è scesa del 35% (differenza non significativa). Le persone da sole erano le più accurate, l'AI da sola la meno accurata."
+     },
+     "relevance": {
+      "en": "Warns that speed gains can hide quality losses. School-level taxonomy; preprint.",
+      "it": "Avverte che il tempo risparmiato può nascondere errori. Classificazione scolastica; preprint."
+     }
+    },
+    {
+     "source": "li-2024-oer",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "Embedding-based models re-tagged open educational resources to a new taxonomy at non-expert level with ~100 labelled examples and near-expert level with ~5,000; full automation was not viable.",
+      "it": "Modelli basati su embedding hanno ricollegato risorse educative aperte a una nuova classificazione con un'accuratezza da non esperto usando circa 100 esempi etichettati, e quasi da esperto con circa 5.000. L'automazione completa non era praticabile."
+     },
+     "relevance": {
+      "en": "Useful when a framework changes; evidence is from school standards (indirect).",
+      "it": "Utile quando cambia un quadro di riferimento; evidenza da standard scolastici (indiretta)."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Faster first drafts of learning outcomes that follow good-practice wording (action verbs, measurable).",
+      "it": "Prime bozze più rapide di risultati di apprendimento scritti secondo le buone pratiche (verbi d'azione, misurabili)."
+     },
+     "sources": [
+      "doyle-2025-lo",
+      "sridhar-2023-lo"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Rapid screening of many courses against a skills framework, to spot gaps or overlaps for experts to check.",
+      "it": "Controllo rapido di molti insegnamenti rispetto a un quadro di competenze, per trovare lacune o sovrapposizioni che poi verificano gli esperti."
+     },
+     "sources": [
+      "zamecnik-2024-skills",
+      "li-2024-oer"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Useful for cross-institution recognition (mobility, prior learning) when combined with expert review.",
+      "it": "Può aiutare il riconoscimento tra atenei (mobilità, apprendimenti pregressi) se affiancato dalla revisione di esperti."
+     },
+     "sources": [
+      "oecd-deo-2026",
+      "xu-2023-aversion"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Working with AI suggestions can lower accuracy while saving time (anchoring on the suggestion).",
+      "it": "Lavorare con i suggerimenti dell'AI può ridurre l'accuratezza anche se fa risparmiare tempo (ci si appoggia al suggerimento)."
+     },
+     "sources": [
+      "ren-2024-tagging"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Agreement with experts is uneven across skills; a good average can hide poor mapping of some outcomes.",
+      "it": "L'accordo con gli esperti non è uniforme: una buona media può nascondere mappature sbagliate per alcune competenze."
+     },
+     "sources": [
+      "zamecnik-2024-skills"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Generic, well-formed outcomes can look aligned on paper without reflecting what is actually taught or assessed.",
+      "it": "Risultati ben scritti ma generici possono sembrare allineati sulla carta senza corrispondere a ciò che si insegna e si valuta davvero."
+     },
+     "sources": [
+      "doyle-2025-lo"
+     ]
+    },
+    {
+     "kind": "vendor",
+     "text": {
+      "en": "Curriculum-mapping products may report accuracy on their own data only; ask for agreement figures per outcome on your programmes.",
+      "it": "I prodotti di mappatura del curriculum possono dichiarare un'accuratezza misurata solo sui propri dati: chiedete i dati di accordo per singolo obiettivo, sui vostri corsi."
+     },
+     "sources": [
+      "zamecnik-2024-skills"
+     ]
+    }
+   ],
+   "conditions": [
+    {
+     "en": "Give the model the actual syllabus, assessments and the reference framework, not just course titles.",
+     "it": "Date al modello il programma reale, le prove d'esame e il quadro di riferimento, non solo i titoli dei corsi."
+    },
+    {
+     "en": "Experts review every mapping; measure agreement on a sample before scaling.",
+     "it": "Gli esperti rivedono ogni mappatura; misurate l'accordo su un campione prima di estendere l'uso."
+    },
+    {
+     "en": "Keep the human decision explicit when results affect credit recognition.",
+     "it": "La decisione resta esplicitamente umana quando incide sul riconoscimento di crediti."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Ask the AI for alternatives and for the evidence behind each mapping (which syllabus passage), then decide.",
+     "it": "Chiedete all'AI alternative e la prova di ogni collegamento (quale passaggio del programma), poi decidete voi."
+    },
+    {
+     "en": "Have two people code a sample without seeing AI output, to check where the tool drifts.",
+     "it": "Fate codificare un campione a due persone senza vedere l'output dell'AI, per capire dove lo strumento sbaglia."
+    },
+    {
+     "en": "Hide low-confidence suggestions instead of mixing them with good ones.",
+     "it": "Nascondete i suggerimenti a bassa confidenza invece di mescolarli a quelli buoni."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Curriculum mapping workshop",
+      "it": "Laboratorio di mappatura del curriculum"
+     },
+     "text": {
+      "en": "A structured matrix exercise with the teaching team (outcomes x courses x assessments) remains the reference method the AI is compared against.",
+      "it": "Una matrice costruita con il gruppo docente (obiettivi x insegnamenti x prove) resta il metodo di riferimento con cui si confronta l'AI."
+     },
+     "sources": [
+      "zamecnik-2024-skills",
+      "doyle-2025-lo"
+     ]
+    }
+   ],
+   "toolTypes": [
+    "general-assistant",
+    "analytics",
+    "local-open-weights"
+   ],
+   "gaps": [
+    {
+     "en": "No study shows that AI-assisted alignment improves student learning or programme quality.",
+     "it": "Nessuno studio mostra che l'allineamento assistito dall'AI migliori l'apprendimento o la qualità del corso di studio."
+    },
+    {
+     "en": "Almost no evidence outside English-language computing and teacher-education programmes, and none for Italian programmes.",
+     "it": "Quasi nessuna evidenza fuori da corsi in inglese di informatica e di formazione insegnanti; nessuna per corsi italiani."
+    },
+    {
+     "en": "Studies are mostly by tool developers; independent replications are missing.",
+     "it": "Gli studi sono soprattutto di chi sviluppa gli strumenti; mancano repliche indipendenti."
+    }
+   ]
+  },
+  {
+   "id": "d-course-design",
+   "role": "design",
+   "title": {
+    "en": "Design or redesign a course",
+    "it": "Progettare o riprogettare un insegnamento"
+   },
+   "question": {
+    "en": "Does using generative AI to design a course save time without lowering quality?",
+    "it": "Usare l'AI generativa per progettare un insegnamento fa risparmiare tempo senza abbassare la qualità?"
+   },
+   "description": {
+    "en": "Using AI to draft course structure, sequence of activities, assessments and materials (e.g. backward design), alone or with a teaching team.",
+    "it": "Usare l'AI per abbozzare la struttura di un insegnamento, la sequenza delle attività, le prove e i materiali (ad es. con la progettazione a ritroso), da soli o con il gruppo docente."
+   },
+   "oecd": "Ch. 1, pp. 27-28 (Roy et al. 2024 RCT; Cukurova framework on teacher agency); Ch. 2, pp. 42-43 (lesson-planning evidence); Ch. 11, pp. 209, 211 (PromptHive)",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "In higher education there are only design case studies: they report time savings but no measured quality or student outcomes. The one rigorous trial (secondary-school teachers in England) found about 31% less planning time with no visible loss of quality. Treat AI as a drafting partner; expert judgement drives the design.",
+    "it": "In università ci sono solo casi di studio: raccontano un risparmio di tempo ma non misurano la qualità né i risultati degli studenti. L'unico studio rigoroso (insegnanti di scuola secondaria in Inghilterra) ha trovato circa il 31% di tempo in meno per la preparazione, senza perdita visibile di qualità. Usate l'AI come aiuto per le bozze: il progetto lo guida il giudizio esperto."
+   },
+   "outcomesMeasured": [
+    "time",
+    "assisted-performance"
+   ],
+   "findings": [
+    {
+     "source": "eef-2024-chatgpt-planning",
+     "outcome": "time",
+     "finding": {
+      "en": "In an RCT with 259 secondary science teachers, those using ChatGPT with a guide spent 56 vs 81 minutes a week on planning (-31%); blinded experts saw no quality difference.",
+      "it": "In uno studio randomizzato con 259 insegnanti di scienze della secondaria, chi usava ChatGPT con una guida dedicava alla preparazione 56 minuti a settimana invece di 81 (-31%). Esperti che non sapevano chi aveva usato l'AI non hanno visto differenze di qualità."
+     },
+     "relevance": {
+      "en": "Indirect: school level, one subject, ChatGPT 3.5.",
+      "it": "Indiretta: livello scolastico, una sola materia, ChatGPT 3.5."
+     }
+    },
+    {
+     "source": "conklin-2024-course",
+     "outcome": "time",
+     "finding": {
+      "en": "Three designers built a 14-week Master's course with ChatGPT 3.5 in much less time, but needed precise prompts, constant checking and expert refinement.",
+      "it": "Tre progettisti hanno costruito con ChatGPT 3.5 un corso magistrale di 14 settimane in molto meno tempo, ma servivano istruzioni precise, verifiche continue e la revisione di esperti."
+     },
+     "relevance": {
+      "en": "Direct HE case, self-reported, no comparison.",
+      "it": "Caso diretto in università, autodichiarato, senza confronto."
+     }
+    },
+    {
+     "source": "tupper-2024-fieldcourse",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "Designing two field courses with ChatGPT saved effort, but the authors concluded human expertise remained indispensable.",
+      "it": "Progettare due corsi sul campo con ChatGPT ha ridotto il lavoro, ma gli autori concludono che la competenza umana resta indispensabile."
+     },
+     "relevance": {
+      "en": "Direct HE case study, no systematic quality measure.",
+      "it": "Caso di studio universitario, senza misure sistematiche di qualità."
+     }
+    },
+    {
+     "source": "reza-2025-prompthive",
+     "outcome": "learning",
+     "finding": {
+      "en": "When subject experts steered the prompts, AI-generated maths hints produced learning gains similar to human-written hints and cut authoring time from months to hours.",
+      "it": "Quando erano gli esperti della materia a guidare le istruzioni, gli aiuti di matematica generati dall'AI hanno prodotto apprendimenti simili a quelli scritti da persone, riducendo i tempi di scrittura da mesi a ore."
+     },
+     "relevance": {
+      "en": "Shows that expert-in-the-loop design can keep quality; maths content only.",
+      "it": "Mostra che con l'esperto dentro il processo la qualità può restare; solo contenuti di matematica."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Less time on drafting structure and materials, when staff get guidance on how to use the tool.",
+      "it": "Meno tempo per abbozzare struttura e materiali, se il personale riceve indicazioni su come usare lo strumento."
+     },
+     "sources": [
+      "eef-2024-chatgpt-planning",
+      "conklin-2024-course"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Expert-controlled prompting workflows can keep quality close to human-authored content.",
+      "it": "Flussi di lavoro in cui l'esperto controlla le istruzioni possono mantenere una qualità vicina ai contenuti scritti da persone."
+     },
+     "sources": [
+      "reza-2025-prompthive"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Outputs need constant validation; time saved on drafting can be spent on checking and repair.",
+      "it": "I risultati vanno verificati di continuo: il tempo risparmiato nelle bozze può finire nei controlli e nelle correzioni."
+     },
+     "sources": [
+      "conklin-2024-course",
+      "oecd-deo-2026"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Offloading design may erode staff design expertise and lead to generic, homogeneous courses.",
+      "it": "Delegare la progettazione può impoverire la competenza progettuale del personale e portare a corsi generici, tutti uguali."
+     },
+     "sources": [
+      "oecd-deo-2026"
+     ]
+    },
+    {
+     "kind": "vendor",
+     "text": {
+      "en": "Course-builder tools promise 'course in minutes'; no independent HE study measures quality or learning from such tools.",
+      "it": "Gli strumenti che promettono un 'corso in pochi minuti' non hanno studi indipendenti in università che ne misurino qualità o apprendimento."
+     },
+     "sources": [
+      "tupper-2024-fieldcourse",
+      "conklin-2024-course"
+     ]
+    }
+   ],
+   "conditions": [
+    {
+     "en": "Start from your own outcomes, assessment policy and student profile; give them to the AI.",
+     "it": "Partite dai vostri obiettivi, dalle regole di valutazione e dal profilo degli studenti, e forniteli all'AI."
+    },
+    {
+     "en": "Plan time for expert review of every element, especially facts, readings and references.",
+     "it": "Prevedete tempo per la revisione esperta di ogni parte, soprattutto fatti, letture e riferimenti bibliografici."
+    },
+    {
+     "en": "Give staff short, practical guidance; the time saving in the RCT came with a guide.",
+     "it": "Date al personale indicazioni brevi e pratiche: nello studio randomizzato il risparmio di tempo era legato a una guida."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Use AI to generate alternatives (activities, case ideas), not the final design.",
+     "it": "Usate l'AI per generare alternative (attività, idee di casi), non il progetto finale."
+    },
+    {
+     "en": "Keep a log of what was AI-drafted and what was changed, for transparency in programme review.",
+     "it": "Tenete traccia di cosa è stato abbozzato dall'AI e di cosa è stato cambiato, per trasparenza nel riesame del corso."
+    },
+    {
+     "en": "Pilot the redesigned course and collect student data before scaling.",
+     "it": "Sperimentate il corso riprogettato e raccogliete dati sugli studenti prima di estenderlo."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Design sprint with peers and templates",
+      "it": "Progettazione in gruppo con modelli condivisi"
+     },
+     "text": {
+      "en": "Backward-design templates and peer review in a teaching and learning centre are the established way to design courses; AI adds speed, not proven quality.",
+      "it": "Modelli di progettazione a ritroso e revisione tra colleghi in un centro per la didattica sono il metodo consolidato; l'AI aggiunge velocità, non una qualità dimostrata."
+     },
+     "sources": [
+      "tupper-2024-fieldcourse"
+     ]
+    }
+   ],
+   "toolTypes": [
+    "general-assistant",
+    "presentation-generator",
+    "lms-integrated"
+   ],
+   "gaps": [
+    {
+     "en": "No controlled HE study compares AI-assisted and conventional course design on student learning.",
+     "it": "Nessuno studio controllato in università confronta progettazione assistita dall'AI e tradizionale sull'apprendimento degli studenti."
+    },
+    {
+     "en": "No study measures hidden checking time in HE design teams.",
+     "it": "Nessuno studio misura il tempo 'nascosto' di verifica nei gruppi di progettazione universitari."
+    }
+   ]
+  },
+  {
+   "id": "d-evaluations",
+   "role": "design",
+   "title": {
+    "en": "Analyse student course-evaluation comments",
+    "it": "Analizzare i commenti aperti dei questionari di valutazione della didattica"
+   },
+   "question": {
+    "en": "Can an LLM summarise and code open-ended evaluation comments as reliably as people, and without amplifying bias?",
+    "it": "Un modello linguistico sa riassumere e classificare i commenti aperti degli studenti in modo affidabile come le persone, e senza amplificare i pregiudizi?"
+   },
+   "description": {
+    "en": "Using AI to find themes, sentiment and actionable suggestions in free-text answers of student course evaluations, for teachers, programme committees or quality offices.",
+    "it": "Usare l'AI per trovare temi, tono e suggerimenti utili nelle risposte libere dei questionari studenti, per docenti, commissioni paritetiche o uffici qualità."
+   },
+   "oecd": null,
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "Small studies show LLMs can find most of the themes an instructor finds, in less time, and some models match human sentiment ratings closely. Agreement is lowest on criticism, which is what matters most, and models differ a lot. Comments themselves carry known gender bias. Use AI to sort and summarise; read the comments yourself before decisions.",
+    "it": "Studi piccoli mostrano che un modello linguistico trova gran parte dei temi individuati dal docente, in meno tempo, e che alcuni modelli giudicano il tono dei commenti quasi come le persone. L'accordo è più basso proprio sulle critiche, cioè la parte più utile, e i modelli sono molto diversi tra loro. Inoltre i commenti stessi contengono pregiudizi di genere noti. Usate l'AI per ordinare e riassumere; leggete voi i commenti prima di decidere."
+   },
+   "outcomesMeasured": [
+    "assisted-performance",
+    "time",
+    "equity"
+   ],
+   "findings": [
+    {
+     "source": "fuller-2024-evaluations",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "On 470 comments from four pharmacy courses, ChatGPT themes matched instructor themes 71-82% for course topics but only 53-81% for course weaknesses; it took ~10-13 minutes vs ~28 for instructors.",
+      "it": "Su 470 commenti di quattro corsi di farmacia, i temi trovati da ChatGPT coincidevano con quelli dei docenti nel 71-82% dei casi sugli argomenti del corso, ma solo nel 53-81% sui punti deboli. Ci ha messo circa 10-13 minuti contro circa 28 dei docenti."
+     },
+     "relevance": {
+      "en": "Direct HE evidence; tiny sample, percent agreement only.",
+      "it": "Evidenza diretta in università; campione minimo, solo percentuale di accordo."
+     }
+    },
+    {
+     "source": "lacy-2026-sentiment",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "On 1,000 course-evaluation comments, some models approached human inter-rater reliability for sentiment with little tuning; others never became reliable. Model choice matters.",
+      "it": "Su 1.000 commenti, alcuni modelli si avvicinavano all'accordo tra valutatori umani nel giudicare il tono, con poco addestramento; altri non diventavano mai affidabili. La scelta del modello conta."
+     },
+     "relevance": {
+      "en": "Direct HE evidence on sentiment, not on themes.",
+      "it": "Evidenza diretta in università sul tono dei commenti, non sui temi."
+     }
+    },
+    {
+     "source": "zhang-2024-sefi",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "An open-source LLM produced summaries and action lists for 75 computer-science courses (742 responses); authors call it promising but report no human accuracy check in the abstract.",
+      "it": "Un modello open source ha prodotto riassunti e liste di azioni per 75 corsi di informatica (742 risposte). Gli autori lo giudicano promettente, ma nell'abstract non c'è una verifica umana dell'accuratezza."
+     },
+     "relevance": {
+      "en": "Shows feasibility with local open models; preprint.",
+      "it": "Mostra che si può fare con modelli aperti in locale; preprint."
+     }
+    },
+    {
+     "source": "mitchell-2018-gender",
+     "outcome": "equity",
+     "finding": {
+      "en": "Students used significantly different language for a male and a female instructor teaching an identical online course; the man also got higher ratings.",
+      "it": "Gli studenti usavano parole molto diverse per un docente uomo e una docente donna con lo stesso identico corso online; l'uomo riceveva anche voti più alti."
+     },
+     "relevance": {
+      "en": "Any AI summary inherits this bias unless it is checked.",
+      "it": "Ogni riassunto fatto dall'AI eredita questo pregiudizio se non viene controllato."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Faster first pass through large volumes of comments that today often go unread.",
+      "it": "Una prima lettura più rapida di grandi quantità di commenti che oggi spesso nessuno legge."
+     },
+     "sources": [
+      "fuller-2024-evaluations",
+      "lacy-2026-sentiment"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Open, locally run models can produce summaries without sending comments to external services.",
+      "it": "Modelli aperti eseguiti in locale possono fare i riassunti senza inviare i commenti a servizi esterni."
+     },
+     "sources": [
+      "zhang-2024-sefi"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Lowest agreement on course weaknesses: the AI may soften or miss the criticism that drives improvement.",
+      "it": "L'accordo più basso è sui punti deboli: l'AI può attenuare o perdere proprio le critiche che servono a migliorare."
+     },
+     "sources": [
+      "fuller-2024-evaluations"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Models are not interchangeable; some never reach reliable sentiment coding.",
+      "it": "I modelli non sono intercambiabili: alcuni non arrivano mai a classificare il tono in modo affidabile."
+     },
+     "sources": [
+      "lacy-2026-sentiment"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Comments contain gender and other biases; summaries can reproduce them in a neutral-looking form.",
+      "it": "I commenti contengono pregiudizi di genere e non solo: i riassunti possono riprodurli con un'apparenza neutrale."
+     },
+     "sources": [
+      "mitchell-2018-gender",
+      "kreitzer-2022-set-review"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "If AI summaries feed decisions on staff (promotion, contracts), EU AI Act Annex III point 4 on evaluating workers' performance may apply, and comments are personal data under GDPR. Check with your legal office.",
+      "it": "Se i riassunti dell'AI pesano su decisioni sul personale (carriera, contratti), potrebbe applicarsi l'AI Act UE, Allegato III punto 4, sulla valutazione dei lavoratori; e i commenti sono dati personali ai sensi del GDPR. Verificate con l'ufficio legale."
+     },
+     "sources": [
+      "eu-ai-act-2024"
+     ]
+    }
+   ],
+   "conditions": [
+    {
+     "en": "Remove names and identifying details before analysis; prefer institutional or local models.",
+     "it": "Togliete nomi e dettagli identificativi prima dell'analisi; preferite modelli istituzionali o locali."
+    },
+    {
+     "en": "Check agreement on a sample coded by people, separately for praise and criticism.",
+     "it": "Verificate l'accordo su un campione codificato da persone, separatamente per elogi e critiche."
+    },
+    {
+     "en": "Do not use AI summaries alone for decisions about individual staff.",
+     "it": "Non usate i soli riassunti dell'AI per decisioni su singoli docenti."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Ask the model to quote the comments behind each theme, and count them.",
+     "it": "Chiedete al modello di citare i commenti alla base di ogni tema, e di contarli."
+    },
+    {
+     "en": "Screen for abusive or discriminatory comments before they reach the teacher.",
+     "it": "Filtrate i commenti offensivi o discriminatori prima che arrivino al docente."
+    },
+    {
+     "en": "Report themes with their share of comments, not as conclusions.",
+     "it": "Riportate i temi con la quota di commenti che li sostiene, non come conclusioni."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Simple codebook and two readers",
+      "it": "Un codice di categorie e due lettori"
+     },
+     "text": {
+      "en": "A short shared codebook and two people coding a sample remain the benchmark; AI is only trustworthy once compared with it.",
+      "it": "Un breve elenco di categorie condiviso e due persone che codificano un campione restano il riferimento: l'AI è affidabile solo dopo il confronto con questo metodo."
+     },
+     "sources": [
+      "fuller-2024-evaluations",
+      "lacy-2026-sentiment"
+     ]
+    }
+   ],
+   "toolTypes": [
+    "general-assistant",
+    "analytics",
+    "local-open-weights"
+   ],
+   "gaps": [
+    {
+     "en": "No study tests whether LLM summaries of evaluation comments amplify or reduce gender or other bias.",
+     "it": "Nessuno studio verifica se i riassunti dell'AI dei commenti amplifichino o riducano i pregiudizi di genere o di altro tipo."
+    },
+    {
+     "en": "No study in Italian or for Italian evaluation questionnaires (e.g. ANVUR-based surveys).",
+     "it": "Nessuno studio in italiano o sui questionari usati negli atenei italiani (ad es. quelli secondo le indicazioni ANVUR)."
+    },
+    {
+     "en": "No evidence that AI-analysed feedback leads to better teaching changes.",
+     "it": "Nessuna evidenza che l'analisi fatta con l'AI porti a cambiamenti migliori nella didattica."
+    }
+   ]
+  },
+  {
+   "id": "d-workload",
+   "role": "design",
+   "title": {
+    "en": "Estimate student workload",
+    "it": "Stimare il carico di lavoro degli studenti"
+   },
+   "question": {
+    "en": "Can analytics or AI estimate real student workload better than credits (CFU/ECTS), and does that help students?",
+    "it": "Analytics o AI sanno stimare il carico di lavoro reale meglio dei crediti (CFU/ECTS), e questo aiuta gli studenti?"
+   },
+   "description": {
+    "en": "Estimating how much time, effort and stress a course or semester really requires, to balance programmes and inform course choice.",
+    "it": "Stimare quanto tempo, fatica e stress richiede davvero un insegnamento o un semestre, per bilanciare il corso di studio e orientare la scelta degli esami."
+   },
+   "oecd": "Ch. 11, pp. 208-210 (Course Load Analytics; Figure 11.3; Box 11.3)",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "At one US university, models built on LMS and enrolment data explained perceived workload far better than credit hours, and showed first semesters are heavier than credits suggest. A small experiment showed this information changes course choices. It is not generative AI, it comes from one research group, and no study yet shows better grades, wellbeing or retention.",
+    "it": "In un'università statunitense, modelli basati sui dati della piattaforma didattica e delle iscrizioni spiegavano il carico percepito molto meglio dei crediti, e mostravano che il primo semestre è più pesante di quanto dicano i crediti. Un piccolo esperimento mostra che questa informazione cambia le scelte degli studenti. Non è AI generativa, viene da un solo gruppo di ricerca, e nessuno studio mostra ancora effetti su voti, benessere o abbandoni."
+   },
+   "outcomesMeasured": [
+    "assisted-performance",
+    "retention",
+    "wellbeing"
+   ],
+   "findings": [
+    {
+     "source": "pardos-2023-workload",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "Credit hours explained about 6% of perceived workload; LMS features (number of assignments, late drops) explained about 36% (596 student ratings).",
+      "it": "I crediti spiegavano circa il 6% del carico percepito; i dati della piattaforma (numero di consegne, ritiri tardivi) circa il 36% (596 valutazioni di studenti)."
+     },
+     "relevance": {
+      "en": "Shows credits are a weak proxy; US credit-hour system.",
+      "it": "Mostra che i crediti sono un indicatore debole; sistema statunitense dei crediti."
+     }
+    },
+    {
+     "source": "borchers-2023-cla",
+     "outcome": "retention",
+     "finding": {
+      "en": "Across a 10,000-course catalogue, the first semester was among the heaviest by predicted load but the lightest by credits; students with this hidden load were more likely to leave their programme.",
+      "it": "Su un catalogo di 10.000 insegnamenti, il primo semestre risultava tra i più pesanti secondo il carico stimato ma tra i più leggeri secondo i crediti; gli studenti con questo carico 'nascosto' lasciavano più spesso il corso di studio."
+     },
+     "relevance": {
+      "en": "Associational, not causal.",
+      "it": "Associazione, non rapporto causa-effetto."
+     }
+    },
+    {
+     "source": "borchers-2025-cla-rct",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "In a preregistered randomised experiment with 61 students, showing predicted time, effort and stress in the catalogue changed which course students chose.",
+      "it": "In un esperimento randomizzato e preregistrato con 61 studenti, mostrare nel catalogo il tempo, la fatica e lo stress stimati cambiava la scelta del corso."
+     },
+     "relevance": {
+      "en": "Hypothetical choice; no outcome data afterwards.",
+      "it": "Scelta ipotetica; nessun dato su cosa succede dopo."
+     }
+    },
+    {
+     "source": "borchers-2025-late-enrol",
+     "outcome": "retention",
+     "finding": {
+      "en": "Students who enrolled late carried more workload and dropped more courses late (about 0.8 SD more drops per SD of late enrolment), in panel models of enrolment records.",
+      "it": "Gli studenti che si iscrivevano tardi agli insegnamenti avevano più carico e ritiravano più spesso gli esami in ritardo (circa 0,8 deviazioni standard di ritiri in più per ogni deviazione standard di ritardo), secondo modelli sui dati di iscrizione."
+     },
+     "relevance": {
+      "en": "Suggests workload information is most useful early in planning; observational.",
+      "it": "Suggerisce che l'informazione sul carico serve soprattutto all'inizio della pianificazione; studio osservazionale."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Reveals hidden overload (e.g. first year) that credits miss, useful for programme redesign.",
+      "it": "Fa emergere sovraccarichi nascosti (ad es. al primo anno) che i crediti non vedono; utile per riprogettare il corso di studio."
+     },
+     "sources": [
+      "borchers-2023-cla",
+      "pardos-2023-workload"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Workload information can shift students towards more balanced choices.",
+      "it": "L'informazione sul carico può orientare gli studenti verso scelte più equilibrate."
+     },
+     "sources": [
+      "borchers-2025-cla-rct"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Could support ECTS reviews by comparing nominal and actual workload, if validated locally.",
+      "it": "Potrebbe aiutare la revisione dei CFU confrontando carico nominale e reale, se validato localmente."
+     },
+     "sources": [
+      "pardos-2023-workload"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Evidence comes from one institution and one research group; transfer to European ECTS programmes is untested.",
+      "it": "Le evidenze vengono da un solo ateneo e un solo gruppo di ricerca; il trasferimento ai corsi europei con CFU/ECTS non è testato."
+     },
+     "sources": [
+      "oecd-deo-2026",
+      "borchers-2023-cla"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Asking a general chatbot to 'estimate the workload' of a syllabus has no validation at all; it is a guess.",
+      "it": "Chiedere a un chatbot generico di 'stimare il carico' di un programma non ha alcuna validazione: è un'ipotesi."
+     },
+     "sources": []
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Workload labels can stigmatise demanding courses or push students away from hard but valuable subjects.",
+      "it": "Le etichette di carico possono stigmatizzare corsi impegnativi o allontanare gli studenti da materie difficili ma importanti."
+     },
+     "sources": [
+      "borchers-2025-cla-rct"
+     ]
+    }
+   ],
+   "conditions": [
+    {
+     "en": "Collect students' own workload reports (time diaries, short surveys) to validate any model.",
+     "it": "Raccogliete le stime degli studenti stessi (diari del tempo, brevi questionari) per validare qualsiasi modello."
+    },
+    {
+     "en": "Use LMS data under clear data-protection rules and aggregate at course level.",
+     "it": "Usate i dati della piattaforma con regole chiare di protezione dei dati e aggregati a livello di insegnamento."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Compare nominal CFU, student-reported hours and model estimates side by side in programme review.",
+     "it": "Nel riesame del corso confrontate fianco a fianco CFU nominali, ore dichiarate dagli studenti e stime del modello."
+    },
+    {
+     "en": "Look at semester totals and sequencing, not just single courses.",
+     "it": "Guardate il totale del semestre e la sequenza degli esami, non solo il singolo insegnamento."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Student time-use surveys",
+      "it": "Indagini sull'uso del tempo degli studenti"
+     },
+     "text": {
+      "en": "Short workload surveys or diaries per course are the basis for ECTS calibration and the data any model needs anyway.",
+      "it": "Brevi questionari o diari del carico per insegnamento sono la base per tarare i CFU, e sono comunque i dati di cui ogni modello ha bisogno."
+     },
+     "sources": [
+      "pardos-2023-workload"
+     ]
+    }
+   ],
+   "toolTypes": [
+    "analytics",
+    "lms-integrated"
+   ],
+   "gaps": [
+    {
+     "en": "No study of generative AI estimating workload from syllabi.",
+     "it": "Nessuno studio sull'AI generativa che stima il carico partendo dai programmi."
+    },
+    {
+     "en": "No evidence of effects on grades, wellbeing or dropout after workload information is used.",
+     "it": "Nessuna evidenza di effetti su voti, benessere o abbandoni dopo l'uso delle informazioni sul carico."
+    },
+    {
+     "en": "No European or Italian replication.",
+     "it": "Nessuna replica europea o italiana."
+    }
+   ]
+  },
+  {
+   "id": "d-analytics",
+   "role": "design",
+   "title": {
+    "en": "Learning analytics, progression and dropout monitoring",
+    "it": "Learning analytics, monitoraggio delle carriere e dell'abbandono"
+   },
+   "question": {
+    "en": "Do predictive analytics and early-warning systems actually reduce dropout, and are they fair?",
+    "it": "Le analisi predittive e i sistemi di allerta precoce riducono davvero gli abbandoni, e sono eque?"
+   },
+   "description": {
+    "en": "Using institutional data (LMS activity, grades, enrolment) to predict which students are at risk and trigger support, or to monitor progression and course difficulty.",
+    "it": "Usare i dati dell'ateneo (attività sulla piattaforma, voti, iscrizioni) per prevedere quali studenti sono a rischio e attivare un supporto, o per monitorare carriere e difficoltà degli insegnamenti."
+   },
+   "oecd": "Ch. 11, pp. 208, 210-211 (curriculum analytics; Baucks et al.; governance and privacy, Drachsler & Greller); Ch. 2 glossary on learning analytics",
+   "evidenceLevel": "mixed",
+   "verdict": {
+    "en": "Predicting who is at risk works reasonably well. Turning predictions into fewer dropouts is not proven: reviews find few rigorous intervention studies, and a Dutch randomised trial found no effect. Models are often less accurate for minority groups, and fixes do not fully work. Systems that steer learning may be high-risk under the EU AI Act. Invest first in what support follows the flag.",
+    "it": "Prevedere chi è a rischio funziona abbastanza bene. Trasformare la previsione in meno abbandoni non è dimostrato: le rassegne trovano pochi studi rigorosi sugli interventi e uno studio randomizzato olandese non ha trovato effetti. I modelli sono spesso meno precisi per i gruppi minoritari e le correzioni non bastano. I sistemi che orientano l'apprendimento possono essere ad alto rischio secondo l'AI Act. Investite prima nel supporto che segue la segnalazione."
+   },
+   "outcomesMeasured": [
+    "retention",
+    "learning",
+    "equity"
+   ],
+   "findings": [
+    {
+     "source": "plak-2022-ews",
+     "outcome": "retention",
+     "finding": {
+      "en": "Randomised field experiment at a large Dutch university: the early-warning system predicted at-risk students accurately, but counselling informed by it did not reduce dropout or improve grades.",
+      "it": "Esperimento randomizzato in un grande ateneo olandese: il sistema di allerta individuava bene gli studenti a rischio, ma il counselling basato sulle segnalazioni non ha ridotto gli abbandoni né migliorato i voti."
+     },
+     "relevance": {
+      "en": "Strongest direct test in European HE: prediction is not intervention.",
+      "it": "Il test diretto più solido nell'università europea: prevedere non è intervenire."
+     }
+    },
+    {
+     "source": "sonderlund-2019-la-review",
+     "outcome": "retention",
+     "finding": {
+      "en": "Of 689 papers on learning analytics in HE, only 11 evaluated interventions; quality was moderate.",
+      "it": "Su 689 articoli di learning analytics in università, solo 11 valutavano interventi; qualità media."
+     },
+     "relevance": {
+      "en": "Shows how thin the intervention evidence is.",
+      "it": "Mostra quanto siano poche le evidenze sugli interventi."
+     }
+    },
+    {
+     "source": "ifenthaler-2020-la-review",
+     "outcome": "retention",
+     "finding": {
+      "en": "Across 46 key studies, many promising approaches but no rigorous large-scale evidence that analytics improves study success.",
+      "it": "Su 46 studi principali, molti approcci promettenti ma nessuna evidenza rigorosa su larga scala che le analytics migliorino il successo negli studi."
+     },
+     "relevance": {
+      "en": "Converges with the review above.",
+      "it": "Va nella stessa direzione della rassegna precedente."
+     }
+    },
+    {
+     "source": "gandara-2024-bias",
+     "outcome": "equity",
+     "finding": {
+      "en": "Using US national data, student-success models were less accurate for racially minoritised students, and common bias-mitigation methods did not remove the gaps.",
+      "it": "Su dati nazionali statunitensi, i modelli di previsione del successo erano meno precisi per gli studenti di minoranze etniche, e i metodi correttivi più comuni non eliminavano il divario."
+     },
+     "relevance": {
+      "en": "Fairness must be checked locally; mitigation is not automatic.",
+      "it": "L'equità va verificata in loco; la correzione non è automatica."
+     }
+    },
+    {
+     "source": "baucks-2024-dcf",
+     "outcome": "equity",
+     "finding": {
+      "en": "An IRT-based method on 20,000+ students detects courses that are unexpectedly harder for some groups (e.g. students from other majors).",
+      "it": "Un metodo statistico (IRT) su oltre 20.000 studenti individua insegnamenti inaspettatamente più difficili per alcuni gruppi (ad es. studenti di altri corsi di studio)."
+     },
+     "relevance": {
+      "en": "Course-level monitoring rather than labelling individuals; not generative AI.",
+      "it": "Monitoraggio a livello di insegnamento invece di etichettare i singoli; non è AI generativa."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Accurate identification of students who may need support.",
+      "it": "Individuazione accurata degli studenti che potrebbero aver bisogno di supporto."
+     },
+     "sources": [
+      "plak-2022-ews"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Course-level analytics can show where curricula are harder for some groups, guiding redesign rather than labelling students.",
+      "it": "Le analytics a livello di insegnamento mostrano dove il curriculum è più difficile per alcuni gruppi, orientando la riprogettazione invece di etichettare gli studenti."
+     },
+     "sources": [
+      "baucks-2024-dcf",
+      "baucks-2024-irt"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "No proven effect on dropout: a flag without effective follow-up changes nothing.",
+      "it": "Nessun effetto dimostrato sugli abbandoni: una segnalazione senza un intervento efficace non cambia nulla."
+     },
+     "sources": [
+      "plak-2022-ews",
+      "sonderlund-2019-la-review",
+      "ifenthaler-2020-la-review"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Prediction errors are unequal across groups and hard to correct.",
+      "it": "Gli errori di previsione non sono uguali tra i gruppi e sono difficili da correggere."
+     },
+     "sources": [
+      "gandara-2024-bias",
+      "baker-2022-bias",
+      "idowu-2024-debiasing"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Labelling a student 'at risk' can lower expectations of staff and the student (labelling harm); rigorous HE evidence on this is lacking.",
+      "it": "Etichettare uno studente 'a rischio' può abbassare le aspettative del personale e dello studente stesso; mancano evidenze rigorose in università su questo effetto."
+     },
+     "sources": [
+      "baker-2022-bias"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "EU AI Act Annex III point 3 may classify as high-risk the systems used to evaluate learning outcomes, including when they steer the learning process, or to decide admission or the level of education. A dropout predictor that triggers interventions or recommendations could fall in scope: this means risk management, data governance, human oversight and documentation duties. Check with your legal office.",
+      "it": "L'AI Act UE, Allegato III punto 3, può classificare ad alto rischio i sistemi usati per valutare i risultati di apprendimento, anche quando orientano il percorso di apprendimento, o per decidere ammissioni o livello di istruzione. Un predittore di abbandono che attiva interventi o raccomandazioni potrebbe rientrarvi: ne derivano obblighi di gestione del rischio, qualità dei dati, sorveglianza umana e documentazione. Verificate con l'ufficio legale."
+     },
+     "sources": [
+      "eu-ai-act-2024"
+     ]
+    },
+    {
+     "kind": "vendor",
+     "text": {
+      "en": "Vendors often report prediction accuracy (AUC) as if it were impact on retention; these are different outcomes.",
+      "it": "I fornitori spesso presentano l'accuratezza della previsione come se fosse un effetto sulla permanenza degli studenti: sono due cose diverse."
+     },
+     "sources": [
+      "plak-2022-ews",
+      "sonderlund-2019-la-review"
+     ]
+    }
+   ],
+   "conditions": [
+    {
+     "en": "Define the support action and its capacity before deploying predictions.",
+     "it": "Definite l'intervento di supporto e le risorse disponibili prima di attivare le previsioni."
+    },
+    {
+     "en": "Audit accuracy and error rates by group (gender, origin, disability, working students) on local data.",
+     "it": "Verificate accuratezza ed errori per gruppo (genere, provenienza, disabilità, studenti lavoratori) sui dati locali."
+    },
+    {
+     "en": "Tell students what data are used and why; give them access and a way to contest.",
+     "it": "Dite agli studenti quali dati si usano e perché; garantite accesso e possibilità di contestare."
+    },
+    {
+     "en": "Run a data-protection impact assessment and an AI Act classification check.",
+     "it": "Fate una valutazione d'impatto sulla protezione dei dati e una verifica della classificazione secondo l'AI Act."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Evaluate the intervention with a comparison group (e.g. staggered roll-out), not only the model.",
+     "it": "Valutate l'intervento con un gruppo di confronto (ad es. introduzione graduale), non solo il modello."
+    },
+    {
+     "en": "Prefer course- and programme-level analytics for redesign over individual risk scores.",
+     "it": "Per riprogettare, preferite analytics a livello di insegnamento e di corso di studio rispetto ai punteggi di rischio individuali."
+    },
+    {
+     "en": "Use supportive, non-deficit language in any message to students.",
+     "it": "Usate un linguaggio di sostegno, non di 'carenza', in ogni messaggio agli studenti."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Simple progression indicators and tutoring",
+      "it": "Indicatori semplici di carriera e tutorato"
+     },
+     "text": {
+      "en": "Credits earned per year and missed first exams, followed by personal tutoring, are transparent signals; the Dutch trial shows prediction quality is not the bottleneck.",
+      "it": "Crediti acquisiti per anno ed esami del primo anno non sostenuti, seguiti da tutorato personale, sono segnali trasparenti; lo studio olandese mostra che il limite non è la qualità della previsione."
+     },
+     "sources": [
+      "plak-2022-ews"
+     ]
+    }
+   ],
+   "toolTypes": [
+    "analytics",
+    "lms-integrated",
+    "teaching-analytics"
+   ],
+   "gaps": [
+    {
+     "en": "Very few randomised evaluations of what happens after a student is flagged.",
+     "it": "Pochissime valutazioni randomizzate di cosa succede dopo la segnalazione."
+    },
+    {
+     "en": "No rigorous HE study on labelling harms or students' experience of being flagged.",
+     "it": "Nessuno studio rigoroso in università sugli effetti dell'etichetta 'a rischio' o su come la vivono gli studenti."
+    },
+    {
+     "en": "Generative AI in analytics (e.g. explaining dashboards) is just starting to be studied.",
+     "it": "L'AI generativa nelle analytics (ad es. per spiegare i cruscotti) è appena all'inizio degli studi."
+    }
+   ]
+  },
+  {
+   "id": "d-chatbot",
+   "role": "design",
+   "title": {
+    "en": "Build and configure a course chatbot",
+    "it": "Costruire e configurare un chatbot per l'insegnamento"
+   },
+   "question": {
+    "en": "Do custom course chatbots built by institutions help students learn, and under what design?",
+    "it": "I chatbot costruiti dall'ateneo per un insegnamento aiutano gli studenti ad apprendere, e con quale progettazione?"
+   },
+   "description": {
+    "en": "Setting up an AI assistant grounded in course materials (e.g. retrieval from slides and readings), with pedagogical rules such as guiding instead of giving answers.",
+    "it": "Configurare un assistente AI basato sui materiali del corso (ad es. che cerca nelle slide e nelle letture), con regole didattiche come guidare invece di dare la risposta."
+   },
+   "oecd": "Ch. 9, pp. 165-188 (AI teaching assistants, JeepyTA); Ch. 1, p. 28; Ch. 11, p. 207 (Box 11.2)",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "One well-run randomised trial at Harvard found a carefully designed tutor, with instructor-written prompts and solutions, beat an active-learning class on an immediate test. Course chatbots are usually liked by students. But evidence is from single courses, short periods and immediate tests; effects of chatbots tend to fade in longer interventions. Design and expert content matter more than the chatbot itself.",
+    "it": "Uno studio randomizzato ben condotto a Harvard ha trovato che un tutor progettato con cura, con istruzioni e soluzioni scritte dai docenti, faceva meglio di una lezione attiva in un test immediato. I chatbot dei corsi di solito piacciono agli studenti. Ma le evidenze vengono da singoli corsi, periodi brevi e test immediati, e gli effetti tendono a calare negli interventi lunghi. Conta più la progettazione didattica e il contenuto esperto che il chatbot in sé."
+   },
+   "outcomesMeasured": [
+    "learning",
+    "satisfaction",
+    "time"
+   ],
+   "findings": [
+    {
+     "source": "kestin-2025-ai-tutor",
+     "outcome": "learning",
+     "finding": {
+      "en": "Randomised crossover trial (N=194, Harvard physics): students using a custom GPT-4 tutor learned more than twice as much as in an active-learning class on the immediate post-test (effect ~0.63-1.3 SD), in a median 49 vs 60 minutes, and felt more engaged.",
+      "it": "Studio randomizzato incrociato (194 studenti, fisica a Harvard): chi usava un tutor costruito su GPT-4 ha imparato più del doppio rispetto a una lezione attiva nel test immediato (effetto circa 0,63-1,3 deviazioni standard), in 49 minuti mediani contro 60, e si sentiva più coinvolto."
+     },
+     "relevance": {
+      "en": "Strongest direct evidence; but the tutor relied on instructor-written solutions and only immediate learning was measured.",
+      "it": "Evidenza diretta più solida; ma il tutor si basava su soluzioni scritte dai docenti e si è misurato solo l'apprendimento immediato."
+     }
+    },
+    {
+     "source": "wu-2024-chatbot-meta",
+     "outcome": "learning",
+     "finding": {
+      "en": "Meta-analysis of 24 randomised studies: large average effect of AI chatbots on learning outcomes, larger in higher education, but weaker in longer interventions (likely novelty effect).",
+      "it": "Meta-analisi di 24 studi randomizzati: effetto medio ampio dei chatbot sui risultati di apprendimento, maggiore in università, ma più debole negli interventi lunghi (probabile effetto novità)."
+     },
+     "relevance": {
+      "en": "Mostly pre-ChatGPT chatbots and language learning; indirect for custom LLM course bots.",
+      "it": "Soprattutto chatbot precedenti a ChatGPT e apprendimento delle lingue; indiretta per i chatbot di corso basati su LLM."
+     }
+    },
+    {
+     "source": "liu-2024-cs50",
+     "outcome": "satisfaction",
+     "finding": {
+      "en": "Harvard's CS50 deployed course-specific AI tools that guide rather than give answers to hundreds of on-campus and thousands of online students; students reported feeling they had 'a personal tutor'.",
+      "it": "Il corso CS50 di Harvard ha introdotto strumenti AI specifici che guidano invece di dare la soluzione, per centinaia di studenti in presenza e migliaia online; gli studenti dicevano di sentirsi come con un tutor personale."
+     },
+     "relevance": {
+      "en": "Shows feasibility at scale; no comparison group.",
+      "it": "Mostra che si può fare su larga scala; senza gruppo di confronto."
+     }
+    },
+    {
+     "source": "oecd-deo-2026",
+     "outcome": "time",
+     "finding": {
+      "en": "OECD reports that the JeepyTA assistant cut median response times to students from ~7 to ~2 hours with human review kept in place, and was rated weaker than human TAs on motivation and developmental guidance.",
+      "it": "L'OCSE riporta che l'assistente JeepyTA ha ridotto i tempi mediani di risposta agli studenti da circa 7 a circa 2 ore, mantenendo la revisione umana, ma era giudicato meno efficace dei tutor umani nel motivare e orientare."
+     },
+     "relevance": {
+      "en": "Reported by the system's developers in the OECD chapter; primary studies not checked here.",
+      "it": "Dati riportati dagli sviluppatori nel capitolo OCSE; studi primari non verificati qui."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Well-designed tutors can produce strong short-term learning gains and let students work at their own pace.",
+      "it": "Tutor ben progettati possono produrre forti guadagni di apprendimento a breve termine e permettere a ciascuno di andare al proprio ritmo."
+     },
+     "sources": [
+      "kestin-2025-ai-tutor"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Faster answers to routine and logistic questions, freeing staff for complex issues.",
+      "it": "Risposte più rapide alle domande di routine e organizzative, liberando tempo del personale per le questioni complesse."
+     },
+     "sources": [
+      "oecd-deo-2026",
+      "liu-2024-cs50"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Effects may shrink over longer use; most evidence is short-term and on immediate tests.",
+      "it": "Gli effetti possono ridursi con l'uso prolungato; quasi tutte le evidenze sono a breve termine e su test immediati."
+     },
+     "sources": [
+      "wu-2024-chatbot-meta",
+      "kestin-2025-ai-tutor"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Accuracy depends on instructor-provided solutions and careful prompts; without them, LLM errors reach students.",
+      "it": "L'accuratezza dipende da soluzioni fornite dal docente e da istruzioni curate; senza, gli errori del modello arrivano agli studenti."
+     },
+     "sources": [
+      "kestin-2025-ai-tutor",
+      "pardos-2024-hints"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "A chatbot that adapts exercises or steers students based on their answers may fall under EU AI Act Annex III point 3(b) (steering the learning process); check classification.",
+      "it": "Un chatbot che adatta gli esercizi o orienta lo studente in base alle risposte potrebbe rientrare nell'Allegato III punto 3(b) dell'AI Act (orientare il percorso di apprendimento); verificate la classificazione."
+     },
+     "sources": [
+      "eu-ai-act-2024"
+     ]
+    },
+    {
+     "kind": "vendor",
+     "text": {
+      "en": "'Upload your slides and get a tutor' products rarely publish learning evaluations; good results came from heavy pedagogical design.",
+      "it": "I prodotti 'carica le slide e ottieni un tutor' raramente pubblicano valutazioni sull'apprendimento; i buoni risultati vengono da una progettazione didattica impegnativa."
+     },
+     "sources": [
+      "kestin-2025-ai-tutor"
+     ]
+    }
+   ],
+   "conditions": [
+    {
+     "en": "Ground the bot in vetted course materials and, for problem solving, in instructor-written solutions.",
+     "it": "Basate il chatbot su materiali del corso verificati e, per gli esercizi, su soluzioni scritte dal docente."
+    },
+    {
+     "en": "Configure it to guide step by step and not hand over answers to graded work.",
+     "it": "Configuratelo per guidare passo passo e non consegnare le risposte delle prove valutate."
+    },
+    {
+     "en": "Allow staff review of answers and a clear route to a human.",
+     "it": "Prevedete la revisione delle risposte da parte del personale e un canale chiaro verso una persona."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Measure learning with a delayed test and a comparison group, not only satisfaction.",
+     "it": "Misurate l'apprendimento con un test a distanza di tempo e un gruppo di confronto, non solo il gradimento."
+    },
+    {
+     "en": "Use the bot for first exposure or practice before class, keeping class time for discussion.",
+     "it": "Usate il chatbot per il primo contatto con i contenuti o per esercitarsi prima della lezione, lasciando l'aula alla discussione."
+    },
+    {
+     "en": "Log and sample conversations (with consent and privacy safeguards) to catch errors.",
+     "it": "Registrate e controllate a campione le conversazioni (con consenso e tutele della privacy) per individuare errori."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Structured FAQ and peer tutoring",
+      "it": "FAQ strutturate e tutorato tra pari"
+     },
+     "text": {
+      "en": "A maintained FAQ and peer or TA office hours cover logistics; active learning in class remains a strong, proven baseline.",
+      "it": "Una FAQ aggiornata e i ricevimenti di tutor o colleghi più esperti coprono le questioni organizzative; la didattica attiva in aula resta un riferimento solido e dimostrato."
+     },
+     "sources": [
+      "kestin-2025-ai-tutor"
+     ]
+    }
+   ],
+   "toolTypes": [
+    "custom-chatbot",
+    "tutoring-system",
+    "lms-integrated",
+    "local-open-weights"
+   ],
+   "gaps": [
+    {
+     "en": "No long-term (semester or more) randomised study of a custom course chatbot on retention or transfer.",
+     "it": "Nessuno studio randomizzato di lungo periodo (un semestre o più) su un chatbot di corso con misure di ritenzione o transfer."
+    },
+    {
+     "en": "No evidence in Italian-language courses or outside STEM.",
+     "it": "Nessuna evidenza per corsi in lingua italiana o fuori dalle discipline STEM."
+    },
+    {
+     "en": "Little data on equity: who uses the bot and who benefits.",
+     "it": "Pochi dati sull'equità: chi usa il chatbot e chi ne trae beneficio."
+    }
+   ]
+  },
+  {
+   "id": "d-content-scale",
+   "role": "design",
+   "title": {
+    "en": "Produce open educational resources and content at scale",
+    "it": "Produrre risorse educative aperte e contenuti su larga scala"
+   },
+   "question": {
+    "en": "Is AI-generated content (hints, exercises, items, OER) good enough to use at scale, and how much checking does it need?",
+    "it": "I contenuti generati dall'AI (suggerimenti, esercizi, domande, risorse aperte) sono abbastanza buoni da usare su larga scala, e quanto vanno controllati?"
+   },
+   "description": {
+    "en": "Generating and tagging large banks of exercises, hints, questions or open materials for many courses, and keeping them aligned to curricula.",
+    "it": "Generare e classificare grandi raccolte di esercizi, suggerimenti, domande o materiali aperti per molti insegnamenti, e mantenerli allineati ai programmi."
+   },
+   "oecd": "Ch. 11, pp. 204-207, 211 (OER tagging; item generation and calibration; PromptHive); Ch. 12, p. 215 (human review of every item); Ch. 2, p. 53",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "In maths and algebra, expert-steered AI content produced learning gains and item quality similar to human-written content, much faster. But error rates without checks were high (32% of help failed checks in one study), and every study in a medical-exam review found faulty items. Scale only with systematic human review.",
+    "it": "In matematica e algebra, contenuti generati dall'AI sotto la guida di esperti hanno dato apprendimenti e qualità delle domande simili a quelli scritti da persone, molto più in fretta. Ma senza controlli gli errori erano molti (in uno studio il 32% degli aiuti non superava le verifiche) e tutti gli studi di una rassegna sugli esami di medicina contenevano domande sbagliate. Si può scalare solo con revisione umana sistematica."
+   },
+   "outcomesMeasured": [
+    "learning",
+    "assisted-performance",
+    "time"
+   ],
+   "findings": [
+    {
+     "source": "pardos-2024-hints",
+     "outcome": "learning",
+     "finding": {
+      "en": "In a randomised study (N=274), ChatGPT-generated help gave learning gains similar to human-tutor help, but 32% failed quality checks before self-consistency filtering (down to ~0% in algebra, 13% in statistics).",
+      "it": "In uno studio randomizzato (274 persone), gli aiuti generati da ChatGPT davano apprendimenti simili a quelli scritti da tutor umani, ma il 32% non superava i controlli di qualità prima di un filtro automatico (poi circa 0% in algebra, 13% in statistica)."
+     },
+     "relevance": {
+      "en": "Shows both the potential and the error rate.",
+      "it": "Mostra insieme il potenziale e il tasso di errore."
+     }
+    },
+    {
+     "source": "bhandari-2024-items",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "15 ChatGPT-generated algebra items had difficulty and discrimination statistically indistinguishable from textbook items (207 respondents).",
+      "it": "15 domande di algebra generate da ChatGPT avevano difficoltà e capacità di distinguere tra studenti statisticamente uguali a quelle del libro di testo (207 rispondenti)."
+     },
+     "relevance": {
+      "en": "Small item set, one topic.",
+      "it": "Poche domande, un solo argomento."
+     }
+    },
+    {
+     "source": "artsi-2024-mcq-review",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "A systematic review of 8 studies on LLM-written medical exam questions found usable items in most, but faulty items in all of them.",
+      "it": "Una rassegna sistematica di 8 studi su domande d'esame di medicina scritte da LLM ha trovato domande utilizzabili nella maggior parte, ma domande sbagliate in tutti."
+     },
+     "relevance": {
+      "en": "Direct HE evidence (medicine); early models.",
+      "it": "Evidenza diretta in università (medicina); modelli delle prime versioni."
+     }
+    },
+    {
+     "source": "moore-2023-mcq",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "To check MCQ quality, a rule-based method caught 91% of human-identified flaws vs 79% for GPT-4.",
+      "it": "Nel controllare la qualità delle domande a scelta multipla, un metodo a regole individuava il 91% dei difetti trovati dalle persone, GPT-4 il 79%."
+     },
+     "relevance": {
+      "en": "Automated checks help but do not replace human review.",
+      "it": "I controlli automatici aiutano ma non sostituiscono la revisione umana."
+     }
+    },
+    {
+     "source": "reza-2025-prompthive",
+     "outcome": "time",
+     "finding": {
+      "en": "With an expert-led prompt-authoring tool, content creation went from months to hours with comparable learning gains (358 learners).",
+      "it": "Con uno strumento in cui gli esperti scrivono e provano le istruzioni, la produzione di contenuti è passata da mesi a ore, con apprendimenti comparabili (358 studenti)."
+     },
+     "relevance": {
+      "en": "Developer-evaluated; maths hints only.",
+      "it": "Valutato dagli sviluppatori; solo suggerimenti di matematica."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Large time savings in producing practice material, with comparable short-term learning when experts steer prompts.",
+      "it": "Grande risparmio di tempo nel produrre materiali di esercitazione, con apprendimenti a breve termine comparabili quando gli esperti guidano le istruzioni."
+     },
+     "sources": [
+      "reza-2025-prompthive",
+      "pardos-2024-hints"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Larger item pools reduce over-exposure of exam questions; LLM 'respondents' can help pre-calibrate items for low-stakes use.",
+      "it": "Raccolte di domande più ampie riducono il riuso eccessivo delle stesse domande; 'rispondenti' simulati dall'AI possono aiutare a pre-tarare le domande per usi a basso rischio."
+     },
+     "sources": [
+      "liu-2025-llm-respondents",
+      "oecd-deo-2026"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Re-tagging existing OER to new frameworks becomes cheaper.",
+      "it": "Ricollegare le risorse aperte esistenti a nuovi quadri di riferimento costa meno."
+     },
+     "sources": [
+      "li-2024-oer"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "High raw error rates; errors reach students if not every item is checked.",
+      "it": "Tassi di errore alti nell'output grezzo; gli errori arrivano agli studenti se non si controlla ogni elemento."
+     },
+     "sources": [
+      "pardos-2024-hints",
+      "artsi-2024-mcq-review"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Evidence is concentrated in maths and medicine with multiple-choice formats; quality in essays, humanities or Italian is unknown.",
+      "it": "Le evidenze riguardano soprattutto matematica e medicina, con domande a scelta multipla; la qualità per testi aperti, discipline umanistiche o in italiano non è nota."
+     },
+     "sources": [
+      "bhandari-2024-items",
+      "artsi-2024-mcq-review"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Open licensing of AI-generated content and of source materials used in prompts needs checking.",
+      "it": "Va verificata la licenza aperta dei contenuti generati e dei materiali usati come fonte nelle istruzioni."
+     },
+     "sources": []
+    },
+    {
+     "kind": "vendor",
+     "text": {
+      "en": "Platforms selling 'unlimited question generation' seldom report item-level error rates.",
+      "it": "Le piattaforme che vendono 'generazione illimitata di domande' raramente dichiarano i tassi di errore delle singole domande."
+     },
+     "sources": [
+      "artsi-2024-mcq-review"
+     ]
+    }
+   ],
+   "conditions": [
+    {
+     "en": "Anchor generation in vetted course material and expert-designed templates.",
+     "it": "Basate la generazione su materiali del corso verificati e su modelli progettati da esperti."
+    },
+    {
+     "en": "Human review of every item before students see it, plus automated flaw checks.",
+     "it": "Revisione umana di ogni elemento prima che arrivi agli studenti, più controlli automatici dei difetti."
+    },
+    {
+     "en": "Pilot with students and check item statistics before high-stakes use.",
+     "it": "Sperimentate con gli studenti e controllate le statistiche delle domande prima di usarle in prove importanti."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Let subject experts iterate on prompts and compare outputs side by side.",
+     "it": "Lasciate che gli esperti della materia migliorino le istruzioni e confrontino gli output fianco a fianco."
+    },
+    {
+     "en": "Track provenance (model, version, reviewer) for each resource.",
+     "it": "Registrate la provenienza di ogni risorsa (modello, versione, revisore)."
+    },
+    {
+     "en": "Release under a clear open licence with an AI-use statement.",
+     "it": "Pubblicate con una licenza aperta chiara e una dichiarazione sull'uso dell'AI."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Reuse and adapt existing OER",
+      "it": "Riutilizzare e adattare risorse aperte esistenti"
+     },
+     "text": {
+      "en": "Searching and adapting peer-reviewed open textbooks and item banks often gives validated material faster than generating and checking new content.",
+      "it": "Cercare e adattare libri di testo e raccolte di domande aperte già revisionati spesso dà materiale validato più in fretta che generare e verificare contenuti nuovi."
+     },
+     "sources": [
+      "bhandari-2024-items"
+     ]
+    }
+   ],
+   "toolTypes": [
+    "item-generator",
+    "general-assistant",
+    "local-open-weights",
+    "lms-integrated"
+   ],
+   "gaps": [
+    {
+     "en": "No study of AI-generated OER quality outside STEM/medicine or in Italian.",
+     "it": "Nessuno studio sulla qualità delle risorse aperte generate dall'AI fuori da STEM/medicina o in italiano."
+    },
+    {
+     "en": "No long-term learning or retention data for AI-generated content at scale.",
+     "it": "Nessun dato di apprendimento a lungo termine per contenuti generati su larga scala."
+    },
+    {
+     "en": "Real reviewer workload per item is rarely measured.",
+     "it": "Il carico reale di revisione per elemento è misurato raramente."
+    }
+   ]
+  },
+  {
+   "id": "d-quality",
+   "role": "design",
+   "title": {
+    "en": "Programme review and quality assurance",
+    "it": "Riesame dei corsi di studio e assicurazione della qualità"
+   },
+   "question": {
+    "en": "Can LLMs help analyse review reports, self-evaluations and programme data reliably?",
+    "it": "I modelli linguistici aiutano ad analizzare in modo affidabile rapporti di riesame, autovalutazioni e dati dei corsi di studio?"
+   },
+   "description": {
+    "en": "Using AI to summarise and compare quality-assurance documents (self-evaluation reports, review reports, annual reviews), check programmes against standards, and monitor course difficulty.",
+    "it": "Usare l'AI per riassumere e confrontare i documenti di assicurazione della qualità (rapporti di autovalutazione, rapporti di accreditamento, schede di monitoraggio e riesami), verificare i corsi rispetto agli standard e monitorare la difficoltà degli insegnamenti."
+   },
+   "oecd": "Ch. 11, pp. 208, 210-211 (curriculum analytics for quality assurance; Box 11.3); Ch. 1, p. 29",
+   "evidenceLevel": "limited",
+   "verdict": {
+    "en": "A national quality agency (NOKUT, Norway) found an LLM useful for spotting patterns across 48 review reports, but it confused institutions and needed restructured data and expert checking. A small Ukrainian study found LLMs did not reproduce expert judgements when applying official accreditation criteria. Use AI to organise documents and find patterns, never to score programmes.",
+    "it": "Un'agenzia nazionale per la qualità (NOKUT, Norvegia) ha trovato un modello linguistico utile per individuare schemi ricorrenti in 48 rapporti di valutazione, ma confondeva gli atenei e richiedeva dati riorganizzati e controllo esperto. Un piccolo studio ucraino ha trovato che gli LLM non riproducevano il giudizio degli esperti applicando i criteri ufficiali di accreditamento. Usate l'AI per ordinare i documenti e trovare schemi, mai per dare un punteggio ai corsi."
+   },
+   "outcomesMeasured": [
+    "assisted-performance",
+    "time",
+    "equity"
+   ],
+   "findings": [
+    {
+     "source": "nokut-2026-llm",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "NOKUT analysed 48 review reports (~1,800 pages) with NotebookLM: manual and AI analysis found many of the same challenges; the AI was good at structuring and patterns but mixed up institution names and needed restructured data and expert validation.",
+      "it": "NOKUT ha analizzato 48 rapporti di valutazione (circa 1.800 pagine) con NotebookLM: analisi manuale e con AI hanno trovato molte criticità in comune; l'AI era brava a strutturare e trovare schemi, ma confondeva i nomi degli atenei e richiedeva dati riorganizzati e verifica esperta."
+     },
+     "relevance": {
+      "en": "Direct, real QA-agency use; no quantitative accuracy measure.",
+      "it": "Uso reale e diretto da parte di un'agenzia per la qualità; nessuna misura quantitativa di accuratezza."
+     }
+    },
+    {
+     "source": "stasiuk-2026-naqa",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "On 10 programme self-evaluation reports, GPT-5 and Gemini 2.5 showed weak alignment with experts when applying national accreditation criteria; text metrics like factual density did separate strong from weak reports.",
+      "it": "Su 10 rapporti di autovalutazione, GPT-5 e Gemini 2.5 erano poco allineati con gli esperti nell'applicare i criteri nazionali di accreditamento; indicatori testuali come la densità di fatti distinguevano invece i rapporti forti da quelli deboli."
+     },
+     "relevance": {
+      "en": "Very small sample; signals that scoring against criteria is unreliable.",
+      "it": "Campione molto piccolo; segnala che dare punteggi secondo i criteri non è affidabile."
+     }
+    },
+    {
+     "source": "zamecnik-2024-skills",
+     "outcome": "assisted-performance",
+     "finding": {
+      "en": "LLM skill mapping of 26 courses broadly matched experts, with uneven agreement by skill.",
+      "it": "La mappatura delle competenze di 26 insegnamenti fatta da un LLM era in generale vicina agli esperti, con accordo diverso per competenza."
+     },
+     "relevance": {
+      "en": "Relevant to checking programmes against required competences.",
+      "it": "Rilevante per verificare i corsi rispetto alle competenze richieste."
+     }
+    },
+    {
+     "source": "baucks-2024-irt",
+     "outcome": "equity",
+     "finding": {
+      "en": "IRT-based curriculum analytics showed course difficulty shifted over years (e.g. during COVID-19) and that raw pass rates are confounded by cohort.",
+      "it": "Analisi statistiche (IRT) del curriculum hanno mostrato che la difficoltà degli insegnamenti cambia negli anni (ad es. durante il COVID-19) e che le percentuali di superamento grezze sono distorte dalla coorte."
+     },
+     "relevance": {
+      "en": "Better indicators for monitoring; not generative AI.",
+      "it": "Indicatori migliori per il monitoraggio; non è AI generativa."
+     }
+    }
+   ],
+   "benefits": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "Pattern-finding and summarising across large sets of QA documents in less time.",
+      "it": "Individuare schemi ricorrenti e riassumere grandi insiemi di documenti di qualità in meno tempo."
+     },
+     "sources": [
+      "nokut-2026-llm"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Statistical curriculum analytics give fairer indicators than raw pass rates for review.",
+      "it": "Le analisi statistiche del curriculum danno indicatori più equi delle semplici percentuali di superamento."
+     },
+     "sources": [
+      "baucks-2024-irt",
+      "baucks-2024-dcf"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Using AI pushes institutions to standardise document structure, which also helps human reviewers.",
+      "it": "Usare l'AI spinge gli atenei a uniformare la struttura dei documenti, il che aiuta anche i revisori umani."
+     },
+     "sources": [
+      "nokut-2026-llm"
+     ]
+    }
+   ],
+   "risks": [
+    {
+     "kind": "research",
+     "text": {
+      "en": "LLMs do not reliably apply formal accreditation criteria.",
+      "it": "Gli LLM non applicano in modo affidabile i criteri formali di accreditamento."
+     },
+     "sources": [
+      "stasiuk-2026-naqa"
+     ]
+    },
+    {
+     "kind": "research",
+     "text": {
+      "en": "Confusions (names, sources) produce misleading conclusions if not checked.",
+      "it": "Le confusioni (nomi, fonti) producono conclusioni fuorvianti se non controllate."
+     },
+     "sources": [
+      "nokut-2026-llm"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Reports written 'for the AI' may reward polished text over real quality (style effects).",
+      "it": "Rapporti scritti 'per l'AI' potrebbero premiare un testo curato più della qualità reale."
+     },
+     "sources": [
+      "stasiuk-2026-naqa"
+     ]
+    },
+    {
+     "kind": "interpretation",
+     "text": {
+      "en": "Documents with personal data (student or staff) need privacy safeguards; NOKUT used only public reports.",
+      "it": "I documenti con dati personali (studenti o personale) richiedono tutele della privacy; NOKUT ha usato solo rapporti pubblici."
+     },
+     "sources": [
+      "nokut-2026-llm"
+     ]
+    }
+   ],
+   "conditions": [
+    {
+     "en": "Restructure documents with consistent headings and names before analysis.",
+     "it": "Riorganizzate i documenti con titoli e nomi coerenti prima dell'analisi."
+    },
+    {
+     "en": "Use source-grounded tools that cite passages, and verify every claim against the source.",
+     "it": "Usate strumenti che citano i passaggi delle fonti e verificate ogni affermazione sul documento originale."
+    },
+    {
+     "en": "Keep final judgements with reviewers and committees.",
+     "it": "Il giudizio finale resta ai revisori e alle commissioni."
+    }
+   ],
+   "goodPractice": [
+    {
+     "en": "Document prompts, models and versions used, as part of the QA audit trail.",
+     "it": "Documentate istruzioni, modelli e versioni usati, come parte della tracciabilità del processo di qualità."
+    },
+    {
+     "en": "Start with short, specific questions before broad synthesis questions.",
+     "it": "Iniziate con domande brevi e specifiche prima delle domande di sintesi generale."
+    },
+    {
+     "en": "Compare AI and manual analysis on a subset each cycle.",
+     "it": "A ogni ciclo, confrontate analisi con AI e analisi manuale su una parte dei documenti."
+    }
+   ],
+   "noAI": [
+    {
+     "title": {
+      "en": "Structured templates and peer review",
+      "it": "Modelli strutturati e revisione tra pari"
+     },
+     "text": {
+      "en": "Standardised report templates and committee reading remain the core of QA; NOKUT's experience shows structure matters with or without AI.",
+      "it": "Modelli di rapporto standardizzati e lettura in commissione restano il cuore della qualità; l'esperienza di NOKUT mostra che la struttura conta con o senza AI."
+     },
+     "sources": [
+      "nokut-2026-llm"
+     ]
+    }
+   ],
+   "toolTypes": [
+    "research-assistant",
+    "general-assistant",
+    "analytics",
+    "local-open-weights"
+   ],
+   "gaps": [
+    {
+     "en": "No study measures accuracy of LLMs on Italian AVA/ANVUR documents (e.g. annual monitoring sheets, cyclical reviews).",
+     "it": "Nessuno studio misura l'accuratezza degli LLM sui documenti del sistema AVA/ANVUR (ad es. schede di monitoraggio annuale, riesami ciclici)."
+    },
+    {
+     "en": "No quantitative agreement study between AI and QA experts at scale.",
+     "it": "Nessuno studio quantitativo su larga scala dell'accordo tra AI ed esperti di qualità."
+    },
+    {
+     "en": "No evidence that AI-supported reviews lead to better programme decisions.",
+     "it": "Nessuna evidenza che i riesami supportati dall'AI portino a decisioni migliori sui corsi."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "oecd-deo-2026",
+   "kind": "grey",
+   "read": "full",
+   "accessed": "2026-10-22",
+   "doi": "10.1787/062a7394-en",
+   "url": "https://doi.org/10.1787/062a7394-en",
+   "short": "OECD (2026), Digital Education Outlook 2026",
+   "citation": "OECD (2026), OECD Digital Education Outlook 2026: Exploring Effective Uses of Generative AI in Education, OECD Publishing, Paris. CC BY 4.0. Chapters read in full: 11 (Pardos & Borchers, pp. 200-214), 12 (von Davier interview, opening pp. 215-216), 1 (system-level section, pp. 27-31); chapter 2 sections on teacher support, item generation, automated scoring and methodological rigour (pp. 42-43, 52-54); chapter 9 (AI teaching assistants, pp. 165-188) skimmed for JeepyTA figures.",
+   "study": {
+    "design": "Policy report; narrative synthesis by invited experts",
+    "sample": "Not applicable",
+    "context": "OECD member systems; chapter 11 focuses on US higher-education institutional workflows",
+    "comparison": "Not applicable",
+    "outcome": "Narrative synthesis; no pooled effects",
+    "duration": "Not applicable",
+    "result": "Ch.11: embedding/LLM tools can speed curriculum tagging, articulation and workload analytics, but human quality assurance stays essential (e.g. AI-assisted tagging ~50% faster but less accurate). Ch.1: staff must remain responsible for AI output; most evidence comes from short interventions.",
+    "uncertainty": "Chapter 11 is written by researchers whose own studies make up most of its evidence base (Pardos, Borchers): not an independent review. Minor citation errors noted: ch.1 cites 'Bhandari et al. (2026[61])' but reference [61] is the PromptHive demo paper; ch.11 lists Borchers & Pardos (2025) JEDM authors incompletely (Xu missing) and Baucks et al. DCF (2024) without co-authors Borchers and Pardos.",
+    "funding": "OECD; chapter 9 and 11 authors are academic researchers",
+    "system": "Various (embeddings, GPT-4 family, Claude 3.7, NotebookLM not covered)"
+   }
+  },
+  {
+   "id": "pardos-2023-workload",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1016/j.iheduc.2022.100882",
+   "url": "https://doi.org/10.1016/j.iheduc.2022.100882",
+   "short": "Pardos, Borchers & Yu (2023)",
+   "citation": "Pardos, Z.A., Borchers, C. & Yu, R. (2023). Credit hours is not enough: Explaining undergraduate perceptions of course workload using LMS records. The Internet and Higher Education, 56, 100882.",
+   "study": {
+    "design": "Correlational; regression of perceived workload on LMS and enrolment features",
+    "sample": "596 student course-load ratings (time load, mental effort, psychological stress)",
+    "context": "Large US public university (UC Berkeley), undergraduate",
+    "comparison": "Credit hours vs LMS-derived features as predictors",
+    "outcome": "Variance in perceived workload explained (OECD reports 6% for credit hours vs 36% for LMS features)",
+    "duration": "Cross-sectional",
+    "result": "Credit hours explain little of students' perceived workload; number of assignments and late-semester drop ratios explain much more.",
+    "uncertainty": "Single institution, US credit-hour system; not generative AI; no intervention. Abstract only read; the 6%/36% figures come from OECD ch.11.",
+    "funding": "not reported",
+    "system": "Classical ML on LMS logs (not an LLM)"
+   }
+  },
+  {
+   "id": "borchers-2023-cla",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1145/3576050.3576081",
+   "url": "https://doi.org/10.1145/3576050.3576081",
+   "short": "Borchers & Pardos (2023), LAK23",
+   "citation": "Borchers, C. & Pardos, Z.A. (2023). Insights into undergraduate pathways using course load analytics. LAK23: 13th International Learning Analytics and Knowledge Conference, 219-229.",
+   "study": {
+    "design": "Predictive modelling + retrospective longitudinal analysis",
+    "sample": "Full catalogue of ~10,000 courses at one university",
+    "context": "Large US public university",
+    "comparison": "Credit-hour load vs predicted course load (CLA)",
+    "outcome": "Predicted semester load; association with leaving programme",
+    "duration": "Retrospective, full degree span",
+    "result": "First semester is among the highest-load semesters by CLA but among the lowest by credit hours; students with low credit-hour but high CLA load were more likely to leave their programme.",
+    "uncertainty": "Associational; one institution; same research group as OECD ch.11 authors.",
+    "funding": "not reported",
+    "system": "ML model on LMS + enrolment features"
+   }
+  },
+  {
+   "id": "borchers-2025-cla-rct",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.18608/jla.2025.8473",
+   "url": "https://doi.org/10.18608/jla.2025.8473",
+   "short": "Borchers & Pardos (2025), JLA",
+   "citation": "Borchers, C. & Pardos, Z.A. (2025). Course Load Analytics Interventions on Higher Education Course Selection. Journal of Learning Analytics, 12.",
+   "study": {
+    "design": "Preregistered randomised forced-choice experiment",
+    "sample": "61 undergraduates",
+    "context": "Large US public university; simulated catalogue choice between two courses",
+    "comparison": "Standard catalogue vs catalogue augmented with predicted time load, mental effort, stress",
+    "outcome": "Hypothetical course choice",
+    "duration": "Single session",
+    "result": "Workload analytics changed choices: students optimised expected workload per credit, guided most by predicted mental effort.",
+    "uncertainty": "Small sample; hypothetical choice, not real enrolment; no data on later grades, wellbeing or dropout.",
+    "funding": "not reported",
+    "system": "Course Load Analytics (ML)"
+   }
+  },
+  {
+   "id": "borchers-2025-late-enrol",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.5281/zenodo.14907388",
+   "url": "https://doi.org/10.5281/zenodo.14907388",
+   "short": "Borchers, Xu & Pardos (2025), JEDM",
+   "citation": "Borchers, C., Xu, Y. & Pardos, Z.A. (2025). Workload Overload? Late Enrollment Leads to Course Dropout. Journal of Educational Data Mining, 17(1), 126-156.",
+   "study": {
+    "design": "Cross-lagged panel models on enrolment transaction data",
+    "sample": "Large-scale enrolment histories at one university",
+    "context": "US public university",
+    "comparison": "Late vs on-time enrolment",
+    "outcome": "Late course drops; workload",
+    "duration": "Consecutive semesters",
+    "result": "Late enrolment associated with higher workload and late drops (~0.8 SD more drops per SD of late enrolment); authors argue for a causal direction.",
+    "uncertainty": "Observational; causal claim rests on panel modelling. OECD ch.11 lists authors as 'Borchers, C. and Y. Pardos' - the actual authors are Borchers, Xu and Pardos.",
+    "funding": "not reported",
+    "system": "Statistical models (not generative AI)"
+   }
+  },
+  {
+   "id": "li-2024-oer",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1016/j.compedu.2024.105027",
+   "url": "https://doi.org/10.1016/j.compedu.2024.105027",
+   "short": "Li, Pardos & Ren (2024)",
+   "citation": "Li, Z., Pardos, Z.A. & Ren, C. (2024). Aligning open educational resources to new taxonomies: How AI technologies can help and in which scenarios. Computers & Education, 216, 105027.",
+   "study": {
+    "design": "Model development and benchmarking against human labellers",
+    "sample": "Tens of thousands of OER (text, images, video) from two platforms",
+    "context": "Mainly US K-12 Common Core and new taxonomies",
+    "comparison": "Non-expert and expert human tagging",
+    "outcome": "Tagging accuracy (assisted-performance)",
+    "duration": "Not applicable",
+    "result": "Full automation not viable; best model reaches non-expert accuracy with ~100 labelled examples and near-expert with ~5,000.",
+    "uncertainty": "School-level taxonomies (indirect for HE learning outcomes); embedding/classifier models, not chat LLMs.",
+    "funding": "not reported",
+    "system": "Embedding + classifier models, multimodal; models released publicly"
+   }
+  },
+  {
+   "id": "ren-2024-tagging",
+   "kind": "preprint",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.48550/arXiv.2403.02259",
+   "url": "https://arxiv.org/abs/2403.02259",
+   "short": "Ren, Pardos & Li (2024), arXiv",
+   "citation": "Ren, C., Pardos, Z. & Li, Z. (2024). Human-AI Collaboration Increases Skill Tagging Speed but Degrades Accuracy. arXiv:2403.02259.",
+   "study": {
+    "design": "Experiment: human alone vs human + AI suggestions vs AI alone",
+    "sample": "N = 22 participants",
+    "context": "Tagging educational content to US Common Core skills",
+    "comparison": "Human-only control",
+    "outcome": "Time; recall; accuracy",
+    "duration": "Single task session",
+    "result": "AI suggestions cut time ~50% (p<0.01) but recall fell 7.7% (p=0.267) and accuracy 35% (p=0.117); human alone most accurate, AI alone least.",
+    "uncertainty": "Preprint, very small sample, accuracy drops not statistically significant; K-12 taxonomy.",
+    "funding": "not reported",
+    "system": "AI tagging recommender"
+   }
+  },
+  {
+   "id": "xu-2023-aversion",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1145/3573051.3593378",
+   "url": "https://doi.org/10.1145/3573051.3593378",
+   "short": "Xu, Pardos & Pai (2023), L@S",
+   "citation": "Xu, L., Pardos, Z.A. & Pai, A. (2023). Convincing the Expert: Reducing Algorithm Aversion in Administrative Higher Education Decision-making. Proceedings of the Tenth ACM Conference on Learning @ Scale, 215-225.",
+   "study": {
+    "design": "2x2 between-subjects experiment",
+    "sample": "Expert administrators making credit-equivalency decisions (n not in abstract)",
+    "context": "US course articulation",
+    "comparison": "With/without outlier recommendations; with/without feedback prompt",
+    "outcome": "Acceptance of AI suggestions; productivity",
+    "duration": "Single session",
+    "result": "Removing low-confidence outliers raised acceptance and productivity; asking users to flag suggestions lowered acceptance unless outliers were shown.",
+    "uncertainty": "Interface study; acceptance is not the same as decision quality.",
+    "funding": "not reported",
+    "system": "AI course-matching platform"
+   }
+  },
+  {
+   "id": "sridhar-2023-lo",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.48550/arXiv.2306.17459",
+   "url": "https://arxiv.org/abs/2306.17459",
+   "short": "Sridhar et al. (2023), AIED workshop",
+   "citation": "Sridhar, P., Doyle, A., Agarwal, A., Bogart, C., Savelka, J. & Sakr, M. (2023). Harnessing LLMs in Curricular Design: Using GPT-4 to Support Authoring of Learning Objectives. AIED 2023 workshops, CEUR-WS Vol. 3487. arXiv:2306.17459.",
+   "study": {
+    "design": "Descriptive evaluation of generated learning objectives",
+    "sample": "127 learning objectives",
+    "context": "One university AI practitioner course (Carnegie Mellon)",
+    "comparison": "Best-practice criteria (Bloom verbs, level); no human-authored comparison",
+    "outcome": "Quality of objectives (assisted-performance)",
+    "duration": "Not applicable",
+    "result": "Objectives mostly sensible and well-formed, at plausible Bloom levels; some lacked specificity.",
+    "uncertainty": "Workshop paper; single course; authors' own rating; abstract and secondary summaries only.",
+    "funding": "not reported",
+    "system": "GPT-4"
+   }
+  },
+  {
+   "id": "doyle-2025-lo",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1111/jcal.13092",
+   "url": "https://doi.org/10.1111/jcal.13092",
+   "short": "Doyle et al. (2025), JCAL",
+   "citation": "Doyle, A., Sridhar, P., Agarwal, A., Savelka, J. & Sakr, M.F. (2025). A comparative study of AI-generated and human-crafted learning objectives in computing education. Journal of Computer Assisted Learning, 41.",
+   "study": {
+    "design": "Blinded-style comparison by two human evaluators",
+    "sample": "LO lists for computing courses (n courses not in abstract)",
+    "context": "University computing education",
+    "comparison": "Instructor-authored learning objectives",
+    "outcome": "Alignment with course goals, SMART criteria, overlap, ordering",
+    "duration": "Not applicable",
+    "result": "LLM-generated LOs comparable to instructor ones on measurability, relevance and alignment; sometimes less specific or achievable; often better ordered.",
+    "uncertainty": "Two raters; computing only; same group as Sridhar et al.",
+    "funding": "not reported",
+    "system": "State-of-the-art LLM (GPT-4 family per authors' framework)"
+   }
+  },
+  {
+   "id": "zamecnik-2024-skills",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1007/978-3-031-72312-4_2",
+   "url": "https://doi.org/10.1007/978-3-031-72312-4_2",
+   "short": "Zamecnik et al. (2024), EC-TEL",
+   "citation": "Zamecnik, A., Barthakur, A., Wang, H. & Dawson, S. (2024). Mapping Employable Skills in Higher Education Curriculum Using LLMs. EC-TEL 2024, LNCS 15160, 18-32.",
+   "study": {
+    "design": "Agreement study: LLM annotations vs expert reviewers",
+    "sample": "26 courses of one initial teacher education programme",
+    "context": "Australian university",
+    "comparison": "Expert curriculum reviewers",
+    "outcome": "Agreement (Cohen's kappa) on which skills each course develops",
+    "duration": "Not applicable",
+    "result": "LLM evaluations broadly comparable to experts, but kappa varied widely across skills.",
+    "uncertainty": "One programme; abstract read via repository record only; per-skill figures not checked.",
+    "funding": "not reported",
+    "system": "LLMs (not specified in abstract)"
+   }
+  },
+  {
+   "id": "fuller-2024-evaluations",
+   "kind": "peer-reviewed",
+   "read": "full",
+   "accessed": "2026-10-22",
+   "doi": "10.1186/s12909-024-05316-2",
+   "url": "https://doi.org/10.1186/s12909-024-05316-2",
+   "short": "Fuller et al. (2024), BMC Med Educ",
+   "citation": "Fuller, K.A., Morbitzer, K.A., Zeeman, J.M., Persky, A.M., Savage, A.C. & McLaughlin, J.E. (2024). Exploring the use of ChatGPT to analyze student course evaluation comments. BMC Medical Education, 24, 423.",
+   "study": {
+    "design": "Comparison of instructor thematic coding vs two ChatGPT accounts; agreement rated by three researchers",
+    "sample": "4 instructors, 4 courses, 470 comments",
+    "context": "US pharmacy school (UNC), June 2023",
+    "comparison": "Instructors coding their own course comments",
+    "outcome": "Percent agreement of themes; time",
+    "duration": "One analysis round",
+    "result": "Agreement 0.71-0.82 for course topics, 0.53-0.81 for course weaknesses; ChatGPT took ~10-13 min vs ~28 min for instructors (incl. anonymising).",
+    "uncertainty": "Tiny sample, percent agreement (not chance-corrected), model version not stated, different prompts per account; no bias analysis.",
+    "funding": "None reported; no conflicts declared",
+    "system": "ChatGPT (version not stated)"
+   }
+  },
+  {
+   "id": "lacy-2026-sentiment",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1016/j.caeai.2026.100545",
+   "url": "https://doi.org/10.1016/j.caeai.2026.100545",
+   "short": "Lacy et al. (2026), CAEAI",
+   "citation": "Lacy, J.W., Nnoka, C., Jock, Z. & Morreale, C. (2026). LLM sentiment quantification reveals selective alignment with human course-evaluation raters. Computers and Education: Artificial Intelligence, 10, 100545.",
+   "study": {
+    "design": "Benchmark of masked and generative models, naive and fine-tuned, against human raters",
+    "sample": "1,000 de-identified course evaluation responses",
+    "context": "US university (SUNY Buffalo affiliation)",
+    "comparison": "Human inter-rater reliability",
+    "outcome": "Sentiment agreement with humans",
+    "duration": "Not applicable",
+    "result": "Some models approach human inter-rater reliability with little tuning; others never became reliable, even after training. Authors warn about using ChatGPT for sentiment analysis.",
+    "uncertainty": "Sentiment only (not themes); abstract only; exact agreement figures not checked.",
+    "funding": "not reported",
+    "system": "BERT, RoBERTa, OpenAI model variants"
+   }
+  },
+  {
+   "id": "zhang-2024-sefi",
+   "kind": "preprint",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.48550/arXiv.2407.01274",
+   "url": "https://arxiv.org/abs/2407.01274",
+   "short": "Zhang et al. (2024), SEFI / arXiv",
+   "citation": "Zhang, M., Lindsay, E.D., Thorbensen, F.B., Poulsen, D.B. & Bjerva, J. (2024). Leveraging Large Language Models for Actionable Course Evaluation Student Feedback to Lecturers. SEFI 2024; arXiv:2407.01274.",
+   "study": {
+    "design": "Feasibility study of open-source LLM summaries",
+    "sample": "742 responses across 75 courses",
+    "context": "Computer Science department, Aalborg University (Denmark)",
+    "comparison": "None reported in abstract",
+    "outcome": "Summaries and action items for lecturers",
+    "duration": "Not applicable",
+    "result": "Authors report a promising, low-cost way to give lecturers actionable summaries; no quantitative human evaluation in abstract.",
+    "uncertainty": "Conference/preprint; no comparison group in abstract.",
+    "funding": "not reported",
+    "system": "Open-source generative LLM"
+   }
+  },
+  {
+   "id": "mitchell-2018-gender",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1017/S104909651800001X",
+   "url": "https://doi.org/10.1017/S104909651800001X",
+   "short": "Mitchell & Martin (2018)",
+   "citation": "Mitchell, K.M.W. & Martin, J. (2018). Gender Bias in Student Evaluations. PS: Political Science & Politics, 51.",
+   "study": {
+    "design": "Content analysis of comments + comparison of ratings in identical online courses",
+    "sample": "Comments and ratings for one male and one female instructor",
+    "context": "US university, online course",
+    "comparison": "Male vs female instructor teaching identical course",
+    "outcome": "Language used in comments; ordinal ratings (equity)",
+    "duration": "Course sections",
+    "result": "Language about male vs female instructors differs significantly; male instructor received higher ratings for identical course.",
+    "uncertainty": "Very small instructor sample; not about AI - documents bias already present in the comments any AI would analyse.",
+    "funding": "not reported",
+    "system": "None (no AI)"
+   }
+  },
+  {
+   "id": "kreitzer-2022-set-review",
+   "kind": "review",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1007/s10805-021-09400-w",
+   "url": "https://doi.org/10.1007/s10805-021-09400-w",
+   "short": "Kreitzer & Sweet-Cushman (2022)",
+   "citation": "Kreitzer, R.J. & Sweet-Cushman, J. (2022). Evaluating Student Evaluations of Teaching: a Review of Measurement and Equity Bias in SETs and Recommendations for Ethical Reform. Journal of Academic Ethics, 20(1), 73-84.",
+   "study": {
+    "design": "Literature review",
+    "sample": "100+ articles",
+    "context": "Student evaluations of teaching, mainly US",
+    "comparison": "Not applicable",
+    "outcome": "Measurement and equity bias (equity)",
+    "duration": "Not applicable",
+    "result": "Women and other marginalised groups face significant but conditional biases in SETs.",
+    "uncertainty": "Abstract read via index summary only; focuses mostly on ratings rather than comments.",
+    "funding": "not reported",
+    "system": "None (no AI)"
+   }
+  },
+  {
+   "id": "reza-2025-prompthive",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1145/3706598.3714051",
+   "url": "https://doi.org/10.1145/3706598.3714051",
+   "short": "Reza et al. (2025), CHI - PromptHive",
+   "citation": "Reza, M., Anastasopoulos, I., Bhandari, S. & Pardos, Z.A. (2025). PromptHive: Bringing Subject Matter Experts Back to the Forefront with Collaborative Prompt Engineering for Educational Content Creation. CHI 2025, 1-22.",
+   "study": {
+    "design": "Usability study with experts + learning-gain experiment",
+    "sample": "10 maths subject-matter experts; 358 learners",
+    "context": "Open-source adaptive tutor (OATutor), maths hints; online learners",
+    "comparison": "Human-authored hints",
+    "outcome": "Learning gains; authoring time; perceived cognitive load",
+    "duration": "Short experiment",
+    "result": "Expert-prompted AI hints produced learning gains statistically indistinguishable from human hints; perceived load halved; authoring time from months to hours (OECD: >20x faster).",
+    "uncertainty": "Maths only; short-term learning; developers evaluated their own tool.",
+    "funding": "not reported",
+    "system": "LLM via PromptHive prompt-authoring interface"
+   }
+  },
+  {
+   "id": "pardos-2024-hints",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1371/journal.pone.0304013",
+   "url": "https://doi.org/10.1371/journal.pone.0304013",
+   "short": "Pardos & Bhandari (2024), PLOS ONE",
+   "citation": "Pardos, Z.A. & Bhandari, S. (2024). ChatGPT-generated help produces learning gains equivalent to human tutor-authored help on mathematics skills. PLOS ONE, 19, e0304013.",
+   "study": {
+    "design": "Randomised 3x4 experiment",
+    "sample": "N = 274 online participants",
+    "context": "Algebra and statistics problems",
+    "comparison": "No-help control and human tutor-authored help",
+    "outcome": "Learning gains; time on task; content error rate",
+    "duration": "Single session",
+    "result": "ChatGPT help gave gains similar to human help; but 32% of generated help failed quality checks, reduced to ~0% (algebra) and 13% (statistics) with self-consistency checks.",
+    "uncertainty": "Crowd-sourced adults, short-term; immediate post-test only.",
+    "funding": "not reported",
+    "system": "ChatGPT"
+   }
+  },
+  {
+   "id": "bhandari-2024-items",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1016/j.caeai.2024.100284",
+   "url": "https://doi.org/10.1016/j.caeai.2024.100284",
+   "short": "Bhandari et al. (2024), CAEAI",
+   "citation": "Bhandari, S., Liu, Y., Kwak, Y. & Pardos, Z.A. (2024). Evaluating the psychometric properties of ChatGPT-generated questions. Computers and Education: Artificial Intelligence, 7, 100284.",
+   "study": {
+    "design": "IRT comparison of two item pools with linking",
+    "sample": "207 respondents; 15 items per pool",
+    "context": "College algebra (OpenStax textbook lesson)",
+    "comparison": "Published open textbook items",
+    "outcome": "Item difficulty and discrimination",
+    "duration": "Single administration",
+    "result": "No significant differences in difficulty or discrimination; ChatGPT items marginally better at discriminating.",
+    "uncertainty": "15 items, one lesson, one domain.",
+    "funding": "not reported",
+    "system": "ChatGPT"
+   }
+  },
+  {
+   "id": "liu-2025-llm-respondents",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1111/bjet.13570",
+   "url": "https://doi.org/10.1111/bjet.13570",
+   "short": "Liu, Bhandari & Pardos (2025), BJET",
+   "citation": "Liu, Y., Bhandari, S. & Pardos, Z.A. (2025). Leveraging LLM respondents for item evaluation: A psychometric analysis. British Journal of Educational Technology, 56(3), 1028-1052.",
+   "study": {
+    "design": "Comparison of LLM-simulated vs human item calibration",
+    "sample": "Six LLMs vs college-student responses",
+    "context": "College algebra items",
+    "comparison": "Human-calibrated item parameters",
+    "outcome": "Correlation of item parameters",
+    "duration": "Not applicable",
+    "result": "Single LLMs have too narrow ability spread; ensembles correlate >0.8 with human calibration; augmentation raised Spearman from 0.89 to 0.93.",
+    "uncertainty": "Authors frame it as suitable for low-stakes use only.",
+    "funding": "not reported",
+    "system": "GPT-3.5, GPT-4, Llama 2/3, Gemini-Pro, Command R+"
+   }
+  },
+  {
+   "id": "moore-2023-mcq",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1007/978-3-031-42682-7_16",
+   "url": "https://doi.org/10.1007/978-3-031-42682-7_16",
+   "short": "Moore et al. (2023), EC-TEL",
+   "citation": "Moore, S., Nguyen, H.A., Chen, T. & Stamper, J. (2023). Assessing the Quality of Multiple-Choice Questions Using GPT-4 and Rule-Based Methods. EC-TEL 2023, LNCS.",
+   "study": {
+    "design": "Comparison of automated flaw detection vs human annotation",
+    "sample": "200 student-generated MCQs, four subjects",
+    "context": "Undergraduate introductory courses",
+    "comparison": "Human annotators; rule-based method",
+    "outcome": "Detection of 19 item-writing flaws",
+    "duration": "Not applicable",
+    "result": "Rule-based method found 91% of human-flagged flaws vs 79% for GPT-4.",
+    "uncertainty": "Authors' own rule-based method compared.",
+    "funding": "not reported",
+    "system": "GPT-4; rule-based checker"
+   }
+  },
+  {
+   "id": "artsi-2024-mcq-review",
+   "kind": "review",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1186/s12909-024-05239-y",
+   "url": "https://doi.org/10.1186/s12909-024-05239-y",
+   "short": "Artsi et al. (2024), systematic review",
+   "citation": "Artsi, Y., Sorin, V., Konen, E., Glicksberg, B.S., Nadkarni, G. & Klang, E. (2024). Large language models for generating medical examinations: systematic review. BMC Medical Education, 24, 354.",
+   "study": {
+    "design": "Systematic review (PRISMA, QUADAS-2 adapted)",
+    "sample": "8 studies (Apr-Oct 2023)",
+    "context": "Medical education MCQs",
+    "comparison": "Varied; only one study compared with human-written items",
+    "outcome": "Validity/quality of generated items",
+    "duration": "Not applicable",
+    "result": "LLMs can produce usable MCQs, but every included study found faulty items unsuitable for exams.",
+    "uncertainty": "Small, early literature; 2 studies at high risk of bias; medicine only.",
+    "funding": "not reported",
+    "system": "ChatGPT 3.5 (6 studies), GPT-4 (2)"
+   }
+  },
+  {
+   "id": "tupper-2024-fieldcourse",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1080/14703297.2024.2316716",
+   "url": "https://doi.org/10.1080/14703297.2024.2316716",
+   "short": "Tupper, Hendy & Shipway (2024), IETI",
+   "citation": "Tupper, M.H., Hendy, I.W. & Shipway, J.R. (2024). Field courses for dummies: To what extent can ChatGPT design a higher education field course? Innovations in Education and Teaching International, 62.",
+   "study": {
+    "design": "Case study (two courses designed with ChatGPT)",
+    "sample": "2 field courses",
+    "context": "UK university, marine/field biology",
+    "comparison": "Informal comparison with existing human-designed module",
+    "outcome": "Design quality judged by authors; time",
+    "duration": "Not applicable",
+    "result": "ChatGPT can save time in field-course design, but human expertise remained indispensable.",
+    "uncertainty": "No systematic comparison, no student outcomes.",
+    "funding": "not reported",
+    "system": "ChatGPT"
+   }
+  },
+  {
+   "id": "conklin-2024-course",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1007/s44217-024-00386-2",
+   "url": "https://doi.org/10.1007/s44217-024-00386-2",
+   "short": "Conklin, Dorgan & Barreto (2024), Discover Education",
+   "citation": "Conklin, S.A., Dorgan, T. & Barreto, D. (2024). Is AI the new course creator. Discover Education, 3.",
+   "study": {
+    "design": "Design case study",
+    "sample": "1 Master's course (14 weeks, 3 credits)",
+    "context": "US university, online asynchronous instructional design course",
+    "comparison": "None",
+    "outcome": "Development time (self-reported); workflow",
+    "duration": "Course development period",
+    "result": "Course built in 'significantly reduced' time including LMS HTML/CSS; outputs needed validation and expert refinement.",
+    "uncertainty": "Self-report by designers; no student or quality outcomes.",
+    "funding": "not reported",
+    "system": "ChatGPT 3.5"
+   }
+  },
+  {
+   "id": "eef-2024-chatgpt-planning",
+   "kind": "grey",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "doi": null,
+   "url": "https://educationendowmentfoundation.org.uk/projects-and-evaluation/projects/chatgpt-in-lesson-preparation-teacher-choices-trial",
+   "short": "Roy et al. (2024), EEF/NFER trial",
+   "citation": "Roy, P., Poet, H., Staunton, R., Aston, K. & Thomas, D. (2024). ChatGPT in Lesson Preparation: A Teacher Choices Trial. Evaluation report. Education Endowment Foundation.",
+   "study": {
+    "design": "Randomised controlled trial",
+    "sample": "259 teachers, 68 secondary schools (England)",
+    "context": "KS3 science (pupils aged 11-13) - K-12, indirect for HE",
+    "comparison": "Teachers asked not to use GenAI for planning",
+    "outcome": "Weekly planning time; blinded expert rating of resource quality",
+    "duration": "One school term (approx.)",
+    "result": "56.2 vs 81.5 minutes/week (-31%); no noticeable quality difference.",
+    "uncertainty": "School level, one subject, ChatGPT 3.5 with a guide; read via OECD ch.1 and the Stanford SCALE summary page, not the full report.",
+    "funding": "Education Endowment Foundation",
+    "system": "ChatGPT (free version) + guide"
+   }
+  },
+  {
+   "id": "plak-2022-ews",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1111/hequ.12298",
+   "url": "https://doi.org/10.1111/hequ.12298",
+   "short": "Plak et al. (2022), HEQ",
+   "citation": "Plak, S., Cornelisz, I., Meeter, M. & van Klaveren, C. (2022). Early warning systems for more effective student counselling in higher education: Evidence from a Dutch field experiment. Higher Education Quarterly, 76(1).",
+   "study": {
+    "design": "Randomised field experiment",
+    "sample": "First-year students at a large Dutch university (n in full text)",
+    "context": "Netherlands; counsellors received student-level risk information",
+    "comparison": "Counselling without EWS information",
+    "outcome": "Dropout; academic performance (retention, learning)",
+    "duration": "First year",
+    "result": "EWS predicted at-risk students accurately, but EWS-assisted counselling did not reduce dropout or improve performance.",
+    "uncertainty": "One institution; abstract only; null result may depend on what counsellors did with the flags.",
+    "funding": "not reported",
+    "system": "Predictive early-warning model"
+   }
+  },
+  {
+   "id": "sonderlund-2019-la-review",
+   "kind": "review",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1111/bjet.12720",
+   "url": "https://doi.org/10.1111/bjet.12720",
+   "short": "Larrabee Sønderlund et al. (2019), BJET",
+   "citation": "Larrabee Sønderlund, A., Hughes, E. & Smith, J. (2019). The efficacy of learning analytics interventions in higher education: A systematic review. British Journal of Educational Technology, 50(5).",
+   "study": {
+    "design": "Systematic review with quality assessment",
+    "sample": "689 papers screened; 11 intervention studies",
+    "context": "Higher education",
+    "comparison": "Varied",
+    "outcome": "Underperformance, experience, discontinuation",
+    "duration": "Not applicable",
+    "result": "Only 11 studies tested interventions; promising but moderate quality; institutions implement with little evidence.",
+    "uncertainty": "Pre-generative-AI literature; review is dated.",
+    "funding": "not reported",
+    "system": "Predictive learning analytics"
+   }
+  },
+  {
+   "id": "ifenthaler-2020-la-review",
+   "kind": "review",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1007/s11423-020-09788-z",
+   "url": "https://doi.org/10.1007/s11423-020-09788-z",
+   "short": "Ifenthaler & Yau (2020), ETR&D",
+   "citation": "Ifenthaler, D. & Yau, J.Y.-K. (2020). Utilising learning analytics to support study success in higher education: a systematic review. Educational Technology Research and Development, 68.",
+   "study": {
+    "design": "Systematic review",
+    "sample": "6,220 records; 46 key publications",
+    "context": "Higher education",
+    "comparison": "Varied",
+    "outcome": "Study success, retention",
+    "duration": "Not applicable",
+    "result": "Many promising approaches, but rigorous large-scale evidence of effectiveness is still lacking.",
+    "uncertainty": "Pre-generative-AI literature.",
+    "funding": "not reported",
+    "system": "Learning analytics"
+   }
+  },
+  {
+   "id": "baker-2022-bias",
+   "kind": "review",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1007/s40593-021-00285-9",
+   "url": "https://doi.org/10.1007/s40593-021-00285-9",
+   "short": "Baker & Hawn (2022), IJAIED",
+   "citation": "Baker, R.S. & Hawn, A. (2022). Algorithmic Bias in Education. International Journal of Artificial Intelligence in Education, 32.",
+   "study": {
+    "design": "Narrative review",
+    "sample": "Empirical studies on algorithmic bias in education",
+    "context": "All levels",
+    "comparison": "Not applicable",
+    "outcome": "Bias by race, gender, nationality, SES, disability (equity)",
+    "duration": "Not applicable",
+    "result": "Documents concrete bias across groups and pipeline stages; many groups understudied.",
+    "uncertainty": "Not systematic; mixed levels.",
+    "funding": "not reported",
+    "system": "Educational prediction models"
+   }
+  },
+  {
+   "id": "idowu-2024-debiasing",
+   "kind": "review",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1007/s40593-023-00389-4",
+   "url": "https://doi.org/10.1007/s40593-023-00389-4",
+   "short": "Idowu (2024), IJAIED",
+   "citation": "Idowu, J.A. (2024). Debiasing Education Algorithms. International Journal of Artificial Intelligence in Education, 34.",
+   "study": {
+    "design": "Systematic literature review",
+    "sample": "Studies on fairness of ML in education (dropout, performance prediction, etc.)",
+    "context": "Mixed levels",
+    "comparison": "Not applicable",
+    "outcome": "Fairness metrics and mitigation (equity)",
+    "duration": "Not applicable",
+    "result": "Most studies found no strict fairness-accuracy trade-off; recommends checking data fairness first and assessing impact on end users.",
+    "uncertainty": "Abstract only.",
+    "funding": "not reported",
+    "system": "ML prediction models"
+   }
+  },
+  {
+   "id": "gandara-2024-bias",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1177/23328584241258741",
+   "url": "https://doi.org/10.1177/23328584241258741",
+   "short": "Gándara et al. (2024), AERA Open",
+   "citation": "Gándara, D., Anahideh, H., Ison, M.P. & Picchiarini, L. (2024). Inside the Black Box: Detecting and Mitigating Algorithmic Bias Across Racialized Groups in College Student-Success Prediction. AERA Open, 10.",
+   "study": {
+    "design": "Secondary analysis; multiple ML models with bias audits",
+    "sample": "Nationally representative US data (Education Longitudinal Study of 2002)",
+    "context": "US college student success",
+    "comparison": "Across racialized groups; with/without mitigation",
+    "outcome": "Prediction accuracy by group (equity)",
+    "duration": "Longitudinal dataset",
+    "result": "Models are less accurate for racially minoritised students; common mitigation techniques generally fail to remove the gaps.",
+    "uncertainty": "US data; findings on prediction, not on interventions.",
+    "funding": "not reported",
+    "system": "Various ML classifiers"
+   }
+  },
+  {
+   "id": "eu-ai-act-2024",
+   "kind": "grey",
+   "read": "page",
+   "accessed": "2026-10-22",
+   "doi": null,
+   "url": "http://data.europa.eu/eli/reg/2024/1689/oj",
+   "short": "EU AI Act (Reg. 2024/1689), Annex III",
+   "citation": "Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act), Annex III, point 3 (education and vocational training).",
+   "study": {
+    "design": "Legislation",
+    "sample": "Not applicable",
+    "context": "European Union",
+    "comparison": "Not applicable",
+    "outcome": "Legal classification",
+    "duration": "Not applicable",
+    "result": "Annex III point 3(b) lists as high-risk AI systems intended to evaluate learning outcomes, including when those outcomes are used to steer the learning process; 3(a) admission/assignment, 3(c) level of education, 3(d) proctoring.",
+    "uncertainty": "Read via the artificialintelligenceact.eu annex page (EUR-Lex not reachable from our tools). Application dates for Annex III obligations are subject to amendment proposals; check the current Official Journal text. Not legal advice.",
+    "funding": "not reported",
+    "system": "Not applicable"
+   }
+  },
+  {
+   "id": "kestin-2025-ai-tutor",
+   "kind": "peer-reviewed",
+   "read": "full",
+   "accessed": "2026-10-22",
+   "doi": "10.1038/s41598-025-97652-6",
+   "url": "https://doi.org/10.1038/s41598-025-97652-6",
+   "short": "Kestin et al. (2025), Scientific Reports",
+   "citation": "Kestin, G., Miller, K., Klales, A., Milbourne, T. & Ponti, G. (2025). AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting. Scientific Reports, 15.",
+   "study": {
+    "design": "Randomised crossover controlled trial",
+    "sample": "N = 194 analysed (course of 233), Harvard introductory physics for life sciences",
+    "context": "US elite university, Fall 2023; two lessons (surface tension, fluid flow)",
+    "comparison": "In-class active learning taught by experienced instructors",
+    "outcome": "Immediate post-test learning gains; time on task; engagement and motivation (satisfaction)",
+    "duration": "Two one-week lessons",
+    "result": "Median learning gains more than double with the custom AI tutor; effect size ~0.63 (regression) to 0.73-1.3 (other analyses); median 49 min vs 60 min in class; higher engagement and motivation.",
+    "uncertainty": "Immediate post-test only (no retention/transfer); one course, one institution, two topics; tutor built with expert-written, question-specific prompts and pre-written solutions; authors are the course instructors.",
+    "funding": "No competing interests declared",
+    "system": "Custom GPT-4-based tutor (PS2 Pal) with structured, instructor-authored prompts"
+   }
+  },
+  {
+   "id": "wu-2024-chatbot-meta",
+   "kind": "review",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1111/bjet.13334",
+   "url": "https://doi.org/10.1111/bjet.13334",
+   "short": "Wu & Yu (2024), BJET meta-analysis",
+   "citation": "Wu, R. & Yu, Z. (2024). Do AI chatbots improve students learning outcomes? Evidence from a meta-analysis. British Journal of Educational Technology, 55(1), 10-33.",
+   "study": {
+    "design": "Meta-analysis",
+    "sample": "24 randomised studies",
+    "context": "Mixed levels; many language-learning studies",
+    "comparison": "Non-chatbot conditions",
+    "outcome": "Learning outcomes (mixed measures)",
+    "duration": "Not applicable",
+    "result": "Large overall effect; larger in higher education; short interventions stronger than long ones (possible novelty effect).",
+    "uncertainty": "Mostly pre-ChatGPT chatbots; heterogeneous outcomes; small studies; many in language learning.",
+    "funding": "not reported",
+    "system": "Various AI chatbots"
+   }
+  },
+  {
+   "id": "liu-2024-cs50",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1145/3626252.3630938",
+   "url": "https://doi.org/10.1145/3626252.3630938",
+   "short": "Liu et al. (2024), SIGCSE - CS50",
+   "citation": "Liu, R., Zenke, C., Liu, C., Holmes, A., Thornton, P. & Malan, D.J. (2024). Teaching CS50 with AI: Leveraging Generative Artificial Intelligence in Computer Science Education. SIGCSE 2024.",
+   "study": {
+    "design": "Descriptive deployment report",
+    "sample": "~70 summer students, thousands online, several hundred on campus",
+    "context": "Harvard CS50, 2023",
+    "comparison": "None",
+    "outcome": "Student perceptions (satisfaction); answer accuracy on forum",
+    "duration": "Summer + Fall 2023",
+    "result": "Course-specific tools, designed to guide rather than give answers, were received positively.",
+    "uncertainty": "No comparison group; built and evaluated by course staff.",
+    "funding": "not reported",
+    "system": "Course-built tools on GPT-4 (CS50 Duck)"
+   }
+  },
+  {
+   "id": "nokut-2026-llm",
+   "kind": "grey",
+   "read": "full",
+   "accessed": "2026-10-22",
+   "doi": null,
+   "url": "https://www.nokut.no/globalassets/nokut/rapporter/tematiske-analyser/2026/report-c_large-language-models-in-analytical-processes_5-2026.pdf",
+   "short": "NOKUT (2026), Report 5/2026",
+   "citation": "Guajardo, G., Lanestedt, J. & Friedrich, P.E.L. (2026). Large Language Models in Analytical Processes: Insights from NOKUT's Thematic Analyses of the Third Periodic Review Cycle. NOKUT Report 5/2026.",
+   "study": {
+    "design": "Agency practice report; reflective comparison of manual vs LLM-assisted thematic analysis",
+    "sample": "48 institutional review reports (~1,800 pages), 2017-2024",
+    "context": "Norwegian quality-assurance agency",
+    "comparison": "Manual analysis by NOKUT staff (qualitative)",
+    "outcome": "Usefulness, errors observed",
+    "duration": "2025 project",
+    "result": "Both approaches found many of the same challenges; NotebookLM good at structuring and spotting patterns; confused institution names/abbreviations, needed restructured data and careful prompts; humans must make final judgments.",
+    "uncertainty": "No quantitative agreement measure; public documents only.",
+    "funding": "NOKUT (public agency)",
+    "system": "Google NotebookLM (Gemini-based); ChatGPT-4o for prompt refinement"
+   }
+  },
+  {
+   "id": "stasiuk-2026-naqa",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.30970/eli.33.1",
+   "url": "https://doi.org/10.30970/eli.33.1",
+   "short": "Stasiuk et al. (2026)",
+   "citation": "Stasiuk, M., Kukharskyy, V. & Pavlyshenko, B. (2026). Using Large Language Models for Text Analysis in the Evaluation of University Educational Programs. Electronics and Information Technologies, 33.",
+   "study": {
+    "design": "Correlational comparison of LLM scores with expert classification",
+    "sample": "10 programme self-evaluation reports (5 strongest, 5 weakest)",
+    "context": "Ukrainian university; national agency (NAQA) criteria",
+    "comparison": "Expert ranking of reports",
+    "outcome": "Alignment of LLM scores with expert judgement",
+    "duration": "Not applicable",
+    "result": "LLMs showed weak alignment when applying official NAQA criteria; textual metrics (factual density, argumentation) did separate strong from weak reports.",
+    "uncertainty": "Tiny sample; one institution; regional journal.",
+    "funding": "not reported",
+    "system": "GPT-5, Gemini 2.5"
+   }
+  },
+  {
+   "id": "baucks-2024-dcf",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1145/3657604.3662028",
+   "url": "https://doi.org/10.1145/3657604.3662028",
+   "short": "Baucks et al. (2024), L@S - DCF",
+   "citation": "Baucks, F., Schmucker, R., Borchers, C., Pardos, Z.A. & Wiskott, L. (2024). Gaining Insights into Group-Level Course Difficulty via Differential Course Functioning. Proceedings of the Eleventh ACM Conference on Learning @ Scale, 165-176.",
+   "study": {
+    "design": "Methodological study (IRT-based curriculum analytics)",
+    "sample": "20,000+ students",
+    "context": "Large public university",
+    "comparison": "Student groups (e.g. transfer vs non-transfer)",
+    "outcome": "Group differences in course difficulty (equity)",
+    "duration": "Retrospective",
+    "result": "DCF detects courses that are unexpectedly harder for some groups after controlling for overall performance.",
+    "uncertainty": "Statistical method, not generative AI; no intervention evaluated.",
+    "funding": "not reported",
+    "system": "Item response theory"
+   }
+  },
+  {
+   "id": "baucks-2024-irt",
+   "kind": "peer-reviewed",
+   "read": "abstract",
+   "accessed": "2026-10-22",
+   "doi": "10.1145/3636555.3636902",
+   "url": "https://doi.org/10.1145/3636555.3636902",
+   "short": "Baucks et al. (2024), LAK - IRT difficulty",
+   "citation": "Baucks, F., Schmucker, R. & Wiskott, L. (2024). Gaining Insights into Course Difficulty Variations Using Item Response Theory. LAK '24, 450-461.",
+   "study": {
+    "design": "Methodological study",
+    "sample": "664 Computer Science and 1,355 Mechanical Engineering students",
+    "context": "Undergraduate CS and Mechanical Engineering programmes at one university (institution not checked)",
+    "comparison": "Conventional pass rates",
+    "outcome": "Course difficulty over time",
+    "duration": "Several years",
+    "result": "Course difficulty fell during COVID-19; raw pass rates are confounded by cohort; IRT-adjusted pass rates proposed.",
+    "uncertainty": "Statistical method, not generative AI.",
+    "funding": "not reported",
+    "system": "Item response theory"
+   }
+  }
+ ]
+}
