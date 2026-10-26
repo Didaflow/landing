@@ -30,3 +30,14 @@ cwebp -q 72 -m 6 bruegel-original.jpg -o childrens-games.webp
 
 Scrolling moves the figures a few pixels (`scripts/main.js`); the movement is decorative and never
 represents a simulated intervention or outcome. `prefers-reduced-motion` turns it off.
+
+### Groups added for the home page
+
+| File | What it is |
+| --- | --- |
+| `chain.webp` | six children pulling together with sticks (team) |
+| `leapfrog.webp` | leapfrog: one child jumps over another, a third gets ready (training and co-design) |
+
+Cut from the 6567×4770 reproduction with Segment Anything (vit_h): one box prompt per figure, plus a
+few points where figures overlap; masks merged, cleaned and feathered by 1 px, exported as WebP
+(quality 84, alpha 92, at most 1000 px wide).
