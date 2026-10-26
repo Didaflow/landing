@@ -132,6 +132,20 @@ describe("reports, usage and limits", () => {
     expect(text).toContain(`"'=HYPERLINK(""http://x"",""ok"")"`);
     expect(text).toContain("'+cmd");
   });
+  test("a carriage return does not let a formula through the CSV export", async () => {
+    await post("/posts", { ...experience, text: "ok\r=1+1" });
+    const text = await (await get("/admin/export/posts.csv", { authorization: "Bearer secret" }))!.text();
+    expect(text).toContain(`"ok\r=1+1"`);
+  });
+  test("flags on a numeric id count once, whatever its spelling", async () => {
+    const { id, editToken } = await (await post("/posts", experience))!.json();
+    await post(`/posts/${id}/updates`, { text: "Later" }, { "x-edit-token": editToken });
+    const o = await (await get("/admin/overview", { authorization: "Bearer secret" }))!.json();
+    const u = o.updates[0].id;
+    for (const spelling of [String(u), "0" + u, "00" + u]) await post(`/updates/${spelling}/flag`, {}, client(4));
+    const o2 = await (await get("/admin/overview", { authorization: "Bearer secret" }))!.json();
+    expect(o2.updates[0].flags).toBe(1);
+  });
   test("oversized bodies are refused before they are read", async () => {
     const r = await api(new Request(BASE + "/events", { method: "POST", headers: { "content-length": "100000" }, body: "{}" }), "1.1.1.1");
     expect(r!.status).toBe(413);
