@@ -10,6 +10,7 @@
 
   var LANG = document.documentElement.lang === "it" ? "it" : "en";
   var HOME = LANG === "it" ? "/it/" : "/";
+  var COMMONS = LANG === "it" ? "/it/commons/" : "/commons/";
 
   // Only the home page is translated; methodology, legal pages, changelog and white paper stay in English.
   var T = {
@@ -83,6 +84,7 @@
         <a href="${href("platform")}">${T.platform}</a>
         <a href="${href("practice")}">${T.practice}</a>
         <a href="/methodology/">${T.thinking}</a>
+        <a href="${COMMONS}">Commons</a>
         ${langSwitch()}
       </nav>
       <div class="site-header__cta">
@@ -97,6 +99,7 @@
       <a href="${href("platform")}">${T.platform}</a>
       <a href="${href("practice")}">${T.practice}</a>
       <a href="/methodology/">${T.thinking}</a>
+      <a href="${COMMONS}">Commons</a>
       ${langSwitch()}
       <a class="btn btn--primary" href="${href("contact")}" data-demo>${T.demo}</a>
     </nav>
@@ -131,6 +134,7 @@
               <li><a href="${href("practice")}">${T.cases}</a></li>
               <li><a href="/changelog/">${T.changelog}</a></li>
               <li><a href="/credits/">${T.credits}</a></li>
+              <li><a href="${COMMONS}">Commons</a></li>
             </ul>
           </div>
           <div>
