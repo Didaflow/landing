@@ -60,14 +60,37 @@ describe("experiences", () => {
     const s = await (await get("/summary?task=t-feedback&tool=feedbackfruits-acai"))!.json();
     expect(s.posts[0].updates[0].text).toBe("Later");
   });
-  test("three reports hide a post; the moderator can restore it", async () => {
+  test("a browser flags a contribution once; flags never hide it, they queue it for the moderator", async () => {
     const { id } = await (await post("/posts", experience))!.json();
-    for (let i = 0; i < 3; i++) await post(`/posts/${id}/flag`, {});
+    for (let i = 0; i < 5; i++) await post(`/posts/${id}/flag`, {}, client(1));
+    await post(`/posts/${id}/flag`, {}, client(2));
+    let s = await (await get("/summary?task=t-feedback&tool=feedbackfruits-acai"))!.json();
+    expect(s.posts.length).toBe(1);
+    const o = await (await get("/admin/overview", { authorization: "Bearer secret" }))!.json();
+    expect(o.posts[0]).toMatchObject({ id, flags: 2, status: "visible" });
+    expect((await post(`/posts/${id}/flag`, {}))!.status).toBe(400); // no browser id, no flag
+  });
+  test("the moderator hides a flagged post and restoring it clears the flags", async () => {
+    const { id } = await (await post("/posts", experience))!.json();
+    await post(`/posts/${id}/flag`, {}, client(1));
+    await post(`/admin/posts/${id}`, { status: "hidden" }, { authorization: "Bearer secret" });
     let s = await (await get("/summary?task=t-feedback&tool=feedbackfruits-acai"))!.json();
     expect(s.posts.length).toBe(0);
     await post(`/admin/posts/${id}`, { status: "visible" }, { authorization: "Bearer secret" });
     s = await (await get("/summary?task=t-feedback&tool=feedbackfruits-acai"))!.json();
     expect(s.posts.length).toBe(1);
+    const o = await (await get("/admin/overview", { authorization: "Bearer secret" }))!.json();
+    expect(o.posts[0].flags).toBe(0);
+  });
+  test("updates can be flagged and hidden by the moderator, and appear in the queue", async () => {
+    const { id, editToken } = await (await post("/posts", experience))!.json();
+    await post(`/posts/${id}/updates`, { text: "Spam" }, { "x-edit-token": editToken });
+    const o1 = await (await get("/admin/overview", { authorization: "Bearer secret" }))!.json();
+    const u = o1.updates[0];
+    await post(`/updates/${u.id}/flag`, {}, client(3));
+    await post(`/admin/updates/${u.id}`, { status: "hidden" }, { authorization: "Bearer secret" });
+    const s = await (await get("/summary?task=t-feedback&tool=feedbackfruits-acai"))!.json();
+    expect(s.posts[0].updates.length).toBe(0);
   });
   test("honeypot submissions are accepted silently and not stored", async () => {
     await post("/posts", { ...experience, website: "http://spam" });
@@ -102,5 +125,15 @@ describe("reports, usage and limits", () => {
     const text = await r!.text();
     expect(text.split("\n")[0]).not.toContain("edit_hash");
     expect(text).toContain("feedbackfruits-acai");
+  });
+  test("CSV export neutralises spreadsheet formulas in user text", async () => {
+    await post("/posts", { ...experience, text: '=HYPERLINK("http://x","ok")', name: "+cmd" });
+    const text = await (await get("/admin/export/posts.csv", { authorization: "Bearer secret" }))!.text();
+    expect(text).toContain(`"'=HYPERLINK(""http://x"",""ok"")"`);
+    expect(text).toContain("'+cmd");
+  });
+  test("oversized bodies are refused before they are read", async () => {
+    const r = await api(new Request(BASE + "/events", { method: "POST", headers: { "content-length": "100000" }, body: "{}" }), "1.1.1.1");
+    expect(r!.status).toBe(413);
   });
 });

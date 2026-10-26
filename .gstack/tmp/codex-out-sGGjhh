@@ -1,0 +1,1 @@
+Revisione non eseguita: il comando git diff richiesto è stato bloccato dall’errore del sandbox «bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted». Il verdetto è quindi non verificato: occorre fornire il diff o ripristinare l’esecuzione dei comandi.

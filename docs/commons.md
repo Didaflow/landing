@@ -73,8 +73,8 @@ What people can do on the map, with no account, no email and no cookies:
 
 Privacy by design: the browser keeps a random id (stored server-side only as a hash) and the edit
 keys of its own posts; IP addresses are used only for the rate limit, hashed with a daily key kept in
-memory and never written to the database; honeypot field against bots; three reports hide a
-contribution until a moderator looks at it. See `landing/privacy-policy/` (section “Commons and the
+memory and never written to the database; honeypot field against bots; a browser can flag a
+contribution once, which only queues it for a moderator: nothing is hidden automatically. See `landing/privacy-policy/` (section “Commons and the
 AI Map”).
 
 ### Moderation and analysis

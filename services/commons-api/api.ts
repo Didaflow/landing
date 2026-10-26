@@ -7,7 +7,7 @@
 //   POST /api/commons/posts                       structured experience → { id, editToken }
 //   POST /api/commons/posts/:id/updates           "how it went" (needs the edit token)
 //   POST /api/commons/posts/:id/replies           reply
-//   POST /api/commons/{posts|replies}/:id/flag    report a contribution (hidden after 3 reports)
+//   POST /api/commons/{posts|replies|updates}/:id/flag  report a contribution (once per browser; the moderator decides)
 //   POST /api/commons/reports                     something missing (task, tool, study)
 //   POST /api/commons/events                      cookieless usage counters (daily aggregates only)
 //   /api/commons/admin/*                          moderation and CSV export (Bearer token)
@@ -27,7 +27,9 @@ const SEEN = ["learning", "time", "engagement", "none", "integrity", "errors"];
 const REPORT_KINDS = ["task", "tool", "study"];
 const EVENT_KINDS = ["role", "task", "tool", "useful-open", "share"];
 const SHOW_CHECKS_FROM = 10;
-const HIDE_AFTER_FLAGS = 3;
+// Caps on public reads: a summary never returns more than this, so the page size stays bounded as contributions grow.
+const MAX_POSTS = 200, MAX_UPDATES = 20, MAX_REPLIES = 50;
+const MAX_BODY = 16 * 1024;
 
 export type ApiOptions = { dbPath: string; dataDir: string; adminToken?: string; writeLimit?: number; now?: () => Date };
 
@@ -38,7 +40,8 @@ export function createApi(opts: ApiOptions) {
     CREATE TABLE IF NOT EXISTS checks (task TEXT NOT NULL, role TEXT NOT NULL, value TEXT NOT NULL, client TEXT NOT NULL, created TEXT NOT NULL, updated TEXT NOT NULL, UNIQUE (task, client));
     CREATE TABLE IF NOT EXISTS useful (task TEXT NOT NULL, tool TEXT NOT NULL, role TEXT NOT NULL, value TEXT, reason TEXT, client TEXT NOT NULL, created TEXT NOT NULL, UNIQUE (task, tool, client));
     CREATE TABLE IF NOT EXISTS posts (id TEXT PRIMARY KEY, task TEXT NOT NULL, tool TEXT NOT NULL, role TEXT NOT NULL, stars INTEGER NOT NULL, level TEXT, field TEXT, size TEXT, how TEXT, seen TEXT NOT NULL, text TEXT, name TEXT, created TEXT NOT NULL, edit_hash TEXT NOT NULL, status TEXT NOT NULL DEFAULT 'visible', flags INTEGER NOT NULL DEFAULT 0);
-    CREATE TABLE IF NOT EXISTS updates (id INTEGER PRIMARY KEY, post_id TEXT NOT NULL REFERENCES posts(id), text TEXT NOT NULL, created TEXT NOT NULL);
+    CREATE TABLE IF NOT EXISTS updates (id INTEGER PRIMARY KEY, post_id TEXT NOT NULL REFERENCES posts(id), text TEXT NOT NULL, created TEXT NOT NULL, status TEXT NOT NULL DEFAULT 'visible', flags INTEGER NOT NULL DEFAULT 0);
+    CREATE TABLE IF NOT EXISTS flags (kind TEXT NOT NULL, id TEXT NOT NULL, client TEXT NOT NULL, created TEXT NOT NULL, PRIMARY KEY (kind, id, client));
     CREATE TABLE IF NOT EXISTS replies (id INTEGER PRIMARY KEY, post_id TEXT NOT NULL REFERENCES posts(id), text TEXT NOT NULL, name TEXT, created TEXT NOT NULL, status TEXT NOT NULL DEFAULT 'visible', flags INTEGER NOT NULL DEFAULT 0);
     CREATE TABLE IF NOT EXISTS reports (id INTEGER PRIMARY KEY, kind TEXT NOT NULL, role TEXT, task TEXT, tool TEXT, what TEXT NOT NULL, link TEXT, created TEXT NOT NULL, status TEXT NOT NULL DEFAULT 'open');
     CREATE TABLE IF NOT EXISTS events (day TEXT NOT NULL, kind TEXT NOT NULL, role TEXT NOT NULL DEFAULT '', task TEXT NOT NULL DEFAULT '', tool TEXT NOT NULL DEFAULT '', n INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (day, kind, role, task, tool));
@@ -90,9 +93,9 @@ export function createApi(opts: ApiOptions) {
       for (const r of db.query("SELECT tool, COUNT(*) n, AVG(stars) avg FROM posts WHERE task = ? AND status = 'visible' GROUP BY tool").all(task) as any[]) ratings[r.tool] = { n: r.n, avg: r.avg };
       return { checks, mine, ratings };
     }
-    const posts = db.query("SELECT id, role, stars, level, field, size, how, seen, text, name, created FROM posts WHERE task = ? AND tool = ? AND status = 'visible' ORDER BY created DESC, rowid DESC").all(task, tool) as any[];
-    const ups = db.query("SELECT text, created FROM updates WHERE post_id = ? ORDER BY id");
-    const reps = db.query("SELECT id, text, name, created FROM replies WHERE post_id = ? AND status = 'visible' ORDER BY id");
+    const posts = db.query(`SELECT id, role, stars, level, field, size, how, seen, text, name, created FROM posts WHERE task = ? AND tool = ? AND status = 'visible' ORDER BY created DESC, rowid DESC LIMIT ${MAX_POSTS}`).all(task, tool) as any[];
+    const ups = db.query(`SELECT id, text, created FROM updates WHERE post_id = ? AND status = 'visible' ORDER BY id LIMIT ${MAX_UPDATES}`);
+    const reps = db.query(`SELECT id, text, name, created FROM replies WHERE post_id = ? AND status = 'visible' ORDER BY id LIMIT ${MAX_REPLIES}`);
     const seen: Record<string, number> = {};
     for (const p of posts) {
       p.seen = JSON.parse(p.seen);
@@ -115,7 +118,12 @@ export function createApi(opts: ApiOptions) {
   function csv(rows: any[]) {
     if (!rows.length) return "";
     const cols = Object.keys(rows[0]).filter((c) => c !== "edit_hash" && c !== "client");
-    const cell = (v: any) => { const s = v == null ? "" : String(v); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+    // Text that starts like a formula would run in a spreadsheet: prefix it so the moderator sees it as plain text.
+    const cell = (v: any) => {
+      let s = v == null ? "" : String(v);
+      if (typeof v === "string" && /^[=+\-@\t\r]/.test(s)) s = "'" + s;
+      return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+    };
     return [cols.join(","), ...rows.map((r) => cols.map((c) => cell(r[c])).join(","))].join("\n") + "\n";
   }
 
@@ -137,18 +145,25 @@ export function createApi(opts: ApiOptions) {
             replies: (db.query("SELECT COUNT(*) n FROM replies").get() as any).n,
             reportsOpen: (db.query("SELECT COUNT(*) n FROM reports WHERE status = 'open'").get() as any).n,
           },
-          posts: db.query("SELECT id, task, tool, role, stars, text, name, created, status, flags FROM posts ORDER BY created DESC LIMIT 200").all(),
-          replies: db.query("SELECT id, post_id, text, name, created, status, flags FROM replies ORDER BY id DESC LIMIT 200").all(),
+          // Moderation queue first: the most flagged contributions come first, then the newest.
+          posts: db.query("SELECT id, task, tool, role, stars, text, name, created, status, flags FROM posts ORDER BY flags DESC, created DESC LIMIT 200").all(),
+          replies: db.query("SELECT id, post_id, text, name, created, status, flags FROM replies ORDER BY flags DESC, id DESC LIMIT 200").all(),
+          updates: db.query("SELECT id, post_id, text, created, status, flags FROM updates ORDER BY flags DESC, id DESC LIMIT 200").all(),
           reports: db.query("SELECT * FROM reports ORDER BY id DESC LIMIT 200").all(),
           disagreement: db.query("SELECT task, SUM(value = 'yes') yes, SUM(value = 'partly') partly, SUM(value = 'no') no, COUNT(*) n FROM checks WHERE value != 'untried' GROUP BY task HAVING n >= ? ORDER BY (1.0 * SUM(value = 'no') / COUNT(*)) DESC").all(SHOW_CHECKS_FROM),
           usage: db.query("SELECT kind, role, task, tool, SUM(n) n FROM events WHERE day >= date('now', '-30 day') GROUP BY kind, role, task, tool ORDER BY n DESC LIMIT 100").all(),
         });
       }
-      let m = path.match(/^\/admin\/(posts|replies)\/([\w-]+)$/);
+      let m = path.match(/^\/admin\/(posts|replies|updates)\/([\w-]+)$/);
       if (req.method === "POST" && m) {
         const b = await body(req); const status = one(b?.status, ["visible", "hidden"]);
         if (!status) return bad("status");
-        db.query(`UPDATE ${m[1]} SET status = ?, flags = CASE WHEN ? = 'visible' THEN 0 ELSE flags END WHERE id = ?`).run(status, status, m[2]);
+        db.query(`UPDATE ${m[1]} SET status = ? WHERE id = ?`).run(status, m[2]);
+        // Restoring a contribution means the moderator has reviewed its flags: clear them.
+        if (status === "visible") {
+          db.query("DELETE FROM flags WHERE kind = ? AND id = ?").run(m[1], m[2]);
+          db.query(`UPDATE ${m[1]} SET flags = 0 WHERE id = ?`).run(m[2]);
+        }
         return ok({ ok: true });
       }
       m = path.match(/^\/admin\/reports\/(\d+)$/);
@@ -158,7 +173,7 @@ export function createApi(opts: ApiOptions) {
         db.query("UPDATE reports SET status = ? WHERE id = ?").run(status, Number(m[1]));
         return ok({ ok: true });
       }
-      m = path.match(/^\/admin\/export\/(checks|useful|posts|updates|replies|reports|events)\.csv$/);
+      m = path.match(/^\/admin\/export\/(checks|useful|posts|updates|replies|reports|events|flags)\.csv$/);
       if (req.method === "GET" && m) return new Response(csv(db.query(`SELECT * FROM ${m[1]}`).all()), { headers: { "content-type": "text/csv; charset=utf-8", "content-disposition": `attachment; filename="commons-${m[1]}-${today()}.csv"` } });
       return bad("not found", 404);
     }
@@ -173,6 +188,7 @@ export function createApi(opts: ApiOptions) {
     // ─── Writes ───
     if (req.method !== "POST") return bad("not found", 404);
     if (!allowed(ip)) return bad("too many requests, try again later", 429);
+    if (Number(req.headers.get("content-length") || 0) > MAX_BODY) return bad("payload too large", 413);
     const b = await body(req);
     if (!b || typeof b !== "object") return bad("invalid body");
     if (b.website) return ok({ ok: true }); // honeypot field: bots fill it, people never see it
@@ -222,9 +238,14 @@ export function createApi(opts: ApiOptions) {
       db.query("INSERT INTO replies (post_id, text, name, created) VALUES (?, ?, ?, ?)").run(m[1], text, str(b.name, 60), at);
       return ok({ ok: true }, 201);
     }
-    m = path.match(/^\/(posts|replies)\/([\w-]+)\/flag$/);
+    // A flag is counted once per browser and only queues the contribution for the moderator: nothing is hidden automatically.
+    m = path.match(/^\/(posts|replies|updates)\/([\w-]+)\/flag$/);
     if (m) {
-      db.query(`UPDATE ${m[1]} SET flags = flags + 1, status = CASE WHEN flags + 1 >= ? THEN 'hidden' ELSE status END WHERE id = ?`).run(HIDE_AFTER_FLAGS, m[2]);
+      const me = client(req);
+      if (!me) return bad("invalid answer");
+      if (!db.query(`SELECT 1 FROM ${m[1]} WHERE id = ?`).get(m[2])) return bad("not found", 404);
+      if (db.query("INSERT OR IGNORE INTO flags (kind, id, client, created) VALUES (?, ?, ?, ?)").run(m[1], m[2], me, at).changes)
+        db.query(`UPDATE ${m[1]} SET flags = flags + 1 WHERE id = ?`).run(m[2]);
       return ok({ ok: true });
     }
     if (path === "/reports") {

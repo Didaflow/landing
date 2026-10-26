@@ -55,6 +55,9 @@
     <h2>Risposte</h2>
     <div class="table-wrap"><table id="replies"></table></div>
 
+    <h2>Aggiornamenti</h2>
+    <div class="table-wrap"><table id="updates"></table></div>
+
     <h2>Segnalazioni di contenuti mancanti</h2>
     <div class="table-wrap"><table id="reports"></table></div>
 
@@ -93,11 +96,12 @@
         var toggle = function (kind) { return function (r) { var next = r.status === "hidden" ? "visible" : "hidden"; return '<button class="ghost" data-kind="' + kind + '" data-id="' + r.id + '" data-status="' + next + '">' + (next === "hidden" ? "Nascondi" : "Ripristina") + "</button>"; }; };
         table(document.getElementById("posts"), [["created", "Data"], ["task", "Compito"], ["tool", "Strumento"], ["role", "Ruolo"], ["stars", "★", "num"], ["text", "Testo"], ["name", "Nome"], ["flags", "Segn."]], d.posts, toggle("posts"));
         table(document.getElementById("replies"), [["created", "Data"], ["post_id", "Esperienza"], ["text", "Testo"], ["name", "Nome"], ["flags", "Segn."]], d.replies, toggle("replies"));
+        table(document.getElementById("updates"), [["created", "Data"], ["post_id", "Esperienza"], ["text", "Testo"], ["flags", "Segn."]], d.updates, toggle("updates"));
         table(document.getElementById("reports"), [["created", "Data"], ["kind", "Tipo"], ["task", "Compito"], ["tool", "Strumento"], ["what", "Che cosa manca"], ["link", "Link"], ["status", "Stato"]], d.reports, function (r) {
           return '<button class="ghost" data-kind="reports" data-id="' + r.id + '" data-status="' + (r.status === "open" ? "done" : "open") + '">' + (r.status === "open" ? "Chiudi" : "Riapri") + "</button>";
         });
         table(document.getElementById("usage"), [["kind", "Evento"], ["role", "Ruolo"], ["task", "Compito"], ["tool", "Strumento"], ["n", "Volte", "num"]], d.usage);
-        document.getElementById("exports").innerHTML = ["checks", "useful", "posts", "updates", "replies", "reports", "events"].map(function (t) { return '<button class="ghost" data-export="' + t + '">' + t + ".csv</button>"; }).join("");
+        document.getElementById("exports").innerHTML = ["checks", "useful", "posts", "updates", "replies", "reports", "events", "flags"].map(function (t) { return '<button class="ghost" data-export="' + t + '">' + t + ".csv</button>"; }).join("");
       }).catch(function () { sessionStorage.removeItem("commons.admin"); token = ""; document.getElementById("login").hidden = false; document.getElementById("app").hidden = true; });
     }
     document.getElementById("login").addEventListener("submit", function (e) {

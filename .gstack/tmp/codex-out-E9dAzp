@@ -1,0 +1,20 @@
+- **[P1] Un solo utente può nascondere qualsiasi contributo.** `services/commons-api/api.ts:225–227`  
+  Ogni richiesta di segnalazione incrementa `flags`, senza identificare il segnalante né deduplicare. Bastano tre POST dallo stesso indirizzo per nascondere un post o una risposta; il limite predefinito consente di oscurarne dieci ogni dieci minuti. Il test conferma questo comportamento. Registrare segnalazioni distinte e impedire che richieste ripetute dello stesso soggetto attivino l’oscuramento automatico.
+
+- **[P2] Gli export consentono CSV formula injection.** `services/commons-api/api.ts:118–119`  
+  L’escaping gestisce delimitatori e virgolette, ma lascia intatte formule nei campi controllati dagli utenti, come `text`, `name`, `what` e `link`. Aprendo l’export con un foglio di calcolo, il moderatore potrebbe interpretare contenuti ostili come formule. Neutralizzare i prefissi di formula nell’export: racchiudere il valore tra virgolette CSV non basta.
+
+- **[P2] Gli aggiornamenti pubblici non hanno una moderazione dedicata.** `services/commons-api/api.ts:100`, `services/commons-api/api.ts:209–215`  
+  L’autore può aggiungere testo successivamente e questo viene restituito pubblicamente. Gli aggiornamenti non compaiono nell’overview amministrativa e non hanno stato, identificativo pubblico per la segnalazione o endpoint di moderazione. Un aggiornamento abusivo richiede quindi di nascondere l’intera esperienza, individuandolo fuori dalla console. Includerli nella coda di moderazione e consentirne l’oscuramento individuale.
+
+- **[P2] La lettura pubblica cresce senza limiti e può saturare il servizio.** `services/commons-api/api.ts:93–101`  
+  Ogni riepilogo carica tutti i post della coppia compito/strumento e, per ciascuno, tutti gli aggiornamenti e le risposte mediante ulteriori query sincrone. Non ci sono paginazione, limiti alle risposte o limitazione delle richieste GET nel codice mostrato. Con l’aumento dei contributi, richieste ripetute possono occupare il processo Bun e produrre risposte molto grandi. Limitare e paginare anche le collezioni annidate.
+
+- **[P2] I limiti sui campi arrivano dopo il caricamento integrale del corpo.** `services/commons-api/api.ts:107`, `services/commons-api/server.ts:18–25`  
+  `req.json()` legge e interpreta tutto il payload prima delle troncature e delle validazioni. Nel diff non è configurato un limite del corpo adeguato a questi piccoli messaggi, né in Bun né nella route Caddy. Il limite sul numero di richieste non limita i byte elaborati. Impostare un tetto esplicito e restituire `413` per payload eccessivi.
+
+Nel codice mostrato, l’admin rifiuta l’accesso se manca il token e confronta il segreto con `timingSafeEqual`. Le query parametrizzano i valori e i nomi delle tabelle interpolati provengono da whitelist: non emerge una SQL injection. Il token amministrativo è salvato in `sessionStorage`, quindi resta accessibile agli script della stessa origine.
+
+La route Caddy espone anche `/api/commons/admin/*`: la protezione è il Bearer token applicativo. Bun ascolta su loopback. Il template delle pagine Commons include `noindex`; l’admin include `noindex, nofollow`, ma il suo HTML è pubblicamente accessibile. **`noindex` non rende privata una pagina.**
+
+Non ho verificato file o configurazioni esterni al diff, eseguito test o effettuato richieste. Restano quindi non verificabili: rendering pubblico e possibili XSS in `map.js`, HTML effettivamente generato, configurazione Caddy completa e affidabilità di `X-Forwarded-For`, versione e limiti effettivi di Bun, robustezza del token configurato, collocazione e permessi del database rispetto alla document root, ed eventuali requisiti di accesso privato alle pagine.

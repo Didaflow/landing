@@ -18,6 +18,8 @@ const handle = createApi({
 const server = Bun.serve({
   hostname: "127.0.0.1",
   port: Number(Bun.env.COMMONS_API_PORT ?? 8787),
+  // Largest body the server reads at all, chunked or not. Every message here is a few hundred bytes.
+  maxRequestBodySize: 16 * 1024,
   async fetch(req, srv) {
     // Caddy sets X-Forwarded-For; the address is only used, salted and hashed, for the rate limit.
     const ip = req.headers.get("x-forwarded-for")?.split(",")[0].trim() || srv.requestIP(req)?.address || "";
