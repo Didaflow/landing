@@ -145,6 +145,9 @@ describe("reports, usage and limits", () => {
     for (const spelling of [String(u), "0" + u, "00" + u]) await post(`/updates/${spelling}/flag`, {}, client(4));
     const o2 = await (await get("/admin/overview", { authorization: "Bearer secret" }))!.json();
     expect(o2.updates[0].flags).toBe(1);
+    // Exponent spellings would reach the same row in SQLite but not in the flags table: they are refused.
+    expect((await post(`/updates/${u}e0/flag`, {}, client(5)))!.status).toBe(404);
+    expect((await post(`/updates/${u}E0/flag`, {}, client(5)))!.status).toBe(404);
   });
   test("oversized bodies are refused before they are read", async () => {
     const r = await api(new Request(BASE + "/events", { method: "POST", headers: { "content-length": "100000" }, body: "{}" }), "1.1.1.1");
