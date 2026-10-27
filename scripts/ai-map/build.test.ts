@@ -17,8 +17,10 @@ test("map data: the five JSON files the map loads are committed, not ignored, an
     const f = join(dir, n + ".json");
     expect(existsSync(f)).toBe(true);
     expect(JSON.parse(readFileSync(f, "utf8"))).toBeTruthy();
-    // exit 1 = not ignored; the deploy ships the tag, so ignored data never reaches production
-    expect(Bun.spawnSync(["git", "check-ignore", "-q", f]).exitCode).toBe(1);
+    // exit 1 = not ignored (--no-index also checks tracked files); the deploy ships the tag, so ignored data never reaches production
+    expect(Bun.spawnSync(["git", "check-ignore", "--no-index", "-q", f]).exitCode).toBe(1);
+    // and tracked by git, so it is in the tag
+    expect(Bun.spawnSync(["git", "ls-files", "--error-unmatch", f]).exitCode).toBe(0);
   }
   expect(JSON.parse(readFileSync(join(dir, "tasks.json"), "utf8")).tasks.length).toBe(d.tasks.length);
 });
