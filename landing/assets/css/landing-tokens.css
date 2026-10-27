@@ -97,6 +97,7 @@
     --ground: #fbf8f6; --surface: #ffffff; --ink: #1a1411; --muted: #5e534d; --line: #e6ddd8;
     --border-strong: #8c7d75; --accent: #d96d60; --accent-strong: #b5471e; --on-accent: #1a1411;
     --surface-raised: #ffffff;
+    --ok: #4a6a2a; --warn: #9a6414; --error: #b3121e; --ochre: #b87a14; --ochre-soft: #f0c24a; --moss: #6f8a3d; --umber: #7a5236; --plum: #7a5a78;
     --band: var(--ink); --on-band: var(--ground); --on-band-muted: color-mix(in srgb, var(--ground) 78%, transparent);
     --on-band-line: color-mix(in srgb, var(--ground) 28%, transparent); --band-accent: var(--accent);
   }
