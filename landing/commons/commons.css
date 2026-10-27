@@ -446,6 +446,12 @@
  * One question per screen; the report is also the print layout ("Save as PDF").
  * Chosen options carry a filled mark and a word, never colour alone. */
 .quiz { max-width: 780px; margin: 0 auto; padding: 48px max(16px, 3vw) 96px; }
+.quiz-top { display: flex; justify-content: flex-end; margin: 0 0 8px; font-size: 13px; }
+.quiz-explore { display: inline-flex; align-items: center; min-height: 44px; color: var(--ed-coral); }
+.quiz-resumed { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; margin: 14px 0 0; color: var(--muted); font-size: 13px; }
+.quiz-linkbtn { min-height: 44px; padding: 0; border: 0; border-bottom: 1px solid currentColor; border-radius: 0; background: none; color: var(--ed-coral); font: inherit; cursor: pointer; }
+.quiz-open { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 16px 0; color: var(--muted); font-size: 13px; }
+.quiz-maplink { display: inline-flex; align-items: center; min-height: 44px; color: var(--ed-coral); font-size: 13px; }
 .quiz-progress { display: flex; gap: 6px; }
 .quiz-progress span { flex: 1; height: 4px; border-radius: var(--radius-sm); background: var(--line); }
 .quiz-progress span.done { background: var(--ink); }
@@ -508,7 +514,7 @@
 }
 @media print {
   @page { margin: 16mm; }
-  .skip-link, .site-header, .site-footer, .quiz-progress, .quiz-step, .quiz-nav, .quiz-actions, .quiz-hint, .quiz-privacy, .quiz-all summary { display: none !important; }
+  .skip-link, .site-header, .site-footer, .quiz-top, .quiz-resumed, .quiz-open, .quiz-maplink, .quiz-progress, .quiz-step, .quiz-nav, .quiz-actions, .quiz-hint, .quiz-privacy, .quiz-all summary { display: none !important; }
   body.commons { background: Canvas; color: CanvasText; }
   .quiz { max-width: none; padding: 0; }
   .quiz h2 { font-size: 24pt; }
