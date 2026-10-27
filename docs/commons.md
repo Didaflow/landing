@@ -77,6 +77,16 @@ memory and never written to the database; honeypot field against bots; a browser
 contribution once, which only queues it for a moderator: nothing is hidden automatically. See `landing/privacy-policy/` (section “Commons and the
 AI Map”).
 
+### Guided path (questionnaire)
+
+`/commons/ai-map/questionnaire/` (Italian: `/it/commons/ai-map/questionario/`, `noindex`, not in the sitemap). Six
+questions, one per screen (role, up to three activities, tools used or available by category, data, budget, local models),
+then a report: evidence, good practice and risks per activity, the three best-fitting tools with the reasons for their
+order, and all tools by category. It runs entirely in the browser (`ai-map/quiz.js`, data from `ai-map/data/*.json`):
+answers stay in the browser's `localStorage`, nothing is sent and nothing is collected. The PDF is the browser's
+"Save as PDF" on the print stylesheet (`@media print` in `commons.css`); contact is a prefilled `mailto:` link.
+The scoring is in `quiz.js` and tested in `scripts/ai-map/quiz.test.ts`.
+
 ### Moderation and analysis
 
 `/commons/admin/` (token from `COMMONS_ADMIN_TOKEN`; in development the token is `dev`):

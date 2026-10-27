@@ -14,7 +14,7 @@
     en: {
       hub: "Commons", title: "AI <em>Map</em>",
       lead: "Choose who you are and what you want to do. Compare the AI tools that fit, see what research says, what the rules allow, and how to try it responsibly.",
-      method: "How the map works", scope: "Higher education · Updated monthly",
+      method: "How the map works", guided: "Guided path", scope: "Higher education · Updated monthly",
       s1: "Who are you?", s2: "What do you want to do?", s3: "Evidence and tools", s4: "Analysis",
       you: "You are", task: "Your task", tool: "Tool", change: "Change",
       tasksN: function (n) { return n + " tasks"; },
@@ -89,7 +89,7 @@
     it: {
       hub: "Commons", title: "Mappa <em>AI</em>",
       lead: "Scegli chi sei e che cosa vuoi fare. Confronta gli strumenti AI pertinenti, guarda che cosa dice la ricerca, che cosa consentono le regole e come provarli in modo consapevole.",
-      method: "Come funziona la mappa", scope: "Istruzione superiore · Aggiornata ogni mese",
+      method: "Come funziona la mappa", guided: "Percorso guidato", scope: "Istruzione superiore · Aggiornata ogni mese",
       s1: "Chi sei?", s2: "Che cosa vuoi fare?", s3: "Evidenze e strumenti", s4: "Analisi",
       you: "Sei", task: "Il tuo compito", tool: "Strumento", change: "Cambia",
       tasksN: function (n) { return n + " compiti"; },
@@ -291,7 +291,7 @@
     var role = D.roles[st.role], task = D.task[st.task], tool = D.tools[st.tool];
     if (task) fetchSummary(task.id, null);
     if (task && tool) fetchSummary(task.id, tool.id);
-    var h = '<div class="wrap"><header class="map-top"><div><a class="crumb-hub" href="' + HUB + '">← ' + S.hub + "</a><h1>" + S.title + '</h1><p class="lead">' + S.lead + '</p></div><div class="map-top__links"><span class="muted">' + S.scope + '</span><a class="u" href="' + HERE + 'method/">' + S.method + "</a></div></header>";
+    var h = '<div class="wrap"><header class="map-top"><div><a class="crumb-hub" href="' + HUB + '">← ' + S.hub + "</a><h1>" + S.title + '</h1><p class="lead">' + S.lead + '</p></div><div class="map-top__links"><span class="muted">' + S.scope + '</span><a class="u" href="' + HERE + (LANG === "it" ? "questionario/" : "questionnaire/") + '">' + S.guided + '</a><a class="u" href="' + HERE + 'method/">' + S.method + "</a></div></header>";
     h += '<div class="steps">';
 
     // Step 1 — role
