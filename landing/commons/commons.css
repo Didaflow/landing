@@ -460,6 +460,10 @@
 .quiz h2 { font-size: clamp(30px, 4vw, 46px); line-height: 1.08; letter-spacing: -0.035em; }
 .quiz h3 { margin-top: 6px; font-size: 26px; line-height: 1.15; letter-spacing: -0.02em; }
 .quiz-title em { color: var(--ed-coral); }
+.quiz .quiz-step { margin: 14px 0 0; }
+.quiz h2 { margin: 12px 0 0; }
+.quiz .quiz-lede { margin: 14px 0 28px; }
+.quiz .btn { padding: 12px 24px; min-height: 44px; }
 .quiz-lede { max-width: 640px; margin: 14px 0 28px; color: var(--text); font-size: 16px; line-height: 1.65; }
 .quiz-hint, .quiz-note, .quiz-privacy { color: var(--muted); font-size: 13px; line-height: 1.7; }
 .quiz-hint { margin-top: 14px; }
@@ -496,7 +500,9 @@
 .quiz-lbl { margin-top: 18px; color: var(--muted); font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
 .quiz-tools { margin: 8px 0 0; padding: 0; list-style: none; counter-reset: q; }
 .quiz-tools li { counter-increment: q; display: grid; grid-template-columns: 28px 1fr; gap: 2px 8px; padding: 10px 0; border-bottom: 1px solid var(--line); }
-.quiz-tools li::before { content: counter(q); grid-row: span 3; font-weight: 600; color: var(--ed-coral); }
+.quiz-tools li > * { grid-column: 2; }
+.quiz-tools .quiz-maplink { justify-self: start; }
+.quiz-tools li::before { content: counter(q); grid-column: 1; grid-row: span 4; font-weight: 600; color: var(--ed-coral); }
 .quiz .meta { color: var(--muted); font-size: 12.5px; }
 .quiz .why { display: flex; flex-wrap: wrap; gap: 6px; }
 .quiz .why span { padding: 1px 7px; border: 1px solid var(--line); border-radius: var(--radius-sm); font-size: 12px; }
