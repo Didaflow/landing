@@ -268,7 +268,7 @@ body[data-surface="grid"]::before {
 .btn--sm { padding: 8px 16px; font-size: var(--text-sm); }
 .btn--md { padding: 12px 24px; font-size: var(--text-md); }
 .btn--lg { padding: 16px 32px; font-size: var(--text-lg); }
-.btn--primary { background: var(--accent); color: #fff; }
+.btn--primary { background: var(--accent); color: var(--on-accent); }
 .btn--primary:hover {
   background: var(--accent-strong);
   box-shadow: var(--shadow-lg);
@@ -807,7 +807,7 @@ body[data-surface="grid"]::before {
 }
 .cta-block p em { color: rgba(255, 230, 220, 0.95); font-style: italic; }
 .cta-block__actions { display: flex; flex-direction: column; gap: var(--space-3); }
-.cta-block .btn--primary { background: var(--accent); color: #fff; }
+.cta-block .btn--primary { background: var(--accent); color: var(--on-accent); }
 .cta-block .btn--primary:hover { background: var(--accent-strong); }
 .cta-block .btn--secondary {
   background: transparent;
