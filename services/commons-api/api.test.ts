@@ -201,6 +201,32 @@ describe("retention and deletion", () => {
     expect(c.posts).toBe(1);
     expect(c.checks).toBe(2);
   });
+  test("month arithmetic stays on the calendar: 31 March minus one month is 28 February", async () => {
+    clock = new Date("2026-02-28T10:00:00Z");
+    await post("/reports", { kind: "tool", what: "end of february" });
+    clock = new Date("2026-03-01T12:00:00Z");
+    await post("/reports", { kind: "tool", what: "first of march" });
+    clock = new Date("2026-03-31T12:00:00Z");
+    expect(api.purge(1)).toMatchObject({ reports: 1 }); // cut-off is 28 Feb 12:00: the 10:00 report goes, 1 March stays
+    expect((await counts()).reportsOpen).toBe(1);
+  });
+  test("flags of replies and updates go with them and never touch another kind with the same number", async () => {
+    const a = await (await post("/posts", experience))!.json();
+    await post(`/posts/${a.id}/updates`, { text: "u" }, { "x-edit-token": a.editToken });
+    await post(`/posts/${a.id}/replies`, { text: "r" });
+    await post("/updates/1/flag", {}, client(1));
+    await post("/replies/1/flag", {}, client(2));
+    clock = new Date("2026-06-01T10:00:00Z");
+    const b = await (await post("/posts", experience))!.json();
+    await post(`/posts/${b.id}/replies`, { text: "r2" }); // reply 2, newer
+    await post("/replies/2/flag", {}, client(3));
+    clock = new Date("2028-02-01T10:00:00Z"); // only the January 2026 items are past 24 months
+    api.purge(24);
+    const csv = await (await get("/admin/export/flags.csv", auth))!.text();
+    expect(csv.trim().split("\n").length).toBe(2); // header + the flag on reply 2
+    expect(csv).toContain("replies,2");
+    expect((await counts()).replies).toBe(1);
+  });
   test("the period is a whole number of months, at least one", () => {
     for (const bad of [0, -1, 1.5, NaN]) expect(() => api.purge(bad)).toThrow();
   });

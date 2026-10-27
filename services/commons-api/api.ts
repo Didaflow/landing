@@ -139,7 +139,7 @@ export function createApi(opts: ApiOptions) {
   }
 
   // A post goes with everything attached to it; the foreign keys would refuse otherwise.
-  function deletePosts(ids: string[]) {
+  const deletePosts = db.transaction((ids: string[]) => {
     let n = 0;
     for (const id of ids) {
       for (const k of ["updates", "replies"]) {
@@ -151,13 +151,20 @@ export function createApi(opts: ApiOptions) {
       n += db.query("DELETE FROM posts WHERE id = ?").run(id).changes;
     }
     return n;
-  }
+  });
+  const deleteOne = db.transaction((kind: string, id: string) => {
+    if (kind !== "reports") db.query("DELETE FROM flags WHERE kind = ? AND id = ?").run(kind, id);
+    return db.query(`DELETE FROM ${kind} WHERE id = ?`).run(id).changes;
+  });
 
   // Retention: everything older than `months` is deleted for good. Usage counters are anonymous daily totals and stay.
   // Answers count from their last change, the rest from the day they were sent.
   function purge(months: number): Purged {
     if (!Number.isInteger(months) || months < 1) throw new Error("retention must be a whole number of months, at least 1");
-    const d = new Date(now().getTime()); d.setUTCMonth(d.getUTCMonth() - months);
+    // Calendar months, clamped to the last day: 31 March minus one month is 28 February, not 3 March.
+    const d = new Date(now().getTime()), day = d.getUTCDate();
+    d.setUTCDate(1); d.setUTCMonth(d.getUTCMonth() - months);
+    d.setUTCDate(Math.min(day, new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 0)).getUTCDate()));
     const cut = d.toISOString();
     const out: Purged = {};
     db.transaction(() => {
@@ -206,12 +213,7 @@ export function createApi(opts: ApiOptions) {
       if (req.method === "DELETE" && m) {
         const id = itemId(m[1], m[2]);
         if (id === null) return bad("not found", 404);
-        let n = 0;
-        if (m[1] === "posts") n = deletePosts([id as string]);
-        else {
-          if (m[1] !== "reports") db.query("DELETE FROM flags WHERE kind = ? AND id = ?").run(m[1], id);
-          n = db.query(`DELETE FROM ${m[1]} WHERE id = ?`).run(id).changes;
-        }
+        const n = m[1] === "posts" ? deletePosts([id as string]) : deleteOne(m[1], id as string);
         return n ? ok({ ok: true }) : bad("not found", 404);
       }
       m = path.match(/^\/admin\/(posts|replies|updates)\/([\w-]+)$/);
