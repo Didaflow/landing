@@ -90,3 +90,14 @@
 
 /* PROPOSTO · titolo della hero: più grande di «display», fluido. Il sistema ha solo display (40 px). */
 :root { --type-hero-size: clamp(2.5rem, 5.5vw, 4.25rem); --type-hero-line: 1.05; }
+
+/* Stampa (PDF del questionario): sempre i valori del tema chiaro, anche se il dispositivo è in scuro. */
+@media print {
+  :root[data-theme="auto"], :root[data-theme="dark"] {
+    --ground: #fbf8f6; --surface: #ffffff; --ink: #1a1411; --muted: #5e534d; --line: #e6ddd8;
+    --border-strong: #8c7d75; --accent: #d96d60; --accent-strong: #b5471e; --on-accent: #1a1411;
+    --surface-raised: #ffffff;
+    --band: var(--ink); --on-band: var(--ground); --on-band-muted: color-mix(in srgb, var(--ground) 78%, transparent);
+    --on-band-line: color-mix(in srgb, var(--ground) 28%, transparent); --band-accent: var(--accent);
+  }
+}

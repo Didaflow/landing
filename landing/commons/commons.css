@@ -203,7 +203,7 @@
 .form legend { margin-bottom: 6px; font-size: 13px; font-weight: 600; }
 .star-input { display: inline-flex; flex-direction: row-reverse; gap: 2px; }
 .star-input input { position: absolute; opacity: 0; width: 1px; height: 1px; }
-.star-input label { padding: 2px 3px; color: var(--border-strong); font-size: 28px; line-height: 1; cursor: pointer; }
+.star-input label { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 2px 3px; color: var(--border-strong); font-size: 28px; line-height: 1; cursor: pointer; }
 .star-input input:checked ~ label, .star-input label:hover, .star-input label:hover ~ label { color: var(--ink); }
 .star-input input:focus-visible + label { outline: 2px solid var(--ed-coral); outline-offset: 2px; }
 .form .hint { color: var(--muted); font-size: 12px; font-weight: 400; }
