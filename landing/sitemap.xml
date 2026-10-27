@@ -12,7 +12,16 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://didaflow.ai/it/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://didaflow.ai/" />
   </url>
-  <url><loc>https://didaflow.ai/changelog/</loc></url>
+  <url><loc>https://didaflow.ai/changelog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://didaflow.ai/changelog/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://didaflow.ai/it/changelog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://didaflow.ai/changelog/" />
+  </url>
+  <url><loc>https://didaflow.ai/it/changelog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://didaflow.ai/changelog/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://didaflow.ai/it/changelog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://didaflow.ai/changelog/" />
+  </url>
   <url><loc>https://didaflow.ai/whitepaper/</loc></url>
   <url><loc>https://didaflow.ai/methodology/</loc></url>
   <url><loc>https://didaflow.ai/credits/</loc></url>

@@ -132,7 +132,7 @@
               <li><a href="/whitepaper/">${T.whitepaper}</a></li>
               <li><a href="/methodology/">${T.methodology}</a></li>
               <li><a href="${href("practice")}">${T.cases}</a></li>
-              <li><a href="/changelog/">${T.changelog}</a></li>
+              <li><a href="${LANG === "it" ? "/it/" : "/"}changelog/">${T.changelog}</a></li>
               <li><a href="/credits/">${T.credits}</a></li>
               <li><a href="${COMMONS}">Commons</a></li>
             </ul>
