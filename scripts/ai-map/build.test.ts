@@ -34,6 +34,8 @@ test("the quiz is the way into the AI Map; the full map and the old questionnair
     const old = html(P.legacyQuiz[lang]);
     expect(old).toContain(`url=${P.quiz[lang]}`);
     expect(old).toContain("noindex");
+    // a redirect keeps the query and the fragment, so a shared link does not lose its role and task
+    expect(old).toContain("location.search + location.hash");
   }
   // quiz.js and map.js use the same explore address, in both languages
   const quiz = readFileSync(join(root, "commons", "ai-map", "quiz.js"), "utf8"), map = readFileSync(join(root, "commons", "ai-map", "map.js"), "utf8");

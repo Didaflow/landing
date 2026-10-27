@@ -151,7 +151,7 @@ function redirect(lang: Lang, to: string) {
 </head>
 <body>
   <p>${T[lang].redirect} <a href="${to}">${to}</a></p>
-  <script>location.replace(${JSON.stringify(to)} + location.hash);</script>
+  <script>location.replace(${JSON.stringify(to)} + location.search + location.hash);</script>
 </body>
 </html>
 `;
