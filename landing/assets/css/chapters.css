@@ -210,3 +210,6 @@
 @media (max-width: 1150px) { .team-grid { gap: 20px; } .team-grid h3 { font-size: 22px; } }
 @media (max-width: 900px) { .team-grid { grid-template-columns: repeat(2, 1fr); gap: 45px; } .team-grid h3 { font-size: 25px; } }
 @media (max-width: 600px) { .team-grid { gap: 32px 20px; } .team-grid h3 { font-size: 21px; } .team-grid p { font-size: 11px; } .team-grid .team-role { font-size: 10px; } }
+
+/* Methodology: the section index sits under the opening, in a row, instead of a side column */
+.doc-opening .document-nav { position: static; flex-direction: row; flex-wrap: wrap; gap: 10px 22px; margin-top: 36px; }
