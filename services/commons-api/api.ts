@@ -10,7 +10,8 @@
 //   POST /api/commons/{posts|replies|updates}/:id/flag  report a contribution (once per browser; the moderator decides)
 //   POST /api/commons/reports                     something missing (task, tool, study)
 //   POST /api/commons/events                      cookieless usage counters (daily aggregates only)
-//   /api/commons/admin/*                          moderation and CSV export (Bearer token)
+//   /api/commons/admin/*                          moderation, real deletion by id, CSV export (Bearer token)
+//   api.purge(months)                             deletes contributions older than the retention period (server.ts runs it daily)
 import { Database } from "bun:sqlite";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -32,6 +33,7 @@ const MAX_POSTS = 200, MAX_UPDATES = 20, MAX_REPLIES = 50;
 const MAX_BODY = 16 * 1024;
 
 export type ApiOptions = { dbPath: string; dataDir: string; adminToken?: string; writeLimit?: number; now?: () => Date };
+export type Purged = Record<string, number>;
 
 export function createApi(opts: ApiOptions) {
   const db = new Database(opts.dbPath, { create: true });
@@ -136,7 +138,50 @@ export function createApi(opts: ApiOptions) {
     return [cols.join(","), ...rows.map((r) => cols.map((c) => cell(r[c])).join(","))].join("\n") + "\n";
   }
 
-  return async function handle(req: Request, ip = ""): Promise<Response | null> {
+  // A post goes with everything attached to it; the foreign keys would refuse otherwise.
+  const deletePosts = db.transaction((ids: string[]) => {
+    let n = 0;
+    for (const id of ids) {
+      for (const k of ["updates", "replies"]) {
+        const sub = db.query(`SELECT id FROM ${k} WHERE post_id = ?`).all(id) as { id: number }[];
+        for (const r of sub) db.query("DELETE FROM flags WHERE kind = ? AND id = ?").run(k, r.id);
+        db.query(`DELETE FROM ${k} WHERE post_id = ?`).run(id);
+      }
+      db.query("DELETE FROM flags WHERE kind = 'posts' AND id = ?").run(id);
+      n += db.query("DELETE FROM posts WHERE id = ?").run(id).changes;
+    }
+    return n;
+  });
+  const deleteOne = db.transaction((kind: string, id: string) => {
+    if (kind !== "reports") db.query("DELETE FROM flags WHERE kind = ? AND id = ?").run(kind, id);
+    return db.query(`DELETE FROM ${kind} WHERE id = ?`).run(id).changes;
+  });
+
+  // Retention: everything older than `months` is deleted for good. Usage counters are anonymous daily totals and stay.
+  // Answers count from their last change, the rest from the day they were sent.
+  function purge(months: number): Purged {
+    if (!Number.isInteger(months) || months < 1) throw new Error("retention must be a whole number of months, at least 1");
+    // Calendar months, clamped to the last day: 31 March minus one month is 28 February, not 3 March.
+    const d = new Date(now().getTime()), day = d.getUTCDate();
+    d.setUTCDate(1); d.setUTCMonth(d.getUTCMonth() - months);
+    d.setUTCDate(Math.min(day, new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 0)).getUTCDate()));
+    const cut = d.toISOString();
+    const out: Purged = {};
+    db.transaction(() => {
+      out.posts = deletePosts((db.query("SELECT id FROM posts WHERE created < ?").all(cut) as { id: string }[]).map((r) => r.id));
+      for (const k of ["updates", "replies"]) {
+        for (const r of db.query(`SELECT id FROM ${k} WHERE created < ?`).all(cut) as { id: number }[]) db.query("DELETE FROM flags WHERE kind = ? AND id = ?").run(k, r.id);
+        out[k] = db.query(`DELETE FROM ${k} WHERE created < ?`).run(cut).changes;
+      }
+      out.checks = db.query("DELETE FROM checks WHERE updated < ?").run(cut).changes;
+      out.useful = db.query("DELETE FROM useful WHERE created < ?").run(cut).changes;
+      out.reports = db.query("DELETE FROM reports WHERE created < ?").run(cut).changes;
+      out.flags = db.query("DELETE FROM flags WHERE created < ?").run(cut).changes;
+    })();
+    return out;
+  }
+
+  const handle = async function handle(req: Request, ip = ""): Promise<Response | null> {
     const url = new URL(req.url);
     if (!url.pathname.startsWith("/api/commons/")) return null;
     const path = url.pathname.slice("/api/commons".length);
@@ -163,7 +208,15 @@ export function createApi(opts: ApiOptions) {
           usage: db.query("SELECT kind, role, task, tool, SUM(n) n FROM events WHERE day >= date('now', '-30 day') GROUP BY kind, role, task, tool ORDER BY n DESC LIMIT 100").all(),
         });
       }
-      let m = path.match(/^\/admin\/(posts|replies|updates)\/([\w-]+)$/);
+      // Real deletion, for a person's request to remove what they wrote. Hiding keeps the row; this does not.
+      let m = path.match(/^\/admin\/(posts|replies|updates|reports)\/([\w-]+)$/);
+      if (req.method === "DELETE" && m) {
+        const id = itemId(m[1], m[2]);
+        if (id === null) return bad("not found", 404);
+        const n = m[1] === "posts" ? deletePosts([id as string]) : deleteOne(m[1], id as string);
+        return n ? ok({ ok: true }) : bad("not found", 404);
+      }
+      m = path.match(/^\/admin\/(posts|replies|updates)\/([\w-]+)$/);
       if (req.method === "POST" && m) {
         const b = await body(req); const status = one(b?.status, ["visible", "hidden"]);
         if (!status) return bad("status");
@@ -269,4 +322,5 @@ export function createApi(opts: ApiOptions) {
     }
     return bad("not found", 404);
   };
+  return Object.assign(handle, { purge });
 }
