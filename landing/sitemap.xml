@@ -16,8 +16,26 @@
   <url><loc>https://didaflow.ai/whitepaper/</loc></url>
   <url><loc>https://didaflow.ai/methodology/</loc></url>
   <url><loc>https://didaflow.ai/credits/</loc></url>
-  <url><loc>https://didaflow.ai/privacy-policy/</loc></url>
+  <url><loc>https://didaflow.ai/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://didaflow.ai/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://didaflow.ai/it/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://didaflow.ai/privacy-policy/" />
+  </url>
+  <url><loc>https://didaflow.ai/it/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://didaflow.ai/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://didaflow.ai/it/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://didaflow.ai/privacy-policy/" />
+  </url>
   <url><loc>https://didaflow.ai/terms-of-service/</loc></url>
-  <url><loc>https://didaflow.ai/cookie-policy/</loc></url>
+  <url><loc>https://didaflow.ai/cookie-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://didaflow.ai/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://didaflow.ai/it/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://didaflow.ai/cookie-policy/" />
+  </url>
+  <url><loc>https://didaflow.ai/it/cookie-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://didaflow.ai/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://didaflow.ai/it/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://didaflow.ai/cookie-policy/" />
+  </url>
   <url><loc>https://didaflow.ai/dpa/</loc></url>
 </urlset>
