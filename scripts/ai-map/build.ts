@@ -98,7 +98,7 @@ const T = {
 
 function page(lang: Lang, o: { path: Record<Lang, string>; title: string; desc: string; kind: string; body?: string; v: string }) {
   return `<!DOCTYPE html>
-<html lang="${lang}">
+<html lang="${lang}" data-theme="auto">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -114,6 +114,8 @@ function page(lang: Lang, o: { path: Record<Lang, string>; title: string; desc: 
   <link rel="stylesheet" href="/_assets/css/fonts-didaflow.css" />
   <link rel="stylesheet" href="/_assets/css/tokens.css" />
   <link rel="stylesheet" href="/_assets/css/primitives.css" />
+  <link rel="stylesheet" href="/assets/css/didaflow-tokens.css" />
+  <link rel="stylesheet" href="/assets/css/landing-tokens.css" />
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/editorial.css" />
   <link rel="stylesheet" href="/commons/commons.css?v=${o.v}" />

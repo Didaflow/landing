@@ -9,25 +9,15 @@
  * the stakeholder question panels, never behind or under a call to action.
  */
 
-@font-face {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("/assets/fonts/inter.woff2") format("woff2");
-}
 
 .page-editorial {
   --ed-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   --ed-heading: var(--font-display);
-  --ed-coral: var(--accent-strong);     /* #b5504a — AA on paper for text */
-  --ed-line: var(--border);
-  --ed-on-ink-muted: #d3dbe7;
   --ed-gutter: 96px;
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font: 16px/1.6 var(--ed-body);
+  font: var(--type-body-weight) var(--type-body-size)/var(--type-body-line) var(--ed-body);
 }
 .page-editorial h1,
 .page-editorial h2,
@@ -82,23 +72,23 @@
   gap: 32px;
   min-height: 50px;
   padding: 17px 23px;
-  border: 1px solid var(--foreground);
-  border-radius: 2px;
-  background: var(--foreground);
-  color: var(--background);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: var(--on-accent);
   font-size: 13px;
   transition: background var(--duration-base), border-color var(--duration-base), transform var(--duration-base);
 }
-.button:hover { background: var(--ed-coral); border-color: var(--ed-coral); transform: translateY(-2px); }
+.button:hover { background: color-mix(in srgb, var(--accent) 86%, var(--ground)); border-color: color-mix(in srgb, var(--accent) 86%, var(--ground)); transform: translateY(-2px); }
 .button span { font-size: 20px; line-height: 1; }
-.button--light { background: var(--background); border-color: var(--background); color: var(--ink); }
+.button--light { background: var(--on-band); border-color: var(--on-band); color: var(--band); }
 .button--light:hover { background: var(--surface); border-color: var(--surface); }
 .text-link {
   display: inline-flex;
   align-items: center;
   gap: 22px;
-  min-height: 40px;
-  padding: 6px 0;
+  min-height: 44px;
+  padding: 10px 0;
   border: 0;
   border-bottom: 1px solid currentColor;
   border-radius: 0;
@@ -141,8 +131,8 @@
   object-fit: cover;
   object-position: 48% 25%;
   opacity: 0.66;
-  -webkit-mask-image: radial-gradient(ellipse at 56% 44%, #000 18%, rgba(0, 0, 0, 0.85) 42%, transparent 75%);
-  mask-image: radial-gradient(ellipse at 56% 44%, #000 18%, rgba(0, 0, 0, 0.85) 42%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at 56% 44%, var(--ink) 18%, color-mix(in srgb, var(--ink) 85%, transparent) 42%, transparent 75%);
+  mask-image: radial-gradient(ellipse at 56% 44%, var(--ink) 18%, color-mix(in srgb, var(--ink) 85%, transparent) 42%, transparent 75%);
 }
 .scene .art-figure { position: absolute; }
 .scene__blue { left: 4%; top: 43%; width: 70px; }
@@ -189,15 +179,15 @@
 .section-intro { max-width: 380px; color: var(--muted); font-size: 14px; line-height: 1.85; }
 
 /* ─── Shared foundation: sources → layer → agents, read bottom to top ── */
-.shared-foundation { padding: 30px 34px; border: 1px solid var(--ed-line); border-radius: 8px; background: rgba(255, 255, 255, 0.3); }
+.shared-foundation { padding: 30px 34px; border: 1px solid var(--ed-line); border-radius: var(--radius-md); background: var(--glass-soft); }
 .foundation-row { text-align: center; }
 .foundation-label { margin-bottom: 18px; color: var(--muted); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; }
 .foundation-items { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; align-items: center; }
 .foundation-stakeholders .foundation-items span { font: 500 19px/1.35 var(--ed-heading); }
-.foundation-core { padding: 25px 20px; border-radius: 5px; background: var(--ink); color: var(--background); text-align: center; }
+.foundation-core { padding: 25px 20px; border-radius: var(--radius-sm); background: var(--band); color: var(--on-band); text-align: center; }
 .foundation-core .ed-eyebrow { color: var(--ed-on-ink-muted); font-size: 10px; }
 .foundation-core h3 { margin: 8px 0 12px; font-size: 29px; line-height: 1.2; letter-spacing: -0.025em; }
-.foundation-core p { color: #dce4ee; font-size: 11px; }
+.foundation-core p { color: var(--on-band-muted); font-size: 11px; }
 .foundation-core p span { margin-inline: 12px; }
 .foundation-arrow { padding: 16px 0; color: var(--ed-coral); font-size: 25px; line-height: 1; text-align: center; }
 .foundation-sources .foundation-label { margin-bottom: 14px; }
@@ -205,7 +195,7 @@
 .foundation-sources .foundation-items span {
   padding: 9px 6px;
   border: 1px solid var(--ed-line);
-  border-radius: 3px;
+  border-radius: var(--radius-sm);
   background: var(--background);
   color: var(--muted);
   font-size: 12px;
@@ -226,7 +216,7 @@
   height: 100%;
   padding: 30px;
   border-top: 1px solid var(--ed-line);
-  background: radial-gradient(ellipse at 72% 72%, #efdfd1 0, transparent 70%);
+  background: radial-gradient(ellipse at 72% 72%, color-mix(in srgb, var(--accent) 12%, var(--ground)) 0, transparent 70%);
 }
 .journey-stage__inner > .ed-eyebrow { color: var(--muted); }
 .stage-scenes { position: relative; height: calc(100% - 52px); margin-top: 25px; }
@@ -281,12 +271,12 @@
 .motion-enabled .reveal:focus { opacity: 1; transform: none; }
 
 /* ─── Machine in the Loop ─────────────────────────────────── */
-.method-preview { background: var(--ink); color: var(--background); }
+.method-preview { background: var(--band); color: var(--on-band); }
 .method-grid { display: grid; grid-template-columns: 1fr 0.9fr; gap: 100px; align-items: center; }
 .method-preview h2 { margin: 24px 0; font-size: clamp(64px, 6.8vw, 102px); }
-.method-preview h2 em { color: #e8bd95; }
+.method-preview h2 em { color: var(--band-accent); }
 .method-description { max-width: 450px; margin-bottom: 30px; color: var(--ed-on-ink-muted); font-size: 15px; line-height: 1.9; }
-.method-principles article { padding: 28px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+.method-principles article { padding: 28px 0; border-bottom: 1px solid var(--on-band-line); }
 .method-principles article > div { max-width: 400px; }
 .method-principles h3 { margin-bottom: 12px; font-size: 28px; line-height: 1.2; }
 .method-principles p { max-width: 360px; color: var(--ed-on-ink-muted); font-size: 13px; line-height: 1.85; }
@@ -322,7 +312,7 @@
 
 /* ─── Document pages (methodology, white paper, credits) ──── */
 .document-header { max-width: 1100px; padding-block: 80px 60px; }
-.document-header h1 { margin: 25px 0; font-size: clamp(65px, 7vw, 105px); line-height: 1.03; letter-spacing: -0.05em; }
+.document-header h1 { margin: 25px 0; font-size: var(--type-display-size); line-height: var(--type-display-line); font-weight: var(--type-display-weight); letter-spacing: var(--type-display-tracking); }
 .document-header h1 em { color: var(--ed-coral); }
 .document-header .lead { max-width: 760px; font: 500 25px/1.5 var(--ed-heading); }
 .reading-tag { margin-top: 25px; color: var(--muted); font-size: 11px; }
@@ -338,12 +328,13 @@
   border-top: 1px solid var(--ed-line);
   font-size: 12px;
 }
+.document-nav a { display: inline-flex; align-items: center; min-height: 44px; }
 .document-nav a:hover { color: var(--ed-coral); }
 .document-content { max-width: 790px; }
 .document-content section { margin-bottom: 60px; scroll-margin-top: calc(var(--header-h) + 24px); }
 .document-content h2 { margin-bottom: 22px; font-size: 39px; line-height: 1.2; letter-spacing: -0.03em; }
 .document-content h3 { margin: 30px 0 15px; font-size: 28px; line-height: 1.2; }
-.document-content p { margin-bottom: 20px; color: #4e4a47; font-size: 15px; line-height: 1.95; }
+.document-content p { margin-bottom: 20px; color: var(--muted); font-size: 15px; line-height: 1.95; }
 .document-content p strong { color: var(--foreground); font-weight: 600; }
 .document-content p em { font-style: italic; }
 .document-content .ed-eyebrow { margin-bottom: 8px; color: var(--ed-coral); }
@@ -353,19 +344,19 @@
 
 /* Optional technical detail: the causal model, labels follow the page language (main.js). */
 .technical-detail { margin-block: 35px; padding: 22px 0; border-block: 1px solid var(--ed-line); }
-.technical-detail summary { cursor: pointer; font-size: 13px; }
+.technical-detail summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; font-size: 13px; }
 .technical-detail figure { margin: 28px 0 0; }
 .technical-detail figcaption { margin-top: 18px; color: var(--muted); font-size: 12px; }
-.causal-diagram { padding: 22px 10px; border: 1px solid var(--ed-line); border-radius: 5px; background: #fff; }
+.causal-diagram { padding: 22px 10px; border: 1px solid var(--ed-line); border-radius: var(--radius-sm); background: var(--surface); }
 .causal-svg { display: block; width: 100%; height: auto; overflow: visible; }
 .causal-svg text { fill: var(--foreground); font: 500 21px var(--ed-heading); text-anchor: middle; }
 .causal-svg .model-subtitle { font: 14px var(--ed-body); }
 .model-edge { fill: none; stroke: var(--ink); stroke-width: 2; vector-effect: non-scaling-stroke; }
-.model-context-edge { stroke: #939ba5; stroke-dasharray: 6 5; }
-.model-context rect { fill: #fafafa; stroke: #939ba5; stroke-width: 1.5; stroke-dasharray: 6 5; }
-.model-intervention rect { fill: #fcf1df; }
-.model-mediator rect { fill: #e8eff6; stroke: var(--ink); stroke-width: 1; }
-.model-outcome rect { fill: #e1ebd9; }
+.model-context-edge { stroke: var(--border-strong); stroke-dasharray: 6 5; }
+.model-context rect { fill: var(--surface); stroke: var(--border-strong); stroke-width: 1.5; stroke-dasharray: 6 5; }
+.model-intervention rect { fill: color-mix(in srgb, var(--ochre) 16%, var(--surface)); }
+.model-mediator rect { fill: color-mix(in srgb, var(--plum) 14%, var(--surface)); stroke: var(--ink); stroke-width: 1; }
+.model-outcome rect { fill: color-mix(in srgb, var(--moss) 20%, var(--surface)); }
 .causal-mobile { display: none; }
 
 /* ─── Responsive ──────────────────────────────────────────── */
