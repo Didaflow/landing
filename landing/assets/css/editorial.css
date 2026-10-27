@@ -82,7 +82,7 @@
 .button:hover { background: color-mix(in srgb, var(--accent) 86%, var(--ground)); border-color: color-mix(in srgb, var(--accent) 86%, var(--ground)); transform: translateY(-2px); }
 .button span { font-size: 20px; line-height: 1; }
 .button--light { background: var(--on-band); border-color: var(--on-band); color: var(--band); }
-.button--light:hover { background: var(--surface); border-color: var(--surface); }
+.button--light:hover { background: color-mix(in srgb, var(--on-band) 88%, var(--band)); border-color: color-mix(in srgb, var(--on-band) 88%, var(--band)); }
 .text-link {
   display: inline-flex;
   align-items: center;

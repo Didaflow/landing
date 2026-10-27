@@ -89,7 +89,7 @@
 .chapter--contact .contact-bottom { border-color: var(--on-band-line); }
 .chapter--contact .contact-bottom p { color: var(--ed-on-ink-muted); font-size: 16px; }
 .chapter--ink .button { background: var(--on-band); border-color: var(--on-band); color: var(--band); }
-.chapter--ink .button:hover { background: var(--brand-tint-hex); border-color: var(--brand-tint-hex); }
+.chapter--ink .button:hover { background: color-mix(in srgb, var(--on-band) 88%, var(--band)); border-color: color-mix(in srgb, var(--on-band) 88%, var(--band)); }
 .chapter--ink :focus-visible { outline-color: var(--ch-on-ink-accent); }
 
 /* ─── Responsive ──────────────────────────────────────────── */
