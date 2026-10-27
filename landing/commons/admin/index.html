@@ -93,12 +93,13 @@
         var c = d.counts;
         document.getElementById("counts").innerHTML = [["Risposte «nella tua esperienza»", c.checks], ["«Ti è stata utile?»", c.useful], ["Esperienze", c.posts], ["Risposte", c.replies], ["Segnalazioni aperte", c.reportsOpen]].map(function (x) { return "<div><b>" + x[1] + "</b>" + x[0] + "</div>"; }).join("");
         table(document.getElementById("disagreement"), [["task", "Compito"], ["n", "Risposte", "num"], ["yes", "Sì", "num"], ["partly", "In parte", "num"], ["no", "No", "num"]], d.disagreement);
-        var toggle = function (kind) { return function (r) { var next = r.status === "hidden" ? "visible" : "hidden"; return '<button class="ghost" data-kind="' + kind + '" data-id="' + r.id + '" data-status="' + next + '">' + (next === "hidden" ? "Nascondi" : "Ripristina") + "</button>"; }; };
+        var del = function (kind, id) { return ' <button class="ghost" data-delete="' + kind + '" data-id="' + id + '">Elimina</button>'; };
+        var toggle = function (kind) { return function (r) { var next = r.status === "hidden" ? "visible" : "hidden"; return '<button class="ghost" data-kind="' + kind + '" data-id="' + r.id + '" data-status="' + next + '">' + (next === "hidden" ? "Nascondi" : "Ripristina") + "</button>" + del(kind, r.id); }; };
         table(document.getElementById("posts"), [["created", "Data"], ["task", "Compito"], ["tool", "Strumento"], ["role", "Ruolo"], ["stars", "★", "num"], ["text", "Testo"], ["name", "Nome"], ["flags", "Segn."]], d.posts, toggle("posts"));
         table(document.getElementById("replies"), [["created", "Data"], ["post_id", "Esperienza"], ["text", "Testo"], ["name", "Nome"], ["flags", "Segn."]], d.replies, toggle("replies"));
         table(document.getElementById("updates"), [["created", "Data"], ["post_id", "Esperienza"], ["text", "Testo"], ["flags", "Segn."]], d.updates, toggle("updates"));
         table(document.getElementById("reports"), [["created", "Data"], ["kind", "Tipo"], ["task", "Compito"], ["tool", "Strumento"], ["what", "Che cosa manca"], ["link", "Link"], ["status", "Stato"]], d.reports, function (r) {
-          return '<button class="ghost" data-kind="reports" data-id="' + r.id + '" data-status="' + (r.status === "open" ? "done" : "open") + '">' + (r.status === "open" ? "Chiudi" : "Riapri") + "</button>";
+          return '<button class="ghost" data-kind="reports" data-id="' + r.id + '" data-status="' + (r.status === "open" ? "done" : "open") + '">' + (r.status === "open" ? "Chiudi" : "Riapri") + "</button>" + del("reports", r.id);
         });
         table(document.getElementById("usage"), [["kind", "Evento"], ["role", "Ruolo"], ["task", "Compito"], ["tool", "Strumento"], ["n", "Volte", "num"]], d.usage);
         document.getElementById("exports").innerHTML = ["checks", "useful", "posts", "updates", "replies", "reports", "events", "flags"].map(function (t) { return '<button class="ghost" data-export="' + t + '">' + t + ".csv</button>"; }).join("");
@@ -108,6 +109,11 @@
       e.preventDefault(); token = document.getElementById("token").value; sessionStorage.setItem("commons.admin", token); load();
     });
     document.addEventListener("click", function (e) {
+      var d = e.target.closest("[data-delete]");
+      if (d) {
+        if (!confirm("Eliminare definitivamente? Non si può annullare (le esperienze portano con sé risposte e aggiornamenti).")) return;
+        call("/" + d.dataset["delete"] + "/" + d.dataset.id, { method: "DELETE" }).then(load); return;
+      }
       var b = e.target.closest("[data-kind]");
       if (b) { call("/" + b.dataset.kind + "/" + b.dataset.id, { method: "POST", body: JSON.stringify({ status: b.dataset.status }) }).then(load); return; }
       var x = e.target.closest("[data-export]");

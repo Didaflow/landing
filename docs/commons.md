@@ -134,7 +134,12 @@ User=didaflow
 WantedBy=multi-user.target
 ```
 
-`commons.env` holds `COMMONS_ADMIN_TOKEN`. The Caddyfile forwards `/api/commons/*` to
+`commons.env` holds `COMMONS_ADMIN_TOKEN`. It may also set `COMMONS_RETENTION_MONTHS` (whole months, default 24): the API
+deletes contributions older than that at start and every six hours (answers count from their last change; the anonymous
+usage counters stay). The privacy policy states the same figure, so change both together. The moderation page can also
+delete an experience (with its replies and updates), a reply, an update or a report for good, for a person’s request:
+“Elimina” removes the row, unlike “Nascondi”. Backups of the SQLite file keep deleted rows until they rotate: keep that
+period short. The Caddyfile forwards `/api/commons/*` to
 `127.0.0.1:8787`; validate it with `caddy validate --config Caddyfile` before reloading. Back up the
 SQLite file with the server’s usual backups (`sqlite3 commons.db ".backup …"` for a consistent copy).
 When the map data change, restart the API so it reloads the valid task and tool ids.
