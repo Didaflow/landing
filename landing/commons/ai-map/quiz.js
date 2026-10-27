@@ -174,11 +174,24 @@
 
   try {
     var saved = JSON.parse(localStorage.getItem(KEY) || "null");
-    if (saved && saved.a) { state.a = saved.a; state.step = Math.max(0, Math.min(saved.step | 0, STEPS - 1)); }
+    if (saved && saved.a && typeof saved.a === "object" && !Array.isArray(saved.a)) { state.a = saved.a; state.step = Math.max(0, Math.min(saved.step | 0, STEPS - 1)); }
   } catch (e) { /* storage unavailable: the questionnaire still works for this visit */ }
   if (!Array.isArray(state.a.tasks)) state.a.tasks = [];
   if (!state.a.stack || typeof state.a.stack !== "object" || Array.isArray(state.a.stack)) state.a.stack = {};
   function save() { try { localStorage.setItem(KEY, JSON.stringify({ step: state.step, a: state.a })); } catch (e) { /* ignore */ } }
+
+  // Saved answers are untrusted: keep only values the questionnaire can produce, and resume at the first gap.
+  function sanitise() {
+    var a = state.a, roles = D.tax.roles.map(function (r) { return r.id; });
+    var one = function (k, ok) { if (ok.indexOf(a[k]) < 0) delete a[k]; };
+    one("role", roles); one("data", ["high", "mid", "low"]); one("budget", ["free", "some", "inst"]); one("tech", ["yes", "no", "unknown"]);
+    var valid = D.tasks.filter(function (t) { return t.role === a.role; }).map(function (t) { return t.id; });
+    a.tasks = (Array.isArray(a.tasks) ? a.tasks : []).filter(function (t, i, l) { return valid.indexOf(t) >= 0 && l.indexOf(t) === i; }).slice(0, MAX_TASKS);
+    var st = {};
+    CATS.forEach(function (c) { if (STATUS.indexOf(a.stack[c.id]) >= 0) st[c.id] = a.stack[c.id]; });
+    a.stack = st;
+    for (var i = 0; i < QIDS.length; i++) if (!answered(QIDS[i])) { state.step = Math.min(state.step, i); break; }
+  }
 
   function json(n) { return fetch("/commons/ai-map/data/" + n + ".json", { cache: "no-store" }).then(function (r) { return r.json(); }); }
 
@@ -207,7 +220,7 @@
 
   function go(d) {
     state.step = Math.max(0, Math.min(STEPS - 1, state.step + d));
-    save(); render();
+    save(); render(true);
     window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
   }
   function progress() {
@@ -232,8 +245,8 @@
   function renderStack(id) {
     var rows = CATS.map(function (c) {
       return '<div class="quiz-row"><div class="quiz-cat"><span class="t">' + esc(L.cats[c.id].t) + '</span><span class="d">' + esc(L.cats[c.id].ex) + "</span></div>" +
-        '<div class="quiz-seg" role="radiogroup" aria-label="' + esc(L.cats[c.id].t) + '">' + STATUS.map(function (v) {
-          return '<button type="button" id="st-' + c.id + "-" + v + '" role="radio" aria-checked="' + (state.a.stack[c.id] === v) + '" data-c="' + c.id + '" data-v="' + v + '">' + esc(L.status[v]) + "</button>";
+        '<div class="quiz-seg" role="group" aria-label="' + esc(L.cats[c.id].t) + '">' + STATUS.map(function (v) {
+          return '<button type="button" id="st-' + c.id + "-" + v + '" aria-pressed="' + (state.a.stack[c.id] === v) + '" data-c="' + c.id + '" data-v="' + v + '">' + esc(L.status[v]) + "</button>";
         }).join("") + "</div></div>";
     }).join("");
     var n = CATS.filter(function (c) { return state.a.stack[c.id]; }).length;
@@ -251,10 +264,10 @@
     var sel = function (v) { return multi ? state.a.tasks.indexOf(v) >= 0 : state.a[id] === v; };
     var lede = typeof L.qs[id].l === "function" ? L.qs[id].l(MAX_TASKS) : L.qs[id].l;
     app.innerHTML = shell("<h2>" + esc(L.qs[id].t) + "</h2>" + (lede ? '<p class="quiz-lede">' + esc(lede) + "</p>" : "") +
-      '<div class="quiz-options" role="' + (multi ? "group" : "radiogroup") + '" aria-label="' + esc(L.qs[id].t) + '">' +
+      '<div class="quiz-options" role="group" aria-label="' + esc(L.qs[id].t) + '">' +
       opts.map(function (o, i) {
-        return '<button type="button" class="quiz-opt" id="opt-' + id + "-" + i + '" data-v="' + esc(o.v) + '" ' +
-          (multi ? 'aria-pressed="' + sel(o.v) + '"' : 'role="radio" aria-checked="' + sel(o.v) + '"') + '><span class="mark" aria-hidden="true"></span><span><span class="t">' +
+        return '<button type="button" class="quiz-opt" id="opt-' + id + "-" + i + '" data-v="' + esc(o.v) + '"' + (multi ? " data-multi" : "") + " " +
+          'aria-pressed="' + sel(o.v) + '"' + '><span class="mark" aria-hidden="true"></span><span><span class="t">' +
           esc(o.t) + "</span>" + (o.d ? '<span class="d">' + esc(o.d) + "</span>" : "") + "</span></button>";
       }).join("") + "</div>" +
       (multi ? '<p class="quiz-hint">' + L.selected(state.a.tasks.length, MAX_TASKS) + "</p>" : "") +
@@ -296,7 +309,7 @@
     R.forEach(function (x) { lines.push("- " + T(x.task.title) + ": " + x.top.map(function (r) { return r.tool.name; }).join(", ")); });
     lines.push("", L.mailEnd);
     var body = lines.join("\n");
-    return "mailto:hello@didaflow.ai?subject=" + encodeURIComponent(L.mailSubject) + "&body=" + encodeURIComponent(body.slice(0, 1200));
+    return "mailto:hello@didaflow.ai?subject=" + encodeURIComponent(L.mailSubject) + "&body=" + encodeURIComponent(Array.from(body).slice(0, 1200).join(""));
   }
 
   function renderReport() {
@@ -331,12 +344,15 @@
       '<div class="quiz-nav"><button type="button" class="btn btn--secondary" id="q-back">' + L.back + "</button></div>");
     bindNav();
     document.getElementById("q-print").onclick = function () { window.print(); };
-    document.getElementById("q-restart").onclick = function () { state.a = { tasks: [], stack: {} }; state.step = 0; save(); render(); };
+    document.getElementById("q-restart").onclick = function () { state.a = { tasks: [], stack: {} }; state.step = 0; save(); render(true); };
   }
 
-  function render() {
+  // On a new screen the previous button is gone: move focus to the heading so keyboard and screen-reader users land at the top.
+  function render(moved) {
     if (state.step < QIDS.length) { document.title = L.title.replace(/<[^>]+>/g, "") + " · didaflow"; renderQuestion(QIDS[state.step]); }
     else renderReport();
+    var h = app.querySelector("h2");
+    if (h) { h.setAttribute("tabindex", "-1"); if (moved) h.focus({ preventScroll: true }); }
   }
 
   // Closed <details> do not print: open them for the print dialog and restore them afterwards.
@@ -348,7 +364,8 @@
   window.addEventListener("afterprint", function () { reopened.forEach(function (d) { d.open = false; }); reopened = []; });
 
   document.addEventListener("keydown", function (e) {
-    if (!D || e.altKey || e.ctrlKey || e.metaKey || /^(INPUT|TEXTAREA|SELECT)$/.test((e.target || {}).tagName || "")) return;
+    var t = e.target || {};
+    if (!D || e.altKey || e.ctrlKey || e.metaKey || !(t === document.body || (t.closest && t.closest(".quiz-nav")) || t.tagName === "H2")) return;
     if (e.key === "ArrowLeft" && state.step > 0) go(-1);
     else if (e.key === "ArrowRight" && state.step < STEPS - 1 && answered(QIDS[state.step])) go(1);
   });
@@ -356,6 +373,7 @@
   app.innerHTML = '<section class="quiz"><p class="quiz-lede">' + esc(L.loading) + "</p></section>";
   Promise.all([json("taxonomy"), json("tasks"), json("tools")]).then(function (r) {
     D = { tax: r[0], tasks: r[1].tasks, tools: r[2].tools };
+    sanitise(); save();
     render();
   }).catch(function () { app.innerHTML = '<section class="quiz"><p class="quiz-lede">' + esc(L.failed) + "</p></section>"; });
 })(typeof window !== "undefined" ? window : globalThis);
