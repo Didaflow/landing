@@ -7,7 +7,7 @@ cd "$(dirname "$0")/.."
 versione=$(cat DESIGN_VERSION)
 dest=shared/design
 rm -rf "$dest" && mkdir -p "$dest"
-gh api "repos/Didaflow/didaflow-design/tarball/$versione" | tar -xz --strip-components=1 -C "$dest" --wildcards '*/css/*' '*/fonts/*' '*/static/*'
+GH_TASK=lettura gh api "repos/Didaflow/didaflow-design/tarball/$versione" | tar -xz --strip-components=1 -C "$dest" --wildcards '*/css/*' '*/fonts/*' '*/static/*'
 rm -rf "$dest/css/tenants" "$dest"/fonts/{unibo-fonts.css,cinzel-*,merriweather-*}   # temi e font dei clienti: non servono al sito Didaflow
 printf 'didaflow-design %s\n' "$versione" > "$dest/VERSION"
 echo "didaflow-design $versione -> $dest"
