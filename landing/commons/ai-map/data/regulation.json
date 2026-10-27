@@ -1,0 +1,1653 @@
+{
+ "rules": [
+  {
+   "id": "aiact-art5-1f",
+   "instrument": "AI Act",
+   "ref": "Art. 5(1)(f)",
+   "status": "prohibited",
+   "appliesFrom": "2025-02-02",
+   "adopted": true,
+   "title": {
+    "en": "Ban on emotion recognition in education institutions",
+    "it": "Divieto di riconoscimento delle emozioni negli istituti di istruzione"
+   },
+   "plain": {
+    "en": "A university may not use AI that infers students' or staff's emotions (stress, interest, attention, anxiety) from faces, voice, gaze, keystrokes or other body data. This has applied since February 2025 and also covers online exams, admission tests and tools the institution requires students to use. Text-only sentiment analysis is not covered by this ban, but other rules still apply; institutions should seek legal advice on borderline tools.",
+    "it": "Un ateneo non può usare sistemi di IA che deducono le emozioni di studenti o personale (stress, interesse, attenzione, ansia) da volto, voce, sguardo, battitura o altri dati del corpo. Il divieto vale da febbraio 2025, anche per esami online, test di ammissione e app che l'ateneo rende obbligatorie. L'analisi del sentiment sui soli testi scritti non rientra nel divieto, ma restano altre regole: per i casi dubbi serve un parere legale."
+   },
+   "whatItCovers": {
+    "en": "Placing on the market, putting into service for this purpose, or use of AI systems to infer emotions of a natural person in the areas of workplace and education institutions. Commission guidelines: 'education institutions' is broad (public and private, all levels, online/in person/blended, including candidates during admission); emotion recognition means inference from biometric data (face, voice, keystrokes, posture). Examples given as prohibited: inferring students' interest and attention; emotion detection added to online-exam eye-tracking; emotion recognition in admission tests; applying it to teachers (workplace).",
+    "it": "Immissione sul mercato, messa in servizio a questo scopo o uso di sistemi di IA per dedurre le emozioni di una persona nei luoghi di lavoro e negli istituti di istruzione. Le linee guida della Commissione intendono gli 'istituti di istruzione' in senso ampio (pubblici e privati, ogni livello, online, in presenza o misti, compresi i candidati all'ammissione); conta la deduzione da dati biometrici (volto, voce, battitura, postura). Esempi vietati: dedurre interesse e attenzione degli studenti; aggiungere il rilevamento delle emozioni all'eye-tracking negli esami online; usarlo nei test di ammissione; usarlo sui docenti (luogo di lavoro)."
+   },
+   "exceptions": {
+    "en": "Only for medical or safety reasons, interpreted narrowly (therapeutic use = CE-marked medical devices; protection of life and health only). Not exempt: general wellbeing or stress monitoring, burnout or depression detection. Out of scope: emotions inferred from written text only, physical states such as pain or fatigue, emotion tools a learner chooses outside an institution, role-play training whose results cannot affect evaluation. Permitted emotion-recognition systems are high-risk (Annex III point 1(c)) and need disclosure under Art. 50(3).",
+    "it": "Solo per motivi medici o di sicurezza, in senso stretto (uso terapeutico = dispositivi medici con marcatura CE; sicurezza = tutela di vita e salute). Non rientrano nell'eccezione: monitoraggio generico di benessere o stress, rilevazione di burnout o depressione. Fuori dal divieto: emozioni dedotte solo da testo scritto, stati fisici come dolore o stanchezza, app scelte liberamente dallo studente fuori dall'istituto, simulazioni formative i cui risultati non incidono sulla valutazione. I sistemi ammessi restano ad alto rischio (Allegato III, punto 1(c)) e richiedono informativa (art. 50(3))."
+   },
+   "tasks": [
+    "t-classroom-feedback",
+    "t-tutoring",
+    "t-assistant",
+    "t-detect",
+    "t-proctoring",
+    "d-analytics",
+    "d-admissions",
+    "s-language"
+   ],
+   "toolTypes": [
+    "teaching-analytics",
+    "analytics",
+    "tutoring-system",
+    "lms-integrated",
+    "ai-detector"
+   ],
+   "sources": [
+    "eu-aiact",
+    "ec-guidelines-prohibited"
+   ]
+  },
+  {
+   "id": "aiact-art5-other",
+   "instrument": "AI Act",
+   "ref": "Art. 5(1)(a), (b), (c), (g)",
+   "status": "prohibited",
+   "appliesFrom": "2025-02-02",
+   "adopted": true,
+   "title": {
+    "en": "Other prohibited practices that can touch education",
+    "it": "Altre pratiche vietate che possono riguardare l'istruzione"
+   },
+   "plain": {
+    "en": "Also banned since February 2025: AI that manipulates people or exploits vulnerabilities (for example age or disability) in ways likely to cause significant harm, social scoring that leads to unjustified or unrelated detrimental treatment, and biometric categorisation that infers sensitive traits such as religion or sexual orientation. Ordinary study tools are very unlikely to fall here, but a student 'trust score' built from behaviour across unrelated contexts probably would raise this question.",
+    "it": "Dal febbraio 2025 sono vietati anche: IA che manipola le persone o sfrutta vulnerabilità (per esempio età o disabilità) con probabile danno significativo, il 'social scoring' che porta a trattamenti sfavorevoli ingiustificati o in contesti non collegati, e la categorizzazione biometrica che deduce tratti sensibili come religione o orientamento sessuale. I normali strumenti di studio difficilmente rientrano qui; un 'punteggio di affidabilità' dello studente costruito su comportamenti in contesti diversi probabilmente solleverebbe la questione."
+   },
+   "whatItCovers": {
+    "en": "Art. 5(1)(a) subliminal, manipulative or deceptive techniques causing significant harm; (b) exploitation of vulnerabilities due to age, disability or social/economic situation; (c) social scoring with detrimental treatment in unrelated contexts or disproportionate to the behaviour; (g) biometric categorisation to infer race, political opinions, trade-union membership, religious or philosophical beliefs, sex life or sexual orientation.",
+    "it": "Art. 5(1)(a) tecniche subliminali, manipolative o ingannevoli con danno significativo; (b) sfruttamento di vulnerabilità legate a età, disabilità o situazione socio-economica; (c) punteggio sociale con trattamenti sfavorevoli in contesti non collegati o sproporzionati; (g) categorizzazione biometrica per dedurre origine etnica, opinioni politiche, appartenenza sindacale, convinzioni religiose o filosofiche, vita od orientamento sessuale."
+   },
+   "exceptions": null,
+   "tasks": [
+    "d-analytics",
+    "t-tutoring",
+    "t-assistant",
+    "d-chatbot"
+   ],
+   "toolTypes": [
+    "analytics",
+    "tutoring-system",
+    "custom-chatbot",
+    "general-assistant"
+   ],
+   "sources": [
+    "eu-aiact",
+    "ec-guidelines-prohibited"
+   ]
+  },
+  {
+   "id": "aiact-art5-1ba-bb",
+   "instrument": "AI Act (as amended by Reg. (EU) 2026/1744)",
+   "ref": "Art. 5(1)(ba), (bb), (1a), (1b)",
+   "status": "prohibited",
+   "appliesFrom": "2026-12-02",
+   "adopted": true,
+   "title": {
+    "en": "New ban: non-consensual intimate deepfakes and child sexual abuse material",
+    "it": "Nuovo divieto: deepfake intimi senza consenso e materiale pedopornografico"
+   },
+   "plain": {
+    "en": "From 2 December 2026, AI systems that generate realistic intimate or sexually explicit images, video or audio of an identifiable person without explicit consent, or child sexual abuse material, are prohibited. For deployers, the ban applies when they use a system to generate such material. This was added by the Digital Omnibus and is already adopted law.",
+    "it": "Dal 2 dicembre 2026 sono vietati i sistemi di IA che generano immagini, video o audio realistici intimi o sessualmente espliciti di una persona identificabile senza il suo consenso esplicito, o materiale pedopornografico. Per chi usa il sistema, il divieto scatta quando lo usa per generare questo materiale. È stato aggiunto dal Digital Omnibus ed è già legge."
+   },
+   "whatItCovers": {
+    "en": "Placing on the market, putting into service or use of AI systems generating or manipulating realistic intimate depictions of identifiable persons without 'freely-given, specific, informed, unambiguous and explicit consent', or material within Directive 2011/93/EU. Providers are caught where this is the intended purpose or a reasonably foreseeable, reproducible outcome without reasonable safeguards (Art. 5(1a)).",
+    "it": "Immissione sul mercato, messa in servizio o uso di sistemi che generano o manipolano rappresentazioni intime realistiche di persone identificabili senza consenso libero, specifico, informato, inequivocabile ed esplicito, o materiale ai sensi della direttiva 2011/93/UE. Il fornitore è coinvolto se questo è lo scopo previsto o un risultato prevedibile e riproducibile senza misure di sicurezza ragionevoli (art. 5(1a))."
+   },
+   "exceptions": {
+    "en": "For (bb): where a 'without right' defence applies under national law.",
+    "it": "Per (bb): quando il diritto nazionale prevede la difesa 'senza diritto' (without right)."
+   },
+   "tasks": [
+    "s-ideas",
+    "t-materials",
+    "d-content-scale"
+   ],
+   "toolTypes": [
+    "general-assistant",
+    "presentation-generator"
+   ],
+   "sources": [
+    "eu-omnibus-pecons",
+    "eu-omnibus-oj"
+   ]
+  },
+  {
+   "id": "aiact-annex3-3a",
+   "instrument": "AI Act",
+   "ref": "Annex III, point 3(a)",
+   "status": "high-risk",
+   "appliesFrom": "2027-12-02 (was 2026-08-02 before Reg. (EU) 2026/1744); high-risk systems already on the market before that date: only if significantly changed, but providers and deployers of systems used by public authorities must comply by 2030-08-02",
+   "adopted": true,
+   "title": {
+    "en": "High-risk: AI that decides admission or assigns students to programmes",
+    "it": "Alto rischio: IA che decide l'ammissione o assegna gli studenti ai corsi"
+   },
+   "plain": {
+    "en": "AI used to determine access or admission, or to assign people to institutions, programmes or courses, is high-risk. The full high-risk rules apply from 2 December 2027. According to the Commission's draft guidelines, an information chatbot for applicants or a tool that only indexes or translates application files is probably not high-risk, while a system that scores applications or decides scholarship eligibility is.",
+    "it": "L'IA usata per decidere l'accesso o l'ammissione, o per assegnare persone a istituti, corsi di studio o insegnamenti, è ad alto rischio. Le regole complete si applicano dal 2 dicembre 2027. Secondo la bozza di linee guida della Commissione, un chatbot informativo per i candidati o uno strumento che si limita a indicizzare o tradurre le domande probabilmente non è ad alto rischio; lo è invece un sistema che dà punteggi alle domande o decide l'idoneità a una borsa."
+   },
+   "whatItCovers": {
+    "en": "'AI systems intended to be used to determine access or admission or to assign natural persons to educational and vocational training institutions at all levels'. Draft guidelines (not adopted): includes assignment to specific programmes or courses within an institution, and scholarship-eligibility systems; excludes programme-matching tools that only inform prospective students and general admission-information chatbots.",
+    "it": "'Sistemi di IA destinati a essere utilizzati per determinare l'accesso, l'ammissione o l'assegnazione di persone fisiche agli istituti di istruzione e formazione professionale a tutti i livelli'. Bozza di linee guida (non adottata): include l'assegnazione a specifici corsi o insegnamenti e i sistemi di idoneità alle borse di studio; esclude gli strumenti che orientano i futuri studenti e i chatbot informativi sull'ammissione."
+   },
+   "exceptions": {
+    "en": "Art. 6(3) filter (see aiact-art6-3): e.g. file indexing/translation (preparatory task), ex-post review of committee decisions (pattern detection), sorting applications by level applied for (narrow procedural task). The filter never applies if the system profiles natural persons.",
+    "it": "Filtro dell'art. 6(3) (vedi aiact-art6-3): per esempio indicizzazione o traduzione delle pratiche (attività preparatoria), revisione ex post delle decisioni di una commissione (rilevazione di schemi), smistamento delle domande per livello richiesto (compito procedurale limitato). Il filtro non si applica mai se il sistema fa profilazione."
+   },
+   "tasks": [
+    "d-admissions",
+    "d-analytics",
+    "d-chatbot"
+   ],
+   "toolTypes": [
+    "analytics",
+    "custom-chatbot",
+    "lms-integrated"
+   ],
+   "sources": [
+    "eu-aiact",
+    "ec-draft-hr-guidelines",
+    "eu-omnibus-pecons"
+   ]
+  },
+  {
+   "id": "aiact-annex3-3b",
+   "instrument": "AI Act",
+   "ref": "Annex III, point 3(b)",
+   "status": "high-risk",
+   "appliesFrom": "2027-12-02 (was 2026-08-02 before Reg. (EU) 2026/1744); high-risk systems already on the market before that date: only if significantly changed, but providers and deployers of systems used by public authorities must comply by 2030-08-02",
+   "adopted": true,
+   "title": {
+    "en": "High-risk: AI that evaluates learning outcomes (grading), including steering learning",
+    "it": "Alto rischio: IA che valuta i risultati di apprendimento (voti), anche per orientare il percorso"
+   },
+   "plain": {
+    "en": "AI that evaluates learning outcomes is high-risk, including when the result is used to steer a student's learning path. The Commission's draft guidelines say this probably covers summative uses: AI that proposes or sets grades that count towards a final mark. Formative feedback, tutoring and adaptive practice that do not feed grades are probably not high-risk. The full rules apply from 2 December 2027; institutions should seek legal advice before using AI on graded work.",
+    "it": "L'IA che valuta i risultati di apprendimento è ad alto rischio, anche quando il risultato serve a orientare il percorso dello studente. Secondo la bozza di linee guida della Commissione riguarda probabilmente gli usi sommativi: IA che propone o assegna voti che contano per il voto finale. Feedback formativo, tutoraggio ed esercizi adattivi che non incidono sul voto probabilmente non sono ad alto rischio. Le regole complete si applicano dal 2 dicembre 2027: prima di usare l'IA su prove valutate conviene un parere legale."
+   },
+   "whatItCovers": {
+    "en": "'AI systems intended to be used to evaluate learning outcomes, including when those outcomes are used to steer the learning process of natural persons in educational and vocational training institutions at all levels'. Draft guidelines (not adopted), paras 220-225: high-risk = AI grading of tests, quizzes or exams counting towards a final evaluation; personalised assistants whose end-of-unit reports are used by teachers to set grades. Not high-risk = adaptive learning, intelligent tutoring, engagement analytics giving insights to teachers, tools students use of their own volition (unless leading to a recognised credential), pronunciation or language feedback not used for grades.",
+    "it": "'Sistemi di IA destinati a essere utilizzati per valutare i risultati dell'apprendimento, anche nei casi in cui tali risultati sono utilizzati per orientare il processo di apprendimento di persone fisiche in istituti di istruzione e formazione professionale a tutti i livelli'. Bozza di linee guida (non adottata), parr. 220-225: alto rischio = correzione automatica di test, quiz o esami che contano per la valutazione finale; assistenti personalizzati i cui report di fine unità servono al docente per il voto. Non alto rischio = apprendimento adattivo, tutor intelligenti, analitiche di coinvolgimento per i docenti, strumenti usati liberamente dagli studenti (salvo che portino a una certificazione riconosciuta), feedback linguistico non usato per il voto."
+   },
+   "exceptions": {
+    "en": "Art. 6(3) filter: draft examples include an exam-quality checker that suggests wording fixes to the teacher (improves a completed human activity), a weighted-average grade calculator (narrow procedural task), and a tool flagging anomalies in instructors' grading patterns for human review (pattern detection). Draft para 215 says systems in point 3 that profile students should always be treated as high-risk.",
+    "it": "Filtro dell'art. 6(3): la bozza cita un controllo di qualità delle prove d'esame che suggerisce correzioni al docente (migliora un'attività umana già svolta), un calcolatore di media ponderata (compito procedurale limitato) e uno strumento che segnala anomalie nei voti dei docenti per una revisione umana (rilevazione di schemi). Il par. 215 della bozza dice che i sistemi del punto 3 che profilano gli studenti vanno sempre trattati come ad alto rischio."
+   },
+   "tasks": [
+    "t-grading",
+    "t-feedback",
+    "t-assistant",
+    "t-tutoring",
+    "t-items",
+    "d-analytics",
+    "d-quality",
+    "s-practice",
+    "s-writing",
+    "s-language"
+   ],
+   "toolTypes": [
+    "writing-feedback",
+    "tutoring-system",
+    "lms-integrated",
+    "analytics",
+    "general-assistant",
+    "item-generator"
+   ],
+   "sources": [
+    "eu-aiact",
+    "ec-draft-hr-guidelines",
+    "eu-omnibus-pecons"
+   ]
+  },
+  {
+   "id": "aiact-annex3-3c",
+   "instrument": "AI Act",
+   "ref": "Annex III, point 3(c)",
+   "status": "high-risk",
+   "appliesFrom": "2027-12-02 (was 2026-08-02 before Reg. (EU) 2026/1744); high-risk systems already on the market before that date: only if significantly changed, but providers and deployers of systems used by public authorities must comply by 2030-08-02",
+   "adopted": true,
+   "title": {
+    "en": "High-risk: AI that assesses the appropriate level of education (placement, progression)",
+    "it": "Alto rischio: IA che stabilisce il livello di istruzione adeguato (collocamento, progressione)"
+   },
+   "plain": {
+    "en": "AI used by an institution to decide what level of education a person will receive or can access is high-risk: placement tests, deciding beginner or advanced classes, or readiness to progress. Tools that only give students personal suggestions based on their own interests are probably not covered. The full rules apply from 2 December 2027.",
+    "it": "È ad alto rischio l'IA usata da un ateneo per decidere il livello di istruzione che una persona riceverà o a cui potrà accedere: test di piazzamento, assegnazione a classi base o avanzate, idoneità a proseguire. Gli strumenti che danno solo suggerimenti personali allo studente in base ai suoi interessi probabilmente non rientrano. Le regole complete si applicano dal 2 dicembre 2027."
+   },
+   "whatItCovers": {
+    "en": "'AI systems intended to be used for the purpose of assessing the appropriate level of education that an individual will receive or will be able to access, in the context of or within educational and vocational training institutions at all levels'. Draft examples (not adopted): adaptive placement tools setting course level for incoming students; level assessment for vocational programmes; classifiers placing students with special educational needs.",
+    "it": "'Sistemi di IA destinati a essere utilizzati per valutare il livello di istruzione adeguato che una persona riceverà o a cui potrà accedere, nel contesto o all'interno di istituti di istruzione e formazione professionale a tutti i livelli'. Esempi della bozza (non adottata): strumenti adattivi che fissano il livello del corso per le matricole; valutazione del livello per percorsi professionali; classificatori che collocano studenti con bisogni educativi speciali."
+   },
+   "exceptions": {
+    "en": "Art. 6(3) filter, e.g. a pre-assessment tool that only generates questions for the educator (preparatory task). Outside scope: recommendations to students based on their own stated interests; aggregate trend analysis not used for individual decisions.",
+    "it": "Filtro dell'art. 6(3), per esempio uno strumento che genera solo domande per il docente in vista della valutazione (attività preparatoria). Fuori ambito: suggerimenti agli studenti basati sui loro interessi dichiarati; analisi di tendenze aggregate non usate per decisioni individuali."
+   },
+   "tasks": [
+    "s-language",
+    "t-tutoring",
+    "d-analytics",
+    "d-admissions"
+   ],
+   "toolTypes": [
+    "tutoring-system",
+    "analytics",
+    "lms-integrated"
+   ],
+   "sources": [
+    "eu-aiact",
+    "ec-draft-hr-guidelines",
+    "eu-omnibus-pecons"
+   ]
+  },
+  {
+   "id": "aiact-annex3-3d",
+   "instrument": "AI Act",
+   "ref": "Annex III, point 3(d)",
+   "status": "high-risk",
+   "appliesFrom": "2027-12-02 (was 2026-08-02 before Reg. (EU) 2026/1744); high-risk systems already on the market before that date: only if significantly changed, but providers and deployers of systems used by public authorities must comply by 2030-08-02",
+   "adopted": true,
+   "title": {
+    "en": "High-risk: AI proctoring that monitors and detects prohibited behaviour during tests",
+    "it": "Alto rischio: proctoring con IA che sorveglia e rileva comportamenti vietati durante le prove"
+   },
+   "plain": {
+    "en": "AI that watches students during tests (online or in person) to detect cheating is high-risk. If it also infers emotions such as anxiety, it is prohibited outright. According to the Commission's draft guidelines, checking submitted homework or essays for plagiarism is probably not in this category, because it happens after the work is done and not during a supervised test.",
+    "it": "L'IA che sorveglia gli studenti durante le prove (online o in presenza) per scoprire chi copia è ad alto rischio. Se deduce anche emozioni come l'ansia, è vietata del tutto. Secondo la bozza di linee guida della Commissione, il controllo antiplagio di compiti o elaborati consegnati probabilmente non rientra, perché avviene dopo la consegna e non durante una prova sorvegliata."
+   },
+   "whatItCovers": {
+    "en": "'AI systems intended to be used for monitoring and detecting prohibited behaviour of students during tests in the context of or within educational and vocational training institutions at all levels'. Draft guidelines (not adopted): the system must both monitor and detect; 'tests' means a controlled, supervised summative setting; facial recognition, keystroke analysis, screen monitoring, audio/video. Explicitly outside: plagiarism checks of homework or assignments against a database.",
+    "it": "'Sistemi di IA destinati a essere utilizzati per monitorare e rilevare comportamenti vietati degli studenti durante le prove nel contesto o all'interno di istituti di istruzione e formazione professionale a tutti i livelli'. Bozza di linee guida (non adottata): il sistema deve sia sorvegliare sia rilevare; 'prove' significa una situazione sommativa controllata e sorvegliata; riconoscimento facciale, analisi della battitura, monitoraggio dello schermo, audio e video. Esplicitamente escluso: il controllo antiplagio di compiti ed elaborati su una banca dati."
+   },
+   "exceptions": {
+    "en": "Art. 6(3) filter, draft examples: AI that only confirms or denies a human proctor's existing suspicion (improves a completed human activity); identity verification where the human proctor decides (procedural task). Note: if the tool uses biometric identification, the GDPR special-category rules still apply (see garante-bocconi-2021).",
+    "it": "Filtro dell'art. 6(3), esempi della bozza: IA che conferma o smentisce un sospetto già formulato dal sorvegliante umano (migliora un'attività umana già svolta); verifica d'identità quando decide il sorvegliante (compito procedurale). Attenzione: se lo strumento usa dati biometrici, restano le regole GDPR sulle categorie particolari (vedi garante-bocconi-2021)."
+   },
+   "tasks": [
+    "t-proctoring",
+    "t-detect"
+   ],
+   "toolTypes": [
+    "ai-detector",
+    "lms-integrated"
+   ],
+   "sources": [
+    "eu-aiact",
+    "ec-draft-hr-guidelines",
+    "eu-omnibus-pecons"
+   ]
+  },
+  {
+   "id": "aiact-annex3-4",
+   "instrument": "AI Act",
+   "ref": "Annex III, point 4(b) (employment)",
+   "status": "high-risk",
+   "appliesFrom": "2027-12-02 (was 2026-08-02 before Reg. (EU) 2026/1744); high-risk systems already on the market before that date: only if significantly changed, but providers and deployers of systems used by public authorities must comply by 2030-08-02",
+   "adopted": true,
+   "title": {
+    "en": "High-risk: AI used to monitor or evaluate teaching staff",
+    "it": "Alto rischio: IA usata per monitorare o valutare il personale docente"
+   },
+   "plain": {
+    "en": "When AI in a university is aimed at staff rather than students, it falls under the employment rules. AI used to monitor and evaluate the performance or behaviour of teachers, or to decide promotion or contract matters, is high-risk. A teacher who analyses their own lessons for self-improvement, with results not shared with management, is probably outside this category.",
+    "it": "Quando l'IA in ateneo riguarda il personale e non gli studenti, valgono le regole sul lavoro. L'IA usata per monitorare e valutare prestazioni o comportamenti dei docenti, o per decidere promozioni e contratti, è ad alto rischio. Un docente che analizza le proprie lezioni per migliorarsi, senza che i risultati arrivino ai vertici, probabilmente resta fuori."
+   },
+   "whatItCovers": {
+    "en": "Annex III point 4(b): AI intended to make decisions affecting terms of work relationships, promotion or termination, to allocate tasks based on behaviour or traits, or to monitor and evaluate performance and behaviour of persons in such relationships. Draft guidelines para 214: AI used in an educational institution but mainly directed at educators and staff falls outside point 3 and may fall within point 4.",
+    "it": "Allegato III, punto 4(b): IA destinata a decisioni sulle condizioni dei rapporti di lavoro, promozioni o cessazioni, ad assegnare compiti in base a comportamenti o caratteristiche, o a monitorare e valutare prestazioni e comportamenti dei lavoratori. Bozza di linee guida, par. 214: l'IA usata in un istituto ma rivolta soprattutto a docenti e personale esce dal punto 3 e può rientrare nel punto 4."
+   },
+   "exceptions": {
+    "en": "Art. 6(3) filter where applicable (never with profiling). Emotion recognition on staff is prohibited, not merely high-risk (Art. 5(1)(f), 'workplace').",
+    "it": "Filtro dell'art. 6(3) se applicabile (mai con profilazione). Il riconoscimento delle emozioni sul personale è vietato, non solo ad alto rischio (art. 5(1)(f), 'luogo di lavoro')."
+   },
+   "tasks": [
+    "t-classroom-feedback",
+    "d-evaluations",
+    "d-quality"
+   ],
+   "toolTypes": [
+    "teaching-analytics",
+    "analytics"
+   ],
+   "sources": [
+    "eu-aiact",
+    "ec-draft-hr-guidelines",
+    "eu-omnibus-pecons"
+   ]
+  },
+  {
+   "id": "aiact-art6-3",
+   "instrument": "AI Act",
+   "ref": "Art. 6(3)-(4); Art. 49(2); Annex VIII section B (as amended)",
+   "status": "high-risk",
+   "appliesFrom": "2027-12-02 (was 2026-08-02 before Reg. (EU) 2026/1744); high-risk systems already on the market before that date: only if significantly changed, but providers and deployers of systems used by public authorities must comply by 2030-08-02",
+   "adopted": true,
+   "title": {
+    "en": "When an Annex III system is NOT high-risk (the 'filter')",
+    "it": "Quando un sistema dell'Allegato III NON è ad alto rischio (il 'filtro')"
+   },
+   "plain": {
+    "en": "A system used in an Annex III area is not high-risk if it does not materially influence decisions, for example because it only does a narrow procedural task, improves work a human already completed, spots patterns for later human review, or prepares material for a human assessment. It is always high-risk if it profiles people. The provider must document this assessment and still register the system in the EU database (with a shorter form since the Omnibus).",
+    "it": "Un sistema usato in un'area dell'Allegato III non è ad alto rischio se non incide in modo rilevante sulle decisioni: per esempio se svolge solo un compito procedurale limitato, migliora un lavoro umano già fatto, individua schemi da far rivedere a una persona o prepara materiale per una valutazione umana. È sempre ad alto rischio se profila le persone. Il fornitore deve documentare questa valutazione e registrare comunque il sistema nella banca dati UE (con un modulo ridotto dopo l'Omnibus)."
+   },
+   "whatItCovers": {
+    "en": "Art. 6(3): four conditions (a) narrow procedural task; (b) improve the result of a previously completed human activity; (c) detect decision-making patterns or deviations without replacing or influencing the completed human assessment absent proper human review; (d) preparatory task to an assessment. Last subparagraph: systems performing profiling of natural persons are always high-risk. Art. 6(4): document before placing on market; registration under Art. 49(2). Reg. 2026/1744 deletes points 7 and 9 of Annex VIII section B (lighter registration).",
+    "it": "Art. 6(3): quattro condizioni (a) compito procedurale limitato; (b) migliorare il risultato di un'attività umana già completata; (c) rilevare schemi decisionali o deviazioni senza sostituire o influenzare la valutazione umana già fatta senza un'adeguata revisione umana; (d) compito preparatorio a una valutazione. Ultimo comma: i sistemi che profilano persone fisiche sono sempre ad alto rischio. Art. 6(4): documentare prima dell'immissione sul mercato; registrazione ai sensi dell'art. 49(2). Il reg. 2026/1744 elimina i punti 7 e 9 dell'Allegato VIII, sezione B (registrazione più leggera)."
+   },
+   "exceptions": null,
+   "tasks": [
+    "t-grading",
+    "t-items",
+    "t-detect",
+    "t-proctoring",
+    "d-quality",
+    "d-analytics",
+    "d-admissions"
+   ],
+   "toolTypes": [
+    "lms-integrated",
+    "analytics",
+    "item-generator",
+    "ai-detector"
+   ],
+   "sources": [
+    "eu-aiact",
+    "ec-draft-hr-guidelines",
+    "eu-omnibus-pecons"
+   ]
+  },
+  {
+   "id": "aiact-art26-deployer",
+   "instrument": "AI Act",
+   "ref": "Art. 26",
+   "status": "obligation",
+   "appliesFrom": "2027-12-02 (was 2026-08-02 before Reg. (EU) 2026/1744); high-risk systems already on the market before that date: only if significantly changed, but providers and deployers of systems used by public authorities must comply by 2030-08-02",
+   "adopted": true,
+   "title": {
+    "en": "Duties of universities that use high-risk AI (deployers)",
+    "it": "Obblighi degli atenei che usano IA ad alto rischio (deployer)"
+   },
+   "plain": {
+    "en": "A university that uses a high-risk system (for example automated grading or AI proctoring) must use it according to the instructions, assign trained staff with authority to oversee it, check input data it controls, keep the logs, monitor its operation, and tell students that such a system is used in decisions about them. These duties apply from 2 December 2027; for systems already in use before then, public bodies must comply by 2 August 2030 at the latest.",
+    "it": "Un ateneo che usa un sistema ad alto rischio (per esempio correzione automatica o proctoring con IA) deve usarlo secondo le istruzioni, affidare la sorveglianza a personale formato e con poteri reali, controllare i dati di ingresso che gestisce, conservare i log, monitorarne il funzionamento e informare gli studenti che il sistema è usato nelle decisioni che li riguardano. Gli obblighi valgono dal 2 dicembre 2027; per i sistemi già in uso prima, gli enti pubblici devono adeguarsi entro il 2 agosto 2030."
+   },
+   "whatItCovers": {
+    "en": "Art. 26(1) use per instructions; (2) human oversight by competent, trained persons with authority; (4) relevant and representative input data where under the deployer's control; (5) monitoring and reporting; (6) keep automatically generated logs; (7) inform workers' representatives before workplace use; (9) use provider information for the GDPR DPIA; (11) deployers of Annex III systems that make or assist decisions about natural persons must inform them. Not amended by Reg. 2026/1744 (only the application date moved).",
+    "it": "Art. 26(1) uso conforme alle istruzioni; (2) sorveglianza umana da parte di persone competenti, formate e con autorità; (4) dati di input pertinenti e rappresentativi se controllati dal deployer; (5) monitoraggio e segnalazioni; (6) conservazione dei log generati automaticamente; (7) informare i rappresentanti dei lavoratori prima dell'uso sul lavoro; (9) usare le informazioni del fornitore per la DPIA ai sensi del GDPR; (11) chi usa sistemi dell'Allegato III per decisioni su persone fisiche deve informarle. Non modificato dal reg. 2026/1744 (cambia solo la data)."
+   },
+   "exceptions": null,
+   "tasks": [
+    "t-grading",
+    "t-proctoring",
+    "d-admissions",
+    "d-analytics",
+    "t-classroom-feedback"
+   ],
+   "toolTypes": [
+    "lms-integrated",
+    "analytics",
+    "ai-detector",
+    "teaching-analytics"
+   ],
+   "sources": [
+    "eu-aiact",
+    "eu-omnibus-pecons"
+   ]
+  },
+  {
+   "id": "aiact-art27-fria",
+   "instrument": "AI Act",
+   "ref": "Art. 27",
+   "status": "obligation",
+   "appliesFrom": "2027-12-02 (was 2026-08-02 before Reg. (EU) 2026/1744); high-risk systems already on the market before that date: only if significantly changed, but providers and deployers of systems used by public authorities must comply by 2030-08-02",
+   "adopted": true,
+   "title": {
+    "en": "Fundamental rights impact assessment for public and public-service universities",
+    "it": "Valutazione d'impatto sui diritti fondamentali per atenei pubblici o che svolgono un servizio pubblico"
+   },
+   "plain": {
+    "en": "Before using a high-risk Annex III system, bodies governed by public law and private bodies providing public services must assess its impact on fundamental rights. Recital 96 names education as a public service, so this probably covers public universities and very likely many private ones too. Since the Omnibus, the assessment can reuse parts of the GDPR DPIA and the AI Office will provide a template.",
+    "it": "Prima di usare un sistema ad alto rischio dell'Allegato III, gli organismi di diritto pubblico e i privati che erogano servizi pubblici devono valutarne l'impatto sui diritti fondamentali. Il considerando 96 cita l'istruzione tra i servizi pubblici: quindi probabilmente riguarda gli atenei pubblici e molto probabilmente anche molti privati. Dopo l'Omnibus la valutazione può riprendere parti della DPIA prevista dal GDPR e l'AI Office fornirà un modello."
+   },
+   "whatItCovers": {
+    "en": "Art. 27(1): prior to deploying a high-risk system under Art. 6(2) (except Annex III point 2), deployers that are bodies governed by public law or private entities providing public services perform a fundamental rights impact assessment (processes, period and frequency of use, affected groups, specific risks, oversight measures, remedies). Recital 96 lists education among public services. Reg. 2026/1744 replaced Art. 27(4)-(5): cross-references to or inclusion of the DPIA allowed; AI Office questionnaire template incl. automated tool.",
+    "it": "Art. 27(1): prima di usare un sistema ad alto rischio ex art. 6(2) (escluso l'Allegato III, punto 2), i deployer che sono organismi di diritto pubblico o privati che erogano servizi pubblici svolgono una valutazione d'impatto sui diritti fondamentali (processi, durata e frequenza d'uso, persone coinvolte, rischi specifici, misure di sorveglianza, rimedi). Il considerando 96 cita l'istruzione tra i servizi pubblici. Il reg. 2026/1744 ha sostituito l'art. 27(4)-(5): si possono richiamare o includere parti della DPIA; l'AI Office predispone un questionario modello anche automatizzato."
+   },
+   "exceptions": null,
+   "tasks": [
+    "t-grading",
+    "t-proctoring",
+    "d-admissions",
+    "d-analytics"
+   ],
+   "toolTypes": [
+    "lms-integrated",
+    "analytics",
+    "ai-detector"
+   ],
+   "sources": [
+    "eu-aiact",
+    "eu-omnibus-pecons"
+   ]
+  },
+  {
+   "id": "aiact-art4-literacy",
+   "instrument": "AI Act (as amended by Reg. (EU) 2026/1744)",
+   "ref": "Art. 4",
+   "status": "obligation",
+   "appliesFrom": "2025-02-02 (original wording); amended wording from 2026-07-27",
+   "adopted": true,
+   "title": {
+    "en": "AI literacy measures for staff",
+    "it": "Misure di alfabetizzazione sull'IA per il personale"
+   },
+   "plain": {
+    "en": "Universities that use AI systems must take measures to support the AI literacy of staff and others who operate AI on their behalf, adapted to their role and to the people affected. Since July 2026 the Omnibus softened the wording: the duty is to support literacy, not to guarantee a level for each person. It applies to any AI use, not only high-risk.",
+    "it": "Gli atenei che usano sistemi di IA devono adottare misure per sostenere l'alfabetizzazione sull'IA del personale e di chi usa l'IA per loro conto, in base al ruolo e alle persone coinvolte. Da luglio 2026 l'Omnibus ha attenuato il testo: l'obbligo è sostenere la competenza, non garantire un livello per ogni persona. Vale per qualsiasi uso di IA, non solo ad alto rischio."
+   },
+   "whatItCovers": {
+    "en": "New Art. 4(1): providers and deployers 'shall take measures to support the development of AI literacy of their staff and other persons dealing with the operation and use of AI systems on their behalf'; it 'does not require providers or deployers to guarantee any specific level of AI literacy of any individual'. Art. 4(2)-(3): Commission and Member States support (practical examples on the single information platform); AI Board recommendations. Previous wording (2025-02-02 to 2026-07-26): measures 'to ensure, to their best extent, a sufficient level of AI literacy'.",
+    "it": "Nuovo art. 4(1): fornitori e deployer adottano misure per sostenere lo sviluppo dell'alfabetizzazione sull'IA del personale e delle altre persone che usano i sistemi per loro conto; l'obbligo non impone di garantire un livello specifico per ogni persona. Art. 4(2)-(3): sostegno di Commissione e Stati membri (esempi pratici sulla piattaforma informativa unica); raccomandazioni del Comitato IA. Testo precedente (dal 2-2-2025 al 26-7-2026): misure per garantire 'nella misura del possibile' un livello sufficiente di alfabetizzazione."
+   },
+   "exceptions": {
+    "en": "Whether students using institution-provided tools are persons acting 'on behalf of' the institution is not settled; probably not in most study uses.",
+    "it": "Non è chiaro se gli studenti che usano strumenti forniti dall'ateneo agiscano 'per conto' dell'ateneo; nella maggior parte degli usi di studio probabilmente no."
+   },
+   "tasks": [
+    "t-materials",
+    "t-items",
+    "t-feedback",
+    "t-grading",
+    "t-assistant",
+    "t-detect",
+    "t-accessibility",
+    "t-case-teaching",
+    "t-classroom-feedback",
+    "t-tutoring",
+    "d-outcomes",
+    "d-course-design",
+    "d-evaluations",
+    "d-workload",
+    "d-analytics",
+    "d-chatbot",
+    "d-content-scale",
+    "d-quality"
+   ],
+   "toolTypes": [
+    "general-assistant",
+    "lms-integrated",
+    "custom-chatbot",
+    "analytics",
+    "teaching-analytics"
+   ],
+   "sources": [
+    "eu-aiact",
+    "eu-omnibus-pecons"
+   ]
+  },
+  {
+   "id": "aiact-art50-1",
+   "instrument": "AI Act",
+   "ref": "Art. 50(1)",
+   "status": "transparency",
+   "appliesFrom": "2026-08-02",
+   "adopted": true,
+   "title": {
+    "en": "Chatbots must say they are AI",
+    "it": "I chatbot devono dichiarare di essere IA"
+   },
+   "plain": {
+    "en": "Since 2 August 2026, providers of AI systems that interact with people must design them so users are told they are talking to an AI, unless it is obvious. A university that builds and puts into service its own course chatbot or AI teaching assistant is probably a provider for this purpose and should show a clear notice.",
+    "it": "Dal 2 agosto 2026 i fornitori di sistemi di IA che interagiscono con le persone devono progettarli in modo che l'utente sappia di parlare con un'IA, salvo che sia evidente. Un ateneo che crea e mette in servizio un proprio chatbot di corso o assistente didattico probabilmente è 'fornitore' a questo fine e dovrebbe mostrare un avviso chiaro."
+   },
+   "whatItCovers": {
+    "en": "Providers shall ensure AI systems intended to interact directly with natural persons are designed so that those persons 'are informed that they are interacting with an AI system', unless obvious to a reasonably well-informed person. Art. 50 was not postponed by Reg. 2026/1744.",
+    "it": "I fornitori garantiscono che i sistemi destinati a interagire direttamente con persone fisiche siano progettati in modo che queste siano informate di interagire con un sistema di IA, salvo che sia evidente per una persona ragionevolmente informata. L'art. 50 non è stato rinviato dal reg. 2026/1744."
+   },
+   "exceptions": {
+    "en": "Obvious from context; systems authorised by law for criminal-offence purposes.",
+    "it": "Quando è evidente dal contesto; sistemi autorizzati per legge a fini di contrasto dei reati."
+   },
+   "tasks": [
+    "t-assistant",
+    "d-chatbot",
+    "t-tutoring",
+    "d-admissions"
+   ],
+   "toolTypes": [
+    "custom-chatbot",
+    "tutoring-system",
+    "lms-integrated"
+   ],
+   "sources": [
+    "eu-aiact",
+    "eu-omnibus-pecons"
+   ]
+  },
+  {
+   "id": "aiact-art50-2",
+   "instrument": "AI Act (as amended by Reg. (EU) 2026/1744)",
+   "ref": "Art. 50(2); Art. 111(4)",
+   "status": "transparency",
+   "appliesFrom": "2026-08-02; for generative systems placed on the market before 2026-08-02: 2026-12-02",
+   "adopted": true,
+   "title": {
+    "en": "Machine-readable marking of AI-generated content (provider duty)",
+    "it": "Marcatura leggibile dalle macchine dei contenuti generati (obbligo del fornitore)"
+   },
+   "plain": {
+    "en": "Providers of generative AI must mark generated text, images, audio and video in a machine-readable way so they can be detected as AI-made. This is the vendor's duty, not the teacher's. Visible watermarks or labels may still be missing, so marking should not be relied on to detect student use of AI.",
+    "it": "I fornitori di IA generativa devono marcare testi, immagini, audio e video generati in modo leggibile dalle macchine, così da poterli riconoscere come prodotti dall'IA. È un obbligo del fornitore, non del docente. Etichette visibili possono comunque mancare: non conviene contare su questa marcatura per scoprire l'uso dell'IA da parte degli studenti."
+   },
+   "whatItCovers": {
+    "en": "Providers of AI systems, including GPAI systems, generating synthetic audio, image, video or text shall ensure outputs are 'marked in a machine-readable format and detectable as artificially generated or manipulated'. New Art. 111(4): systems placed on the market before 2 August 2026 must comply by 2 December 2026.",
+    "it": "I fornitori di sistemi, anche per finalità generali, che generano audio, immagini, video o testo sintetici garantiscono che gli output siano marcati in formato leggibile dalle macchine e rilevabili come generati o manipolati artificialmente. Nuovo art. 111(4): i sistemi immessi prima del 2 agosto 2026 devono adeguarsi entro il 2 dicembre 2026."
+   },
+   "exceptions": {
+    "en": "Assistive editing functions that do not substantially alter input; uses authorised by law for criminal-offence purposes.",
+    "it": "Funzioni di assistenza all'editing che non alterano in modo sostanziale l'input; usi autorizzati per legge a fini di contrasto dei reati."
+   },
+   "tasks": [
+    "t-detect",
+    "d-content-scale",
+    "t-materials",
+    "s-ideas"
+   ],
+   "toolTypes": [
+    "general-assistant",
+    "presentation-generator",
+    "ai-detector"
+   ],
+   "sources": [
+    "eu-aiact",
+    "eu-omnibus-pecons"
+   ]
+  },
+  {
+   "id": "aiact-art50-4",
+   "instrument": "AI Act",
+   "ref": "Art. 50(3)-(4)",
+   "status": "transparency",
+   "appliesFrom": "2026-08-02",
+   "adopted": true,
+   "title": {
+    "en": "Disclose deepfakes and AI-written public-interest texts (deployer duty)",
+    "it": "Dichiarare deepfake e testi di interesse pubblico scritti dall'IA (obbligo di chi li usa)"
+   },
+   "plain": {
+    "en": "If a teacher or university publishes AI-generated or manipulated images, audio or video that resemble real people, places or events (for example a synthetic video of a real lecturer), they must disclose it. AI-generated text published to inform the public on matters of public interest must also be disclosed, unless a person reviewed it and takes editorial responsibility. Ordinary teaching materials are probably not 'public-interest' texts, but labelling AI use is good practice.",
+    "it": "Se un docente o un ateneo pubblica immagini, audio o video generati o modificati dall'IA che somigliano a persone, luoghi o fatti reali (per esempio un video sintetico di un docente reale), deve dichiararlo. Va dichiarato anche il testo generato dall'IA pubblicato per informare il pubblico su temi di interesse pubblico, salvo revisione umana con responsabilità editoriale. I normali materiali didattici probabilmente non sono testi 'di interesse pubblico', ma indicare l'uso dell'IA resta buona pratica."
+   },
+   "whatItCovers": {
+    "en": "Art. 50(4): deployers of systems generating deep fakes 'shall disclose that the content has been artificially generated or manipulated'; same for AI-generated or manipulated text published to inform the public on matters of public interest. Art. 50(3): deployers of (permitted) emotion recognition or biometric categorisation systems must inform the persons exposed.",
+    "it": "Art. 50(4): chi usa sistemi che generano deepfake rende noto che il contenuto è generato o manipolato artificialmente; lo stesso per i testi generati o manipolati pubblicati per informare il pubblico su temi di interesse pubblico. Art. 50(3): chi usa sistemi (ammessi) di riconoscimento delle emozioni o di categorizzazione biometrica informa le persone esposte."
+   },
+   "exceptions": {
+    "en": "Evidently artistic, creative, satirical or fictional works: disclosure in a way that does not hamper the work. Text: no disclosure if human review or editorial control and editorial responsibility.",
+    "it": "Opere evidentemente artistiche, creative, satiriche o di finzione: informativa adeguata che non ostacoli l'opera. Testi: nessun obbligo se c'è revisione umana o controllo editoriale con responsabilità editoriale."
+   },
+   "tasks": [
+    "t-materials",
+    "t-accessibility",
+    "d-content-scale",
+    "s-ideas",
+    "t-case-teaching"
+   ],
+   "toolTypes": [
+    "presentation-generator",
+    "translation",
+    "general-assistant"
+   ],
+   "sources": [
+    "eu-aiact"
+   ]
+  },
+  {
+   "id": "aiact-gpai",
+   "instrument": "AI Act",
+   "ref": "Arts. 53-55; Art. 111(3); Art. 113",
+   "status": "obligation",
+   "appliesFrom": "2025-08-02 (models placed on the market before that date: 2027-08-02); Commission enforcement powers from 2026-08-02",
+   "adopted": true,
+   "title": {
+    "en": "Rules for general-purpose AI model providers",
+    "it": "Regole per i fornitori di modelli di IA per finalità generali"
+   },
+   "plain": {
+    "en": "Companies that place general-purpose models on the market (for example the makers of large language models) must keep technical documentation, publish a training-content summary and have a copyright policy; the largest models have extra safety duties. A university that only uses or lightly customises such a model is probably not a model provider, but one that substantially modifies and redistributes a model (for example local open-weight models) should check.",
+    "it": "Le aziende che immettono sul mercato modelli per finalità generali (per esempio chi sviluppa i grandi modelli linguistici) devono tenere documentazione tecnica, pubblicare una sintesi dei contenuti di addestramento e avere una politica sul diritto d'autore; i modelli più grandi hanno obblighi di sicurezza in più. Un ateneo che si limita a usare o personalizzare leggermente un modello probabilmente non è fornitore del modello; chi lo modifica in modo sostanziale e lo ridistribuisce (per esempio modelli open-weight locali) deve verificare."
+   },
+   "whatItCovers": {
+    "en": "Chapter V obligations for GPAI model providers (documentation, downstream information, copyright policy, training-content summary; systemic-risk models: evaluation, incident reporting, cybersecurity). Dates unchanged by Reg. 2026/1744 apart from AI Office competence changes.",
+    "it": "Obblighi del capo V per i fornitori di modelli GPAI (documentazione, informazioni a valle, politica sul diritto d'autore, sintesi dei dati di addestramento; per i modelli a rischio sistemico: valutazioni, segnalazione incidenti, cybersicurezza). Date non modificate dal reg. 2026/1744, salvo le competenze dell'AI Office."
+   },
+   "exceptions": {
+    "en": "Free and open-source models are exempt from some documentation duties unless they present systemic risk.",
+    "it": "I modelli gratuiti e open source sono esenti da alcuni obblighi di documentazione, salvo rischio sistemico."
+   },
+   "tasks": [
+    "d-chatbot",
+    "d-content-scale"
+   ],
+   "toolTypes": [
+    "local-open-weights",
+    "custom-chatbot",
+    "general-assistant"
+   ],
+   "sources": [
+    "eu-aiact",
+    "fpf-omnibus-timeline"
+   ]
+  },
+  {
+   "id": "aiact-art2-6-research",
+   "instrument": "AI Act",
+   "ref": "Art. 2(6)",
+   "status": "obligation",
+   "appliesFrom": "2024-08-01",
+   "adopted": true,
+   "title": {
+    "en": "Exclusion for AI developed solely for scientific research",
+    "it": "Esclusione per l'IA sviluppata solo per la ricerca scientifica"
+   },
+   "plain": {
+    "en": "The AI Act does not apply to AI systems or models, and their output, specifically developed and put into service for the sole purpose of scientific research and development. A research prototype is probably covered; once the same tool is used in real courses or on real students' grades, it is probably no longer 'solely' research.",
+    "it": "L'AI Act non si applica a sistemi o modelli di IA, e ai loro output, sviluppati e messi in servizio al solo scopo di ricerca e sviluppo scientifico. Un prototipo di ricerca probabilmente rientra nell'esclusione; quando lo stesso strumento viene usato in corsi reali o sui voti di studenti reali, probabilmente non è più 'solo' ricerca."
+   },
+   "whatItCovers": {
+    "en": "Scope exclusion for AI systems or models specifically developed and put into service for the sole purpose of scientific research and development. GDPR and research ethics still apply.",
+    "it": "Esclusione dall'ambito per sistemi o modelli sviluppati e messi in servizio al solo scopo di ricerca e sviluppo scientifico. GDPR ed etica della ricerca continuano ad applicarsi."
+   },
+   "exceptions": null,
+   "tasks": [
+    "d-analytics",
+    "t-classroom-feedback",
+    "t-tutoring"
+   ],
+   "toolTypes": [
+    "analytics",
+    "teaching-analytics",
+    "tutoring-system",
+    "local-open-weights"
+   ],
+   "sources": [
+    "eu-aiact"
+   ]
+  },
+  {
+   "id": "aiact-art4a-bias",
+   "instrument": "AI Act (as amended by Reg. (EU) 2026/1744)",
+   "ref": "Art. 4a (new)",
+   "status": "data-protection",
+   "appliesFrom": "2026-07-27",
+   "adopted": true,
+   "title": {
+    "en": "Processing sensitive data to detect and correct bias",
+    "it": "Trattare dati sensibili per rilevare e correggere i bias"
+   },
+   "plain": {
+    "en": "Since July 2026, providers and deployers may exceptionally process special categories of personal data (for example ethnicity or health) when strictly necessary to detect and correct bias, under strict safeguards. This may matter for institutions auditing dropout-prediction or analytics models for discrimination. It is a permission, not an obligation, and legal advice is needed before relying on it.",
+    "it": "Da luglio 2026 fornitori e deployer possono, in via eccezionale, trattare categorie particolari di dati personali (per esempio origine etnica o salute) se strettamente necessario per rilevare e correggere bias, con garanzie rigorose. Può servire agli atenei che verificano se i modelli predittivi di abbandono o le analitiche discriminano. È una possibilità, non un obbligo: prima di usarla serve un parere legale."
+   },
+   "whatItCovers": {
+    "en": "Art. 4a(1): providers of high-risk systems, under cumulative conditions (no alternative such as synthetic or anonymised data; technical limits on re-use, pseudonymisation; strict access control; no transfer; deletion; reasons recorded). Art. 4a(2): providers and deployers of other AI systems and deployers of high-risk systems, where strictly necessary for bias detection and correction; 'does not create any obligation'. Replaces former Art. 10(5).",
+    "it": "Art. 4a(1): fornitori di sistemi ad alto rischio, a condizioni cumulative (nessuna alternativa come dati sintetici o anonimi; limiti tecnici al riuso, pseudonimizzazione; accesso rigoroso; nessuna trasmissione; cancellazione; motivi registrati). Art. 4a(2): fornitori e deployer di altri sistemi e deployer di sistemi ad alto rischio, se strettamente necessario per rilevare e correggere bias; non crea obblighi. Sostituisce il precedente art. 10(5)."
+   },
+   "exceptions": null,
+   "tasks": [
+    "d-analytics"
+   ],
+   "toolTypes": [
+    "analytics"
+   ],
+   "sources": [
+    "eu-omnibus-pecons"
+   ]
+  },
+  {
+   "id": "gdpr-art22",
+   "instrument": "GDPR",
+   "ref": "Art. 22",
+   "status": "data-protection",
+   "appliesFrom": "2018-05-25",
+   "adopted": true,
+   "title": {
+    "en": "No decisions about students based solely on automated processing",
+    "it": "Niente decisioni sugli studenti basate solo su trattamenti automatizzati"
+   },
+   "plain": {
+    "en": "Students have the right not to be subject to a decision based solely on automated processing that significantly affects them, such as a fail grade, an exclusion or a misconduct finding made by software alone. A real human review that can change the outcome is the usual safeguard. In the Bocconi case the Garante found Art. 22 not applicable because the professor took the final decision, but still found profiling without a legal basis.",
+    "it": "Gli studenti hanno diritto a non essere sottoposti a decisioni basate solo su trattamenti automatizzati che incidono in modo significativo su di loro, come una bocciatura, un'esclusione o un'accusa di plagio decise solo da un software. La garanzia abituale è una revisione umana reale, capace di cambiare l'esito. Nel caso Bocconi il Garante ha escluso l'art. 22 perché decideva il docente, ma ha rilevato una profilazione senza base giuridica."
+   },
+   "whatItCovers": {
+    "en": "Art. 22(1): right not to be subject to a decision based solely on automated processing, including profiling, producing legal effects or similarly significant effects. Exceptions (contract, Union/Member State law with safeguards, explicit consent) require safeguards incl. human intervention, right to express a view and to contest; special-category data only under Art. 9(2)(a) or (g).",
+    "it": "Art. 22(1): diritto a non essere sottoposti a decisioni basate unicamente su trattamenti automatizzati, compresa la profilazione, che producono effetti giuridici o incidono in modo analogo e significativo. Le eccezioni (contratto, legge UE o nazionale con garanzie, consenso esplicito) richiedono garanzie: intervento umano, possibilità di esprimere la propria opinione e di contestare; dati particolari solo ex art. 9(2)(a) o (g)."
+   },
+   "exceptions": {
+    "en": "Contract necessity, authorisation by law with safeguards, explicit consent (rarely valid between student and university because of the imbalance of power).",
+    "it": "Necessità contrattuale, autorizzazione per legge con garanzie, consenso esplicito (raramente valido tra studente e ateneo per lo squilibrio di potere)."
+   },
+   "tasks": [
+    "t-grading",
+    "t-detect",
+    "t-proctoring",
+    "d-analytics",
+    "d-admissions",
+    "t-feedback"
+   ],
+   "toolTypes": [
+    "lms-integrated",
+    "ai-detector",
+    "analytics",
+    "writing-feedback"
+   ],
+   "sources": [
+    "eu-gdpr",
+    "garante-bocconi-2021"
+   ]
+  },
+  {
+   "id": "gdpr-lawful-basis",
+   "instrument": "GDPR",
+   "ref": "Arts. 5, 6, 9; Italian Privacy Code Art. 2-sexies",
+   "status": "data-protection",
+   "appliesFrom": "2018-05-25",
+   "adopted": true,
+   "title": {
+    "en": "A lawful basis and data minimisation for student data in AI tools",
+    "it": "Base giuridica e minimizzazione per i dati degli studenti negli strumenti di IA"
+   },
+   "plain": {
+    "en": "A university processing student data with AI needs a lawful basis, usually its public-interest teaching task, and should use only the data really needed. Consent is often not valid because students cannot freely refuse. Biometric data (for example face matching in proctoring) needs a specific legal basis; in Italy the Garante found none for exam proctoring at Bocconi in 2021.",
+    "it": "Un ateneo che tratta dati degli studenti con l'IA ha bisogno di una base giuridica, di solito il compito di interesse pubblico della didattica, e deve usare solo i dati davvero necessari. Il consenso spesso non è valido perché lo studente non può rifiutare liberamente. I dati biometrici (per esempio il confronto del volto nel proctoring) richiedono una base giuridica specifica: nel 2021 il Garante non l'ha trovata per il proctoring d'esame alla Bocconi."
+   },
+   "whatItCovers": {
+    "en": "Art. 5 principles (lawfulness, purpose limitation, minimisation, storage limitation); Art. 6(1)(c)/(e) legal obligation or public task for public institutions; Art. 9 special categories incl. biometric data for unique identification, Art. 9(2)(g) substantial public interest on a legal basis; Italian Codice privacy Art. 2-sexies. Garante 2021: consent invalid due to imbalance; profiling and biometric processing without legal basis; excessive retention.",
+    "it": "Art. 5 principi (liceità, limitazione della finalità, minimizzazione, limitazione della conservazione); art. 6(1)(c)/(e) obbligo legale o compito pubblico per gli enti pubblici; art. 9 categorie particolari, inclusi i dati biometrici per l'identificazione univoca, art. 9(2)(g) interesse pubblico rilevante su base di legge; Codice privacy art. 2-sexies. Garante 2021: consenso non valido per squilibrio; profilazione e trattamento biometrico senza base giuridica; conservazione eccessiva."
+   },
+   "exceptions": null,
+   "tasks": [
+    "t-proctoring",
+    "t-detect",
+    "d-analytics",
+    "t-classroom-feedback",
+    "t-assistant",
+    "d-chatbot",
+    "t-tutoring",
+    "d-evaluations"
+   ],
+   "toolTypes": [
+    "ai-detector",
+    "analytics",
+    "teaching-analytics",
+    "custom-chatbot",
+    "tutoring-system",
+    "lms-integrated"
+   ],
+   "sources": [
+    "eu-gdpr",
+    "garante-bocconi-2021"
+   ]
+  },
+  {
+   "id": "gdpr-art35-dpia",
+   "instrument": "GDPR",
+   "ref": "Art. 35",
+   "status": "data-protection",
+   "appliesFrom": "2018-05-25",
+   "adopted": true,
+   "title": {
+    "en": "Data protection impact assessment (DPIA) before risky AI uses",
+    "it": "Valutazione d'impatto sulla protezione dei dati (DPIA) prima degli usi rischiosi"
+   },
+   "plain": {
+    "en": "Before rolling out AI that systematically evaluates students, monitors them, processes biometric data or uses new technology at scale, the institution should carry out a DPIA. It will probably be needed for proctoring, learning analytics, automated grading and institution-wide chatbots that receive student data. Under the AI Act the DPIA can feed the fundamental rights impact assessment.",
+    "it": "Prima di introdurre IA che valuta sistematicamente gli studenti, li sorveglia, tratta dati biometrici o usa nuove tecnologie su larga scala, l'ateneo deve svolgere una DPIA. Probabilmente serve per proctoring, analitiche dell'apprendimento, correzione automatica e chatbot d'ateneo che ricevono dati degli studenti. Con l'AI Act la DPIA può alimentare la valutazione d'impatto sui diritti fondamentali."
+   },
+   "whatItCovers": {
+    "en": "Art. 35(1): DPIA where processing, in particular using new technologies, is likely to result in a high risk; Art. 35(3): systematic and extensive evaluation incl. profiling with significant effects, large-scale special categories, systematic monitoring. AI Act Art. 26(9) and amended Art. 27(4) link the DPIA to AI Act duties.",
+    "it": "Art. 35(1): DPIA quando un trattamento, specie con nuove tecnologie, può presentare un rischio elevato; art. 35(3): valutazione sistematica e globale con profilazione ed effetti significativi, categorie particolari su larga scala, sorveglianza sistematica. L'art. 26(9) e il nuovo art. 27(4) dell'AI Act collegano la DPIA agli obblighi dell'AI Act."
+   },
+   "exceptions": null,
+   "tasks": [
+    "t-grading",
+    "t-proctoring",
+    "t-detect",
+    "d-analytics",
+    "t-assistant",
+    "d-chatbot",
+    "t-classroom-feedback",
+    "t-tutoring",
+    "d-evaluations",
+    "d-admissions"
+   ],
+   "toolTypes": [
+    "lms-integrated",
+    "ai-detector",
+    "analytics",
+    "custom-chatbot",
+    "teaching-analytics",
+    "tutoring-system"
+   ],
+   "sources": [
+    "eu-gdpr",
+    "eu-omnibus-pecons"
+   ]
+  },
+  {
+   "id": "gdpr-processor-transfers",
+   "instrument": "GDPR",
+   "ref": "Art. 28; Chapter V (Arts. 44-49)",
+   "status": "data-protection",
+   "appliesFrom": "2018-05-25",
+   "adopted": true,
+   "title": {
+    "en": "Contracts with AI vendors and data transfers outside the EU",
+    "it": "Contratti con i fornitori di IA e trasferimenti di dati fuori dall'UE"
+   },
+   "plain": {
+    "en": "If teachers or staff put student work or personal data into an AI service, the institution needs a data processing agreement with the vendor and a valid basis for any transfer outside the EU. Uploading student essays to a personal consumer account usually lacks both. Transfers to certified US companies currently rely on the EU-US Data Privacy Framework, whose validity is under appeal at the EU Court of Justice (case C-703/25 P, pending as far as found).",
+    "it": "Se docenti o personale inseriscono elaborati o dati personali degli studenti in un servizio di IA, l'ateneo deve avere un accordo sul trattamento dei dati con il fornitore e una base valida per eventuali trasferimenti fuori dall'UE. Caricare gli elaborati su un account personale di un servizio consumer di solito non soddisfa nessuna delle due condizioni. I trasferimenti verso aziende USA certificate si basano oggi sul Data Privacy Framework UE-USA, la cui validità è oggetto di ricorso alla Corte di giustizia UE (causa C-703/25 P, pendente per quanto risulta)."
+   },
+   "whatItCovers": {
+    "en": "Art. 28 processor contracts; Chapter V transfers (adequacy decisions incl. the EU-US Data Privacy Framework of 10 July 2023, standard contractual clauses with supplementary measures). Garante 2021 found that SCC security measures not attached to the contract did not satisfy the clauses. General Court upheld the DPF on 3 Sept 2025 (T-553/23); appeal C-703/25 P reported pending (secondary source).",
+    "it": "Art. 28 contratti con i responsabili del trattamento; capo V trasferimenti (decisioni di adeguatezza, incluso il Data Privacy Framework UE-USA del 10 luglio 2023, clausole contrattuali tipo con misure supplementari). Nel 2021 il Garante ha ritenuto insufficienti misure di sicurezza non allegate alle clausole. Il Tribunale UE ha confermato il DPF il 3-9-2025 (T-553/23); ricorso C-703/25 P riportato come pendente (fonte secondaria)."
+   },
+   "exceptions": null,
+   "tasks": [
+    "t-feedback",
+    "t-grading",
+    "t-assistant",
+    "t-detect",
+    "d-evaluations",
+    "d-chatbot",
+    "t-classroom-feedback",
+    "t-accessibility"
+   ],
+   "toolTypes": [
+    "general-assistant",
+    "writing-feedback",
+    "ai-detector",
+    "transcription-notes",
+    "custom-chatbot",
+    "translation"
+   ],
+   "sources": [
+    "eu-gdpr",
+    "garante-bocconi-2021",
+    "dpf-latombe-appeal"
+   ]
+  },
+  {
+   "id": "it-l132-art14-pa",
+   "instrument": "Legge 132/2025 (Italy)",
+   "ref": "Art. 14; Art. 3(5)",
+   "status": "obligation",
+   "appliesFrom": "2025-10-10",
+   "adopted": true,
+   "title": {
+    "en": "Public administrations: AI only as support, a person remains responsible",
+    "it": "Pubbliche amministrazioni: IA solo come supporto, la responsabilità resta a una persona"
+   },
+   "plain": {
+    "en": "Italian public administrations, which include state universities, may use AI only in an instrumental and supporting role; the person who decides remains solely responsible for the measures taken. They must make the AI's functioning knowable and its use traceable, and train users. This probably means that AI may help prepare grades or decisions at a public university, but a named person must decide and answer for them; legal advice is recommended.",
+    "it": "Le pubbliche amministrazioni italiane, tra cui le università statali, possono usare l'IA solo in funzione strumentale e di supporto; la persona che decide resta l'unica responsabile dei provvedimenti. Devono rendere conoscibile il funzionamento e tracciabile l'uso dell'IA, e formare gli utilizzatori. Probabilmente significa che in un ateneo pubblico l'IA può aiutare a preparare voti o decisioni, ma una persona identificata deve decidere e risponderne; è consigliato un parere legale."
+   },
+   "whatItCovers": {
+    "en": "Art. 14(1): PAs use AI to increase efficiency, 'assicurando agli interessati la conoscibilità del suo funzionamento e la tracciabilità del suo utilizzo'; (2) use 'in funzione strumentale e di supporto all'attività provvedimentale', the person remaining 'l'unica responsabile'; (3) technical, organisational and training measures. Art. 3(5): the law creates no new obligations beyond the AI Act for AI systems and GPAI models.",
+    "it": "Art. 14(1): le PA usano l'IA per l'efficienza, 'assicurando agli interessati la conoscibilità del suo funzionamento e la tracciabilità del suo utilizzo'; (2) uso 'in funzione strumentale e di supporto all'attività provvedimentale', con la persona che resta 'l'unica responsabile'; (3) misure tecniche, organizzative e formative. Art. 3(5): la legge non crea nuovi obblighi oltre l'AI Act per sistemi e modelli GPAI."
+   },
+   "exceptions": {
+    "en": "Applicability to private universities is doubtful (they are not public administrations under d.lgs. 165/2001).",
+    "it": "L'applicazione agli atenei non statali è dubbia (non sono pubbliche amministrazioni ai sensi del d.lgs. 165/2001)."
+   },
+   "tasks": [
+    "t-grading",
+    "t-detect",
+    "t-proctoring",
+    "d-analytics",
+    "d-admissions",
+    "d-quality",
+    "d-chatbot"
+   ],
+   "toolTypes": [
+    "lms-integrated",
+    "analytics",
+    "ai-detector",
+    "custom-chatbot"
+   ],
+   "sources": [
+    "it-l132-2025"
+   ]
+  },
+  {
+   "id": "it-l132-art4-minors",
+   "instrument": "Legge 132/2025 (Italy)",
+   "ref": "Art. 4(3)-(4)",
+   "status": "data-protection",
+   "appliesFrom": "2025-10-10",
+   "adopted": true,
+   "title": {
+    "en": "Clear information; parental consent for under-14s",
+    "it": "Informazioni chiare; consenso dei genitori sotto i 14 anni"
+   },
+   "plain": {
+    "en": "Information on personal data processing linked to AI must be in clear, simple language. Access to AI by children under 14 needs parental consent; from 14 to 17 the minor can consent if the information is easy to understand. This rarely affects universities, except for minors in early-enrolment or orientation programmes.",
+    "it": "Le informazioni sul trattamento dei dati legato all'IA devono essere in linguaggio chiaro e semplice. Sotto i 14 anni l'accesso all'IA richiede il consenso dei genitori; tra 14 e 17 anni il minore può consentire se le informazioni sono facili da capire. Per gli atenei conta di rado, salvo per minorenni in percorsi di orientamento o pre-immatricolazione."
+   },
+   "whatItCovers": {
+    "en": "Art. 4(3) information in clear and simple language incl. right to object; Art. 4(4) access to AI technologies by under-14s and related processing require consent of the holder of parental responsibility; 14-17 year-olds may consent if information is easily accessible and understandable.",
+    "it": "Art. 4(3) informazioni con linguaggio chiaro e semplice, compreso il diritto di opporsi; art. 4(4) l'accesso dei minori di 14 anni alle tecnologie di IA e il relativo trattamento richiedono il consenso di chi esercita la responsabilità genitoriale; tra 14 e 17 anni il minore può prestare il consenso se le informazioni sono accessibili e comprensibili."
+   },
+   "exceptions": null,
+   "tasks": [
+    "d-chatbot",
+    "t-assistant"
+   ],
+   "toolTypes": [
+    "custom-chatbot",
+    "general-assistant"
+   ],
+   "sources": [
+    "it-l132-2025"
+   ]
+  },
+  {
+   "id": "it-l132-art25-copyright",
+   "instrument": "Legge 132/2025 (Italy)",
+   "ref": "Art. 25 (amending Law 633/1941)",
+   "status": "obligation",
+   "appliesFrom": "2025-10-10",
+   "adopted": true,
+   "title": {
+    "en": "Copyright protects human work made with AI help",
+    "it": "Il diritto d'autore tutela l'opera umana realizzata con l'aiuto dell'IA"
+   },
+   "plain": {
+    "en": "In Italy, copyright protects works of 'human' intellect, including those made with AI tools, provided they result from the author's own intellectual work. Purely AI-generated material is therefore probably not protected. Text and data mining by AI is allowed only within the existing TDM exceptions (arts. 70-ter and 70-quater).",
+    "it": "In Italia il diritto d'autore tutela le opere dell'ingegno 'umano', anche se create con strumenti di IA, purché siano frutto del lavoro intellettuale dell'autore. Il materiale generato interamente dall'IA quindi probabilmente non è protetto. L'estrazione di testo e dati tramite IA è consentita solo entro le eccezioni già previste (artt. 70-ter e 70-quater)."
+   },
+   "whatItCovers": {
+    "en": "Art. 1 L. 633/1941 now refers to works of human intellect, 'anche laddove create con l'ausilio di strumenti di intelligenza artificiale, purché costituenti risultato del lavoro intellettuale dell'autore'; new Art. 70-septies on TDM via AI; new criminal offence in Art. 171(1)(a-ter) for TDM in breach of arts. 70-ter/70-quater.",
+    "it": "L'art. 1 della L. 633/1941 ora parla di opere dell'ingegno umano, 'anche laddove create con l'ausilio di strumenti di intelligenza artificiale, purché costituenti risultato del lavoro intellettuale dell'autore'; nuovo art. 70-septies sul TDM tramite IA; nuovo reato all'art. 171(1)(a-ter) per TDM in violazione degli artt. 70-ter/70-quater."
+   },
+   "exceptions": null,
+   "tasks": [
+    "s-writing",
+    "s-ideas",
+    "t-materials",
+    "d-content-scale"
+   ],
+   "toolTypes": [
+    "general-assistant",
+    "presentation-generator",
+    "writing-feedback"
+   ],
+   "sources": [
+    "it-l132-2025"
+   ]
+  },
+  {
+   "id": "it-dlgs179-art44",
+   "instrument": "D.lgs. 179/2026 (Italy)",
+   "ref": "Arts. 43-44",
+   "status": "obligation",
+   "appliesFrom": "2026-10-23 (entry into force per Normattiva)",
+   "adopted": true,
+   "title": {
+    "en": "Universities must promote AI training in degree programmes",
+    "it": "Gli atenei devono promuovere la formazione sull'IA nei corsi di studio"
+   },
+   "plain": {
+    "en": "Universities and AFAM institutions must promote training on how AI works, its safe use and the correct interpretation of its outputs, adapted to each degree programme. Minimum contents include limits and errors, critical reading of outputs, legal and ethical aspects, human oversight and cybersecurity. The Ministry (MUR) will monitor implementation yearly, with indicators set after hearing ANVUR. This shapes curriculum design, not which tools may be used.",
+    "it": "Università e istituzioni AFAM devono promuovere attività formative su come funziona l'IA, sul suo uso sicuro e sulla corretta interpretazione dei risultati, adattate a ciascun corso di studio. I contenuti minimi comprendono limiti ed errori, lettura critica degli output, aspetti giuridici ed etici, sorveglianza umana e cybersicurezza. Il MUR monitorerà l'attuazione ogni anno, con indicatori definiti sentita l'ANVUR. Riguarda la progettazione dei corsi, non quali strumenti si possono usare."
+   },
+   "whatItCovers": {
+    "en": "Art. 44(1)-(4): promotion of AI training activities in universities and AFAM; integrated technical/legal/ethical profiles by type of programme; minimum contents (principles; limits, risks, biases or errors; critical interpretation of outputs; legal, ethical and liability implications; human oversight; cybersecurity); delivered through dedicated courses, integrated modules, related activities, labs or internships. Art. 44(6)-(7): annual MUR monitoring; MUR decree after hearing ANVUR on indicators. Art. 43: universities support AI literacy activities via agreements; such activities count in career evaluation.",
+    "it": "Art. 44(1)-(4): promozione di attività formative sull'IA in università e AFAM; integrazione di profili tecnici, giuridici ed etici a seconda del corso; contenuti minimi (principi; limiti, rischi, distorsioni o errori; interpretazione critica degli output; implicazioni giuridiche, etiche e di responsabilità; sorveglianza umana; cybersicurezza); erogate tramite insegnamenti dedicati, moduli integrati, attività affini, laboratori o tirocini. Art. 44(6)-(7): monitoraggio annuale del MUR; decreto MUR sentita l'ANVUR sugli indicatori. Art. 43: gli atenei sostengono attività di alfabetizzazione tramite accordi; contano nella valutazione della carriera."
+   },
+   "exceptions": null,
+   "tasks": [
+    "d-outcomes",
+    "d-course-design",
+    "d-quality",
+    "t-materials"
+   ],
+   "toolTypes": [
+    "general-assistant"
+   ],
+   "sources": [
+    "it-dlgs179-2026",
+    "it-l132-2025"
+   ]
+  },
+  {
+   "id": "it-dlgs179-art41",
+   "instrument": "D.lgs. 179/2026 (Italy)",
+   "ref": "Art. 41",
+   "status": "obligation",
+   "appliesFrom": "2026-10-23 (entry into force per Normattiva)",
+   "adopted": true,
+   "title": {
+    "en": "Employment decisions about staff cannot be solely automated",
+    "it": "Le decisioni di lavoro sul personale non possono essere solo automatizzate"
+   },
+   "plain": {
+    "en": "When an employer, including a university, uses AI in decisions about the employment relationship, including disciplinary measures and performance evaluations, the final decision must be taken by a person with real, autonomous power. Staff can ask for an understandable explanation from a human. Decisions taken in breach are void. This matters if AI teaching analytics or analyses of course evaluations are used to evaluate individual teachers.",
+    "it": "Quando un datore di lavoro, anche un ateneo, usa l'IA nelle decisioni sul rapporto di lavoro, compresi provvedimenti disciplinari e valutazioni delle prestazioni, la decisione finale spetta a una persona con un potere reale e autonomo. Il lavoratore può chiedere a una persona una spiegazione comprensibile. Le decisioni prese in violazione sono nulle. Conta se analitiche didattiche o analisi dei questionari di valutazione vengono usate per valutare singoli docenti."
+   },
+   "whatItCovers": {
+    "en": "Art. 41(1): final decisions on establishment, modification or termination of employment, incl. disciplinary measures and performance evaluations, not based solely on automated processing; worker consent is not an exception; (3) information duties and right to an intelligible explanation incl. the influence of AI and main parameters; (4) nullity.",
+    "it": "Art. 41(1): le decisioni finali su costituzione, modifica o cessazione del rapporto, compresi provvedimenti disciplinari e valutazioni delle prestazioni, non possono basarsi solo su un trattamento automatizzato; il consenso del lavoratore non è un'eccezione; (3) obblighi di informativa e diritto a una motivazione intelligibile, con l'incidenza dell'IA e i parametri principali; (4) nullità."
+   },
+   "exceptions": {
+    "en": "Search and screening of candidates is not a 'final decision' on hiring.",
+    "it": "La ricerca e selezione delle candidature non è una 'decisione finale' sull'assunzione."
+   },
+   "tasks": [
+    "t-classroom-feedback",
+    "d-evaluations",
+    "d-quality"
+   ],
+   "toolTypes": [
+    "teaching-analytics",
+    "analytics"
+   ],
+   "sources": [
+    "it-dlgs179-2026"
+   ]
+  },
+  {
+   "id": "it-l475-1925",
+   "instrument": "Legge 475/1925 (Italy)",
+   "ref": "Arts. 1-2",
+   "status": "obligation",
+   "appliesFrom": "1925 (in force)",
+   "adopted": true,
+   "title": {
+    "en": "Criminal offence: presenting others' work as one's own in exams and theses",
+    "it": "Reato: presentare come proprio il lavoro altrui in esami e tesi"
+   },
+   "plain": {
+    "en": "Italian law punishes anyone who presents as their own dissertations, studies or projects that are the work of others in exams or competitions for degrees and qualifications, and whoever produces such work for them. Whether a text written by AI counts as 'work of others' has not been decided by any court we found; some commentators think it does. Students should follow their university's rules and declare AI use; institutions should seek legal advice before invoking this law.",
+    "it": "La legge italiana punisce chi, in esami o concorsi per titoli di studio e abilitazioni, presenta come propri dissertazioni, studi o progetti che sono opera di altri, e chi li prepara per lui. Se un testo scritto dall'IA sia 'opera di altri' non risulta deciso da alcun giudice; alcuni commentatori lo sostengono. Gli studenti devono seguire le regole del proprio ateneo e dichiarare l'uso dell'IA; gli atenei dovrebbero chiedere un parere legale prima di richiamare questa legge."
+   },
+   "whatItCovers": {
+    "en": "Presentation, in exams or competitions for degrees, diplomas, professional qualifications or public titles, of dissertations, studies, publications or projects that are wholly or partly the work of others; liability also for whoever executes or procures the work (text known via Normattiva summary, not read directly).",
+    "it": "Presentazione, in esami o concorsi per lauree, diplomi, abilitazioni o titoli pubblici, di dissertazioni, studi, pubblicazioni o progetti che sono in tutto o in parte opera di altri; responsabile anche chi esegue o procura il lavoro (testo noto tramite sintesi di Normattiva, non letto direttamente)."
+   },
+   "exceptions": null,
+   "tasks": [
+    "s-writing",
+    "s-literature",
+    "s-coding",
+    "s-stem-problems",
+    "t-detect"
+   ],
+   "toolTypes": [
+    "general-assistant",
+    "writing-feedback",
+    "coding-assistant",
+    "research-assistant"
+   ],
+   "sources": [
+    "it-l475-1925"
+   ]
+  },
+  {
+   "id": "it-garante-bocconi-2021",
+   "instrument": "Garante privacy decision (Italy)",
+   "ref": "Provv. n. 317 del 16 settembre 2021",
+   "status": "data-protection",
+   "appliesFrom": "2021-09-16 (decision)",
+   "adopted": true,
+   "title": {
+    "en": "Precedent: fine for AI-assisted online exam proctoring",
+    "it": "Precedente: sanzione per il proctoring degli esami online con IA"
+   },
+   "plain": {
+    "en": "The Italian data protection authority fined Bocconi University for using a proctoring tool (Respondus) that analysed students' faces and behaviour during online exams. It found biometric processing and profiling without a legal basis, invalid consent, poor information, excessive retention and weak transfer safeguards. It is a key reference for any Italian institution considering AI monitoring during tests.",
+    "it": "Il Garante privacy ha sanzionato l'Università Bocconi per l'uso di un sistema di proctoring (Respondus) che analizzava volto e comportamento degli studenti negli esami online. Ha rilevato trattamento biometrico e profilazione senza base giuridica, consenso non valido, informativa carente, conservazione eccessiva e garanzie deboli sui trasferimenti. È un riferimento chiave per ogni ateneo italiano che pensa di sorvegliare le prove con l'IA."
+   },
+   "whatItCovers": {
+    "en": "Violations found incl. Arts. 5, 6, 9 GDPR and Art. 2-sexies Codice; profiling under Art. 4(4) without basis; Art. 22 not applicable because the teacher took the final decision; retention breaching Arts. 5(1)(c),(e) and 25; SCC safeguards for US transfer insufficient. Fine EUR 200,000 (reported later reduced by the Tribunale di Milano).",
+    "it": "Violazioni rilevate tra cui artt. 5, 6, 9 GDPR e art. 2-sexies Codice; profilazione ex art. 4(4) senza base; art. 22 non applicabile perché decideva il docente; conservazione in violazione degli artt. 5(1)(c),(e) e 25; garanzie delle clausole tipo per il trasferimento negli USA insufficienti. Sanzione di 200.000 euro (riportata come poi ridotta dal Tribunale di Milano)."
+   },
+   "exceptions": null,
+   "tasks": [
+    "t-proctoring",
+    "t-detect"
+   ],
+   "toolTypes": [
+    "ai-detector",
+    "lms-integrated"
+   ],
+   "sources": [
+    "garante-bocconi-2021"
+   ]
+  },
+  {
+   "id": "vendor-openai",
+   "instrument": "OpenAI Usage Policies",
+   "ref": "Usage Policies (updated 2025-10-29)",
+   "status": "contractual",
+   "appliesFrom": "2025-10-29",
+   "adopted": true,
+   "title": {
+    "en": "OpenAI: no automated high-stakes decisions in education without human review; no emotion inference in schools",
+    "it": "OpenAI: niente decisioni automatizzate ad alto impatto nell'istruzione senza revisione umana; niente deduzione delle emozioni a scuola"
+   },
+   "plain": {
+    "en": "OpenAI's policies forbid automating high-stakes decisions in sensitive areas, which explicitly include education, without human review. They also forbid inferring a person's emotions in workplace and educational settings except when necessary for medical or safety reasons. Using OpenAI models to grade or sanction students automatically would probably breach the contract as well as the law.",
+    "it": "Le policy di OpenAI vietano di automatizzare decisioni ad alto impatto in ambiti sensibili, tra cui è citata espressamente l'istruzione, senza revisione umana. Vietano anche di dedurre le emozioni delle persone sul lavoro e in contesti educativi, salvo necessità mediche o di sicurezza. Usare modelli OpenAI per dare voti o sanzioni in automatico probabilmente violerebbe il contratto oltre che la legge."
+   },
+   "whatItCovers": {
+    "en": "Prohibited: automation of high-stakes decisions in sensitive areas without human review (areas listed include education, employment, critical infrastructure, credit, legal, medical, essential government services); 'inference regarding an individual's emotions in the workplace and educational settings, except when necessary for medical or safety reasons'. Wording checked via search extracts only (page blocked automated fetch).",
+    "it": "Vietato: automatizzare decisioni ad alto impatto in ambiti sensibili senza revisione umana (tra gli ambiti: istruzione, lavoro, infrastrutture critiche, credito, legale, medico, servizi pubblici essenziali); dedurre le emozioni di una persona sul lavoro e in contesti educativi, salvo necessità mediche o di sicurezza. Testo verificato solo tramite estratti dei motori di ricerca (pagina non scaricabile in automatico)."
+   },
+   "exceptions": null,
+   "tasks": [
+    "t-grading",
+    "t-detect",
+    "t-proctoring",
+    "d-admissions",
+    "t-classroom-feedback",
+    "d-analytics"
+   ],
+   "toolTypes": [
+    "general-assistant",
+    "custom-chatbot",
+    "lms-integrated"
+   ],
+   "sources": [
+    "vendor-openai-usage"
+   ]
+  },
+  {
+   "id": "vendor-anthropic",
+   "instrument": "Anthropic Usage Policy",
+   "ref": "Usage Policy (version effective 2026-11-12)",
+   "status": "contractual",
+   "appliesFrom": "2026-11-12 (version shown on 2026-10-22; earlier version not checked)",
+   "adopted": true,
+   "title": {
+    "en": "Anthropic: human review and disclosure for AI recommendations on admission, high-stakes grading and misconduct",
+    "it": "Anthropic: revisione umana e trasparenza per raccomandazioni su ammissioni, voti decisivi e illeciti accademici"
+   },
+   "plain": {
+    "en": "In the version taking effect on 12 November 2026, Anthropic treats as 'high-risk' recommendations on admitting or ranking applicants, grading exams that determine admission, graduation or certification, and academic-misconduct or expulsion decisions. A qualified person must meaningfully review them and remain accountable, and affected people must be told AI was used. The policy also restricts emotion recognition and prohibits submitting AI-assisted work without permission or attribution.",
+    "it": "Nella versione in vigore dal 12 novembre 2026, Anthropic considera 'ad alto rischio' le raccomandazioni su ammissione o graduatoria dei candidati, voti d'esame che decidono ammissione, laurea o certificazione, e decisioni su illeciti accademici o espulsioni. Una persona qualificata deve esaminarle davvero e restarne responsabile, e gli interessati devono sapere che è stata usata l'IA. La policy limita anche il riconoscimento delle emozioni e vieta di consegnare lavori fatti con l'IA senza permesso o attribuzione."
+   },
+   "whatItCovers": {
+    "en": "'Education and credentials': 'admitting, rejecting, or ranking applicants'; 'grading an exam or assessment that determines admission, graduation, licensure, or certification'; 'making a determination of academic misconduct or suspending or expelling a student'. Requirements: 'A qualified person must meaningfully review a High-risk AI Recommendation'; affected persons 'must be clearly told that AI was used to produce it'. Also: prohibition to 'Plagiarize or submit AI-assisted work without proper permission or attribution'; restriction on building emotion recognition systems.",
+    "it": "'Istruzione e titoli': ammettere, respingere o classificare candidati; valutare esami che determinano ammissione, laurea, abilitazione o certificazione; accertare illeciti accademici o sospendere ed espellere studenti. Requisiti: revisione significativa da parte di una persona qualificata; gli interessati devono essere informati chiaramente che è stata usata l'IA. Inoltre: divieto di plagiare o consegnare lavori fatti con l'IA senza permesso o attribuzione; limiti alla costruzione di sistemi di riconoscimento delle emozioni."
+   },
+   "exceptions": null,
+   "tasks": [
+    "t-grading",
+    "t-detect",
+    "d-admissions",
+    "s-writing",
+    "t-classroom-feedback"
+   ],
+   "toolTypes": [
+    "general-assistant",
+    "custom-chatbot",
+    "lms-integrated"
+   ],
+   "sources": [
+    "vendor-anthropic-aup"
+   ]
+  },
+  {
+   "id": "vendor-google",
+   "instrument": "Google Generative AI Prohibited Use Policy",
+   "ref": "Section on automated decisions (last modified 2024-12-17)",
+   "status": "contractual",
+   "appliesFrom": "2024-12-17",
+   "adopted": true,
+   "title": {
+    "en": "Google: no automated decisions with material detrimental impact in high-risk domains without human supervision",
+    "it": "Google: niente decisioni automatizzate con impatto negativo rilevante in ambiti ad alto rischio senza supervisione umana"
+   },
+   "plain": {
+    "en": "Google's policy forbids automated decisions with a material detrimental impact on individual rights without human supervision in high-risk domains. Its listed examples (employment, healthcare, finance, legal, housing, insurance, social welfare) do not name education, but the list is illustrative, so automated grading or sanctions probably remain risky under the contract too.",
+    "it": "La policy di Google vieta decisioni automatizzate con un impatto negativo rilevante sui diritti delle persone senza supervisione umana negli ambiti ad alto rischio. Gli esempi (lavoro, sanità, finanza, legale, casa, assicurazioni, welfare) non citano l'istruzione, ma l'elenco è esemplificativo: voti o sanzioni automatiche restano probabilmente rischiosi anche sul piano contrattuale."
+   },
+   "whatItCovers": {
+    "en": "Prohibits automated decisions that have a material detrimental impact on individual rights 'without human supervision in high-risk domains', with examples not including education.",
+    "it": "Vieta decisioni automatizzate con impatto negativo rilevante sui diritti individuali senza supervisione umana negli ambiti ad alto rischio; gli esempi non includono l'istruzione."
+   },
+   "exceptions": null,
+   "tasks": [
+    "t-grading",
+    "t-detect",
+    "d-admissions"
+   ],
+   "toolTypes": [
+    "general-assistant",
+    "lms-integrated"
+   ],
+   "sources": [
+    "vendor-google-genai-pup"
+   ]
+  }
+ ],
+ "taskFlags": [
+  {
+   "task": "s-understand",
+   "level": "none",
+   "summary": {
+    "en": "Students using AI on their own to understand readings is not regulated as high-risk. If the institution requires a tool that reads emotions from webcam or voice, that tool is prohibited.",
+    "it": "Lo studente che usa l'IA da solo per capire i testi non è in un ambito ad alto rischio. Se l'ateneo impone uno strumento che legge le emozioni da webcam o voce, quello strumento è vietato."
+   },
+   "rules": [
+    "aiact-annex3-3b",
+    "aiact-art5-1f"
+   ]
+  },
+  {
+   "task": "s-practice",
+   "level": "none",
+   "summary": {
+    "en": "Self-testing for exam preparation is formative and probably not high-risk. It becomes high-risk only if the results count towards grades in an institution-run system.",
+    "it": "Esercitarsi per l'esame è attività formativa e probabilmente non ad alto rischio. Lo diventa solo se i risultati contano per il voto in un sistema gestito dall'ateneo."
+   },
+   "rules": [
+    "aiact-annex3-3b"
+   ]
+  },
+  {
+   "task": "s-writing",
+   "level": "caution",
+   "summary": {
+    "en": "Getting feedback on writing is allowed by law, but submitting AI-written work as your own may break university rules, vendor terms and, according to some commentators, the 1925 Italian law on false attribution in exams. Declare AI use as your course requires.",
+    "it": "Ricevere feedback sulla scrittura è lecito, ma consegnare come proprio un testo scritto dall'IA può violare le regole d'ateneo, i termini dei fornitori e, secondo alcuni commentatori, la legge italiana del 1925 sulla falsa attribuzione negli esami. Dichiara l'uso dell'IA come richiede il corso."
+   },
+   "rules": [
+    "it-l475-1925",
+    "vendor-anthropic",
+    "it-l132-art25-copyright",
+    "aiact-annex3-3b"
+   ]
+  },
+  {
+   "task": "s-coding",
+   "level": "none",
+   "summary": {
+    "en": "No specific legal restriction for learning to code with AI. Graded assignments follow course rules on AI use.",
+    "it": "Nessun limite legale specifico per imparare a programmare con l'IA. Per i compiti valutati valgono le regole del corso sull'uso dell'IA."
+   },
+   "rules": [
+    "it-l475-1925"
+   ]
+  },
+  {
+   "task": "s-literature",
+   "level": "caution",
+   "summary": {
+    "en": "Searching and summarising literature is not regulated as high-risk. Presenting AI-produced syntheses as your own work in a thesis can raise academic-integrity issues; follow your university's thesis rules.",
+    "it": "Cercare e sintetizzare la letteratura non è un ambito ad alto rischio. Presentare come proprie sintesi prodotte dall'IA in una tesi può creare problemi di integrità accademica: segui le regole d'ateneo sulla tesi."
+   },
+   "rules": [
+    "it-l475-1925"
+   ]
+  },
+  {
+   "task": "s-argue",
+   "level": "none",
+   "summary": {
+    "en": "No specific legal restriction for preparing discussions and arguments with AI.",
+    "it": "Nessun limite legale specifico per preparare discussioni e argomentazioni con l'IA."
+   },
+   "rules": []
+  },
+  {
+   "task": "s-stem-problems",
+   "level": "none",
+   "summary": {
+    "en": "No specific legal restriction for practising STEM problems with AI. Graded work follows course rules.",
+    "it": "Nessun limite legale specifico per esercitarsi su problemi STEM con l'IA. Per i lavori valutati valgono le regole del corso."
+   },
+   "rules": [
+    "it-l475-1925"
+   ]
+  },
+  {
+   "task": "s-language",
+   "level": "caution",
+   "summary": {
+    "en": "Language apps chosen by the student are not high-risk. An institution-required app that reads emotions is prohibited, and institution placement tests run by AI are high-risk from December 2027.",
+    "it": "Le app linguistiche scelte dallo studente non sono ad alto rischio. Un'app imposta dall'ateneo che legge le emozioni è vietata, e i test di piazzamento con IA gestiti dall'ateneo sono ad alto rischio da dicembre 2027."
+   },
+   "rules": [
+    "aiact-art5-1f",
+    "aiact-annex3-3c",
+    "aiact-annex3-3b"
+   ]
+  },
+  {
+   "task": "s-plan",
+   "level": "none",
+   "summary": {
+    "en": "No specific legal restriction for planning and self-regulating study with AI.",
+    "it": "Nessun limite legale specifico per pianificare e organizzare lo studio con l'IA."
+   },
+   "rules": []
+  },
+  {
+   "task": "s-ideas",
+   "level": "caution",
+   "summary": {
+    "en": "Creative use is allowed. Never generate intimate deepfakes of real people (prohibited from December 2026), disclose published deepfakes, and remember that purely AI-generated output is probably not protected by Italian copyright.",
+    "it": "L'uso creativo è consentito. Mai generare deepfake intimi di persone reali (vietati da dicembre 2026); dichiara i deepfake che pubblichi; ricorda che un risultato interamente generato dall'IA probabilmente non è tutelato dal diritto d'autore italiano."
+   },
+   "rules": [
+    "aiact-art5-1ba-bb",
+    "aiact-art50-4",
+    "it-l132-art25-copyright"
+   ]
+  },
+  {
+   "task": "s-groupwork",
+   "level": "none",
+   "summary": {
+    "en": "No specific legal restriction for using AI in group projects. Take care not to paste classmates' personal data into tools without their agreement.",
+    "it": "Nessun limite legale specifico per usare l'IA nei lavori di gruppo. Evita di inserire dati personali dei compagni negli strumenti senza il loro accordo."
+   },
+   "rules": []
+  },
+  {
+   "task": "t-materials",
+   "level": "caution",
+   "summary": {
+    "en": "Preparing materials with AI is allowed. Disclose deepfakes (for example synthetic video of real people), respect copyright, and ensure staff AI literacy.",
+    "it": "Preparare materiali con l'IA è consentito. Dichiara i deepfake (per esempio video sintetici di persone reali), rispetta il diritto d'autore e cura l'alfabetizzazione del personale."
+   },
+   "rules": [
+    "aiact-art50-4",
+    "it-l132-art25-copyright",
+    "aiact-art4-literacy",
+    "it-dlgs179-art44"
+   ]
+  },
+  {
+   "task": "t-items",
+   "level": "caution",
+   "summary": {
+    "en": "Generating quiz and exam questions is not itself high-risk; the Commission's draft guidelines treat an AI exam-quality checker as exempt via Art. 6(3). The teacher remains responsible for the final exam.",
+    "it": "Generare domande di quiz ed esame non è di per sé ad alto rischio; la bozza di linee guida della Commissione considera esente (art. 6(3)) un controllo di qualità delle prove. Il docente resta responsabile della prova finale."
+   },
+   "rules": [
+    "aiact-art6-3",
+    "aiact-annex3-3b",
+    "aiact-art4-literacy"
+   ]
+  },
+  {
+   "task": "t-feedback",
+   "level": "caution",
+   "summary": {
+    "en": "Formative feedback is probably not high-risk. If AI feedback or scores count towards the final grade, it probably becomes high-risk (from December 2027). Uploading student work needs an institutional contract with the vendor.",
+    "it": "Il feedback formativo probabilmente non è ad alto rischio. Se feedback o punteggi dell'IA contano per il voto finale, probabilmente diventa ad alto rischio (da dicembre 2027). Caricare gli elaborati richiede un contratto d'ateneo con il fornitore."
+   },
+   "rules": [
+    "aiact-annex3-3b",
+    "gdpr-processor-transfers",
+    "gdpr-art22"
+   ]
+  },
+  {
+   "task": "t-grading",
+   "level": "high-risk",
+   "summary": {
+    "en": "AI that evaluates learning outcomes for grades is high-risk under the AI Act; full duties apply from 2 December 2027 (postponed from August 2026 by the Digital Omnibus). Already now: no solely automated decisions (GDPR), a responsible person at public universities (Italian law), and vendor bans on unreviewed high-stakes grading.",
+    "it": "L'IA che valuta i risultati di apprendimento per il voto è ad alto rischio per l'AI Act; gli obblighi completi valgono dal 2 dicembre 2027 (rinviati da agosto 2026 dal Digital Omnibus). Già oggi: niente decisioni solo automatizzate (GDPR), una persona responsabile negli atenei pubblici (legge italiana) e divieti dei fornitori sui voti decisivi senza revisione umana."
+   },
+   "rules": [
+    "aiact-annex3-3b",
+    "aiact-art6-3",
+    "aiact-art26-deployer",
+    "aiact-art27-fria",
+    "gdpr-art22",
+    "gdpr-art35-dpia",
+    "it-l132-art14-pa",
+    "vendor-openai",
+    "vendor-anthropic",
+    "vendor-google"
+   ]
+  },
+  {
+   "task": "t-assistant",
+   "level": "caution",
+   "summary": {
+    "en": "A course Q&A assistant must tell users it is an AI (from August 2026). It is probably not high-risk unless its reports feed grades. It must never read students' emotions. Check data protection and vendor contracts.",
+    "it": "Un assistente di corso deve dichiarare di essere un'IA (da agosto 2026). Probabilmente non è ad alto rischio, salvo che i suoi report servano per i voti. Non deve mai leggere le emozioni degli studenti. Verifica protezione dei dati e contratti."
+   },
+   "rules": [
+    "aiact-art50-1",
+    "aiact-annex3-3b",
+    "aiact-art5-1f",
+    "gdpr-art35-dpia",
+    "gdpr-processor-transfers"
+   ]
+  },
+  {
+   "task": "t-detect",
+   "level": "caution",
+   "summary": {
+    "en": "AI-text or plagiarism checks of submitted work are probably not high-risk under the AI Act (draft guidelines), but detectors are unreliable and a misconduct finding must not rest on software alone (GDPR, vendor policies). Live monitoring during tests is a different, high-risk use (see t-proctoring).",
+    "it": "I controlli su testi generati dall'IA o plagio negli elaborati consegnati probabilmente non sono ad alto rischio per l'AI Act (bozza di linee guida), ma i rilevatori sono poco affidabili e un'accusa di illecito non può basarsi solo sul software (GDPR, policy dei fornitori). La sorveglianza durante le prove è un uso diverso e ad alto rischio (vedi t-proctoring)."
+   },
+   "rules": [
+    "aiact-annex3-3d",
+    "gdpr-art22",
+    "vendor-anthropic",
+    "vendor-openai",
+    "aiact-art50-2",
+    "it-l475-1925"
+   ]
+  },
+  {
+   "task": "t-accessibility",
+   "level": "none",
+   "summary": {
+    "en": "Making materials accessible or translated is not restricted. Disclose synthetic voices or videos of real people, and use institutional contracts when content contains personal data.",
+    "it": "Rendere accessibili o tradurre i materiali non è limitato. Dichiara voci o video sintetici di persone reali e usa contratti d'ateneo se i contenuti includono dati personali."
+   },
+   "rules": [
+    "aiact-art50-4",
+    "gdpr-processor-transfers"
+   ]
+  },
+  {
+   "task": "t-case-teaching",
+   "level": "none",
+   "summary": {
+    "en": "No specific legal restriction for teaching with cases and discussions supported by AI. Label realistic synthetic media if published.",
+    "it": "Nessun limite legale specifico per insegnare con casi e discussioni supportati dall'IA. Indica i contenuti sintetici realistici se li pubblichi."
+   },
+   "rules": [
+    "aiact-art50-4"
+   ]
+  },
+  {
+   "task": "t-classroom-feedback",
+   "level": "caution",
+   "summary": {
+    "en": "A teacher analysing their own lessons (for example talk time) is fine. Tools that infer students' or teachers' emotions or attention from video or voice are prohibited. If the institution uses the results to evaluate teachers, it is high-risk and final decisions must be human (Italian decree 179/2026).",
+    "it": "Un docente che analizza le proprie lezioni (per esempio i tempi di parola) non ha problemi. Gli strumenti che deducono emozioni o attenzione di studenti o docenti da video o voce sono vietati. Se l'ateneo usa i risultati per valutare i docenti, è un uso ad alto rischio e le decisioni finali devono essere umane (d.lgs. 179/2026)."
+   },
+   "rules": [
+    "aiact-art5-1f",
+    "aiact-annex3-4",
+    "it-dlgs179-art41",
+    "gdpr-lawful-basis",
+    "gdpr-art35-dpia"
+   ]
+  },
+  {
+   "task": "t-tutoring",
+   "level": "caution",
+   "summary": {
+    "en": "AI tutoring that gives formative feedback is probably not high-risk (draft guidelines). It becomes high-risk if it sets grades or decides a student's level, and it must never read emotions. Tutors must disclose they are AI.",
+    "it": "Il tutoraggio con IA che dà feedback formativo probabilmente non è ad alto rischio (bozza di linee guida). Lo diventa se assegna voti o decide il livello dello studente, e non deve mai leggere le emozioni. Il tutor deve dichiarare di essere un'IA."
+   },
+   "rules": [
+    "aiact-annex3-3b",
+    "aiact-annex3-3c",
+    "aiact-art5-1f",
+    "aiact-art50-1",
+    "gdpr-art35-dpia"
+   ]
+  },
+  {
+   "task": "d-outcomes",
+   "level": "none",
+   "summary": {
+    "en": "No restriction on using AI to draft learning outcomes. Italian decree 179/2026 asks universities to promote AI-related learning outcomes in degree programmes.",
+    "it": "Nessun limite all'uso dell'IA per scrivere i risultati di apprendimento. Il d.lgs. 179/2026 chiede agli atenei di promuovere risultati di apprendimento sull'IA nei corsi di studio."
+   },
+   "rules": [
+    "it-dlgs179-art44",
+    "aiact-art4-literacy"
+   ]
+  },
+  {
+   "task": "d-course-design",
+   "level": "none",
+   "summary": {
+    "en": "No restriction on using AI to design courses. Include the AI-literacy contents required by Italian decree 179/2026 where relevant.",
+    "it": "Nessun limite all'uso dell'IA per progettare i corsi. Includi, dove pertinente, i contenuti di alfabetizzazione sull'IA previsti dal d.lgs. 179/2026."
+   },
+   "rules": [
+    "it-dlgs179-art44"
+   ]
+  },
+  {
+   "task": "d-evaluations",
+   "level": "caution",
+   "summary": {
+    "en": "Analysing comment text is not emotion recognition (text is not biometric data), but comments are personal data: you need a lawful basis, a vendor contract and possibly a DPIA. If results are used to evaluate individual teachers, high-risk rules and human-only final decisions apply.",
+    "it": "Analizzare i commenti scritti non è riconoscimento delle emozioni (il testo non è un dato biometrico), ma i commenti sono dati personali: servono base giuridica, contratto con il fornitore e forse una DPIA. Se i risultati servono a valutare singoli docenti, valgono le regole sull'alto rischio e decisioni finali solo umane."
+   },
+   "rules": [
+    "gdpr-lawful-basis",
+    "gdpr-processor-transfers",
+    "aiact-annex3-4",
+    "it-dlgs179-art41"
+   ]
+  },
+  {
+   "task": "d-workload",
+   "level": "none",
+   "summary": {
+    "en": "No specific legal restriction for estimating student workload with AI.",
+    "it": "Nessun limite legale specifico per stimare il carico di lavoro degli studenti con l'IA."
+   },
+   "rules": []
+  },
+  {
+   "task": "d-analytics",
+   "level": "caution",
+   "summary": {
+    "en": "Dashboards that give teachers insights are probably not high-risk (draft guidelines). Systems that automatically steer learning paths, assign students or set their level are high-risk from December 2027, and profiling triggers GDPR safeguards and usually a DPIA. Seek legal advice before using predictive dropout scores for individual decisions.",
+    "it": "Le dashboard che danno informazioni ai docenti probabilmente non sono ad alto rischio (bozza di linee guida). I sistemi che orientano in automatico i percorsi, assegnano gli studenti o ne stabiliscono il livello sono ad alto rischio da dicembre 2027, e la profilazione richiede le garanzie del GDPR e di solito una DPIA. Chiedi un parere legale prima di usare punteggi predittivi di abbandono per decisioni individuali."
+   },
+   "rules": [
+    "aiact-annex3-3b",
+    "aiact-annex3-3c",
+    "aiact-annex3-3a",
+    "aiact-art6-3",
+    "gdpr-art22",
+    "gdpr-art35-dpia",
+    "aiact-art4a-bias",
+    "aiact-art5-1f"
+   ]
+  },
+  {
+   "task": "d-chatbot",
+   "level": "caution",
+   "summary": {
+    "en": "A course chatbot must say it is an AI (from August 2026); the institution is probably its provider for that purpose. Information-only chatbots are not high-risk. Check data protection, vendor contracts and, for minors, Italian consent rules.",
+    "it": "Un chatbot di corso deve dichiarare di essere un'IA (da agosto 2026); l'ateneo probabilmente ne è il fornitore a questo fine. I chatbot solo informativi non sono ad alto rischio. Verifica protezione dei dati, contratti e, per i minori, le regole italiane sul consenso."
+   },
+   "rules": [
+    "aiact-art50-1",
+    "aiact-gpai",
+    "gdpr-art35-dpia",
+    "gdpr-processor-transfers",
+    "it-l132-art4-minors"
+   ]
+  },
+  {
+   "task": "d-content-scale",
+   "level": "caution",
+   "summary": {
+    "en": "Producing content at scale is allowed. Label published deepfakes, rely on vendors for machine-readable marking, and remember Italian copyright only protects human intellectual work.",
+    "it": "Produrre contenuti su larga scala è consentito. Indica i deepfake pubblicati, affidati ai fornitori per la marcatura leggibile dalle macchine e ricorda che il diritto d'autore italiano tutela solo il lavoro intellettuale umano."
+   },
+   "rules": [
+    "aiact-art50-4",
+    "aiact-art50-2",
+    "it-l132-art25-copyright",
+    "aiact-art5-1ba-bb"
+   ]
+  },
+  {
+   "task": "d-quality",
+   "level": "caution",
+   "summary": {
+    "en": "Programme review with AI is generally allowed; spotting patterns in past decisions for human review is a listed exemption (Art. 6(3)(c)). If the analysis evaluates individual staff, employment high-risk rules and Italian human-decision rules apply.",
+    "it": "La revisione dei corsi con l'IA è in genere consentita; individuare schemi nelle decisioni passate per una revisione umana rientra in un'esenzione (art. 6(3)(c)). Se l'analisi valuta singoli membri del personale, valgono le regole sull'alto rischio in ambito lavoro e le regole italiane sulla decisione umana."
+   },
+   "rules": [
+    "aiact-art6-3",
+    "aiact-annex3-4",
+    "it-dlgs179-art41",
+    "it-dlgs179-art44"
+   ]
+  },
+  {
+   "task": "t-proctoring",
+   "level": "high-risk",
+   "summary": {
+    "en": "PROPOSED TASK. AI monitoring of students during tests is high-risk (from December 2027) and prohibited if it infers emotions (already now). In Italy the Garante fined Bocconi in 2021 for AI proctoring; biometric processing needs a specific legal basis.",
+    "it": "TASK PROPOSTO. La sorveglianza degli studenti con IA durante le prove è ad alto rischio (da dicembre 2027) e vietata se deduce emozioni (già oggi). In Italia il Garante ha sanzionato la Bocconi nel 2021 per il proctoring con IA; il trattamento biometrico richiede una base giuridica specifica."
+   },
+   "rules": [
+    "aiact-annex3-3d",
+    "aiact-art5-1f",
+    "it-garante-bocconi-2021",
+    "gdpr-lawful-basis",
+    "gdpr-art35-dpia",
+    "aiact-art26-deployer",
+    "aiact-art27-fria"
+   ]
+  },
+  {
+   "task": "d-admissions",
+   "level": "high-risk",
+   "summary": {
+    "en": "PROPOSED TASK. AI that decides or materially influences admission, assignment to programmes or scholarship eligibility is high-risk from December 2027. Information chatbots and file-indexing tools probably are not. Vendor policies also require human review.",
+    "it": "TASK PROPOSTO. L'IA che decide o influenza in modo rilevante ammissioni, assegnazione ai corsi o idoneità alle borse è ad alto rischio da dicembre 2027. I chatbot informativi e gli strumenti di indicizzazione delle pratiche probabilmente no. Anche le policy dei fornitori richiedono revisione umana."
+   },
+   "rules": [
+    "aiact-annex3-3a",
+    "aiact-art6-3",
+    "aiact-art26-deployer",
+    "aiact-art27-fria",
+    "gdpr-art22",
+    "vendor-anthropic",
+    "vendor-openai"
+   ]
+  }
+ ]
+}

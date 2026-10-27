@@ -1,0 +1,383 @@
+{
+ "$comment": "Shared vocabularies for the AI Map v0.2. Ids are stable: change labels, never ids. accessModes are completed from research/tools.json.",
+ "roles": [
+  {
+   "id": "student",
+   "en": "Student",
+   "it": "Studente",
+   "blurb": {
+    "en": "Bachelor’s, master’s, doctoral and executive learners.",
+    "it": "Triennale, magistrale, dottorato e percorsi executive."
+   },
+   "intro": {
+    "en": "These are tasks you do on your own or with classmates. For each one you will see what research says about learning, not only about getting the task done, and which tools fit. Check your course rules first: they decide what is allowed in assessed work.",
+    "it": "Sono compiti che svolgi da solo o con i compagni. Per ognuno vedrai che cosa dice la ricerca sull’apprendimento, non solo sul portare a termine il compito, e quali strumenti sono pertinenti. Controlla prima le regole del tuo corso: sono loro a stabilire che cosa è consentito nelle prove valutate."
+   }
+  },
+  {
+   "id": "teacher",
+   "en": "Teacher",
+   "it": "Docente",
+   "blurb": {
+    "en": "Professors, lecturers, adjuncts and tutors.",
+    "it": "Professori, docenti a contratto e tutor."
+   },
+   "intro": {
+    "en": "These are tasks of preparing, teaching and assessing. Some of them are regulated: where the law restricts a use, you will see it before the tools. Your professional judgement stays central, and the map says where evidence supports it and where it is still missing.",
+    "it": "Sono compiti di preparazione, insegnamento e valutazione. Alcuni sono regolati: dove la legge limita un utilizzo, lo vedrai prima degli strumenti. Il tuo giudizio professionale resta centrale, e la mappa indica dove le evidenze lo sostengono e dove mancano ancora."
+   }
+  },
+  {
+   "id": "design",
+   "en": "Instructional design",
+   "it": "Progettazione didattica",
+   "blurb": {
+    "en": "Programme coordinators, instructional designers, teaching and learning centres.",
+    "it": "Coordinatori di corso di studio, instructional designer, centri per la didattica."
+   },
+   "intro": {
+    "en": "These are tasks that shape courses and programmes rather than single lessons. Decisions here affect many students at once, so data protection and the AI Act matter more, and so does checking AI output against expert judgement.",
+    "it": "Sono compiti che danno forma a corsi e programmi più che a singole lezioni. Qui le decisioni riguardano molti studenti insieme: contano di più la protezione dei dati, l’AI Act e il confronto dei risultati dell’AI con il giudizio di esperti."
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "id": "assisted-performance",
+   "en": "Performance with AI",
+   "it": "Prestazione con l’AI"
+  },
+  {
+   "id": "learning",
+   "en": "Learning",
+   "it": "Apprendimento"
+  },
+  {
+   "id": "transfer",
+   "en": "Transfer",
+   "it": "Trasferimento"
+  },
+  {
+   "id": "retention",
+   "en": "Retention",
+   "it": "Ritenzione"
+  },
+  {
+   "id": "satisfaction",
+   "en": "Satisfaction",
+   "it": "Soddisfazione"
+  },
+  {
+   "id": "time",
+   "en": "Time saved",
+   "it": "Tempo risparmiato"
+  },
+  {
+   "id": "equity",
+   "en": "Equity",
+   "it": "Equità"
+  },
+  {
+   "id": "integrity",
+   "en": "Integrity",
+   "it": "Integrità"
+  },
+  {
+   "id": "wellbeing",
+   "en": "Wellbeing",
+   "it": "Benessere"
+  }
+ ],
+ "evidenceLevels": [
+  {
+   "id": "not-reviewed",
+   "en": "Evidence not reviewed yet",
+   "it": "Evidenze non ancora esaminate"
+  },
+  {
+   "id": "none",
+   "en": "No rigorous evidence yet",
+   "it": "Ancora nessuna evidenza rigorosa"
+  },
+  {
+   "id": "indirect",
+   "en": "Indirect evidence only",
+   "it": "Solo evidenze indirette"
+  },
+  {
+   "id": "limited",
+   "en": "Direct but limited evidence",
+   "it": "Evidenze dirette ma limitate"
+  },
+  {
+   "id": "mixed",
+   "en": "Direct evidence, mixed results",
+   "it": "Evidenze dirette, risultati contrastanti"
+  },
+  {
+   "id": "consistent",
+   "en": "Direct evidence, consistent results",
+   "it": "Evidenze dirette, risultati coerenti"
+  }
+ ],
+ "legalLevels": [
+  {
+   "id": "prohibited",
+   "en": "Prohibited by law",
+   "it": "Vietato dalla legge"
+  },
+  {
+   "id": "high-risk",
+   "en": "High-risk under the AI Act",
+   "it": "Alto rischio per l’AI Act"
+  },
+  {
+   "id": "caution",
+   "en": "Rules to check",
+   "it": "Regole da verificare"
+  },
+  {
+   "id": "none",
+   "en": "No specific rule",
+   "it": "Nessuna regola specifica"
+  }
+ ],
+ "pricing": [
+  {
+   "id": "free",
+   "en": "Free",
+   "it": "Gratuito"
+  },
+  {
+   "id": "freemium",
+   "en": "Free with paid tiers",
+   "it": "Gratuito con piani a pagamento"
+  },
+  {
+   "id": "paid",
+   "en": "Paid",
+   "it": "A pagamento"
+  },
+  {
+   "id": "institutional",
+   "en": "Institutional licence",
+   "it": "Licenza istituzionale"
+  },
+  {
+   "id": "mixed",
+   "en": "Several options",
+   "it": "Diverse opzioni"
+  }
+ ],
+ "toolTypes": [
+  {
+   "id": "general-assistant",
+   "en": "General assistant",
+   "it": "Assistente generalista"
+  },
+  {
+   "id": "research-assistant",
+   "en": "Research assistant",
+   "it": "Assistente per la ricerca"
+  },
+  {
+   "id": "writing-feedback",
+   "en": "Writing feedback",
+   "it": "Feedback sulla scrittura"
+  },
+  {
+   "id": "coding-assistant",
+   "en": "Coding assistant",
+   "it": "Assistente di programmazione"
+  },
+  {
+   "id": "tutoring-system",
+   "en": "Tutoring system",
+   "it": "Sistema di tutoraggio"
+  },
+  {
+   "id": "item-generator",
+   "en": "Question generator",
+   "it": "Generatore di domande"
+  },
+  {
+   "id": "ai-detector",
+   "en": "AI-text detector",
+   "it": "Rilevatore di testi AI"
+  },
+  {
+   "id": "lms-integrated",
+   "en": "Built into the LMS",
+   "it": "Integrato nella piattaforma didattica"
+  },
+  {
+   "id": "translation",
+   "en": "Translation",
+   "it": "Traduzione"
+  },
+  {
+   "id": "transcription-notes",
+   "en": "Transcription and notes",
+   "it": "Trascrizione e appunti"
+  },
+  {
+   "id": "presentation-generator",
+   "en": "Slides and visuals",
+   "it": "Slide e materiali visivi"
+  },
+  {
+   "id": "analytics",
+   "en": "Learning analytics",
+   "it": "Learning analytics"
+  },
+  {
+   "id": "custom-chatbot",
+   "en": "Course chatbot",
+   "it": "Chatbot del corso"
+  },
+  {
+   "id": "local-open-weights",
+   "en": "Local model, open weights",
+   "it": "Modello locale a pesi aperti"
+  },
+  {
+   "id": "teaching-analytics",
+   "en": "Feedback on teaching",
+   "it": "Feedback sull’insegnamento"
+  }
+ ],
+ "accessModes": [
+  {
+   "id": "closed-free",
+   "en": "Closed, free",
+   "it": "Chiuso, gratuito",
+   "text": {
+    "en": "Hosted service, free of charge, model not released. Free does not mean private: check where data goes and whether it trains models.",
+    "it": "Servizio online gratuito, modello non rilasciato. Gratis non vuol dire riservato: verificare dove vanno i dati e se addestrano i modelli."
+   },
+   "examples": [
+    "deepseek",
+    "github-copilot-student",
+    "semantic-scholar"
+   ]
+  },
+  {
+   "id": "closed-freemium",
+   "en": "Closed, freemium",
+   "it": "Chiuso, freemium",
+   "text": {
+    "en": "Free tier with limits plus paid plans. Personal accounts often allow training on your data by default; organisation plans usually do not.",
+    "it": "Piano gratuito limitato più piani a pagamento. Gli account personali spesso usano i dati per l'addestramento di default; i piani per organizzazioni di solito no."
+   },
+   "examples": [
+    "chatgpt",
+    "claude",
+    "gemini-notebook",
+    "mistral-vibe",
+    "perplexity",
+    "cursor",
+    "replit",
+    "elicit",
+    "consensus",
+    "researchrabbit",
+    "grammarly",
+    "deepl",
+    "gptzero",
+    "khanmigo",
+    "quizlet",
+    "otter",
+    "gamma"
+   ]
+  },
+  {
+   "id": "closed-paid",
+   "en": "Closed, paid",
+   "it": "Chiuso, a pagamento",
+   "text": {
+    "en": "Paid licence or add-on only.",
+    "it": "Solo con licenza o componente aggiuntivo a pagamento."
+   },
+   "examples": [
+    "copilot-powerpoint",
+    "scite"
+   ]
+  },
+  {
+   "id": "closed-institutional",
+   "en": "Closed, institutional licence",
+   "it": "Chiuso, licenza d'ateneo",
+   "text": {
+    "en": "Contracted by the university for everyone. Usually: no training on data, admin controls, DPA, sometimes EU data residency.",
+    "it": "Acquistato dall'ateneo per tutti. Di solito: nessun addestramento sui dati, controlli per amministratori, DPA, talvolta residenza dei dati in UE."
+   },
+   "examples": [
+    "chatgpt-edu",
+    "claude-education",
+    "gemini-education",
+    "m365-copilot-chat-edu",
+    "m365-study-learn",
+    "turnitin-ai"
+   ]
+  },
+  {
+   "id": "open-weights",
+   "en": "Open weights",
+   "it": "Pesi aperti",
+   "text": {
+    "en": "Model weights downloadable and runnable locally, so data can stay on campus. Training data is not disclosed: not 'open source' under the OSI definition. Licences vary (Apache 2.0, MIT, or custom like Llama, which excludes EU-based licensees for multimodal models).",
+    "it": "Pesi del modello scaricabili ed eseguibili in locale: i dati possono restare in ateneo. I dati di addestramento non sono divulgati: non è 'open source' secondo l'OSI. Le licenze variano (Apache 2.0, MIT o proprie come Llama, che esclude licenziatari con sede UE per i modelli multimodali)."
+   },
+   "examples": [
+    "llama",
+    "mistral-open-weights",
+    "qwen",
+    "gpt-oss",
+    "eurollm",
+    "minerva",
+    "ollama",
+    "lm-studio"
+   ]
+  },
+  {
+   "id": "open-source-osi",
+   "en": "Open source (OSI definition)",
+   "it": "Open source (definizione OSI)",
+   "text": {
+    "en": "Weights, full training code and enough data information to rebuild the system, with free use, study, modification and sharing. Few models qualify.",
+    "it": "Pesi, codice completo di addestramento e informazioni sui dati sufficienti a ricostruire il sistema, con libertà di usare, studiare, modificare e condividere. Pochi modelli rientrano."
+   },
+   "examples": [
+    "olmo"
+   ]
+  },
+  {
+   "id": "edu-platform",
+   "en": "Education platform",
+   "it": "Piattaforma per la didattica",
+   "text": {
+    "en": "Tools built for teaching (feedback, grading, course chatbots), bought by institutions and usually linked to the LMS.",
+    "it": "Strumenti pensati per la didattica (feedback, valutazione, chatbot di corso), acquistati dagli atenei e di solito collegati all'LMS."
+   },
+   "examples": [
+    "gradescope",
+    "packback",
+    "feedbackfruits-acai",
+    "cogniti"
+   ]
+  },
+  {
+   "id": "lms-builtin",
+   "en": "Built into the LMS",
+   "it": "Integrato nell'LMS",
+   "text": {
+    "en": "AI features inside Moodle, Canvas or Brightspace. Data handling depends on the LMS vendor or, for Moodle, on the provider the institution connects.",
+    "it": "Funzioni IA dentro Moodle, Canvas o Brightspace. La gestione dei dati dipende dal fornitore dell'LMS o, per Moodle, dal fornitore collegato dall'ateneo."
+   },
+   "examples": [
+    "moodle-ai",
+    "canvas-igniteai",
+    "d2l-lumi"
+   ]
+  }
+ ]
+}
