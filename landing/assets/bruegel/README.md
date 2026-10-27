@@ -35,7 +35,6 @@ represents a simulated intervention or outcome. `prefers-reduced-motion` turns i
 
 | File | What it is |
 | --- | --- |
-| `chain.webp` | six children pulling together with sticks (team) |
 | `leapfrog.webp` | leapfrog: one child jumps over another, a third gets ready (training and co-design) |
 
 Cut from the 6567×4770 reproduction with Segment Anything (vit_h): one box prompt per figure, plus a

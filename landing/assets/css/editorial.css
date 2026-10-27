@@ -314,8 +314,6 @@
 .services > p:not(.ed-eyebrow) { color: var(--muted); font-size: 13px; }
 .services .text-link { grid-column: 3; justify-self: start; margin-top: -15px; }
 
-/* ─── Team ────────────────────────────────────────────────── */
-
 /* ─── Contact ─────────────────────────────────────────────── */
 .contact { padding-block: 70px; border-top: 1px solid var(--ed-line); }
 .contact h2 { max-width: 1050px; margin-block: 22px 38px; font-size: clamp(60px, 7.8vw, 116px); line-height: 0.98; letter-spacing: -0.055em; }
