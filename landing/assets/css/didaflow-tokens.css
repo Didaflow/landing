@@ -1,0 +1,142 @@
+/*
+ * Didaflow design system: token del 27/10/2026 (artefatto «Didaflow», tokens.json per intero).
+ * File locale e identico ai token: quando didaflow-design pubblica la v0.6 con questi valori
+ * (DESIGN_VERSION + scripts/design.sh) questo file si toglie e resta solo landing-tokens.css.
+ * Tema: data-theme="dark" lo forza, "auto" segue il sistema, assente = chiaro.
+ */
+
+:root {
+  --ground: #fbf8f6;
+  --surface: #ffffff;
+  --ink: #1a1411;
+  --muted: #5e534d;
+  --line: #e6ddd8;
+  --border-strong: #8c7d75;
+  --accent: #d96d60;
+  --on-accent: #1a1411;
+  --accent-strong: #b5471e;
+  --ok: #4a6a2a;
+  --warn: #9a6414;
+  --error: #b3121e;
+  --surface-raised: #ffffff;
+  --ochre: #b87a14;
+  --ochre-soft: #f0c24a;
+  --moss: #6f8a3d;
+  --umber: #7a5236;
+  --plum: #7a5a78;
+  --chart-1: var(--accent);
+  --chart-2: var(--ochre);
+  --chart-3: var(--moss);
+  --chart-4: var(--umber);
+  --chart-5: var(--plum);
+  --font-display: "Satoshi", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --type-display-size: 40px;
+  --type-display-line: 44px;
+  --type-display-weight: 800;
+  --type-display-tracking: 0;
+  --type-display-family: var(--font-display);
+  --type-title-size: 28px;
+  --type-title-line: 34px;
+  --type-title-weight: 700;
+  --type-title-tracking: 0;
+  --type-title-family: var(--font-display);
+  --type-heading-size: 20px;
+  --type-heading-line: 26px;
+  --type-heading-weight: 600;
+  --type-heading-tracking: 0;
+  --type-heading-family: var(--font-display);
+  --type-body-size: 15px;
+  --type-body-line: 22px;
+  --type-body-weight: 400;
+  --type-body-tracking: 0;
+  --type-body-family: var(--font-sans);
+  --type-small-size: 13px;
+  --type-small-line: 19px;
+  --type-small-weight: 400;
+  --type-small-tracking: 0;
+  --type-small-family: var(--font-sans);
+  --type-label-size: 12px;
+  --type-label-line: 16px;
+  --type-label-weight: 500;
+  --type-label-tracking: 0.04em;
+  --type-label-family: var(--font-sans);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --elevation-0: none;
+  --elevation-1: 0 1px 2px rgba(26,20,17,0.08), 0 1px 1px rgba(26,20,17,0.04);
+  --elevation-2: 0 2px 4px rgba(26,20,17,0.08), 0 4px 12px rgba(26,20,17,0.08);
+  --elevation-3: 0 4px 8px rgba(26,20,17,0.08), 0 12px 24px rgba(26,20,17,0.12);
+  --elevation-4: 0 8px 16px rgba(26,20,17,0.10), 0 24px 48px rgba(26,20,17,0.18);
+}
+:root[data-theme="dark"] {
+  --ground: #14110f;
+  --surface: #1d1916;
+  --ink: #f4eeea;
+  --muted: #b3a69f;
+  --line: #342c27;
+  --border-strong: #7d6f68;
+  --accent: #d96d60;
+  --on-accent: #1a1411;
+  --accent-strong: #ffa987;
+  --ok: #a8c878;
+  --warn: #e3b04b;
+  --error: #ff5c6c;
+  --surface-raised: #26211d;
+  --ochre: #e0a93b;
+  --ochre-soft: #f0c24a;
+  --moss: #9bb56a;
+  --umber: #c79a78;
+  --plum: #b794b2;
+  --chart-1: var(--accent);
+  --chart-2: var(--ochre);
+  --chart-3: var(--moss);
+  --chart-4: var(--umber);
+  --chart-5: var(--plum);
+  --elevation-0: none;
+  --elevation-1: 0 1px 2px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.04);
+  --elevation-2: 0 2px 6px rgba(0,0,0,0.50), 0 6px 16px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.05);
+  --elevation-3: 0 4px 12px rgba(0,0,0,0.55), 0 16px 32px rgba(0,0,0,0.40), inset 0 1px 0 rgba(255,255,255,0.06);
+  --elevation-4: 0 8px 20px rgba(0,0,0,0.60), 0 28px 56px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    --ground: #14110f;
+    --surface: #1d1916;
+    --ink: #f4eeea;
+    --muted: #b3a69f;
+    --line: #342c27;
+    --border-strong: #7d6f68;
+    --accent: #d96d60;
+    --on-accent: #1a1411;
+    --accent-strong: #ffa987;
+    --ok: #a8c878;
+    --warn: #e3b04b;
+    --error: #ff5c6c;
+    --surface-raised: #26211d;
+    --ochre: #e0a93b;
+    --ochre-soft: #f0c24a;
+    --moss: #9bb56a;
+    --umber: #c79a78;
+    --plum: #b794b2;
+    --chart-1: var(--accent);
+    --chart-2: var(--ochre);
+    --chart-3: var(--moss);
+    --chart-4: var(--umber);
+    --chart-5: var(--plum);
+    --elevation-0: none;
+    --elevation-1: 0 1px 2px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.04);
+    --elevation-2: 0 2px 6px rgba(0,0,0,0.50), 0 6px 16px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.05);
+    --elevation-3: 0 4px 12px rgba(0,0,0,0.55), 0 16px 32px rgba(0,0,0,0.40), inset 0 1px 0 rgba(255,255,255,0.06);
+    --elevation-4: 0 8px 20px rgba(0,0,0,0.60), 0 28px 56px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+}

@@ -1,0 +1,104 @@
+/*
+ * Inter (testo del sistema), autoospitato: serve a tutte le pagine, non solo a quelle editoriali.
+ */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/inter.woff2") format("woff2");
+}
+
+/*
+ * Landing: strato fra il design system (didaflow-tokens.css) e le pagine.
+ * 1. Nomi della landing di prima, riportati sui token del sistema (un solo posto, nessun valore sciolto).
+ * 2. Token PROPOSTI: casi che il sistema non copre (fasce scure, hero). Sono nella tabella della PR #43;
+ *    arch li porta nel sistema, poi questo blocco si toglie.
+ * Il selettore ripete quelli di tokens.css (tema chiaro, scuro, auto) e viene dopo: così vince, nei due temi.
+ */
+:root,
+:root[data-theme="light"],
+:root[data-theme="dark"],
+:root[data-theme="auto"] {
+  /* Nomi di prima → token del sistema */
+  --background: var(--ground);
+  --foreground: var(--ink);
+  --heading: var(--ink);
+  --fg-subtle: var(--muted);
+  --border: var(--line);
+  --card-bg: var(--surface);
+  --card-border: var(--line);
+  --card-border-hover: var(--border-strong);
+  --hairline: var(--line);
+  --header-bg: color-mix(in srgb, var(--ground) 90%, transparent);
+  --ink-strong: var(--ink);
+  --ink-deep: var(--ink);
+  --ink-tint: color-mix(in srgb, var(--ink) 6%, var(--ground));
+  --ink-soft: color-mix(in srgb, var(--ink) 10%, transparent);
+  --accent-hover: var(--accent-strong);
+  --accent-light: color-mix(in srgb, var(--accent) 12%, var(--ground));
+  --accent-tint: color-mix(in srgb, var(--accent) 12%, transparent);
+  --brand-tint-hex: var(--accent-light);
+  --success: var(--ok);
+  --warning: var(--warn);
+  --danger: var(--error);
+  --success-strong: var(--ok);
+  --warning-strong: var(--warn);
+  --danger-strong: var(--error);
+  --success-tint: color-mix(in srgb, var(--ok) 12%, transparent);
+  --warning-tint: color-mix(in srgb, var(--warn) 12%, transparent);
+  --danger-tint: color-mix(in srgb, var(--error) 12%, transparent);
+  --radius-xl: var(--radius-lg);
+  --radius-2xl: var(--radius-lg);
+  --ed-body: var(--font-sans);
+  --ed-heading: var(--font-display);
+  --ed-coral: var(--accent-strong);
+  --ed-line: var(--line);
+
+  /* Sovrapposizioni leggere: sempre un token mescolato con trasparenza */
+  --wash-1: color-mix(in srgb, var(--ink) 4%, transparent);
+  --wash-2: color-mix(in srgb, var(--ink) 7%, transparent);
+  --glass: color-mix(in srgb, var(--ground) 92%, transparent);
+  --glass-soft: color-mix(in srgb, var(--ground) 70%, transparent);
+  --scrim: color-mix(in srgb, var(--ink) 55%, transparent);
+
+  /* PROPOSTO · fascia scura (sezioni «ink», blocco di invito): scura anche nel tema chiaro */
+  --band: var(--ink);
+  --on-band: var(--ground);
+  --on-band-muted: color-mix(in srgb, var(--ground) 78%, transparent);
+  --on-band-line: color-mix(in srgb, var(--ground) 28%, transparent);
+  --band-accent: var(--accent);
+  --ed-on-ink-muted: var(--on-band-muted);
+  --ch-on-ink-accent: var(--band-accent);
+}
+:root[data-theme="dark"] {
+  --band: var(--surface-raised);
+  --on-band: var(--ink);
+  --on-band-muted: var(--muted);
+  --on-band-line: var(--border-strong);
+  --band-accent: var(--accent-strong);
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    --band: var(--surface-raised);
+    --on-band: var(--ink);
+    --on-band-muted: var(--muted);
+    --on-band-line: var(--border-strong);
+    --band-accent: var(--accent-strong);
+  }
+}
+
+/* PROPOSTO · titolo della hero: più grande di «display», fluido. Il sistema ha solo display (40 px). */
+:root { --type-hero-size: clamp(2.5rem, 5.5vw, 4.25rem); --type-hero-line: 1.05; }
+
+/* Stampa (PDF del questionario): sempre i valori del tema chiaro, anche se il dispositivo è in scuro. */
+@media print {
+  :root[data-theme="auto"], :root[data-theme="dark"] {
+    --ground: #fbf8f6; --surface: #ffffff; --ink: #1a1411; --muted: #5e534d; --line: #e6ddd8;
+    --border-strong: #8c7d75; --accent: #d96d60; --accent-strong: #b5471e; --on-accent: #1a1411;
+    --surface-raised: #ffffff;
+    --ok: #4a6a2a; --warn: #9a6414; --error: #b3121e; --ochre: #b87a14; --ochre-soft: #f0c24a; --moss: #6f8a3d; --umber: #7a5236; --plum: #7a5a78;
+    --band: var(--ink); --on-band: var(--ground); --on-band-muted: color-mix(in srgb, var(--ground) 78%, transparent);
+    --on-band-line: color-mix(in srgb, var(--ground) 28%, transparent); --band-accent: var(--accent);
+  }
+}
