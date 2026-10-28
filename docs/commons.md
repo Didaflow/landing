@@ -1,7 +1,7 @@
 # Commons and the AI Map
 
 `/commons/` is Didaflow’s page of open tools for the education community. The first tool is the
-**AI Map** (`/commons/ai-map/`, Italian at `/it/commons/ai-map/`): which AI tools fit which tasks in
+**AI Map** (`/commons/ai-map/`, Italian at `/it/commons/ai-map/`; the quiz opens it, the full map is under `explore/` / `esplora/`): which AI tools fit which tasks in
 higher education, with the evidence, the rules and what people who use them say.
 
 ## Files
@@ -77,15 +77,20 @@ memory and never written to the database; honeypot field against bots; a browser
 contribution once, which only queues it for a moderator: nothing is hidden automatically. See `landing/privacy-policy/` (section “Commons and the
 AI Map”).
 
-### Guided path (questionnaire)
+### The quiz (the way into the AI Map)
 
-`/commons/ai-map/questionnaire/` (Italian: `/it/commons/ai-map/questionario/`, `noindex`, not in the sitemap). Six
+`/commons/ai-map/` (Italian: `/it/commons/ai-map/`) opens on the first question; the full map is at
+`/commons/ai-map/explore/` (Italian: `/it/commons/ai-map/esplora/`), linked from every screen as "Explore the whole map"
+and from the result. The old questionnaire addresses (`…/questionnaire/`, `…/questionario/`) are small redirect pages, and
+old map links with `?role=&task=&tool=` on the entry address are sent on to the map with the same query. Six
 questions, one per screen (role, up to three activities, tools used or available by category, data, budget, local models),
-then a report: evidence, good practice and risks per activity, the three best-fitting tools with the reasons for their
-order, and all tools by category. It runs entirely in the browser (`ai-map/quiz.js`, data from `ai-map/data/*.json`):
-answers stay in the browser's `localStorage`, nothing is sent and nothing is collected. The PDF is the browser's
-"Save as PDF" on the print stylesheet (`@media print` in `commons.css`); contact is a prefilled `mailto:` link.
-The scoring is in `quiz.js` and tested in `scripts/ai-map/quiz.test.ts`.
+with a progress bar, back and forward, one tap to answer and resume where you left off; then a report: evidence, good
+practice and risks per activity, the three best-fitting tools with the reasons for their order, all tools by category, and
+for each activity and tool a link into the map (evidence, rules, risks and what the community says there). It runs entirely
+in the browser (`ai-map/quiz.js`, data from `ai-map/data/*.json`): answers stay in `localStorage` (`aimap-quiz`), the quiz
+sends no answers and calls no API. The PDF is the browser's "Save as PDF" on the print stylesheet (`@media print` in
+`commons.css`); contact is a prefilled `mailto:` link. The scoring is in `quiz.js` and tested in
+`scripts/ai-map/quiz.test.ts`. Page paths live in `P` in `scripts/ai-map/build.ts`.
 
 ### Moderation and analysis
 

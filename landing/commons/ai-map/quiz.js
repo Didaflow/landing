@@ -1,5 +1,5 @@
-// AI Map guided questionnaire (plain JS, no build step for the browser).
-// Six questions, one per screen, then a report. Everything runs in the browser: answers stay in
+// AI Map quiz: the way into the AI Map (plain JS, no build step for the browser).
+// Six questions, one per screen, then a report that links into the full map. Everything runs in the browser: answers stay in
 // localStorage, nothing is sent anywhere. The PDF is the browser's "Save as PDF" on a print stylesheet.
 // Data: ./data/{taxonomy,tasks,tools}.json. Text fields are { en, it }.
 (function (root) {
@@ -78,11 +78,16 @@
   // ─── Page ─────────────────────────────────────────────────────
   var LANG = document.documentElement.lang === "it" ? "it" : "en";
   var HERE = LANG === "it" ? "/it/commons/ai-map/" : "/commons/ai-map/";
+  var EXPLORE = LANG === "it" ? "/it/commons/ai-map/esplora/" : "/commons/ai-map/explore/";
   var KEY = "aimap-quiz";
+  // Links to the old map address (…/ai-map/?role=&task=&tool=) keep working: they go to the full map.
+  if (/[?&](role|task|tool)=/.test(location.search)) { location.replace(EXPLORE + location.search + location.hash); return; }
   var S = {
     en: {
       title: "Your path through the AI <em>Map</em>", draft: "Draft content: the map is not yet reviewed by the scientific committee.",
       q: function (i, n) { return "Question " + i + " of " + n; }, report: "Your path", back: "← Back", next: "Next →", seeReport: "See your path →",
+      explore: "Explore the whole map", progress: "Progress", resumed: function (n, m) { return "Welcome back: you had answered " + n + " of " + m + " questions."; },
+      openTask: "Open this activity in the map", openTaskHint: "Evidence, rules and risks, and what the community says.", openTool: "Evidence, rules, risks",
       cats: {
         lms: { t: "Learning platform (LMS)", s: "LMS", ex: "Moodle, Canvas, Brightspace. Many already include AI features." },
         edu: { t: "AI assistant with a university Edu licence", s: "Edu licence", ex: "ChatGPT Edu, Claude for Education, Gemini for Education, Microsoft 365 Copilot" },
@@ -116,7 +121,7 @@
       why: { declared: "Presented by the provider for this use", catUse: "A category you already use", catAvail: "Already available: worth trying", catNo: "Not available at your university", dataLocal: "Data can stay at the university", dataContract: "University contract, usually no training on your data", dataPersonal: "Personal accounts: check how data are used", free: "Free", freemium: "Has a free plan", paid: "Paid", itCan: "Your IT can run it", itCannot: "Someone has to install and run it" },
       save: "Save as PDF", saveHint: "Opens the print dialog: choose “Save as PDF” as the destination.", restart: "Start again",
       contact: "Write to Didaflow", contactHint: "Opens your email program with a short draft. Nothing is sent from this page.",
-      privacy: "Your answers stay in this browser. This page sends nothing and collects no data.",
+      privacy: "Your answers stay in this browser: this page does not send them anywhere and collects no data.",
       printTitle: "AI Map: your path", mailSubject: "AI Map: your path", mailIntro: "Hello, I used the AI Map questionnaire.", mailTasks: "Activities", mailTools: "Best-fitting tools", mailEnd: "I would like to talk about it.",
       loading: "Loading…", failed: "The map data could not be loaded. Reload the page to try again.",
       ev: "Evidence", checked: "Source: Didaflow AI Map (draft)"
@@ -124,6 +129,8 @@
     it: {
       title: "Il tuo percorso nella <em>Mappa</em> AI", draft: "Contenuti in bozza: la mappa non è ancora rivista dal comitato scientifico.",
       q: function (i, n) { return "Domanda " + i + " di " + n; }, report: "Il tuo percorso", back: "← Indietro", next: "Avanti →", seeReport: "Vedi il percorso →",
+      explore: "Esplora tutta la mappa", progress: "Avanzamento", resumed: function (n, m) { return "Bentornato: avevi risposto a " + n + " domande su " + m + "."; },
+      openTask: "Apri questa attività nella mappa", openTaskHint: "Evidenze, regole e rischi, e che cosa dice la comunità.", openTool: "Evidenze, regole, rischi",
       cats: {
         lms: { t: "Piattaforma didattica (LMS)", s: "LMS", ex: "Moodle, Canvas, Brightspace. Molte hanno già funzioni AI incluse." },
         edu: { t: "Assistente AI con licenza Edu d’ateneo", s: "Licenza Edu", ex: "ChatGPT Edu, Claude for Education, Gemini for Education, Microsoft 365 Copilot" },
@@ -157,7 +164,7 @@
       why: { declared: "Indicato dal fornitore per questo uso", catUse: "Categoria che usi già", catAvail: "Già a disposizione: da provare", catNo: "Non disponibile nel tuo ateneo", dataLocal: "I dati possono restare in ateneo", dataContract: "Contratto d’ateneo, di solito senza addestramento", dataPersonal: "Account personali: verificare l’uso dei dati", free: "Gratuito", freemium: "Ha un piano gratuito", paid: "A pagamento", itCan: "Gestibile dal vostro IT", itCannot: "Serve chi lo installi e gestisca" },
       save: "Salva come PDF", saveHint: "Apre la finestra di stampa: scegli «Salva come PDF» come destinazione.", restart: "Ricomincia",
       contact: "Scrivi a Didaflow", contactHint: "Apre il tuo programma di posta con una bozza breve. Da questa pagina non parte nulla.",
-      privacy: "Le risposte restano in questo browser. La pagina non invia nulla e non raccoglie dati.",
+      privacy: "Le risposte restano in questo browser: la pagina non le invia da nessuna parte e non raccoglie dati.",
       printTitle: "Mappa AI: il tuo percorso", mailSubject: "Mappa AI: il mio percorso", mailIntro: "Buongiorno, ho usato il questionario della Mappa AI.", mailTasks: "Attività", mailTools: "Strumenti più adatti", mailEnd: "Vorrei parlarne.",
       loading: "Caricamento…", failed: "Non è stato possibile caricare i dati della mappa. Ricarica la pagina per riprovare.",
       ev: "Evidenze", checked: "Fonte: Mappa AI di Didaflow (bozza)"
@@ -170,6 +177,7 @@
   var D = null; // { tax, tasks, tools }
   var state = { step: 0, a: { tasks: [], stack: {} } };
   var QIDS = ["role", "tasks", "stack", "data", "budget", "tech"];
+  var resumedAt = -1; // set when the visit starts from saved answers rather than from the first question
   var STEPS = QIDS.length + 1; // six questions and the report
 
   try {
@@ -220,13 +228,14 @@
 
   function go(d) {
     state.step = Math.max(0, Math.min(STEPS - 1, state.step + d));
+    resumedAt = -1;
     save(); render(true);
     window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
   }
   function progress() {
     var cells = "";
     for (var i = 0; i < STEPS; i++) cells += '<span class="' + (i < state.step ? "done" : i === state.step ? "now" : "") + '"></span>';
-    return '<div class="quiz-progress" aria-hidden="true">' + cells + "</div>" +
+    return '<div class="quiz-progress" role="progressbar" aria-label="' + esc(L.progress) + '" aria-valuemin="1" aria-valuemax="' + STEPS + '" aria-valuenow="' + (state.step + 1) + '">' + cells + "</div>" +
       '<p class="quiz-step" role="status">' + (state.step < QIDS.length ? L.q(state.step + 1, QIDS.length) : L.report) + "</p>";
   }
   function nav(nextLabel, ok) {
@@ -234,13 +243,16 @@
       '<button type="button" class="btn btn--primary" id="q-next"' + (ok ? "" : " disabled") + ">" + nextLabel + "</button></div>";
   }
   function bindNav() {
+    var rs = document.getElementById("q-reset"); if (rs) rs.onclick = restart;
     var b = document.getElementById("q-back"), n = document.getElementById("q-next");
     if (b) b.onclick = function () { go(-1); };
     if (n) n.onclick = function () { go(1); };
   }
   function shell(inner) {
-    return '<section class="quiz">' + progress() + inner + '<p class="quiz-privacy">' + esc(L.privacy) + "</p></section>";
+    var note = resumedAt > 0 && state.step === resumedAt ? '<p class="quiz-resumed" role="status">' + esc(L.resumed(Math.min(resumedAt, QIDS.length), QIDS.length)) + " " + '<button type="button" class="quiz-linkbtn" id="q-reset">' + esc(L.restart) + "</button></p>" : "";
+    return '<section class="quiz"><p class="quiz-top"><a class="quiz-explore" href="' + EXPLORE + '">' + esc(L.explore) + " →</a></p>" + progress() + note + inner + '<p class="quiz-privacy">' + esc(L.privacy) + "</p></section>";
   }
+  function restart() { state.a = { tasks: [], stack: {} }; state.step = 0; resumedAt = -1; save(); render(true); }
 
   function renderStack(id) {
     var rows = CATS.map(function (c) {
@@ -299,6 +311,10 @@
     var ac = D.tax.accessModes.filter(function (p) { return p.id === t.access; })[0];
     return { name: url ? '<a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(t.name) + "</a>" : esc(t.name), meta: [t.vendor, ac ? T(ac) : "", pr ? T(pr) : ""], why: r.why };
   }
+  // Deep link into the full map: the same ?role=&task=&tool= the map itself writes to the address bar.
+  function mapLink(taskId, toolId) {
+    return EXPLORE + "?role=" + encodeURIComponent(state.a.role) + "&task=" + encodeURIComponent(taskId) + (toolId ? "&tool=" + encodeURIComponent(toolId) : "");
+  }
   function whyHTML(why, n, skipDeclared) {
     return why.filter(function (w) { return !(skipDeclared && w[0] === "declared"); }).slice(0, n)
       .map(function (w) { return '<span class="' + (w[1] ? "neg" : "") + '">' + esc(L.why[w[0]]) + "</span>"; }).join("");
@@ -323,12 +339,13 @@
         var t = x.task;
         return '<article class="quiz-task"><p><span class="quiz-pill ev-' + esc(t.evidenceLevel) + '">' + esc(L.ev + ": " + ev(t.evidenceLevel)) + "</span></p>" +
           "<h3>" + esc(T(t.title)) + "</h3><p class=\"quiz-q\">" + esc(T(t.question)) + "</p><p>" + esc(T(t.verdict)) + "</p>" +
+          '<p class="quiz-open"><a class="btn btn--secondary" href="' + esc(mapLink(t.id)) + '">' + esc(L.openTask) + " →</a> <span>" + esc(L.openTaskHint) + "</span></p>" +
           '<div class="quiz-cols"><div><p class="quiz-lbl">' + esc(L.goodPractice) + '</p><ul>' + (t.goodPractice || []).slice(0, 3).map(function (g) { return "<li>" + esc(T(g)) + "</li>"; }).join("") + "</ul></div>" +
           '<div><p class="quiz-lbl">' + esc(L.risks) + '</p><ul>' + (t.risks || []).slice(0, 2).map(function (g) { return "<li>" + esc(T(g.text)) + "</li>"; }).join("") + "</ul></div></div>" +
           '<p class="quiz-lbl">' + esc(L.topTools) + "</p>" +
           (x.top.length ? '<ol class="quiz-tools">' + x.top.map(function (r) {
             var v = tool(r);
-            return "<li><span class=\"nm\">" + v.name + '</span><span class="meta">' + esc(v.meta.filter(Boolean).join(" · ")) + '</span><span class="why">' + whyHTML(r.why, 3, false) + "</span></li>";
+            return "<li><span class=\"nm\">" + v.name + '</span><span class="meta">' + esc(v.meta.filter(Boolean).join(" · ")) + '</span><span class="why">' + whyHTML(r.why, 3, false) + '</span><a class="quiz-maplink" href="' + esc(mapLink(t.id, r.id)) + '">' + esc(L.openTool) + " →</a></li>";
           }).join("") + "</ol>" : '<p class="quiz-hint">' + esc(L.noTools) + "</p>") +
           (x.total > 3 ? '<details class="quiz-all"><summary>' + esc(L.all(x.total)) + "</summary>" + x.groups.map(function (g) {
             return '<div class="quiz-grp"><p class="quiz-lbl">' + esc(L.cats[g.cat].t) + " · " + g.items.length + "</p><ul>" + g.items.map(function (r) {
@@ -339,12 +356,12 @@
       }).join("") +
       '<p class="quiz-note">' + esc(L.note) + " " + esc(L.draft) + '</p><p class="quiz-print-foot">' + esc(L.checked) + " · didaflow.ai" + HERE + "</p>" +
       '<div class="quiz-actions"><button type="button" class="btn btn--primary" id="q-print">' + esc(L.save) + '</button>' +
-      '<a class="btn btn--secondary" id="q-mail" href="' + esc(mailto(R)) + '">' + esc(L.contact) + '</a><button type="button" class="btn btn--secondary" id="q-restart">' + esc(L.restart) + "</button></div>" +
+      '<a class="btn btn--secondary" href="' + EXPLORE + '">' + esc(L.explore) + '</a><a class="btn btn--secondary" id="q-mail" href="' + esc(mailto(R)) + '">' + esc(L.contact) + '</a><button type="button" class="btn btn--secondary" id="q-restart">' + esc(L.restart) + "</button></div>" +
       '<p class="quiz-hint">' + esc(L.saveHint) + " " + esc(L.contactHint) + "</p>" +
       '<div class="quiz-nav"><button type="button" class="btn btn--secondary" id="q-back">' + L.back + "</button></div>");
     bindNav();
     document.getElementById("q-print").onclick = function () { window.print(); };
-    document.getElementById("q-restart").onclick = function () { state.a = { tasks: [], stack: {} }; state.step = 0; save(); render(true); };
+    document.getElementById("q-restart").onclick = restart;
   }
 
   // On a new screen the previous button is gone: move focus to the heading so keyboard and screen-reader users land at the top.
@@ -374,6 +391,7 @@
   Promise.all([json("taxonomy"), json("tasks"), json("tools")]).then(function (r) {
     D = { tax: r[0], tasks: r[1].tasks, tools: r[2].tools };
     sanitise(); save();
+    if (state.step > 0) resumedAt = state.step;
     render();
   }).catch(function () { app.innerHTML = '<section class="quiz"><p class="quiz-lede">' + esc(L.failed) + "</p></section>"; });
 })(typeof window !== "undefined" ? window : globalThis);

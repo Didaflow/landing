@@ -85,15 +85,18 @@ export function buildData() {
 
 // ─── Pages ────────────────────────────────────────────────────
 type Lang = "en" | "it";
-const P = {
+export const P = {
   hub: { en: "/commons/", it: "/it/commons/" },
-  map: { en: "/commons/ai-map/", it: "/it/commons/ai-map/" },
+  // The quiz is the way in; the full map lives one level down.
+  quiz: { en: "/commons/ai-map/", it: "/it/commons/ai-map/" },
+  map: { en: "/commons/ai-map/explore/", it: "/it/commons/ai-map/esplora/" },
   method: { en: "/commons/ai-map/method/", it: "/it/commons/ai-map/method/" },
-  quiz: { en: "/commons/ai-map/questionnaire/", it: "/it/commons/ai-map/questionario/" },
+  // Old questionnaire addresses: small pages that send people to the new entry.
+  legacyQuiz: { en: "/commons/ai-map/questionnaire/", it: "/it/commons/ai-map/questionario/" },
 };
 const T = {
-  en: { quiz: "Your path through the AI Map", quizDesc: "Six questions to see which AI tools fit your tasks, with the evidence and the rules. Everything stays in your browser.", hub: "Commons", hubDesc: "Open tools by Didaflow for the education community.", map: "AI Map", mapDesc: "Which AI tools fit which tasks in higher education: evidence, rules and experience.", method: "How the AI Map works" },
-  it: { quiz: "Il tuo percorso nella Mappa AI", quizDesc: "Sei domande per vedere quali strumenti AI sono adatti alle tue attività, con evidenze e regole. Tutto resta nel tuo browser.", hub: "Commons", hubDesc: "Strumenti aperti di Didaflow per la comunità educativa.", map: "Mappa AI", mapDesc: "Quali strumenti AI per quali compiti nell’istruzione superiore: evidenze, regole ed esperienze.", method: "Come funziona la Mappa AI" },
+  en: { quiz: "AI Map: your path", quizDesc: "Answer six questions, one at a time, and see which AI tools fit your tasks, with the evidence and the rules. Everything stays in your browser.", redirect: "This page has moved to", hub: "Commons", hubDesc: "Open tools by Didaflow for the education community.", map: "AI Map", mapDesc: "Which AI tools fit which tasks in higher education: evidence, rules and experience.", method: "How the AI Map works" },
+  it: { quiz: "Mappa AI: il tuo percorso", quizDesc: "Rispondi a sei domande, una alla volta, e vedi quali strumenti AI sono adatti alle tue attività, con evidenze e regole. Tutto resta nel tuo browser.", redirect: "Questa pagina si è spostata su", hub: "Commons", hubDesc: "Strumenti aperti di Didaflow per la comunità educativa.", map: "Mappa AI", mapDesc: "Quali strumenti AI per quali compiti nell’istruzione superiore: evidenze, regole ed esperienze.", method: "Come funziona la Mappa AI" },
 };
 
 function page(lang: Lang, o: { path: Record<Lang, string>; title: string; desc: string; kind: string; body?: string; v: string }) {
@@ -134,6 +137,26 @@ function page(lang: Lang, o: { path: Record<Lang, string>; title: string; desc: 
 `;
 }
 
+// A static redirect: meta refresh and a script for browsers, a plain link for everyone else. Never indexed.
+function redirect(lang: Lang, to: string) {
+  return `<!DOCTYPE html>
+<html lang="${lang}" data-theme="auto">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <meta http-equiv="refresh" content="0; url=${to}" />
+  <link rel="canonical" href="https://didaflow.ai${to}" />
+  <title>${T[lang].quiz} · didaflow</title>
+</head>
+<body>
+  <p>${T[lang].redirect} <a href="${to}">${to}</a></p>
+  <script>location.replace(${JSON.stringify(to)} + location.search + location.hash);</script>
+</body>
+</html>
+`;
+}
+
 export function buildPages(v: string) {
   const out = (path: string, html: string) => {
     const f = join(LANDING, path, "index.html");
@@ -146,6 +169,7 @@ export function buildPages(v: string) {
     out(P.map[lang], page(lang, { path: P.map, title: T[lang].map, desc: T[lang].mapDesc, kind: "app", v }));
     out(P.method[lang], page(lang, { path: P.method, title: T[lang].method, desc: T[lang].mapDesc, kind: "method", body: body("method", lang), v }));
     out(P.quiz[lang], page(lang, { path: P.quiz, title: T[lang].quiz, desc: T[lang].quizDesc, kind: "quiz", v }));
+    out(P.legacyQuiz[lang], redirect(lang, P.quiz[lang]));
   }
 }
 
