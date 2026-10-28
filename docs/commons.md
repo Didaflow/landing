@@ -71,11 +71,11 @@ What people can do on the map, with no account, no email and no cookies:
 | Tasks, tools, sources | “Something missing? Tell us” + optional DOI | No (moderation page only) |
 | Everywhere | Usage counters: role, task, tool opened, link shared | No (daily totals only) |
 
-Privacy by design: the browser keeps a random id (stored server-side only as a hash) and the edit
+Privacy by design: the browser creates a random id only on the first write, never when someone just reads (stored server-side only as a hash) and the edit
 keys of its own posts; IP addresses are used only for the rate limit, hashed with a daily key kept in
 memory and never written to the database; honeypot field against bots; a browser can flag a
-contribution once, which only queues it for a moderator: nothing is hidden automatically. See `landing/privacy-policy/` (section “Commons and the
-AI Map”).
+contribution once, which only queues it for a moderator: nothing is hidden automatically. See `landing/privacy-policy/` and `landing/it/privacy-policy/` (section “Commons and the
+AI Map”) and the cookie policies for what is saved in the browser.
 
 ### The quiz (the way into the AI Map)
 

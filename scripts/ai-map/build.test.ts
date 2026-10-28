@@ -25,6 +25,16 @@ test("map data: the five JSON files the map loads are committed, not ignored, an
   expect(JSON.parse(readFileSync(join(dir, "tasks.json"), "utf8")).tasks.length).toBe(d.tasks.length);
 });
 
+test("map.js: the anonymous id is created only by writes, never by reading a summary", () => {
+  const src = readFileSync(join(import.meta.dir, "..", "..", "landing", "commons", "ai-map", "map.js"), "utf8");
+  expect(src.match(/\bclientId\(\)/g)!.length).toBe(2); // its definition and the single call in send()
+  const send = src.slice(src.indexOf("function send("), src.indexOf("function track("));
+  expect(send).toContain("clientId()");
+  const read = src.slice(src.indexOf("function fetchSummary("), src.indexOf("function send("));
+  expect(read).not.toMatch(/[^d]clientId\(\)/);
+  expect(read).toContain("savedClientId()");
+});
+
 test("the quiz is the way into the AI Map; the full map and the old questionnaire addresses are where the pages say", () => {
   const root = join(import.meta.dir, "..", "..", "landing");
   const html = (p: string) => readFileSync(join(root, p, "index.html"), "utf8");

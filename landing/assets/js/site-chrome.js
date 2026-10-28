@@ -11,6 +11,7 @@
   var LANG = document.documentElement.lang === "it" ? "it" : "en";
   var HOME = LANG === "it" ? "/it/" : "/";
   var COMMONS = LANG === "it" ? "/it/commons/" : "/commons/";
+  var LEGAL = LANG === "it" ? "/it/" : "/"; // privacy and cookie policy exist in both languages; terms and DPA are English only
 
   // Only the home page is translated; methodology, legal pages, changelog and white paper stay in English.
   var T = {
@@ -148,8 +149,8 @@
           <div>
             <div class="site-footer__col-title">${T.legal}</div>
             <ul>
-              <li><a href="/privacy-policy/">${T.privacy}</a></li>
-              <li><a href="/cookie-policy/">${T.cookies}</a></li>
+              <li><a href="${LEGAL}privacy-policy/">${T.privacy}</a></li>
+              <li><a href="${LEGAL}cookie-policy/">${T.cookies}</a></li>
               <li><a href="/terms-of-service/">${T.terms}</a></li>
               <li><a href="/dpa/">DPA</a></li>
             </ul>

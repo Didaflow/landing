@@ -255,8 +255,10 @@
   // ─── Community: contributions go to the Commons API (/api/commons) ───
   var API = "/api/commons";
   // An anonymous id for this browser, so a person can change their own answer. Stored server-side only as a hash.
+  // It is created on the first write, never when someone only looks: readers have nothing saved in the browser.
+  function savedClientId() { return store("commons.client"); }
   function clientId() {
-    var c = store("commons.client");
+    var c = savedClientId();
     if (!c) { c = (window.crypto && crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).slice(2) + "-x"); store("commons.client", c); }
     return c;
   }
@@ -270,7 +272,7 @@
     var k = sumKey(task, tool);
     if (!force && SUM[k]) return;
     if (!SUM[k]) SUM[k] = "loading";
-    fetch(API + "/summary?task=" + encodeURIComponent(task) + (tool ? "&tool=" + encodeURIComponent(tool) : ""), { headers: { "x-commons-client": clientId() } })
+    fetch(API + "/summary?task=" + encodeURIComponent(task) + (tool ? "&tool=" + encodeURIComponent(tool) : ""), { headers: savedClientId() ? { "x-commons-client": savedClientId() } : {} })
       .then(function (r) { return r.ok ? r.json() : Promise.reject(r); })
       .then(function (d) { SUM[k] = d; rerender(); }, function () { if (typeof SUM[k] !== "object") { SUM[k] = "error"; rerender(); } });
   }
