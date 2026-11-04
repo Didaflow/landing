@@ -22,6 +22,13 @@ bun run dev       # http://127.0.0.1:8765 (PORT=… for another port)
 Serves `landing/` at `/` and `shared/design/` at `/_assets/` — the same mapping
 production uses, so what you see locally is what ships.
 
+## Test
+
+There is no CI: Didaflow runs no GitHub Actions. Before opening a PR, run
+`python3 -m unittest discover -s tests -v`, then `node --check` on
+`landing/scripts/main.js` and `landing/assets/js/site-chrome.js`, and paste
+the result in the PR body. The reviewer reruns them before approving.
+
 ## Deploy
 
 `Caddyfile` is the production config: the site is served as static files, with
