@@ -366,3 +366,134 @@
     --viz-grid: rgba(255, 255, 255, 0.08);
   }
 }
+
+
+/* ═══ RUOLI COMUNI (v0.7.0, decisione 36) ═══════════════════════════════
+   Token con ruoli, non con nomi di colore. Sono la fonte del sistema: i
+   tenant ridefiniscono solo questi (css/tenants/<tenant>.css), mai i
+   componenti. Il prefisso --df- evita le collisioni con i nomi di prima
+   (--ink è il blu dei dati, --surface e --on-accent hanno altri valori):
+   chi adotta la v0.7.0 non vede cambiare niente finché non migra.
+   Valori del tema Didaflow dall'artefatto «Didaflow» del 27/10/2026;
+   contrasti verificati in tests/test_ruoli.py. Il tema scuro non è
+   l'inverso del chiaro: ha il suo accento (--df-accent-strong si schiarisce). */
+:root {
+  /* Colore (tema chiaro) */
+  --df-ground: #fbf8f6;
+  --df-surface: #ffffff;
+  --df-surface-raised: #ffffff;
+  --df-ink: #1a1411;
+  --df-muted: #5e534d;
+  --df-line: #e6ddd8;
+  --df-border-strong: #8c7d75;
+  --df-accent: #d96d60;
+  --df-on-accent: #1a1411;
+  --df-accent-strong: #b5471e;
+  --df-ok: #4a6a2a;
+  --df-warn: #9a6414;
+  --df-error: #b3121e;
+  --df-ochre: #b87a14;
+  --df-ochre-soft: #f0c24a;
+  --df-moss: #6f8a3d;
+  --df-umber: #7a5236;
+  --df-plum: #7a5a78;
+  --df-elevation-0: none;
+  --df-elevation-1: 0 1px 2px rgba(26,20,17,0.08), 0 1px 1px rgba(26,20,17,0.04);
+  --df-elevation-2: 0 2px 4px rgba(26,20,17,0.08), 0 4px 12px rgba(26,20,17,0.08);
+  --df-elevation-3: 0 4px 8px rgba(26,20,17,0.08), 0 12px 24px rgba(26,20,17,0.12);
+  --df-elevation-4: 0 8px 16px rgba(26,20,17,0.10), 0 24px 48px rgba(26,20,17,0.18);
+
+  /* Serie dei grafici: alias dei colori della palette */
+  --df-chart-1: var(--df-accent);
+  --df-chart-2: var(--df-ochre);
+  --df-chart-3: var(--df-moss);
+  --df-chart-4: var(--df-umber);
+  --df-chart-5: var(--df-plum);
+
+  /* Caratteri: Satoshi per titoli e interfaccia, Inter per testo e dati */
+  --df-font-display: Satoshi, Inter, system-ui, sans-serif;
+  --df-font-sans: Inter, system-ui, sans-serif;
+  --df-text-display: 800 2.5rem/2.75rem var(--df-font-display);   /* 40/44 */
+  --df-text-title:   700 1.75rem/2.125rem var(--df-font-display); /* 28/34 */
+  --df-text-heading: 600 1.25rem/1.625rem var(--df-font-display); /* 20/26 */
+  --df-text-body:    400 0.9375rem/1.375rem var(--df-font-sans);  /* 15/22 */
+  --df-text-small:   400 0.8125rem/1.1875rem var(--df-font-sans); /* 13/19 */
+  --df-text-label:   500 0.75rem/1rem var(--df-font-sans);        /* 12/16 */
+  --df-label-tracking: 0.04em;
+
+  /* Spaziatura (multipli di 4 px), raggi */
+  --df-space-1: 4px;  --df-space-2: 8px;  --df-space-3: 12px; --df-space-4: 16px;
+  --df-space-5: 24px; --df-space-6: 32px; --df-space-7: 48px;
+  --df-radius-sm: 6px; --df-radius-md: 10px; --df-radius-lg: 16px; --df-radius-pill: 999px;
+
+  /* Movimento e interazione */
+  --df-duration-fast: 120ms;
+  --df-duration-base: 200ms;
+  --df-duration-slow: 320ms;
+  --df-ease: cubic-bezier(0.25, 1, 0.5, 1);
+  --df-target-min: 44px;                    /* lato minimo di un bersaglio di tocco */
+  --df-focus-ring: 2px solid var(--df-accent-strong);
+  --df-focus-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --df-duration-fast: 0.01ms;
+    --df-duration-base: 0.01ms;
+    --df-duration-slow: 0.01ms;
+  }
+}
+
+/* Tema scuro dei ruoli: stesso criterio di data-theme sopra. */
+:root[data-theme="dark"] {
+  --df-ground: #14110f;
+  --df-surface: #1d1916;
+  --df-surface-raised: #26211d;
+  --df-ink: #f4eeea;
+  --df-muted: #b3a69f;
+  --df-line: #342c27;
+  --df-border-strong: #7d6f68;
+  --df-accent: #d96d60;
+  --df-on-accent: #1a1411;
+  --df-accent-strong: #ffa987;
+  --df-ok: #a8c878;
+  --df-warn: #e3b04b;
+  --df-error: #ff5c6c;
+  --df-ochre: #e0a93b;
+  --df-ochre-soft: #f0c24a;
+  --df-moss: #9bb56a;
+  --df-umber: #c79a78;
+  --df-plum: #b794b2;
+  --df-elevation-0: none;
+  --df-elevation-1: 0 1px 2px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.04);
+  --df-elevation-2: 0 2px 6px rgba(0,0,0,0.50), 0 6px 16px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.05);
+  --df-elevation-3: 0 4px 12px rgba(0,0,0,0.55), 0 16px 32px rgba(0,0,0,0.40), inset 0 1px 0 rgba(255,255,255,0.06);
+  --df-elevation-4: 0 8px 20px rgba(0,0,0,0.60), 0 28px 56px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    --df-ground: #14110f;
+    --df-surface: #1d1916;
+    --df-surface-raised: #26211d;
+    --df-ink: #f4eeea;
+    --df-muted: #b3a69f;
+    --df-line: #342c27;
+    --df-border-strong: #7d6f68;
+    --df-accent: #d96d60;
+    --df-on-accent: #1a1411;
+    --df-accent-strong: #ffa987;
+    --df-ok: #a8c878;
+    --df-warn: #e3b04b;
+    --df-error: #ff5c6c;
+    --df-ochre: #e0a93b;
+    --df-ochre-soft: #f0c24a;
+    --df-moss: #9bb56a;
+    --df-umber: #c79a78;
+    --df-plum: #b794b2;
+    --df-elevation-0: none;
+    --df-elevation-1: 0 1px 2px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.04);
+    --df-elevation-2: 0 2px 6px rgba(0,0,0,0.50), 0 6px 16px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.05);
+    --df-elevation-3: 0 4px 12px rgba(0,0,0,0.55), 0 16px 32px rgba(0,0,0,0.40), inset 0 1px 0 rgba(255,255,255,0.06);
+    --df-elevation-4: 0 8px 20px rgba(0,0,0,0.60), 0 28px 56px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+}

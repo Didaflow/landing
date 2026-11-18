@@ -13,3 +13,7 @@ Gli stili specifici di didaflow.ai (sezioni della landing, pagine documento) sta
 `landing/assets/js/site-chrome.js`.
 
 Caddy serve `shared/design/` sotto `/_assets/` (`css/`, `fonts/`, `static/`).
+
+I file di Satoshi (licenza ITF Free Font License) **non stanno in questo repo**, che è pubblico: `scripts/design.sh`
+non li copia e `shared/design/fonts/satoshi/` è in `.gitignore`. Li fornisce il deploy di altair
+(`Satoshi-Variable.woff2`, dal clone privato di `didaflow-design`, issue landing#60). Senza il file i titoli ricadono su Inter.

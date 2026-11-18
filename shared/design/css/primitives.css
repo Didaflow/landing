@@ -121,3 +121,183 @@ a:hover { text-decoration: underline; }
 /* ─── SHARED UI FOUNDATION ──────────────────────────────────── */
 
 *, *::before, *::after { box-sizing: border-box; }
+
+
+/* ═══ PRIMITIVE (v0.7.0, decisione 36) ═══════════════════════════════════
+   Pulsanti, campi, tabelle, chip, navigazione, dialoghi, stati vuoti e di
+   caricamento. Solo ruoli --df-*: un tenant cambia i colori ridefinendo i
+   ruoli, mai le primitive. Bersagli di tocco da --df-target-min (44 px), focus
+   sempre visibile, movimento spento con prefers-reduced-motion (le durate
+   scendono a 0 nei token). Gli stati (ok, attenzione, errore) hanno sempre
+   testo: il colore non è mai l'unico segnale. */
+
+.df-button, .df-field__control, .df-nav__item, .df-chip--action {
+  font: var(--df-text-body);
+  min-height: var(--df-target-min);
+}
+
+.df-button:focus-visible, .df-field__control:focus-visible, .df-nav__item:focus-visible,
+.df-chip--action:focus-visible, .df-dialog__close:focus-visible, .df-table a:focus-visible {
+  outline: var(--df-focus-ring);
+  outline-offset: var(--df-focus-offset);
+}
+
+/* Pulsanti: un solo .df-button--primary per schermata */
+.df-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--df-space-2);
+  min-width: var(--df-target-min);
+  padding: 0 var(--df-space-4);
+  border: 1px solid var(--df-border-strong);
+  border-radius: var(--df-radius-md);
+  background: var(--df-surface);
+  color: var(--df-ink);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--df-duration-fast) var(--df-ease), border-color var(--df-duration-fast) var(--df-ease);
+}
+.df-button:hover { border-color: var(--df-ink); }
+.df-button--primary {
+  background: var(--df-accent);
+  border-color: var(--df-accent);
+  color: var(--df-on-accent);
+  font-size: var(--df-button-primary-size, 0.9375rem);     /* un tenant lo alza se il suo accento regge solo testo grande */
+  font-weight: var(--df-button-primary-weight, 600);
+}
+.df-button--primary:hover { border-color: var(--df-accent-strong); }
+.df-button--ghost { background: transparent; border-color: transparent; color: var(--df-accent-strong); }
+.df-button--ghost:hover { border-color: var(--df-line); }
+.df-button--danger { background: var(--df-surface); border-color: var(--df-error); color: var(--df-error); }
+.df-button[disabled], .df-button[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; }
+
+/* Campi: etichetta sempre visibile, errore con testo */
+.df-field { display: grid; gap: var(--df-space-1); }
+.df-field__label { font: var(--df-text-label); letter-spacing: var(--df-label-tracking); color: var(--df-ink); }
+.df-field__control {
+  width: 100%;
+  padding: 0 var(--df-space-3);
+  border: 1px solid var(--df-border-strong);
+  border-radius: var(--df-radius-sm);
+  background: var(--df-surface);
+  color: var(--df-ink);
+}
+textarea.df-field__control { min-height: calc(var(--df-target-min) * 2); padding-block: var(--df-space-3); }
+.df-field__control:focus-visible { border-color: var(--df-accent-strong); }
+.df-field__hint { font: var(--df-text-small); color: var(--df-muted); }
+.df-field--error .df-field__control { border-color: var(--df-error); }
+.df-field--error .df-field__hint { color: var(--df-error); }
+
+/* Tabelle */
+.df-table { width: 100%; border-collapse: collapse; font: var(--df-text-body); color: var(--df-ink); }
+.df-table th {
+  padding: var(--df-space-3) var(--df-space-4);
+  border-bottom: 1px solid var(--df-border-strong);
+  font: var(--df-text-label);
+  letter-spacing: var(--df-label-tracking);
+  text-align: left;
+  color: var(--df-muted);
+}
+.df-table td { padding: var(--df-space-3) var(--df-space-4); border-bottom: 1px solid var(--df-line); }
+.df-table td.df-num, .df-table th.df-num { text-align: right; font-variant-numeric: tabular-nums; }
+.df-table-wrap { overflow-x: auto; }   /* su telefono la tabella scorre in orizzontale */
+
+/* Chip: sempre con testo; --ok/--warn/--error aggiungono il colore, non lo sostituiscono */
+.df-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--df-space-1);
+  padding: var(--df-space-1) var(--df-space-3);
+  border: 1px solid var(--df-line);
+  border-radius: var(--df-radius-pill);
+  background: var(--df-surface);
+  font: var(--df-text-label);
+  letter-spacing: var(--df-label-tracking);
+  color: var(--df-ink);
+}
+.df-chip--action { padding-inline: var(--df-space-4); border-color: var(--df-border-strong); cursor: pointer; }
+.df-chip--ok { border-color: var(--df-ok); color: var(--df-ok); }
+.df-chip--warn { border-color: var(--df-warn); color: var(--df-warn); }
+.df-chip--error { border-color: var(--df-error); color: var(--df-error); }
+
+/* Navigazione: barra in basso su telefono, barra laterale da 768 px */
+.df-nav {
+  position: fixed;
+  inset: auto 0 0 0;
+  display: flex;
+  background: var(--df-surface);
+  border-top: 1px solid var(--df-line);
+  box-shadow: var(--df-elevation-2);
+  z-index: var(--z-sticky);
+}
+.df-nav__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--df-space-1);
+  padding: var(--df-space-2);
+  font: var(--df-text-label);
+  letter-spacing: var(--df-label-tracking);
+  color: var(--df-muted);
+  text-decoration: none;
+}
+.df-nav__item[aria-current="page"] { color: var(--df-accent-strong); box-shadow: inset 0 2px 0 var(--df-accent-strong); }
+@media (min-width: 768px) {
+  .df-nav {
+    inset: 0 auto 0 0;
+    width: 220px;
+    flex-direction: column;
+    padding: var(--df-space-4) var(--df-space-3);
+    gap: var(--df-space-1);
+    border-top: 0;
+    border-right: 1px solid var(--df-line);
+    box-shadow: none;
+  }
+  .df-nav__item {
+    flex: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--df-space-3);
+    padding: 0 var(--df-space-3);
+    border-radius: var(--df-radius-md);
+    font: var(--df-text-body);
+  }
+  .df-nav__item[aria-current="page"] { box-shadow: none; background: var(--df-ground); }
+}
+
+/* Dialoghi: sull'elemento <dialog> */
+.df-dialog {
+  width: min(32rem, calc(100vw - 2 * var(--df-space-4)));
+  padding: var(--df-space-5);
+  border: 1px solid var(--df-line);
+  border-radius: var(--df-radius-lg);
+  background: var(--df-surface-raised);
+  color: var(--df-ink);
+  box-shadow: var(--df-elevation-4);
+}
+.df-dialog::backdrop { background: rgba(26, 20, 17, 0.55); }
+.df-dialog__title { font: var(--df-text-heading); color: var(--df-ink); margin: 0 0 var(--df-space-3); }
+.df-dialog__actions { display: flex; justify-content: flex-end; gap: var(--df-space-2); margin-top: var(--df-space-5); }
+.df-dialog__close { min-width: var(--df-target-min); min-height: var(--df-target-min); }
+
+/* Stati vuoti e di caricamento */
+.df-empty { display: grid; justify-items: center; gap: var(--df-space-3); padding: var(--df-space-7) var(--df-space-4); text-align: center; color: var(--df-muted); }
+.df-empty__title { font: var(--df-text-heading); color: var(--df-ink); margin: 0; }
+.df-loading { display: inline-flex; align-items: center; gap: var(--df-space-3); color: var(--df-muted); font: var(--df-text-body); }
+.df-loading__spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--df-line);
+  border-top-color: var(--df-accent-strong);
+  border-radius: var(--df-radius-pill);
+  animation: df-spin 0.9s linear infinite;
+}
+.df-skeleton { height: 1em; border-radius: var(--df-radius-sm); background: var(--df-line); }
+@keyframes df-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .df-loading__spinner { animation: none; border-top-color: var(--df-line); border-right-color: var(--df-accent-strong); }
+}

@@ -3,7 +3,7 @@
  * (body.page-editorial). Loaded after site.css, which keeps header, footer,
  * demo dialog and the document pages that are not part of the redesign.
  *
- * Headings: Satoshi (fonts-didaflow.css, Fontshare). Body: Inter (OFL,
+ * Headings: Satoshi (fonts-didaflow.css, file served by the deploy). Body: Inter (OFL,
  * self-hosted in /assets/fonts/). Colours come from tokens.css.
  * Bruegel figures are decorative: they live only in the opening scene and in
  * the stakeholder question panels, never behind or under a call to action.

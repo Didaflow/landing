@@ -10,7 +10,12 @@
 }
 
 /*
- * Landing: strato fra il design system (didaflow-tokens.css) e le pagine.
+ * Landing: strato fra il design system (shared/design, v0.7.0) e le pagine.
+ * 0. Ponte: i nomi che la landing legge (--ground, --ink, --space-*, --type-*…) puntano ai ruoli
+ *    --df-* del sistema. La v0.7.0 tiene i nomi di prima con i valori di prima (--ink è il blu dei
+ *    dati, --surface e --on-accent hanno altri valori): questo blocco li porta ai valori del tema
+ *    Didaflow, quelli che la landing ha sempre usato. Chiaro, scuro e auto con la stessa regola:
+ *    var() segue --df-*, che cambia col tema.
  * 1. Nomi della landing di prima, riportati sui token del sistema (un solo posto, nessun valore sciolto).
  * 2. Token PROPOSTI: casi che il sistema non copre (fasce scure, hero). Sono nella tabella della PR #43;
  *    arch li porta nel sistema, poi questo blocco si toglie.
@@ -20,6 +25,58 @@
 :root[data-theme="light"],
 :root[data-theme="dark"],
 :root[data-theme="auto"] {
+  /* Ponte → ruoli del sistema */
+  --ground: var(--df-ground);
+  --surface: var(--df-surface);
+  --surface-raised: var(--df-surface-raised);
+  --ink: var(--df-ink);
+  --muted: var(--df-muted);
+  --line: var(--df-line);
+  --border-strong: var(--df-border-strong);
+  --accent: var(--df-accent);
+  --on-accent: var(--df-on-accent);
+  --accent-strong: var(--df-accent-strong);
+  --ok: var(--df-ok);
+  --warn: var(--df-warn);
+  --error: var(--df-error);
+  --ochre: var(--df-ochre);
+  --ochre-soft: var(--df-ochre-soft);
+  --moss: var(--df-moss);
+  --umber: var(--df-umber);
+  --plum: var(--df-plum);
+  --chart-1: var(--df-chart-1);
+  --chart-2: var(--df-chart-2);
+  --chart-3: var(--df-chart-3);
+  --chart-4: var(--df-chart-4);
+  --chart-5: var(--df-chart-5);
+  --elevation-0: var(--df-elevation-0);
+  --elevation-1: var(--df-elevation-1);
+  --elevation-2: var(--df-elevation-2);
+  --elevation-3: var(--df-elevation-3);
+  --elevation-4: var(--df-elevation-4);
+  --font-display: var(--df-font-display);
+  --font-sans: var(--df-font-sans);
+  --space-1: var(--df-space-1);
+  --space-2: var(--df-space-2);
+  --space-3: var(--df-space-3);
+  --space-4: var(--df-space-4);
+  --space-5: var(--df-space-5);
+  --space-6: var(--df-space-6);
+  --space-7: var(--df-space-7);
+  --radius-sm: var(--df-radius-sm);
+  --radius-md: var(--df-radius-md);
+  --radius-lg: var(--df-radius-lg);
+  --radius-pill: var(--df-radius-pill);
+
+  /* Scala dei caratteri a pezzi: la v0.7.0 ha solo la scorciatoia --df-text-* (font:). Stessi valori,
+     divisi, perché la landing legge dimensione, interlinea, peso e tracking uno per uno. */
+  --type-display-size: 40px;  --type-display-line: 44px;  --type-display-weight: 800; --type-display-tracking: 0; --type-display-family: var(--df-font-display);
+  --type-title-size: 28px;    --type-title-line: 34px;    --type-title-weight: 700;   --type-title-tracking: 0;   --type-title-family: var(--df-font-display);
+  --type-heading-size: 20px;  --type-heading-line: 26px;  --type-heading-weight: 600; --type-heading-tracking: 0; --type-heading-family: var(--df-font-display);
+  --type-body-size: 15px;     --type-body-line: 22px;     --type-body-weight: 400;    --type-body-tracking: 0;    --type-body-family: var(--df-font-sans);
+  --type-small-size: 13px;    --type-small-line: 19px;    --type-small-weight: 400;   --type-small-tracking: 0;   --type-small-family: var(--df-font-sans);
+  --type-label-size: 12px;    --type-label-line: 16px;    --type-label-weight: 500;   --type-label-tracking: var(--df-label-tracking); --type-label-family: var(--df-font-sans);
+
   /* Nomi di prima → token del sistema */
   --background: var(--ground);
   --foreground: var(--ink);

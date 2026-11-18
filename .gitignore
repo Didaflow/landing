@@ -6,3 +6,6 @@ __pycache__/
 node_modules/
 data/
 !landing/commons/ai-map/data/
+
+# Satoshi (ITF FFL): lo fornisce il deploy, mai nel repo pubblico (landing#60)
+shared/design/fonts/satoshi/
