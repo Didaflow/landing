@@ -117,7 +117,6 @@ function page(lang: Lang, o: { path: Record<Lang, string>; title: string; desc: 
   <link rel="stylesheet" href="/_assets/css/fonts-didaflow.css" />
   <link rel="stylesheet" href="/_assets/css/tokens.css" />
   <link rel="stylesheet" href="/_assets/css/primitives.css" />
-  <link rel="stylesheet" href="/assets/css/didaflow-tokens.css" />
   <link rel="stylesheet" href="/assets/css/landing-tokens.css" />
   <link rel="stylesheet" href="/assets/css/site.css" />
   <link rel="stylesheet" href="/assets/css/editorial.css" />

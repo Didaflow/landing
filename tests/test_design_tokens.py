@@ -1,18 +1,22 @@
-"""Design system tokens (#43): contrasto AA nei due temi e nessun valore sciolto nel CSS della landing."""
+"""Design system tokens (#43, #60): contrasto AA nei due temi sui ruoli --df-* della v0.7.0, il ponte della
+landing verso quei ruoli, e nessun valore sciolto nel CSS della landing."""
 import re
+import subprocess
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CSS = ROOT / "landing" / "assets" / "css"
-TOKENS = (CSS / "didaflow-tokens.css").read_text(encoding="utf-8")
+# I valori vengono dai ruoli comuni della v0.7.0 (blocco «RUOLI COMUNI» di shared/design/css/tokens.css).
+TOKENS = (ROOT / "shared" / "design" / "css" / "tokens.css").read_text(encoding="utf-8").split("RUOLI COMUNI", 1)[1]
+PONTE = (CSS / "landing-tokens.css").read_text(encoding="utf-8")
 
 
 def tema(nome):
     """Le variabili colore del blocco :root (chiaro) o :root[data-theme="dark"]."""
     sel = r":root \{" if nome == "light" else r':root\[data-theme="dark"\] \{'
     blocco = re.search(sel + r"(.*?)\n\}", TOKENS, re.S).group(1)
-    return dict(re.findall(r"--([\w-]+): (#[0-9a-fA-F]{6});", blocco))
+    return {k: v for k, v in re.findall(r"--df-([\w-]+): (#[0-9a-fA-F]{6});", blocco)}
 
 
 def luminanza(hex_):
@@ -50,6 +54,31 @@ class Token(unittest.TestCase):
         t = tema("light")
         for fg, minimo in (("ground", 7), ("accent", 4.5)):
             self.assertGreaterEqual(contrasto(t[fg], t["ink"]), minimo, f"light: {fg} su ink (fascia)")
+
+    def test_ponte_dai_nomi_della_landing_ai_ruoli_df(self):
+        """Ogni nome che la landing legge punta al ruolo --df-* omonimo: la v0.7.0 lascia i nomi di prima con
+        i valori di prima (--ink è il blu dei dati), quindi senza il ponte la grafica cambierebbe."""
+        for nome in ("ground", "surface", "surface-raised", "ink", "muted", "line", "border-strong", "accent",
+                     "on-accent", "accent-strong", "ok", "warn", "error", "ochre", "ochre-soft", "moss",
+                     "umber", "plum", "font-display", "font-sans", "elevation-1", "elevation-4",
+                     "space-1", "space-7", "radius-sm", "radius-pill", "chart-1", "chart-5"):
+            self.assertIn(f"  --{nome}: var(--df-{nome});", PONTE, nome)
+
+    def test_nessun_file_satoshi_nel_repo_pubblico(self):
+        """Il repo è pubblico e Satoshi (ITF FFL) non ci entra: lo fornisce il deploy (landing#60)."""
+        self.assertIn("shared/design/fonts/satoshi/", (ROOT / ".gitignore").read_text(encoding="utf-8").splitlines())
+        self.assertIn("--exclude='*/fonts/satoshi/*'", (ROOT / "scripts" / "design.sh").read_text(encoding="utf-8"))
+        try:
+            tracciati = subprocess.run(["git", "ls-files", "shared/design/fonts/satoshi"], cwd=ROOT,
+                                       capture_output=True, text=True, check=True).stdout.split()
+        except (OSError, subprocess.CalledProcessError):
+            self.skipTest("non è un clone git")
+        self.assertEqual([], tracciati)
+
+    def test_nessun_file_di_token_locale(self):
+        self.assertFalse((CSS / "didaflow-tokens.css").exists())
+        for pagina in (ROOT / "landing").rglob("*.html"):
+            self.assertNotIn("didaflow-tokens", pagina.read_text(encoding="utf-8"), str(pagina))
 
     def test_nessun_colore_sciolto_nel_css_della_landing(self):
         for f in ("site.css", "editorial.css", "chapters.css"):
