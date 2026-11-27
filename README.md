@@ -11,6 +11,7 @@ landing/assets/   site styles (css/site.css, css/editorial.css), site-chrome.js,
                   Bruegel figures (bruegel/, see its README)
 scripts/dev.ts    static dev server (Bun), mirrors the production route map
 DESIGN.md         the design system
+CHANGELOG.md      what changed in each version, for visitors
 ```
 
 ## Develop
@@ -20,7 +21,10 @@ bun run dev       # http://127.0.0.1:8765 (PORT=… for another port)
 ```
 
 Serves `landing/` at `/` and `shared/design/` at `/_assets/` — the same mapping
-production uses, so what you see locally is what ships.
+production uses, so what you see locally is what ships, with one exception:
+the Satoshi font file (headings) is not in this public repo. The server
+provides it in `shared/design/fonts/satoshi/`; locally the headings fall back
+to Inter. See `DESIGN.md`.
 
 ## Test
 
